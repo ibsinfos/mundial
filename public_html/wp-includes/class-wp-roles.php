@@ -14,12 +14,12 @@
  * the name in value of the 'name' key. The capabilities are stored as an array
  * in the value of the 'capability' key.
  *
- *     array (
- *    		'rolename' => array (
- *    			'name' => 'rolename',
- *    			'capabilities' => array()
- *    		)
- *     )
+ * array (
+ * 'rolename' => array (
+ * 'name' => 'rolename',
+ * 'capabilities' => array()
+ * )
+ * )
  *
  * @since 2.0.0
  */
@@ -32,7 +32,7 @@ class WP_Roles {
 	 * @var array
 	 */
 	public $roles;
-
+	
 	/**
 	 * List of the role objects.
 	 *
@@ -40,8 +40,8 @@ class WP_Roles {
 	 * @access public
 	 * @var array
 	 */
-	public $role_objects = array();
-
+	public $role_objects = array ();
+	
 	/**
 	 * List of role names.
 	 *
@@ -49,8 +49,8 @@ class WP_Roles {
 	 * @access public
 	 * @var array
 	 */
-	public $role_names = array();
-
+	public $role_names = array ();
+	
 	/**
 	 * Option name for storing role list.
 	 *
@@ -59,7 +59,7 @@ class WP_Roles {
 	 * @var string
 	 */
 	public $role_key;
-
+	
 	/**
 	 * Whether to use the database for retrieval and storage.
 	 *
@@ -68,33 +68,38 @@ class WP_Roles {
 	 * @var bool
 	 */
 	public $use_db = true;
-
+	
 	/**
 	 * Constructor
 	 *
 	 * @since 2.0.0
 	 */
 	public function __construct() {
-		$this->_init();
+		$this->_init ();
 	}
-
+	
 	/**
 	 * Make private/protected methods readable for backward compatibility.
 	 *
 	 * @since 4.0.0
 	 * @access public
-	 *
-	 * @param callable $name      Method to call.
-	 * @param array    $arguments Arguments to pass when calling.
+	 *        
+	 * @param callable $name
+	 *        	Method to call.
+	 * @param array $arguments
+	 *        	Arguments to pass when calling.
 	 * @return mixed|false Return value of the callback, false otherwise.
 	 */
-	public function __call( $name, $arguments ) {
-		if ( '_init' === $name ) {
-			return call_user_func_array( array( $this, $name ), $arguments );
+	public function __call($name, $arguments) {
+		if ('_init' === $name) {
+			return call_user_func_array ( array (
+					$this,
+					$name 
+			), $arguments );
 		}
 		return false;
 	}
-
+	
 	/**
 	 * Set up the object properties.
 	 *
@@ -104,40 +109,41 @@ class WP_Roles {
 	 *
 	 * @since 2.1.0
 	 * @access protected
-	 *
+	 *        
 	 * @global array $wp_user_roles Used to set the 'roles' property value.
 	 */
 	protected function _init() {
 		global $wp_user_roles, $wpdb;
-
-		$this->role_key = $wpdb->get_blog_prefix() . 'user_roles';
-		if ( ! empty( $wp_user_roles ) ) {
+		
+		$this->role_key = $wpdb->get_blog_prefix () . 'user_roles';
+		if (! empty ( $wp_user_roles )) {
 			$this->roles = $wp_user_roles;
 			$this->use_db = false;
 		} else {
-			$this->roles = get_option( $this->role_key );
+			$this->roles = get_option ( $this->role_key );
 		}
-
-		if ( empty( $this->roles ) )
+		
+		if (empty ( $this->roles ))
 			return;
-
-		$this->role_objects = array();
-		$this->role_names =  array();
-		foreach ( array_keys( $this->roles ) as $role ) {
-			$this->role_objects[$role] = new WP_Role( $role, $this->roles[$role]['capabilities'] );
-			$this->role_names[$role] = $this->roles[$role]['name'];
+		
+		$this->role_objects = array ();
+		$this->role_names = array ();
+		foreach ( array_keys ( $this->roles ) as $role ) {
+			$this->role_objects [$role] = new WP_Role ( $role, $this->roles [$role] ['capabilities'] );
+			$this->role_names [$role] = $this->roles [$role] ['name'];
 		}
-
+		
 		/**
 		 * After the roles have been initialized, allow plugins to add their own roles.
 		 *
 		 * @since 4.7.0
-		 *
-		 * @param WP_Roles $this A reference to the WP_Roles object.
+		 *       
+		 * @param WP_Roles $this
+		 *        	A reference to the WP_Roles object.
 		 */
-		do_action( 'wp_roles_init', $this );
+		do_action ( 'wp_roles_init', $this );
 	}
-
+	
 	/**
 	 * Reinitialize the object
 	 *
@@ -149,10 +155,10 @@ class WP_Roles {
 	 * @access public
 	 */
 	public function reinit() {
-		_deprecated_function( __METHOD__, '4.7.0', 'new WP_Roles()' );
-		$this->_init();
+		_deprecated_function ( __METHOD__, '4.7.0', 'new WP_Roles()' );
+		$this->_init ();
 	}
-
+	
 	/**
 	 * Add role name with capabilities to list.
 	 *
@@ -163,126 +169,137 @@ class WP_Roles {
 	 *
 	 * @since 2.0.0
 	 * @access public
-	 *
-	 * @param string $role Role name.
-	 * @param string $display_name Role display name.
-	 * @param array $capabilities List of role capabilities in the above format.
+	 *        
+	 * @param string $role
+	 *        	Role name.
+	 * @param string $display_name
+	 *        	Role display name.
+	 * @param array $capabilities
+	 *        	List of role capabilities in the above format.
 	 * @return WP_Role|void WP_Role object, if role is added.
 	 */
-	public function add_role( $role, $display_name, $capabilities = array() ) {
-		if ( empty( $role ) || isset( $this->roles[ $role ] ) ) {
+	public function add_role($role, $display_name, $capabilities = array()) {
+		if (empty ( $role ) || isset ( $this->roles [$role] )) {
 			return;
 		}
-
-		$this->roles[$role] = array(
-			'name' => $display_name,
-			'capabilities' => $capabilities
-			);
-		if ( $this->use_db )
-			update_option( $this->role_key, $this->roles );
-		$this->role_objects[$role] = new WP_Role( $role, $capabilities );
-		$this->role_names[$role] = $display_name;
-		return $this->role_objects[$role];
+		
+		$this->roles [$role] = array (
+				'name' => $display_name,
+				'capabilities' => $capabilities 
+		);
+		if ($this->use_db)
+			update_option ( $this->role_key, $this->roles );
+		$this->role_objects [$role] = new WP_Role ( $role, $capabilities );
+		$this->role_names [$role] = $display_name;
+		return $this->role_objects [$role];
 	}
-
+	
 	/**
 	 * Remove role by name.
 	 *
 	 * @since 2.0.0
 	 * @access public
-	 *
-	 * @param string $role Role name.
+	 *        
+	 * @param string $role
+	 *        	Role name.
 	 */
-	public function remove_role( $role ) {
-		if ( ! isset( $this->role_objects[$role] ) )
+	public function remove_role($role) {
+		if (! isset ( $this->role_objects [$role] ))
 			return;
-
-		unset( $this->role_objects[$role] );
-		unset( $this->role_names[$role] );
-		unset( $this->roles[$role] );
-
-		if ( $this->use_db )
-			update_option( $this->role_key, $this->roles );
-
-		if ( get_option( 'default_role' ) == $role )
-			update_option( 'default_role', 'subscriber' );
+		
+		unset ( $this->role_objects [$role] );
+		unset ( $this->role_names [$role] );
+		unset ( $this->roles [$role] );
+		
+		if ($this->use_db)
+			update_option ( $this->role_key, $this->roles );
+		
+		if (get_option ( 'default_role' ) == $role)
+			update_option ( 'default_role', 'subscriber' );
 	}
-
+	
 	/**
 	 * Add capability to role.
 	 *
 	 * @since 2.0.0
 	 * @access public
-	 *
-	 * @param string $role Role name.
-	 * @param string $cap Capability name.
-	 * @param bool $grant Optional, default is true. Whether role is capable of performing capability.
+	 *        
+	 * @param string $role
+	 *        	Role name.
+	 * @param string $cap
+	 *        	Capability name.
+	 * @param bool $grant
+	 *        	Optional, default is true. Whether role is capable of performing capability.
 	 */
-	public function add_cap( $role, $cap, $grant = true ) {
-		if ( ! isset( $this->roles[$role] ) )
+	public function add_cap($role, $cap, $grant = true) {
+		if (! isset ( $this->roles [$role] ))
 			return;
-
-		$this->roles[$role]['capabilities'][$cap] = $grant;
-		if ( $this->use_db )
-			update_option( $this->role_key, $this->roles );
+		
+		$this->roles [$role] ['capabilities'] [$cap] = $grant;
+		if ($this->use_db)
+			update_option ( $this->role_key, $this->roles );
 	}
-
+	
 	/**
 	 * Remove capability from role.
 	 *
 	 * @since 2.0.0
 	 * @access public
-	 *
-	 * @param string $role Role name.
-	 * @param string $cap Capability name.
+	 *        
+	 * @param string $role
+	 *        	Role name.
+	 * @param string $cap
+	 *        	Capability name.
 	 */
-	public function remove_cap( $role, $cap ) {
-		if ( ! isset( $this->roles[$role] ) )
+	public function remove_cap($role, $cap) {
+		if (! isset ( $this->roles [$role] ))
 			return;
-
-		unset( $this->roles[$role]['capabilities'][$cap] );
-		if ( $this->use_db )
-			update_option( $this->role_key, $this->roles );
+		
+		unset ( $this->roles [$role] ['capabilities'] [$cap] );
+		if ($this->use_db)
+			update_option ( $this->role_key, $this->roles );
 	}
-
+	
 	/**
 	 * Retrieve role object by name.
 	 *
 	 * @since 2.0.0
 	 * @access public
-	 *
-	 * @param string $role Role name.
+	 *        
+	 * @param string $role
+	 *        	Role name.
 	 * @return WP_Role|null WP_Role object if found, null if the role does not exist.
 	 */
-	public function get_role( $role ) {
-		if ( isset( $this->role_objects[$role] ) )
-			return $this->role_objects[$role];
+	public function get_role($role) {
+		if (isset ( $this->role_objects [$role] ))
+			return $this->role_objects [$role];
 		else
 			return null;
 	}
-
+	
 	/**
 	 * Retrieve list of role names.
 	 *
 	 * @since 2.0.0
 	 * @access public
-	 *
+	 *        
 	 * @return array List of role names.
 	 */
 	public function get_names() {
 		return $this->role_names;
 	}
-
+	
 	/**
 	 * Whether role name is currently in the list of available roles.
 	 *
 	 * @since 2.0.0
 	 * @access public
-	 *
-	 * @param string $role Role name to look up.
+	 *        
+	 * @param string $role
+	 *        	Role name to look up.
 	 * @return bool
 	 */
-	public function is_role( $role ) {
-		return isset( $this->role_names[$role] );
+	public function is_role($role) {
+		return isset ( $this->role_names [$role] );
 	}
 }

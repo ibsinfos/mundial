@@ -3,9 +3,11 @@
 	vertical-align: top;
 	display: inline-block;
 }
+
 .rwmb-embed-media {
 	margin-top: 1em;
 }
+
 .rwmb-embed-media iframe {
 	max-width: 100%;
 }

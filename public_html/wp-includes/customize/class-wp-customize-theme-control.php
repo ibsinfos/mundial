@@ -11,11 +11,11 @@
  * Customize Theme Control class.
  *
  * @since 4.2.0
- *
+ *       
  * @see WP_Customize_Control
  */
 class WP_Customize_Theme_Control extends WP_Customize_Control {
-
+	
 	/**
 	 * Customize control type.
 	 *
@@ -24,7 +24,7 @@ class WP_Customize_Theme_Control extends WP_Customize_Control {
 	 * @var string
 	 */
 	public $type = 'theme';
-
+	
 	/**
 	 * Theme object.
 	 *
@@ -33,28 +33,29 @@ class WP_Customize_Theme_Control extends WP_Customize_Control {
 	 * @var WP_Theme
 	 */
 	public $theme;
-
+	
 	/**
 	 * Refresh the parameters passed to the JavaScript via JSON.
 	 *
 	 * @since 4.2.0
 	 * @access public
-	 *
+	 *        
 	 * @see WP_Customize_Control::to_json()
 	 */
 	public function to_json() {
-		parent::to_json();
-		$this->json['theme'] = $this->theme;
+		parent::to_json ();
+		$this->json ['theme'] = $this->theme;
 	}
-
+	
 	/**
 	 * Don't render the control content from PHP, as it's rendered via JS on load.
 	 *
 	 * @since 4.2.0
 	 * @access public
 	 */
-	public function render_content() {}
-
+	public function render_content() {
+	}
+	
 	/**
 	 * Render a JS template for theme display.
 	 *
@@ -62,50 +63,51 @@ class WP_Customize_Theme_Control extends WP_Customize_Control {
 	 * @access public
 	 */
 	public function content_template() {
-		$current_url = set_url_scheme( 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
-		$active_url  = esc_url( remove_query_arg( 'customize_theme', $current_url ) );
-		$preview_url = esc_url( add_query_arg( 'customize_theme', '__THEME__', $current_url ) ); // Token because esc_url() strips curly braces.
-		$preview_url = str_replace( '__THEME__', '{{ data.theme.id }}', $preview_url );
+		$current_url = set_url_scheme ( 'http://' . $_SERVER ['HTTP_HOST'] . $_SERVER ['REQUEST_URI'] );
+		$active_url = esc_url ( remove_query_arg ( 'customize_theme', $current_url ) );
+		$preview_url = esc_url ( add_query_arg ( 'customize_theme', '__THEME__', $current_url ) ); // Token because esc_url() strips curly braces.
+		$preview_url = str_replace ( '__THEME__', '{{ data.theme.id }}', $preview_url );
 		?>
 		<# if ( data.theme.isActiveTheme ) { #>
-			<div class="theme active" tabindex="0" data-preview-url="<?php echo esc_attr( $active_url ); ?>" aria-describedby="{{ data.theme.id }}-action {{ data.theme.id }}-name">
+<div class="theme active" tabindex="0"
+	data-preview-url="<?php echo esc_attr( $active_url ); ?>"
+	aria-describedby="{{ data.theme.id }}-action {{ data.theme.id }}-name">
+	<# } else { #>
+	<div class="theme" tabindex="0"
+		data-preview-url="<?php echo esc_attr( $preview_url ); ?>"
+		aria-describedby="{{ data.theme.id }}-action {{ data.theme.id }}-name">
+		<# } #> <# if ( data.theme.screenshot[0] ) { #>
+		<div class="theme-screenshot">
+			<img data-src="{{ data.theme.screenshot[0] }}" alt="" />
+		</div>
 		<# } else { #>
-			<div class="theme" tabindex="0" data-preview-url="<?php echo esc_attr( $preview_url ); ?>" aria-describedby="{{ data.theme.id }}-action {{ data.theme.id }}-name">
+		<div class="theme-screenshot blank"></div>
+		<# } #> <# if ( data.theme.isActiveTheme ) { #> <span
+			class="more-details" id="{{ data.theme.id }}-action"><?php _e( 'Customize' ); ?></span>
+		<# } else { #> <span class="more-details"
+			id="{{ data.theme.id }}-action"><?php _e( 'Live Preview' ); ?></span>
 		<# } #>
 
-			<# if ( data.theme.screenshot[0] ) { #>
-				<div class="theme-screenshot">
-					<img data-src="{{ data.theme.screenshot[0] }}" alt="" />
-				</div>
-			<# } else { #>
-				<div class="theme-screenshot blank"></div>
-			<# } #>
+		<div class="theme-author"><?php
+		/* translators: Theme author name */
+		printf ( _x ( 'By %s', 'theme author' ), '{{ data.theme.author }}' );
+		?></div>
 
-			<# if ( data.theme.isActiveTheme ) { #>
-				<span class="more-details" id="{{ data.theme.id }}-action"><?php _e( 'Customize' ); ?></span>
-			<# } else { #>
-				<span class="more-details" id="{{ data.theme.id }}-action"><?php _e( 'Live Preview' ); ?></span>
-			<# } #>
-
-			<div class="theme-author"><?php
-				/* translators: Theme author name */
-				printf( _x( 'By %s', 'theme author' ), '{{ data.theme.author }}' );
-			?></div>
-
-			<# if ( data.theme.isActiveTheme ) { #>
-				<h3 class="theme-name" id="{{ data.theme.id }}-name">
+		<# if ( data.theme.isActiveTheme ) { #>
+		<h3 class="theme-name" id="{{ data.theme.id }}-name">
 					<?php
-					/* translators: %s: theme name */
-					printf( __( '<span>Active:</span> %s' ), '{{{ data.theme.name }}}' );
-					?>
+		/* translators: %s: theme name */
+		printf ( __ ( '<span>Active:</span> %s' ), '{{{ data.theme.name }}}' );
+		?>
 				</h3>
-			<# } else { #>
-				<h3 class="theme-name" id="{{ data.theme.id }}-name">{{{ data.theme.name }}}</h3>
-				<div class="theme-actions">
-					<button type="button" class="button theme-details"><?php _e( 'Theme Details' ); ?></button>
-				</div>
-			<# } #>
+		<# } else { #>
+		<h3 class="theme-name" id="{{ data.theme.id }}-name">{{{
+			data.theme.name }}}</h3>
+		<div class="theme-actions">
+			<button type="button" class="button theme-details"><?php _e( 'Theme Details' ); ?></button>
 		</div>
+		<# } #>
+	</div>
 	<?php
 	}
 }

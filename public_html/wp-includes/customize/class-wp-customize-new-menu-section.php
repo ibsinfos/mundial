@@ -13,11 +13,11 @@
  * Implements the new-menu-ui toggle button instead of a regular section.
  *
  * @since 4.3.0
- *
+ *       
  * @see WP_Customize_Section
  */
 class WP_Customize_New_Menu_Section extends WP_Customize_Section {
-
+	
 	/**
 	 * Control type.
 	 *
@@ -26,7 +26,7 @@ class WP_Customize_New_Menu_Section extends WP_Customize_Section {
 	 * @var string
 	 */
 	public $type = 'new_menu';
-
+	
 	/**
 	 * Render the section, and the controls that have been added to it.
 	 *
@@ -35,12 +35,14 @@ class WP_Customize_New_Menu_Section extends WP_Customize_Section {
 	 */
 	protected function render() {
 		?>
-		<li id="accordion-section-<?php echo esc_attr( $this->id ); ?>" class="accordion-section-new-menu">
-			<button type="button" class="button add-new-menu-item add-menu-toggle" aria-expanded="false">
+<li id="accordion-section-<?php echo esc_attr( $this->id ); ?>"
+	class="accordion-section-new-menu">
+	<button type="button" class="button add-new-menu-item add-menu-toggle"
+		aria-expanded="false">
 				<?php echo esc_html( $this->title ); ?>
 			</button>
-			<ul class="new-menu-section-content"></ul>
-		</li>
-		<?php
+	<ul class="new-menu-section-content"></ul>
+</li>
+<?php
 	}
 }

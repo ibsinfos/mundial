@@ -20,79 +20,86 @@ class Requests_Response_Headers extends Requests_Utility_CaseInsensitiveDictiona
 	 * Avoid using this where commas may be used unquoted in values, such as
 	 * Set-Cookie headers.
 	 *
-	 * @param string $key
+	 * @param string $key        	
 	 * @return string Header value
 	 */
 	public function offsetGet($key) {
-		$key = strtolower($key);
-		if (!isset($this->data[$key])) {
+		$key = strtolower ( $key );
+		if (! isset ( $this->data [$key] )) {
 			return null;
 		}
-
-		return $this->flatten($this->data[$key]);
+		
+		return $this->flatten ( $this->data [$key] );
 	}
-
+	
 	/**
 	 * Set the given item
 	 *
 	 * @throws Requests_Exception On attempting to use dictionary as list (`invalidset`)
-	 *
-	 * @param string $key Item name
-	 * @param string $value Item value
+	 *        
+	 * @param string $key
+	 *        	Item name
+	 * @param string $value
+	 *        	Item value
 	 */
 	public function offsetSet($key, $value) {
 		if ($key === null) {
-			throw new Requests_Exception('Object is a dictionary, not a list', 'invalidset');
+			throw new Requests_Exception ( 'Object is a dictionary, not a list', 'invalidset' );
 		}
-
-		$key = strtolower($key);
-
-		if (!isset($this->data[$key])) {
-			$this->data[$key] = array();
+		
+		$key = strtolower ( $key );
+		
+		if (! isset ( $this->data [$key] )) {
+			$this->data [$key] = array ();
 		}
-
-		$this->data[$key][] = $value;
+		
+		$this->data [$key] [] = $value;
 	}
-
+	
 	/**
 	 * Get all values for a given header
 	 *
-	 * @param string $key
+	 * @param string $key        	
 	 * @return array Header values
 	 */
 	public function getValues($key) {
-		$key = strtolower($key);
-		if (!isset($this->data[$key])) {
+		$key = strtolower ( $key );
+		if (! isset ( $this->data [$key] )) {
 			return null;
 		}
-
-		return $this->data[$key];
+		
+		return $this->data [$key];
 	}
-
+	
 	/**
 	 * Flattens a value into a string
 	 *
 	 * Converts an array into a string by imploding values with a comma, as per
 	 * RFC2616's rules for folding headers.
 	 *
-	 * @param string|array $value Value to flatten
+	 * @param string|array $value
+	 *        	Value to flatten
 	 * @return string Flattened value
 	 */
 	public function flatten($value) {
-		if (is_array($value)) {
-			$value = implode(',', $value);
+		if (is_array ( $value )) {
+			$value = implode ( ',', $value );
 		}
-
+		
 		return $value;
 	}
-
+	
 	/**
 	 * Get an iterator for the data
 	 *
 	 * Converts the internal
+	 * 
 	 * @return ArrayIterator
 	 */
 	public function getIterator() {
-		return new Requests_Utility_FilteredIterator($this->data, array($this, 'flatten'));
+		return new Requests_Utility_FilteredIterator ( $this->data, array (
+				$this,
+				'flatten' 
+		) );
 	}
 }

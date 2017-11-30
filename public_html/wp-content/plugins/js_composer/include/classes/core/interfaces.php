@@ -1,14 +1,16 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-	die( '-1' );
+if (! defined ( 'ABSPATH' )) {
+	die ( '-1' );
 }
 
 /**
+ *
  * @since 4.3
- * Interface for editors
+ *        Interface for editors
  */
 interface Vc_Editor_Interface {
 	/**
+	 *
 	 * @since 4.3
 	 * @return mixed
 	 */
@@ -16,11 +18,13 @@ interface Vc_Editor_Interface {
 }
 
 /**
+ *
  * @since 4.3
- * Default render interface
+ *        Default render interface
  */
 interface Vc_Render {
 	/**
+	 *
 	 * @since 4.3
 	 * @return mixed
 	 */
@@ -28,11 +32,13 @@ interface Vc_Render {
 }
 
 /**
+ *
  * @since 4.3
- * Interface for third-party plugins classes loader.
+ *        Interface for third-party plugins classes loader.
  */
 interface Vc_Vendor_Interface {
 	/**
+	 *
 	 * @since 4.3
 	 * @return mixed
 	 */

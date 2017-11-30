@@ -1,14 +1,14 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-	die( '-1' );
+if (! defined ( 'ABSPATH' )) {
+	die ( '-1' );
 }
 
 /**
  * WPBakery Visual Composer filter functions
  *
  * @package WPBakeryVisualComposer
- *
- * http://kb.wpbakery.com/index.php?title=Visual_Composer_Filters
+ *         
+ *          http://kb.wpbakery.com/index.php?title=Visual_Composer_Filters
  */
 
 /**
@@ -21,23 +21,23 @@ if ( ! defined( 'ABSPATH' ) ) {
  * vc_filter: wpb_widget_title
  * add_filter('wpb_widget_title', 'override_widget_title', 10, 2);
  * function override_widget_title($output = '', $params = array('')) {
- *    $extraclass = (isset($params['extraclass'])) ? " ".$params['extraclass'] : "";
- *    return '<h1 class="entry-title'.$extraclass.'">'.$params['title'].'</h1>';
+ * $extraclass = (isset($params['extraclass'])) ? " ".$params['extraclass'] : "";
+ * return '<h1 class="entry-title'.$extraclass.'">'.$params['title'].'</h1>';
  * }
  *
- * @param array $params
+ * @param array $params        	
  *
  * @return mixed|string|void
  */
-function wpb_widget_title( $params = array( 'title' => '' ) ) {
-	if ( '' === $params['title'] ) {
+function wpb_widget_title($params = array( 'title' => '' )) {
+	if ('' === $params ['title']) {
 		return '';
 	}
-
-	$extraclass = ( isset( $params['extraclass'] ) ) ? ' ' . $params['extraclass'] : '';
-	$output = '<h2 class="wpb_heading' . $extraclass . '">' . $params['title'] . '</h2>';
-
-	return apply_filters( 'wpb_widget_title', $output, $params );
+	
+	$extraclass = (isset ( $params ['extraclass'] )) ? ' ' . $params ['extraclass'] : '';
+	$output = '<h2 class="wpb_heading' . $extraclass . '">' . $params ['title'] . '</h2>';
+	
+	return apply_filters ( 'wpb_widget_title', $output, $params );
 }
 
 /*

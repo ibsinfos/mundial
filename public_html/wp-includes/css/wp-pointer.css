@@ -4,8 +4,8 @@
 	font-size: 13px;
 	background: #fff;
 	border: 1px solid #ddd;
-	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.075);
-	box-shadow: 0 3px 6px rgba(0,0,0,0.075);
+	-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.075);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.075);
 }
 
 .wp-pointer-content h3 {
@@ -81,8 +81,7 @@
 }
 
 /* The arrow base class must take up no space, even with transparent borders. */
-.wp-pointer-arrow,
-.wp-pointer-arrow-inner {
+.wp-pointer-arrow, .wp-pointer-arrow-inner {
 	position: absolute;
 	width: 0;
 	height: 0;
@@ -100,8 +99,7 @@
 }
 
 /* Make Room for the Arrow! */
-.wp-pointer-top,
-.wp-pointer-undefined {
+.wp-pointer-top, .wp-pointer-undefined {
 	padding-top: 13px;
 }
 
@@ -121,28 +119,27 @@
 }
 
 /* Base Size & Positioning */
-.wp-pointer-top .wp-pointer-arrow,
-.wp-pointer-bottom .wp-pointer-arrow,
-.wp-pointer-undefined .wp-pointer-arrow {
+.wp-pointer-top .wp-pointer-arrow, .wp-pointer-bottom .wp-pointer-arrow,
+	.wp-pointer-undefined .wp-pointer-arrow {
 	left: 50px;
 }
 
-.wp-pointer-left .wp-pointer-arrow,
-.wp-pointer-right .wp-pointer-arrow {
+.wp-pointer-left .wp-pointer-arrow, .wp-pointer-right .wp-pointer-arrow
+	{
 	top: 50%;
 	margin-top: -15px;
 }
 
 /* Arrow Sprite */
-.wp-pointer-top .wp-pointer-arrow,
-.wp-pointer-undefined .wp-pointer-arrow {
+.wp-pointer-top .wp-pointer-arrow, .wp-pointer-undefined .wp-pointer-arrow
+	{
 	top: 0;
 	border-width: 0 13px 13px 13px;
 	border-bottom-color: #3592b6;
 }
 
-.wp-pointer-top .wp-pointer-arrow-inner,
-.wp-pointer-undefined .wp-pointer-arrow-inner {
+.wp-pointer-top .wp-pointer-arrow-inner, .wp-pointer-undefined .wp-pointer-arrow-inner
+	{
 	top: 1px;
 	margin-left: -13px;
 	margin-top: -13px;

@@ -8,15 +8,18 @@
 
 <div id="cs-widgets-extra">
 
-	<?php /*
-	============================================================================
-	===== WIDGET head
-	============================================================================
-	*/ ?>
+	<?php 
+/*
+       * ============================================================================
+       * ===== WIDGET head
+       * ============================================================================
+       */
+	?>
 	<div id="cs-title-options">
 		<h2><?php _e( 'Sidebars', 'custom-sidebars' ); ?></h2>
 		<div id="cs-options" class="csb cs-options">
-			<button type="button" class="button button-primary cs-action btn-create-sidebar">
+			<button type="button"
+				class="button button-primary cs-action btn-create-sidebar">
 				<i class="dashicons dashicons-plus-alt"></i>
 				<?php _e( 'Create a new sidebar', 'custom-sidebars' ); ?>
 			</button>
@@ -24,17 +27,19 @@
 			/**
 			 * Show additional functions in the widget header.
 			 */
-			do_action( 'cs_widget_header' );
+			do_action ( 'cs_widget_header' );
 			?>
 		</div>
 	</div>
 
 
-	<?php /*
-	============================================================================
-	===== LANGUAGE
-	============================================================================
-	*/ ?>
+	<?php 
+/*
+			       * ============================================================================
+			       * ===== LANGUAGE
+			       * ============================================================================
+			       */
+	?>
 	<script>
 	csSidebarsData = {
 		'title_edit': "<?php _e( 'Edit [Sidebar]', 'custom-sidebars' ); ?>",
@@ -55,116 +60,98 @@
 	</script>
 
 
-	<?php /*
-	============================================================================
-	===== TOOLBAR for custom sidebars
-	============================================================================
-	*/ ?>
+	<?php 
+/*
+		       * ============================================================================
+		       * ===== TOOLBAR for custom sidebars
+		       * ============================================================================
+		       */
+	?>
 	<div class="cs-custom-sidebar cs-toolbar">
-		<a
-			class="cs-tool delete-sidebar"
-			data-action="delete"
-			href="#"
-			title="<?php _e( 'Delete this sidebar.', 'custom-sidebars' ); ?>"
-			>
-			<i class="dashicons dashicons-trash"></i>
-		</a>
-		<span class="cs-separator">|</span>
-		<a
-			class="cs-tool"
-			data-action="edit"
-			href="#"
-			title="<?php _e( 'Edit this sidebar.', 'custom-sidebars' ); ?>"
-			>
+		<a class="cs-tool delete-sidebar" data-action="delete" href="#"
+			title="<?php _e( 'Delete this sidebar.', 'custom-sidebars' ); ?>"> <i
+			class="dashicons dashicons-trash"></i>
+		</a> <span class="cs-separator">|</span> <a class="cs-tool"
+			data-action="edit" href="#"
+			title="<?php _e( 'Edit this sidebar.', 'custom-sidebars' ); ?>">
 			<?php _e( 'Edit', 'custom-sidebars' ); ?>
-		</a>
-		<span class="cs-separator">|</span>
-		<a
-			class="cs-tool"
-			data-action="location"
-			href="#"
-			title="<?php _e( 'Where do you want to show the sidebar?', 'custom-sidebars' ); ?>"
-			>
+		</a> <span class="cs-separator">|</span> <a class="cs-tool"
+			data-action="location" href="#"
+			title="<?php _e( 'Where do you want to show the sidebar?', 'custom-sidebars' ); ?>">
 			<?php _e( 'Sidebar Location', 'custom-sidebars' ); ?>
-		</a>
-		<span class="cs-separator">|</span>
+		</a> <span class="cs-separator">|</span>
 	</div>
 
 
-	<?php /*
-	============================================================================
-	===== TOOLBAR for theme sidebars
-	============================================================================
-	*/ ?>
+	<?php 
+/*
+			       * ============================================================================
+			       * ===== TOOLBAR for theme sidebars
+			       * ============================================================================
+			       */
+	?>
 	<div class="cs-theme-sidebar cs-toolbar">
-		<label
-			for="cs-replaceable"
-			class="cs-tool btn-replaceable"
+		<label for="cs-replaceable" class="cs-tool btn-replaceable"
 			data-action="replaceable"
 			data-on="<?php _e( 'This sidebar can be replaced on certain pages', 'custom-sidebars' ); ?>"
-			data-off="<?php _e( 'This sidebar will always be same on all pages', 'custom-sidebars' ); ?>"
-			>
-			<span class="icon"></span>
-			<input
-				type="checkbox"
-				id=""
-				class="has-label chk-replaceable"
-				/>
-			<span class="is-label">
+			data-off="<?php _e( 'This sidebar will always be same on all pages', 'custom-sidebars' ); ?>">
+			<span class="icon"></span> <input type="checkbox" id=""
+			class="has-label chk-replaceable" /> <span class="is-label">
 				<?php _e( 'Allow this sidebar to be replaced', 'custom-sidebars' ); ?>
 			</span>
-		</label>
-		<span class="cs-separator">|</span>
-		<span class="">
-			<a
-				class="cs-tool"
-				data-action="location"
-				href="#"
-				title="<?php _e( 'Where do you want to show the sidebar?', 'custom-sidebars' ); ?>"
-				>
+		</label> <span class="cs-separator">|</span> <span class=""> <a
+			class="cs-tool" data-action="location" href="#"
+			title="<?php _e( 'Where do you want to show the sidebar?', 'custom-sidebars' ); ?>">
 				<?php _e( 'Sidebar Location', 'custom-sidebars' ); ?>
-			</a>
-			<span class="cs-separator">|</span>
+			</a> <span class="cs-separator">|</span>
 		</span>
 	</div>
 
 
-	<?php /*
-	============================================================================
-	===== DELETE SIDEBAR confirmation
-	============================================================================
-	*/ ?>
+	<?php 
+/*
+				       * ============================================================================
+				       * ===== DELETE SIDEBAR confirmation
+				       * ============================================================================
+				       */
+	?>
 	<div class="cs-delete">
 	<?php include CSB_VIEWS_DIR . 'widgets-delete.php'; ?>
 	</div>
 
 
-	<?php /*
-	============================================================================
-	===== ADD/EDIT SIDEBAR
-	============================================================================
-	*/ ?>
+	<?php 
+/*
+	       * ============================================================================
+	       * ===== ADD/EDIT SIDEBAR
+	       * ============================================================================
+	       */
+	?>
 	<div class="cs-editor">
 	<?php include CSB_VIEWS_DIR . 'widgets-editor.php'; ?>
 	</div>
 
 
-	<?php /*
-	============================================================================
-	===== EXPORT
-	============================================================================
-	*/ ?>
+	<?php 
+/*
+	       * ============================================================================
+	       * ===== EXPORT
+	       * ============================================================================
+	       */
+	?>
 	<div class="cs-export">
 	<?php include CSB_VIEWS_DIR . 'widgets-export.php'; ?>
 	</div>
 
-	<?php /*
-	============================================================================
-	===== LOCATION popup.
-	============================================================================
-	*/ ?>
+	<?php 
+/*
+	       * ============================================================================
+	       * ===== LOCATION popup.
+	       * ============================================================================
+	       */
+	?>
 	<div class="cs-location">
 	<?php include CSB_VIEWS_DIR . 'widgets-location.php'; ?>
 	</div>
 
- </div>
+</div>

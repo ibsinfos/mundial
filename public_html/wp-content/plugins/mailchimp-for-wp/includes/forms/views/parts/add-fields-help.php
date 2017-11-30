@@ -9,7 +9,9 @@
 			<?php echo __( 'To add more fields to your form, you will need to create those fields in MailChimp first.', 'mailchimp-for-wp' ); ?>
 		</p>
 
-		<p><strong><?php echo __( "Here's how:", 'mailchimp-for-wp' ); ?></strong></p>
+		<p>
+			<strong><?php echo __( "Here's how:", 'mailchimp-for-wp' ); ?></strong>
+		</p>
 
 		<ol>
 			<li>
@@ -24,8 +26,10 @@
 				</p>
 				<ul class="children lists--only-selected">
 					<?php foreach( $lists as $list ) { ?>
-					<li data-list-id="<?php echo $list->id; ?>" class="<?php echo in_array( $list->id, $opts['lists'] ) ? '' : 'hidden'; ?>">
-						<a href="https://admin.mailchimp.com/lists/settings/merge-tags?id=<?php echo $list->web_id; ?>">
+					<li data-list-id="<?php echo $list->id; ?>"
+						class="<?php echo in_array( $list->id, $opts['lists'] ) ? '' : 'hidden'; ?>">
+						<a
+						href="https://admin.mailchimp.com/lists/settings/merge-tags?id=<?php echo $list->web_id; ?>">
 							<span class="screen-reader-text"><?php _e( 'Edit list fields for', 'mailchimp-for-wp' ); ?> </span>
 							<?php echo $list->name; ?>
 						</a>
@@ -39,7 +43,8 @@
 				</p>
 
 				<p>
-					<a class="button button-primary" href="<?php echo add_query_arg( array( '_mc4wp_action' => 'empty_lists_cache' ) ); ?>">
+					<a class="button button-primary"
+						href="<?php echo add_query_arg( array( '_mc4wp_action' => 'empty_lists_cache' ) ); ?>">
 						<?php _e( 'Renew MailChimp lists', 'mailchimp-for-wp' ); ?>
 					</a>
 				</p>

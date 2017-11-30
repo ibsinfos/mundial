@@ -17,7 +17,7 @@ class Requests_Exception_HTTP_405 extends Requests_Exception_HTTP {
 	 * @var integer
 	 */
 	protected $code = 405;
-
+	
 	/**
 	 * Reason phrase
 	 *

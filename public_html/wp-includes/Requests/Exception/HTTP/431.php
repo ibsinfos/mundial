@@ -19,7 +19,7 @@ class Requests_Exception_HTTP_431 extends Requests_Exception_HTTP {
 	 * @var integer
 	 */
 	protected $code = 431;
-
+	
 	/**
 	 * Reason phrase
 	 *

@@ -1,7 +1,7 @@
 #TB_overlay {
 	background: #000;
 	opacity: 0.7;
-	filter: alpha(opacity=70);
+	filter: alpha(opacity = 70);
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -18,8 +18,8 @@
 	text-align: left;
 	top: 50%;
 	left: 50%;
-	-webkit-box-shadow: 0 3px 6px rgba( 0, 0, 0, 0.3 );
-	box-shadow: 0 3px 6px rgba( 0, 0, 0, 0.3 );
+	-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 #TB_window img#TB_Image {
@@ -31,7 +31,7 @@
 	border-left: 1px solid #666;
 }
 
-#TB_caption{
+#TB_caption {
 	height: 25px;
 	padding: 7px 30px 10px 25px;
 	float: left;
@@ -66,7 +66,7 @@
 	padding: 0 29px 0 10px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	width: calc( 100% - 39px );
+	width: calc(100% - 39px);
 }
 
 #TB_title {
@@ -110,7 +110,7 @@
 	left: 0;
 	background-color: #fff;
 	border: none;
-	filter: alpha(opacity=0);
+	filter: alpha(opacity = 0);
 	opacity: 0;
 	height: 100%;
 	width: 100%;
@@ -141,16 +141,13 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-#TB_closeWindowButton:hover .tb-close-icon,
-#TB_closeWindowButton:focus .tb-close-icon {
+#TB_closeWindowButton:hover .tb-close-icon, #TB_closeWindowButton:focus .tb-close-icon
+	{
 	color: #00a0d2;
 }
 
 #TB_closeWindowButton:focus .tb-close-icon {
-	-webkit-box-shadow:
-		0 0 0 1px #5b9dd9,
-		0 0 2px 1px rgba(30, 140, 190, .8);
-	box-shadow:
-		0 0 0 1px #5b9dd9,
-		0 0 2px 1px rgba(30, 140, 190, .8);
+	-webkit-box-shadow: 0 0 0 1px #5b9dd9, 0 0 2px 1px
+		rgba(30, 140, 190, .8);
+	box-shadow: 0 0 0 1px #5b9dd9, 0 0 2px 1px rgba(30, 140, 190, .8);
 }

@@ -1,11 +1,15 @@
 <?php if ( $type == 'plugin' ) :?>
-<div class="updated" style="padding: 0; margin: 0; border: none; background: none;">
-	<form name="akismet_activate" action="<?php echo esc_url( Akismet_Admin::get_page_url() ); ?>" method="POST">
+<div class="updated"
+	style="padding: 0; margin: 0; border: none; background: none;">
+	<form name="akismet_activate"
+		action="<?php echo esc_url( Akismet_Admin::get_page_url() ); ?>"
+		method="POST">
 		<div class="akismet_activate">
 			<div class="aa_a">A</div>
 			<div class="aa_button_container">
 				<div class="aa_button_border">
-					<input type="submit" class="aa_button" value="<?php esc_attr_e( 'Activate your Akismet account', 'akismet' ); ?>" />
+					<input type="submit" class="aa_button"
+						value="<?php esc_attr_e( 'Activate your Akismet account', 'akismet' ); ?>" />
 				</div>
 			</div>
 			<div class="aa_description"><?php _e('<strong>Almost done</strong> - activate Akismet and say goodbye to spam', 'akismet');?></div>
@@ -14,23 +18,30 @@
 </div>
 <?php elseif ( $type == 'spam-check' ) :?>
 <div id="akismet-warning" class="updated fade">
-	<p><strong><?php esc_html_e( 'Akismet has detected a problem.', 'akismet' );?></strong></p>
+	<p>
+		<strong><?php esc_html_e( 'Akismet has detected a problem.', 'akismet' );?></strong>
+	</p>
 	<p><?php printf( __( 'Some comments have not yet been checked for spam by Akismet. They have been temporarily held for moderation and will automatically be rechecked later.', 'akismet' ) ); ?></p>
 	<?php if ( $link_text ) { ?>
 		<p><?php echo $link_text; ?></p>
 	<?php } ?>
 </div>
 <?php elseif ( $type == 'version' ) :?>
-<div id="akismet-warning" class="updated fade"><p><strong><?php printf( esc_html__('Akismet %s requires WordPress 3.0 or higher.', 'akismet'), AKISMET_VERSION);?></strong> <?php printf(__('Please <a href="%1$s">upgrade WordPress</a> to a current version, or <a href="%2$s">downgrade to version 2.4 of the Akismet plugin</a>.', 'akismet'), 'https://codex.wordpress.org/Upgrading_WordPress', 'https://wordpress.org/extend/plugins/akismet/download/');?></p></div>
+<div id="akismet-warning" class="updated fade">
+	<p>
+		<strong><?php printf( esc_html__('Akismet %s requires WordPress 3.0 or higher.', 'akismet'), AKISMET_VERSION);?></strong> <?php printf(__('Please <a href="%1$s">upgrade WordPress</a> to a current version, or <a href="%2$s">downgrade to version 2.4 of the Akismet plugin</a>.', 'akismet'), 'https://codex.wordpress.org/Upgrading_WordPress', 'https://wordpress.org/extend/plugins/akismet/download/');?></p>
+</div>
 <?php elseif ( $type == 'alert' ) :?>
 <div class='error'>
-	<p><strong><?php printf( esc_html__( 'Akismet Error Code: %s', 'akismet' ), $code ); ?></strong></p>
+	<p>
+		<strong><?php printf( esc_html__( 'Akismet Error Code: %s', 'akismet' ), $code ); ?></strong>
+	</p>
 	<p><?php echo esc_html( $msg ); ?></p>
 	<p><?php
-
+	
 	/* translators: the placeholder is a clickable URL that leads to more information regarding an error code. */
-	printf( esc_html__( 'For more information: %s' , 'akismet'), '<a href="https://akismet.com/errors/' . $code . '">https://akismet.com/errors/' . $code . '</a>' );
-
+	printf ( esc_html__ ( 'For more information: %s', 'akismet' ), '<a href="https://akismet.com/errors/' . $code . '">https://akismet.com/errors/' . $code . '</a>' );
+	
 	?>
 	</p>
 </div>
@@ -81,7 +92,8 @@
 	<h3 class="key-status failed"><?php esc_html_e( 'You don&#8217;t have an Akismet plan.', 'akismet'); ?></h3>
 	<p class="description">
 		<?php printf( __( 'In 2012, Akismet began using subscription plans for all accounts (even free ones). A plan has not been assigned to your account, and we&#8217;d appreciate it if you&#8217;d <a href="%s" target="_blank">sign into your account</a> and choose one.', 'akismet'), 'https://akismet.com/account/upgrade/' ); ?>
-		<br /><br />
+		<br />
+		<br />
 		<?php printf( __( 'Please <a href="%s" target="_blank">contact our support team</a> with any questions.', 'akismet' ), 'https://akismet.com/contact/' ); ?>
 	</p>
 </div>
@@ -108,14 +120,16 @@
 	<h3 class="key-status failed"><?php esc_html_e( 'You&#8217;re using your Akismet key on more sites than your Pro subscription allows.', 'akismet' ); ?></h3>
 	<p class="description">
 		<?php printf( __( 'Your Pro subscription allows the use of Akismet on only one site. Please <a href="%s" target="_blank">purchase additional Pro subscriptions</a> or upgrade to an Enterprise subscription that allows the use of Akismet on unlimited sites.', 'akismet' ), 'https://docs.akismet.com/billing/add-more-sites/' ); ?>
-		<br /><br />
+		<br />
+		<br />
 		<?php printf( __( 'Please <a href="%s" target="_blank">contact our support team</a> with any questions.', 'akismet' ), 'https://akismet.com/contact/'); ?>
 	</p>
 	<?php elseif ( $level == 'red' ): ?>
 	<h3 class="key-status failed"><?php esc_html_e( 'You&#8217;re using Akismet on far too many sites for your Pro subscription.', 'akismet' ); ?></h3>
 	<p class="description">
 		<?php printf( __( 'To continue your service, <a href="%s" target="_blank">upgrade to an Enterprise subscription</a>, which covers an unlimited number of sites.', 'akismet'), 'https://akismet.com/account/upgrade/' ); ?></p>
-		<br /><br />
+	<br />
+	<br />
 		<?php printf( __( 'Please <a href="%s" target="_blank">contact our support team</a> with any questions.', 'akismet' ), 'https://akismet.com/contact/'); ?></p>
 	</p>
 	<?php endif; ?>

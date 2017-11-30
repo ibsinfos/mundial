@@ -17,7 +17,7 @@ class Requests_Exception_HTTP_413 extends Requests_Exception_HTTP {
 	 * @var integer
 	 */
 	protected $code = 413;
-
+	
 	/**
 	 * Reason phrase
 	 *

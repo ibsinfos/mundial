@@ -1,30 +1,33 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-	die( '-1' );
+if (! defined ( 'ABSPATH' )) {
+	die ( '-1' );
 }
 /**
  * Shortcode attributes
+ * 
  * @var $atts
  * @var $content - shortcode content
- * Shortcode class
+ *      Shortcode class
  * @var $this WPBakeryShortCode_VC_Cta
  */
 
-$atts = vc_map_get_attributes( $this->getShortcode(), $atts );
-$this->buildTemplate( $atts, $content );
-$containerClass = trim( 'vc_cta3-container ' . esc_attr( implode( ' ', $this->getTemplateVariable( 'container-class' ) ) ) );
-$cssClass = trim( 'vc_general ' . esc_attr( implode( ' ', $this->getTemplateVariable( 'css-class' ) ) ) );
-$wrapper_attributes = array();
-if ( ! empty( $atts['el_id'] ) ) {
-	$wrapper_attributes[] = 'id="' . esc_attr( $atts['el_id'] ) . '"';
+$atts = vc_map_get_attributes ( $this->getShortcode (), $atts );
+$this->buildTemplate ( $atts, $content );
+$containerClass = trim ( 'vc_cta3-container ' . esc_attr ( implode ( ' ', $this->getTemplateVariable ( 'container-class' ) ) ) );
+$cssClass = trim ( 'vc_general ' . esc_attr ( implode ( ' ', $this->getTemplateVariable ( 'css-class' ) ) ) );
+$wrapper_attributes = array ();
+if (! empty ( $atts ['el_id'] )) {
+	$wrapper_attributes [] = 'id="' . esc_attr ( $atts ['el_id'] ) . '"';
 }
 ?>
-<section class="<?php echo esc_attr( $containerClass ); ?>" <?php echo implode( ' ', $wrapper_attributes ); ?>>
-	<div class="<?php echo esc_attr( $cssClass ); ?>"<?php
-	if ( $this->getTemplateVariable( 'inline-css' ) ) {
-		echo ' style="' . esc_attr( implode( ' ', $this->getTemplateVariable( 'inline-css' ) ) ) . '"';
-	}
-	?>>
+<section class="<?php echo esc_attr( $containerClass ); ?>"
+	<?php echo implode( ' ', $wrapper_attributes ); ?>>
+	<div class="<?php echo esc_attr( $cssClass ); ?>"
+		<?php
+		if ($this->getTemplateVariable ( 'inline-css' )) {
+			echo ' style="' . esc_attr ( implode ( ' ', $this->getTemplateVariable ( 'inline-css' ) ) ) . '"';
+		}
+		?>>
 		<?php echo $this->getTemplateVariable( 'icons-top' ); ?>
 		<?php echo $this->getTemplateVariable( 'icons-left' ); ?>
 		<div class="vc_cta3_content-container">

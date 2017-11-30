@@ -1,52 +1,59 @@
 <?php
-if( !defined( 'ABSPATH') ) exit();
+if (! defined ( 'ABSPATH' ))
+	exit ();
 
-$tmpl = new RevSliderTemplate();
+$tmpl = new RevSliderTemplate ();
 
-$author_template_slider = $tmpl->getDefaultTemplateSliders();
+$author_template_slider = $tmpl->getDefaultTemplateSliders ();
 
-$tmp_slider = new RevSlider();
+$tmp_slider = new RevSlider ();
 
-$operations = new RevSliderOperations();
-$glob_vals = $operations->getGeneralSettingsValues();
-//$all_slider = $tmp_slider->getArrSliders();
+$operations = new RevSliderOperations ();
+$glob_vals = $operations->getGeneralSettingsValues ();
+// $all_slider = $tmp_slider->getArrSliders();
 
 ?>
 <!-- THE TEMPLATE AREA -->
 <div id="template_area">
 	<div id="template_header_part">
-		<h2><span class="revlogo-mini" style="margin-right:15px;"></span><?php _e('Slider Template Library', 'revslider'); ?></h2>
-		
+		<h2>
+			<span class="revlogo-mini" style="margin-right: 15px;"></span><?php _e('Slider Template Library', 'revslider'); ?></h2>
+
 		<div id="close-template"></div>
-		
-		<div class="revolution-template-switcher">		
-			<span id="template_filter_buttons_wrapper" style="display:table-cell;vertical-align:top">	
+
+		<div class="revolution-template-switcher">
+			<span id="template_filter_buttons_wrapper"
+				style="display: table-cell; vertical-align: top">	
 				<?php
-				if(!empty($author_template_slider) && is_array($author_template_slider)){
-					foreach($author_template_slider as $name => $v){
+				if (! empty ( $author_template_slider ) && is_array ( $author_template_slider )) {
+					foreach ( $author_template_slider as $name => $v ) {
 						?>
-						<span data-type="temp_<?php echo sanitize_title($name); ?>" class="template_filter_button"><?php echo esc_attr($name); ?></span>
+						<span data-type="temp_<?php echo sanitize_title($name); ?>"
+				class="template_filter_button"><?php echo esc_attr($name); ?></span>
 						<?php
 					}
 				}
 				?>
-				<span style="display:none" id="selected_template_package_title">Light Content Block Page</span>
-				<span  style="display:none" id="leave_selected_template_package"><?php _e('Back', 'revslider'); ?></span>
+				<span style="display: none" id="selected_template_package_title">Light
+					Content Block Page</span> <span style="display: none"
+				id="leave_selected_template_package"><?php _e('Back', 'revslider'); ?></span>
 				<span class="template_filter_button selected" data-type="temp_all"><?php _e('All Templates', 'revslider'); ?></span>
 				<span class="template_filter_button" data-type="template_free"><?php _e('Free Templates', 'revslider'); ?></span>
 				<span class="template_filter_button" data-type="template_premium"><?php _e('Premium Templates', 'revslider'); ?></span>
-				<span class="template_filter_button" data-type="template_package_parent"><?php _e('Packages', 'revslider'); ?></span>
+				<span class="template_filter_button"
+				data-type="template_package_parent"><?php _e('Packages', 'revslider'); ?></span>
 				<span class="template_filter_button" data-type="temp_slider"><?php _e('Slider', 'revslider'); ?></span>
-				<span class="template_filter_button" data-type="temp_carousel"><?php _e('Carousel', 'revslider'); ?></span>			
+				<span class="template_filter_button" data-type="temp_carousel"><?php _e('Carousel', 'revslider'); ?></span>
 				<span class="template_filter_button" data-type="temp_hero"><?php _e('Hero', 'revslider'); ?></span>
 				<span class="template_filter_button" data-type="temp_notinstalled"><?php _e('Not Installed', 'revslider'); ?></span>
 				<span class="template_filter_button" data-type="temp_socialmedia"><?php _e('Social Media', 'revslider'); ?></span>
 				<span class="template_filter_button" data-type="temp_postbased"><?php _e('Post-Based', 'revslider'); ?></span>
-				<span class="template_filter_button temp_new_udpated" data-type="temp_newupdate"><?php _e('New / Updated', 'revslider'); ?></span>			
-			</span>
-			<span style="display:table-cell;vertical-align:top;text-align:right">
+				<span class="template_filter_button temp_new_udpated"
+				data-type="temp_newupdate"><?php _e('New / Updated', 'revslider'); ?></span>
+			</span> <span
+				style="display: table-cell; vertical-align: top; text-align: right">
 				<span class="rs-reload-shop"><i class="eg-icon-arrows-ccw"></i><?php _e('Update Library', 'revslider'); ?></span>
-			</span>			
+			</span>
 		</div>
 	</div>
 
@@ -54,8 +61,8 @@ $glob_vals = $operations->getGeneralSettingsValues();
 	<div class="revolution-template-groups">
 		<!-- TEMPLATES WILL BE ADDED OVER AJAX -->
 	</div>
-	
-	
+
+
 </div>
 
 <script>
@@ -243,7 +250,7 @@ $glob_vals = $operations->getGeneralSettingsValues();
 	};
 	
 	<?php
-	if(isset($_REQUEST['update_shop'])){
+	if (isset ( $_REQUEST ['update_shop'] )) {
 		?>
 		jQuery(document).ready(function(){
 			var recalls_amount = 0;
@@ -278,36 +285,50 @@ $glob_vals = $operations->getGeneralSettingsValues();
 
 
 <!-- Import template slider dialog -->
-<div id="dialog_import_template_slider" title="<?php _e("Import Template Slider",'revslider'); ?>" class="dialog_import_template_slider" style="display:none">
-	<form id="form-import-online-slider-local" action="<?php echo RevSliderBase::$url_ajax; ?>" enctype="multipart/form-data" method="post">
-		<input type="hidden" name="action" value="revslider_ajax_action">
-		<input type="hidden" name="client_action" value="import_slider_template_slidersview">
-		<input type="hidden" name="nonce" value="<?php echo wp_create_nonce("revslider_actions"); ?>">
-		<input type="hidden" name="uid" class="rs-uid" value="">
-		
-		<p><?php _e('Please select the corresponding zip file from the download packages import folder called', 'revslider'); ?>:</p> 
-		<p class="filetoimport"><b><span class="rs-zip-name"></span></b></p>
+<div id="dialog_import_template_slider"
+	title="<?php _e("Import Template Slider",'revslider'); ?>"
+	class="dialog_import_template_slider" style="display: none">
+	<form id="form-import-online-slider-local"
+		action="<?php echo RevSliderBase::$url_ajax; ?>"
+		enctype="multipart/form-data" method="post">
+		<input type="hidden" name="action" value="revslider_ajax_action"> <input
+			type="hidden" name="client_action"
+			value="import_slider_template_slidersview"> <input type="hidden"
+			name="nonce"
+			value="<?php echo wp_create_nonce("revslider_actions"); ?>"> <input
+			type="hidden" name="uid" class="rs-uid" value="">
+
+		<p><?php _e('Please select the corresponding zip file from the download packages import folder called', 'revslider'); ?>:</p>
+		<p class="filetoimport">
+			<b><span class="rs-zip-name"></span></b>
+		</p>
 		<?php
-		$single_page_creation = RevSliderFunctions::getVal($glob_vals, "single_page_creation", "off");
+		$single_page_creation = RevSliderFunctions::getVal ( $glob_vals, "single_page_creation", "off" );
 		?>
 		<table style="margin: 20px 0;<?php echo ($single_page_creation == 'on') ? '' : 'display: none;'; ?>">
 			<tr>
 				<td><?php _e('Create Blank Page:','revslider'); ?></td>
 				<td><input type="radio" name="page-creation" value="true"> <?php _e('Yes', 'revslider'); ?></td>
-				<td><input type="radio" name="page-creation" value="false" checked="checked"> <?php _e('No', 'revslider'); ?></td>
+				<td><input type="radio" name="page-creation" value="false"
+					checked="checked"> <?php _e('No', 'revslider'); ?></td>
 			</tr>
 		</table>
 		<?php
 		
 		?>
-		<p class="import-file-wrapper"><input type="file" size="60" name="import_file" class="input_import_slider "></p>
-		<span style="margin-top:45px;display:block"><input type="submit" class="rs-import-slider-button button-primary revblue tp-be-button" value="<?php _e("Import Template Slider",'revslider'); ?>"></span>
-		<span class="tp-clearfix"></span>
-		<span style="font-weight: 700;"><?php _e("Note: style templates will be updated if they exist!",'revslider'); ?></span>
+		<p class="import-file-wrapper">
+			<input type="file" size="60" name="import_file"
+				class="input_import_slider ">
+		</p>
+		<span style="margin-top: 45px; display: block"><input type="submit"
+			class="rs-import-slider-button button-primary revblue tp-be-button"
+			value="<?php _e("Import Template Slider",'revslider'); ?>"></span> <span
+			class="tp-clearfix"></span> <span style="font-weight: 700;"><?php _e("Note: style templates will be updated if they exist!",'revslider'); ?></span>
 		<table style="display: none;">
 			<tr>
 				<td><?php _e("Custom Animations:",'revslider'); ?></td>
-				<td><input type="radio" name="update_animations" value="true" checked="checked"> <?php _e('Overwrite','revslider'); ?></td>
+				<td><input type="radio" name="update_animations" value="true"
+					checked="checked"> <?php _e('Overwrite','revslider'); ?></td>
 				<td><input type="radio" name="update_animations" value="false"> <?php _e('Append','revslider'); ?></td>
 			</tr>
 			<!--tr>
@@ -321,29 +342,46 @@ $glob_vals = $operations->getGeneralSettingsValues();
 </div>
 
 
-<div id="dialog_import_template_slider_from" title="<?php _e("Import Template Slider",'revslider'); ?>" class="dialog_import_template_slider_from" style="display:none">
+<div id="dialog_import_template_slider_from"
+	title="<?php _e("Import Template Slider",'revslider'); ?>"
+	class="dialog_import_template_slider_from" style="display: none">
 	<?php _e('Import Slider from local or from ThemePunch server?', 'revslider'); ?>
-	<form action="<?php echo RevSliderBase::$url_ajax; ?>" enctype="multipart/form-data" method="post" name="rs-import-template-from-server" id="rs-import-template-from-server">
-		<input type="hidden" name="action" value="revslider_ajax_action">
-		<input type="hidden" name="client_action" value="import_slider_online_template_slidersview">
-		<input type="hidden" name="nonce" value="<?php echo wp_create_nonce("revslider_actions"); ?>">
-		<input type="hidden" name="uid" class="rs-uid" value="">
-		<input type="hidden" name="package" class="rs-package" value="false">
-		<input type="hidden" name="page-creation" class="rs-page-creation" value="false">
+	<form action="<?php echo RevSliderBase::$url_ajax; ?>"
+		enctype="multipart/form-data" method="post"
+		name="rs-import-template-from-server"
+		id="rs-import-template-from-server">
+		<input type="hidden" name="action" value="revslider_ajax_action"> <input
+			type="hidden" name="client_action"
+			value="import_slider_online_template_slidersview"> <input
+			type="hidden" name="nonce"
+			value="<?php echo wp_create_nonce("revslider_actions"); ?>"> <input
+			type="hidden" name="uid" class="rs-uid" value=""> <input
+			type="hidden" name="package" class="rs-package" value="false"> <input
+			type="hidden" name="page-creation" class="rs-page-creation"
+			value="false">
 	</form>
 </div>
 
-<div id="dialog_import_template_slider_info" title="<?php _e('Importing Status','revslider'); ?>" class="dialog_import_template_slider_info" style="display:none">
+<div id="dialog_import_template_slider_info"
+	title="<?php _e('Importing Status','revslider'); ?>"
+	class="dialog_import_template_slider_info" style="display: none">
 	<!-- ADD INFOS HERE ON DEMAND -->
-	<div class="revslider_logo_rotating"><div class="revslidercycle"></div></div>
-	<div id="install-slider-counter-wrapper"><span id="install-slider-counter"></span></div>
+	<div class="revslider_logo_rotating">
+		<div class="revslidercycle"></div>
+	</div>
+	<div id="install-slider-counter-wrapper">
+		<span id="install-slider-counter"></span>
+	</div>
 	<div id="nowinstalling_label"><?php _e('Now Installing','revslider'); ?></div>
 	<div id="import_dialog_box_action"></div>
 	<div id="import_dialog_box"></div>
-	
+
 </div>
 
-<div id="dialog_import_template_slider_page_template" title="<?php _e("Create Blank Page",'revslider'); ?>" class="dialog_import_template_slider_page_template" style="display:none">
+<div id="dialog_import_template_slider_page_template"
+	title="<?php _e("Create Blank Page",'revslider'); ?>"
+	class="dialog_import_template_slider_page_template"
+	style="display: none">
 	<?php
 	_e('Create a Blank Demo Page with this Slider added to it?', 'revslider');
 	?>

@@ -2,51 +2,64 @@
 	font-family: "Flaticon";
 	src: url("flaticon.eot");
 	src: url("flaticon.eot#iefix") format("embedded-opentype"),
-	url("flaticon.woff") format("woff"),
-	url("flaticon.ttf") format("truetype"),
-	url("flaticon.svg") format("svg");
+		url("flaticon.woff") format("woff"), url("flaticon.ttf")
+		format("truetype"), url("flaticon.svg") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after,
+	[class*=" flaticon-"]:after {
 	font-family: Flaticon;
-        font-size: 20px;
-font-style: normal;
-margin-left: 20px;
-}.flaticon-2440:before {
+	font-size: 20px;
+	font-style: normal;
+	margin-left: 20px;
+}
+
+.flaticon-2440:before {
 	content: "\e000";
 }
+
 .flaticon-avatar23:before {
 	content: "\e001";
 }
+
 .flaticon-call37:before {
 	content: "\e002";
 }
+
 .flaticon-customerservice10:before {
 	content: "\e003";
 }
+
 .flaticon-networking9:before {
 	content: "\e004";
 }
+
 .flaticon-operator:before {
 	content: "\e005";
 }
+
 .flaticon-shopping160:before {
 	content: "\e006";
 }
+
 .flaticon-shopping18:before {
 	content: "\e007";
 }
+
 .flaticon-storage17:before {
 	content: "\e008";
 }
+
 .flaticon-telemarketer1:before {
 	content: "\e009";
 }
+
 .flaticon-user220:before {
 	content: "\e00a";
 }
+
 .flaticon-woman16:before {
 	content: "\e00b";
 }

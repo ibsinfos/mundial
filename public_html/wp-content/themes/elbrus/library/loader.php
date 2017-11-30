@@ -1,12 +1,11 @@
 <?php
+define ( 'elbrusDeveloperLog', false );
 
-	define('elbrusDeveloperLog', false);
+/* Load CORE main file */
+require_once (get_template_directory () . '/library/core/index.php');
 
-	/* Load CORE main file */
-	require_once( get_template_directory() . '/library/core/index.php');
+/* Load THEME main file */
+require_once (get_template_directory () . '/library/theme/index.php');
 
-	/* Load THEME main file */
-	require_once( get_template_directory(). '/library/theme/index.php');
-
-	/* Load Plugins */
-	require_once( get_template_directory() . '/library/plugin-activation.php');
+/* Load Plugins */
+require_once (get_template_directory () . '/library/plugin-activation.php');

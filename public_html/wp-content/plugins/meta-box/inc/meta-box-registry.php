@@ -15,28 +15,30 @@ class RWMB_Meta_Box_Registry {
 	 *
 	 * @var array
 	 */
-	private $data = array();
-
+	private $data = array ();
+	
 	/**
 	 * Add a meta box to the registry.
 	 *
-	 * @param RW_Meta_Box $meta_box Meta box instance.
+	 * @param RW_Meta_Box $meta_box
+	 *        	Meta box instance.
 	 */
-	public function add( RW_Meta_Box $meta_box ) {
-		$this->data[ $meta_box->id ] = $meta_box;
+	public function add(RW_Meta_Box $meta_box) {
+		$this->data [$meta_box->id] = $meta_box;
 	}
-
+	
 	/**
 	 * Retrieve a meta box by id.
 	 *
-	 * @param string $id Meta box id.
-	 *
+	 * @param string $id
+	 *        	Meta box id.
+	 *        	
 	 * @return RW_Meta_Box|bool False or meta box object.
 	 */
-	public function get( $id ) {
-		return isset( $this->data[ $id ] ) ? $this->data[ $id ] : false;
+	public function get($id) {
+		return isset ( $this->data [$id] ) ? $this->data [$id] : false;
 	}
-
+	
 	/**
 	 * Retrieve all meta boxes.
 	 *

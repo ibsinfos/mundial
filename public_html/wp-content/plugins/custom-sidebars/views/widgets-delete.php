@@ -8,9 +8,10 @@
 
 <div class="wpmui-form">
 	<div>
-	<?php _e(
-		'Please confirm that you want to delete the sidebar <strong class="name"></strong>.', 'custom-sidebars'
-	); ?>
+	<?php
+	
+_e ( 'Please confirm that you want to delete the sidebar <strong class="name"></strong>.', 'custom-sidebars' );
+	?>
 	</div>
 	<div class="buttons">
 		<button type="button" class="button-link btn-cancel"><?php _e( 'Cancel', 'custom-sidebars' ); ?></button>

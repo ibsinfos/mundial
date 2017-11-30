@@ -1,8 +1,8 @@
 <?php
 
 // get meta options/values
-$elbrus_quote_content = rwmb_meta('post_quote_content');
-$elbrus_quote_source = rwmb_meta('post_quote_source');
+$elbrus_quote_content = rwmb_meta ( 'post_quote_content' );
+$elbrus_quote_source = rwmb_meta ( 'post_quote_source' );
 
 ?>
 <div class="post-quotes">

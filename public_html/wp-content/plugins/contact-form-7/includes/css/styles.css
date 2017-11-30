@@ -61,8 +61,7 @@ span.wpcf7-list-item {
 	margin: 0 0 0 1em;
 }
 
-span.wpcf7-list-item-label::before,
-span.wpcf7-list-item-label::after {
+span.wpcf7-list-item-label::before, span.wpcf7-list-item-label::after {
 	content: " ";
 }
 

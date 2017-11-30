@@ -21,7 +21,7 @@ class WP_Role {
 	 * @var string
 	 */
 	public $name;
-
+	
 	/**
 	 * List of capabilities the role contains.
 	 *
@@ -30,7 +30,7 @@ class WP_Role {
 	 * @var array
 	 */
 	public $capabilities;
-
+	
 	/**
 	 * Constructor - Set up object properties.
 	 *
@@ -39,29 +39,33 @@ class WP_Role {
 	 *
 	 * @since 2.0.0
 	 * @access public
-	 *
-	 * @param string $role Role name.
-	 * @param array $capabilities List of capabilities.
+	 *        
+	 * @param string $role
+	 *        	Role name.
+	 * @param array $capabilities
+	 *        	List of capabilities.
 	 */
-	public function __construct( $role, $capabilities ) {
+	public function __construct($role, $capabilities) {
 		$this->name = $role;
 		$this->capabilities = $capabilities;
 	}
-
+	
 	/**
 	 * Assign role a capability.
 	 *
 	 * @since 2.0.0
 	 * @access public
-	 *
-	 * @param string $cap Capability name.
-	 * @param bool $grant Whether role has capability privilege.
+	 *        
+	 * @param string $cap
+	 *        	Capability name.
+	 * @param bool $grant
+	 *        	Whether role has capability privilege.
 	 */
-	public function add_cap( $cap, $grant = true ) {
-		$this->capabilities[$cap] = $grant;
-		wp_roles()->add_cap( $this->name, $cap, $grant );
+	public function add_cap($cap, $grant = true) {
+		$this->capabilities [$cap] = $grant;
+		wp_roles ()->add_cap ( $this->name, $cap, $grant );
 	}
-
+	
 	/**
 	 * Removes a capability from a role.
 	 *
@@ -72,14 +76,15 @@ class WP_Role {
 	 *
 	 * @since 2.0.0
 	 * @access public
-	 *
-	 * @param string $cap Capability name.
+	 *        
+	 * @param string $cap
+	 *        	Capability name.
 	 */
-	public function remove_cap( $cap ) {
-		unset( $this->capabilities[$cap] );
-		wp_roles()->remove_cap( $this->name, $cap );
+	public function remove_cap($cap) {
+		unset ( $this->capabilities [$cap] );
+		wp_roles ()->remove_cap ( $this->name, $cap );
 	}
-
+	
 	/**
 	 * Determines whether the role has the given capability.
 	 *
@@ -90,26 +95,29 @@ class WP_Role {
 	 *
 	 * @since 2.0.0
 	 * @access public
-	 *
-	 * @param string $cap Capability name.
+	 *        
+	 * @param string $cap
+	 *        	Capability name.
 	 * @return bool True if the role has the given capability. False otherwise.
 	 */
-	public function has_cap( $cap ) {
+	public function has_cap($cap) {
 		/**
 		 * Filters which capabilities a role has.
 		 *
 		 * @since 2.0.0
-		 *
-		 * @param array  $capabilities Array of role capabilities.
-		 * @param string $cap          Capability name.
-		 * @param string $name         Role name.
+		 *       
+		 * @param array $capabilities
+		 *        	Array of role capabilities.
+		 * @param string $cap
+		 *        	Capability name.
+		 * @param string $name
+		 *        	Role name.
 		 */
-		$capabilities = apply_filters( 'role_has_cap', $this->capabilities, $cap, $this->name );
-
-		if ( !empty( $capabilities[$cap] ) )
-			return $capabilities[$cap];
+		$capabilities = apply_filters ( 'role_has_cap', $this->capabilities, $cap, $this->name );
+		
+		if (! empty ( $capabilities [$cap] ))
+			return $capabilities [$cap];
 		else
 			return false;
 	}
-
 }

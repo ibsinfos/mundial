@@ -4,13 +4,12 @@
  * @link      http://www.themepunch.com/
  * @copyright 2015 ThemePunch
  */
-
- 
-if( !defined( 'ABSPATH') ) exit();
+if (! defined ( 'ABSPATH' ))
+	exit ();
 
 $is_edit = false;
 
-require self::getPathTemplate('slider-main-options');
+require self::getPathTemplate ( 'slider-main-options' );
 ?>
 
 <script type="text/javascript">

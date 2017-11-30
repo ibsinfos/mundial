@@ -14,24 +14,21 @@
  *   - $modal
  *   - $blur
  */
-
 $class = 'wpmui-pointer prepared';
-if ( ! empty( $title ) ) {
+if (! empty ( $title )) {
 	$title = '<h3>' . $title . '</h3>';
 } else {
 	$title = '';
 	$class .= ' no-title';
 }
 
-$code = sprintf(
-	'<div class="%3$s">%1$s<p>%2$s</p></div>',
-	$title,
-	$body,
-	esc_attr( $class )
-);
+$code = sprintf ( '<div class="%3$s">%1$s<p>%2$s</p></div>', $title, $body, esc_attr ( $class ) );
 
 // Remove linebreaks to avoid JS errors
-$code = str_replace( array("\r", "\n"), '', $code );
+$code = str_replace ( array (
+		"\r",
+		"\n" 
+), '', $code );
 
 ?>
 <script>

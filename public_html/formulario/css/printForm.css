@@ -5,13 +5,14 @@
     Description:
         For printing live forms
 */
+.form-section {
+	display: inline !important;
+}
 
-.form-section { 
-    display: inline !important;
-}
 .form-pagebreak {
-    display: none !important;
+	display: none !important;
 }
+
 .form-section-closed {
-    height: auto !important;
+	height: auto !important;
 }

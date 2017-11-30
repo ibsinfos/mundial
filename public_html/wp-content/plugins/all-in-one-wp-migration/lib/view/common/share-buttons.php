@@ -24,27 +24,16 @@
 </script>
 
 <div class="ai1wm-share-button-container">
-	<span>
-		<a
-			href="https://twitter.com/share"
-			class="twitter-share-button"
-			data-url="https://servmask.com"
-			data-text="Check this epic WordPress Migration plugin"
-			data-via="servmask"
-			data-related="servmask"
-			data-hashtags="servmask"
-			>
+	<span> <a href="https://twitter.com/share" class="twitter-share-button"
+		data-url="https://servmask.com"
+		data-text="Check this epic WordPress Migration plugin"
+		data-via="servmask" data-related="servmask" data-hashtags="servmask">
 			<?php _e( 'Tweet', AI1WM_PLUGIN_NAME ); ?>
 		</a>
-	</span>
-	<span>
-		<div
-			class="fb-like ai1wm-top-negative-four"
+	</span> <span>
+		<div class="fb-like ai1wm-top-negative-four"
 			data-href="https://www.facebook.com/servmaskproduct"
-			data-layout="button_count"
-			data-action="recommend"
-			data-show-faces="true"
-			data-share="false"
-			></div>
+			data-layout="button_count" data-action="recommend"
+			data-show-faces="true" data-share="false"></div>
 	</span>
 </div>

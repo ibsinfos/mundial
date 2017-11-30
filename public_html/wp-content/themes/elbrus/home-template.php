@@ -7,18 +7,20 @@
  *
  * Template Name: Home Full Width
  */
-
-get_header(); ?>
+get_header ();
+?>
 
 <div class="home-section">
 	<div class="container rtd">
 	<?php
-	if ( have_posts() ) :
-		 while ( have_posts() ) : the_post();
-
-			the_content();
-
-		endwhile;
+	if (have_posts ()) :
+		while ( have_posts () ) :
+			the_post ();
+			
+			the_content ();
+		endwhile
+		;
+	
 	endif;
 	?>
 

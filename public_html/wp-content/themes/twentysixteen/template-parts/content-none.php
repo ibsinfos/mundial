@@ -11,7 +11,8 @@
 <section class="no-results not-found">
 	<header class="page-header">
 		<h1 class="page-title"><?php _e( 'Nothing Found', 'twentysixteen' ); ?></h1>
-	</header><!-- .page-header -->
+	</header>
+	<!-- .page-header -->
 
 	<div class="page-content">
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
@@ -29,5 +30,7 @@
 			<?php get_search_form(); ?>
 
 		<?php endif; ?>
-	</div><!-- .page-content -->
-</section><!-- .no-results -->
+	</div>
+	<!-- .page-content -->
+</section>
+<!-- .no-results -->

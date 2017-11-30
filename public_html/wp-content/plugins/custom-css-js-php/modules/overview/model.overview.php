@@ -5,11 +5,11 @@
  * @version 2.0.0
  * @package Core
  */
-
-if ( ! class_exists( 'wcjp_Model_Overview' ) ) {
-
+if (! class_exists ( 'wcjp_Model_Overview' )) {
+	
 	/**
 	 * Overview model for Plugin Overview.
+	 * 
 	 * @package Core
 	 * @author Flipper Code <hello@flippercode.com>
 	 */
@@ -23,8 +23,8 @@ if ( ! class_exists( 'wcjp_Model_Overview' ) ) {
 		 * Admin menu for Settings Operation
 		 */
 		function navigation() {
-			return array(
-			'wcjp_how_overview' => __( 'How to Use', WCJP_TEXT_DOMAIN ),
+			return array (
+					'wcjp_how_overview' => __ ( 'How to Use', WCJP_TEXT_DOMAIN ) 
 			);
 		}
 	}

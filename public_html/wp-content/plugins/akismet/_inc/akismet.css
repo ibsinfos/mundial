@@ -1,110 +1,130 @@
-
 #submitted-on {
-    position: relative;
+	position: relative;
 }
+
 #the-comment-list .author .akismet-user-comment-count {
-    display: inline;
+	display: inline;
 }
+
 #the-comment-list .author a span {
-    text-decoration: none;
-    color: #999;
+	text-decoration: none;
+	color: #999;
 }
+
 #the-comment-list .author a span.akismet-span-link {
 	text-decoration: inherit;
 	color: inherit;
 }
+
 #the-comment-list .remove_url {
-    margin-left: 3px;
-    color: #999;
-    padding: 2px 3px 2px 0;
+	margin-left: 3px;
+	color: #999;
+	padding: 2px 3px 2px 0;
 }
+
 #the-comment-list .remove_url:hover {
-    color: #A7301F;
-    font-weight: bold;
-    padding: 2px 2px 2px 0;
+	color: #A7301F;
+	font-weight: bold;
+	padding: 2px 2px 2px 0;
 }
+
 #dashboard_recent_comments .akismet-status {
-    display: none;
+	display: none;
 }
+
 .akismet-status {
-    float: right;
+	float: right;
 }
+
 .akismet-status a {
-    color: #AAA;
-    font-style: italic;
+	color: #AAA;
+	font-style: italic;
 }
+
 table.comments td.comment p a {
-    text-decoration: underline;
+	text-decoration: underline;
 }
+
 table.comments td.comment p a:after {
-    content: attr(href);
-    color: #aaa;
-    display: inline-block; /* Show the URL without the link's underline extending under it. */
-    padding: 0 1ex; /* Because it's inline block, we can't just use spaces in the content: attribute to separate it from the link text. */
+	content: attr(href);
+	color: #aaa;
+	display: inline-block;
+	/* Show the URL without the link's underline extending under it. */
+	padding: 0 1ex;
+	/* Because it's inline block, we can't just use spaces in the content: attribute to separate it from the link text. */
 }
+
 .mshot-arrow {
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 10px solid #5C5C5C;
-    position: absolute;
-    left: -6px;
-    top: 91px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid #5C5C5C;
+	position: absolute;
+	left: -6px;
+	top: 91px;
 }
+
 .mshot-container {
-    background: #5C5C5C;
-    position: absolute;
-    top: -94px;
-    padding: 7px;
-    width: 450px;
-    height: 338px;
-    z-index: 20000;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    -webkit-border-radius: 6px;
+	background: #5C5C5C;
+	position: absolute;
+	top: -94px;
+	padding: 7px;
+	width: 450px;
+	height: 338px;
+	z-index: 20000;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
 }
+
 .akismet-mshot {
-    position: absolute;
-    z-index: 100;
+	position: absolute;
+	z-index: 100;
 }
+
 .akismet-mshot .mshot-image {
-    margin: 0;
-    height: 338px;
-    width: 450px;
+	margin: 0;
+	height: 338px;
+	width: 450px;
 }
+
 h2.ak-header {
-    padding: 30px;
-    background: #649316 url('img/logo-full-2x.png') no-repeat 20px center;
-    background-size: 185px 33px;
-    height: 33px;
-    text-indent: -9999em;
-    margin-right: 10px;
+	padding: 30px;
+	background: #649316 url('img/logo-full-2x.png') no-repeat 20px center;
+	background-size: 185px 33px;
+	height: 33px;
+	text-indent: -9999em;
+	margin-right: 10px;
 }
+
 .checkforspam {
-    display: inline-block !important;
+	display: inline-block !important;
 }
+
 .checkforspam-spinner {
-    display: inline-block;
-    margin-top: 7px;
+	display: inline-block;
+	margin-top: 7px;
 }
 
 .config-wrap {
 	margin-top: 2em;
-    max-width: 700px;
+	max-width: 700px;
 }
 
 .activate-option {
-    background: #e3e3e3;
-    border-radius: 3px;
-    margin-bottom: 30px;
-    overflow: hidden;
-    padding: 20px;
+	background: #e3e3e3;
+	border-radius: 3px;
+	margin-bottom: 30px;
+	overflow: hidden;
+	padding: 20px;
 }
+
 .activate-option.clicked {
 	background: #649316;
 	color: #fff;
 }
+
 .activate-option.clicked:hover {
 	background: #68802E;
 	color: #fff;
@@ -132,9 +152,11 @@ h2.ak-header {
 .activate-highlight h3 {
 	margin: 0 0 0.3em;
 }
+
 .activate-highlight p {
 	color: #777;
 }
+
 .activate-highlight .button-primary {
 	margin-top: 15px;
 }
@@ -151,64 +173,75 @@ h2.ak-header {
 .alert-text {
 	color: #dd3d36;
 }
+
 .success {
 	color: #649316;
 }
+
 .option-description {
-    float: left;
-    font-size: 16px;
+	float: left;
+	font-size: 16px;
 }
+
 .option-description span {
-    color: #666;
-    display: block;
-    font-size: 14px;
-    margin-top: 5px;
+	color: #666;
+	display: block;
+	font-size: 14px;
+	margin-top: 5px;
 }
+
 .option-action {
-    float: right;
+	float: right;
 }
+
 .key-config-link {
-    font-size: 14px;
-    margin-left: 20px;
+	font-size: 14px;
+	margin-left: 20px;
 }
+
 .jetpack-account {
-    float: left;
-    font-size: 18px;
-    margin-right: 40px;
+	float: left;
+	font-size: 18px;
+	margin-right: 40px;
 }
+
 .small-heading {
-    color: #777;
-    display: block;
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    text-transform: uppercase;
+	color: #777;
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	text-transform: uppercase;
 }
+
 .inline-label {
-    background: #ddd;
-    border-radius: 3px;
-    font-size: 11px;
-    padding: 3px 8px;
-    text-transform: uppercase;
+	background: #ddd;
+	border-radius: 3px;
+	font-size: 11px;
+	padding: 3px 8px;
+	text-transform: uppercase;
 }
+
 .inline-label.alert {
-    background: #e54747;
-    color: #fff;
+	background: #e54747;
+	color: #fff;
 }
+
 .jetpack-account .inline-label {
-    margin-left: 5px;
+	margin-left: 5px;
 }
+
 .option-action .manual-key {
-    margin-top: 7px;
+	margin-top: 7px;
 }
 
 .alert {
 	border: 1px solid #e5e5e5;
 	padding: 0.4em 1em 1.4em 1em;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-width: 1px;
-    border-style: solid;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-width: 1px;
+	border-style: solid;
 }
 
 .alert h3.key-status {
@@ -229,16 +262,14 @@ h2.ak-header {
 }
 
 .alert p.description {
-	color:#fff;
+	color: #fff;
 	font-size: 14px;
-    margin: 0 0;
+	margin: 0 0;
 	font-style: normal;
 }
 
-.alert p.description a,
-.alert p.description a,
-.alert p.description a,
-.alert p.description a {
+.alert p.description a, .alert p.description a, .alert p.description a,
+	.alert p.description a {
 	color: #fff;
 }
 
@@ -254,11 +285,11 @@ h2.ak-header {
 }
 
 .new-snapshot h3 {
-    background: #f5f5f5;
+	background: #f5f5f5;
 	color: #888;
 	font-size: 11px;
-    margin: 0;
-    padding: 3px;
+	margin: 0;
+	padding: 3px;
 }
 
 .new-snapspot ul {
@@ -267,11 +298,11 @@ h2.ak-header {
 }
 
 .new-snapshot ul li {
-    color: #999;
+	color: #999;
 	float: left;
-    font-size: 11px;
+	font-size: 11px;
 	padding: 0 20px;
-    text-transform: uppercase;
+	text-transform: uppercase;
 	width: 33%;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -279,9 +310,9 @@ h2.ak-header {
 	-ms-box-sizing: border-box;
 }
 
-.new-snapshot.stats ul li:first-child,
-.new-snapshot.stats ul li:nth-child(2) {
-	border-right:1px dotted #ccc;
+.new-snapshot.stats ul li:first-child, .new-snapshot.stats ul li:nth-child(2)
+	{
+	border-right: 1px dotted #ccc;
 }
 
 .new-snapshot.account ul li:nth-child(2) {
@@ -289,7 +320,7 @@ h2.ak-header {
 }
 
 .new-snapshot ul li span {
-    color: #52accc;
+	color: #52accc;
 	display: block;
 	font-size: 32px;
 	font-weight: lighter;
@@ -297,10 +328,10 @@ h2.ak-header {
 }
 
 .new-snapshot.stats {
+	
 }
 
-.new-snapshot.account,
-.new-snapshot.settings {
+.new-snapshot.account, .new-snapshot.settings {
 	float: left;
 	padding: 0;
 	text-align: left;
@@ -324,7 +355,7 @@ h2.ak-header {
 }
 
 .new-snapshot.account ul li {
-	width:100%
+	width: 100%
 }
 
 .new-snapshot.account ul li span {
@@ -332,11 +363,10 @@ h2.ak-header {
 	font-weight: normal;
 }
 
-
 .new-snapshot.settings ul li {
 	border: none;
 	display: block;
-	width:100%
+	width: 100%
 }
 
 .new-snapshot.settings ul li span {
@@ -364,7 +394,7 @@ h2.ak-header {
 	width: 75%;
 }
 
-.akismet-settings span.note{
+.akismet-settings span.note {
 	float: left;
 	padding-left: 23px;
 	font-size: 75%;
@@ -372,7 +402,7 @@ h2.ak-header {
 }
 
 .clearfix {
-	clear:both;
+	clear: both;
 }
 
 /**
@@ -384,7 +414,8 @@ h2.ak-header {
 	padding: 5px;
 	margin: 15px 0;
 	background: #83AF24;
-	background-image: -webkit-gradient(linear, 0% 0, 80% 100%, from(#83AF24), to(#4F800D));
+	background-image: -webkit-gradient(linear, 0% 0, 80% 100%, from(#83AF24),
+		to(#4F800D));
 	background-image: -moz-linear-gradient(80% 100% 120deg, #4F800D, #83AF24);
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -412,7 +443,8 @@ h2.ak-header {
 	padding: 9px 0 8px 0;
 	color: #FFF;
 	background: #029DD6;
-	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#029DD6), to(#0079B1));
+	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#029DD6),
+		to(#0079B1));
 	background-image: -moz-linear-gradient(0% 100% 90deg, #0079B1, #029DD6);
 	-moz-border-radius: 2px;
 	border-radius: 2px;
@@ -431,7 +463,8 @@ h2.ak-header {
 	padding: 9px 0 8px 0;
 	color: #F0F8FB;
 	background: #0079B1;
-	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#0079B1), to(#0092BF));
+	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#0079B1),
+		to(#0092BF));
 	background-image: -moz-linear-gradient(0% 100% 90deg, #0092BF, #0079B1);
 	-moz-border-radius: 2px;
 	border-radius: 2px;
@@ -444,7 +477,8 @@ h2.ak-header {
 	border-radius: 2px;
 	-webkit-border-radius: 2px;
 	background: #029DD6;
-	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#029DD6), to(#0079B1));
+	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#029DD6),
+		to(#0079B1));
 	background-image: -moz-linear-gradient(0% 100% 90deg, #0079B1, #029DD6);
 }
 

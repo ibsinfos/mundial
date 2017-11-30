@@ -25,7 +25,7 @@ class _WP_Dependency {
 	 * @var null
 	 */
 	public $handle;
-
+	
 	/**
 	 * The handle source.
 	 *
@@ -34,7 +34,7 @@ class _WP_Dependency {
 	 * @var null
 	 */
 	public $src;
-
+	
 	/**
 	 * An array of handle dependencies.
 	 *
@@ -42,8 +42,8 @@ class _WP_Dependency {
 	 * @since 2.6.0
 	 * @var array
 	 */
-	public $deps = array();
-
+	public $deps = array ();
+	
 	/**
 	 * The handle version.
 	 *
@@ -54,7 +54,7 @@ class _WP_Dependency {
 	 * @var bool|string
 	 */
 	public $ver = false;
-
+	
 	/**
 	 * Additional arguments for the handle.
 	 *
@@ -62,8 +62,8 @@ class _WP_Dependency {
 	 * @since 2.6.0
 	 * @var null
 	 */
-	public $args = null;  // Custom property, such as $in_footer or $media.
-
+	public $args = null; // Custom property, such as $in_footer or $media.
+	
 	/**
 	 * Extra data to supply to the handle.
 	 *
@@ -71,34 +71,35 @@ class _WP_Dependency {
 	 * @since 2.6.0
 	 * @var array
 	 */
-	public $extra = array();
-
+	public $extra = array ();
+	
 	/**
 	 * Setup dependencies.
 	 *
 	 * @since 2.6.0
 	 */
 	public function __construct() {
-		@list( $this->handle, $this->src, $this->deps, $this->ver, $this->args ) = func_get_args();
-		if ( ! is_array($this->deps) )
-			$this->deps = array();
+		@list ( $this->handle, $this->src, $this->deps, $this->ver, $this->args ) = func_get_args ();
+		if (! is_array ( $this->deps ))
+			$this->deps = array ();
 	}
-
+	
 	/**
 	 * Add handle data.
 	 *
 	 * @access public
 	 * @since 2.6.0
-	 *
-	 * @param string $name The data key to add.
-	 * @param mixed  $data The data value to add.
+	 *       
+	 * @param string $name
+	 *        	The data key to add.
+	 * @param mixed $data
+	 *        	The data value to add.
 	 * @return bool False if not scalar, true otherwise.
 	 */
-	public function add_data( $name, $data ) {
-		if ( !is_scalar($name) )
+	public function add_data($name, $data) {
+		if (! is_scalar ( $name ))
 			return false;
-		$this->extra[$name] = $data;
+		$this->extra [$name] = $data;
 		return true;
 	}
-
 }

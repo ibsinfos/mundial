@@ -5,9 +5,8 @@ input[type='range'] {
 }
 
 .rwmb-output {
-
 	display: inline-block;
-  position: relative;
+	position: relative;
 	padding: 5px 10px;
 	line-height: 20px;
 }

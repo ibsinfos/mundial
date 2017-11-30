@@ -13,7 +13,7 @@
  * @since 4.4.0
  */
 class WP_HTTP_Response {
-
+	
 	/**
 	 * Response data.
 	 *
@@ -22,7 +22,7 @@ class WP_HTTP_Response {
 	 * @var mixed
 	 */
 	public $data;
-
+	
 	/**
 	 * Response headers.
 	 *
@@ -31,7 +31,7 @@ class WP_HTTP_Response {
 	 * @var array
 	 */
 	public $headers;
-
+	
 	/**
 	 * Response status.
 	 *
@@ -40,114 +40,123 @@ class WP_HTTP_Response {
 	 * @var int
 	 */
 	public $status;
-
+	
 	/**
 	 * Constructor.
 	 *
 	 * @since 4.4.0
 	 * @access public
-	 *
-	 * @param mixed $data    Response data. Default null.
-	 * @param int   $status  Optional. HTTP status code. Default 200.
-	 * @param array $headers Optional. HTTP header map. Default empty array.
+	 *        
+	 * @param mixed $data
+	 *        	Response data. Default null.
+	 * @param int $status
+	 *        	Optional. HTTP status code. Default 200.
+	 * @param array $headers
+	 *        	Optional. HTTP header map. Default empty array.
 	 */
-	public function __construct( $data = null, $status = 200, $headers = array() ) {
+	public function __construct($data = null, $status = 200, $headers = array()) {
 		$this->data = $data;
-		$this->set_status( $status );
-		$this->set_headers( $headers );
+		$this->set_status ( $status );
+		$this->set_headers ( $headers );
 	}
-
+	
 	/**
 	 * Retrieves headers associated with the response.
 	 *
 	 * @since 4.4.0
 	 * @access public
-	 *
+	 *        
 	 * @return array Map of header name to header value.
 	 */
 	public function get_headers() {
 		return $this->headers;
 	}
-
+	
 	/**
 	 * Sets all header values.
 	 *
 	 * @since 4.4.0
 	 * @access public
-	 *
-	 * @param array $headers Map of header name to header value.
+	 *        
+	 * @param array $headers
+	 *        	Map of header name to header value.
 	 */
-	public function set_headers( $headers ) {
+	public function set_headers($headers) {
 		$this->headers = $headers;
 	}
-
+	
 	/**
 	 * Sets a single HTTP header.
 	 *
 	 * @since 4.4.0
 	 * @access public
-	 *
-	 * @param string $key     Header name.
-	 * @param string $value   Header value.
-	 * @param bool   $replace Optional. Whether to replace an existing header of the same name.
-	 *                        Default true.
+	 *        
+	 * @param string $key
+	 *        	Header name.
+	 * @param string $value
+	 *        	Header value.
+	 * @param bool $replace
+	 *        	Optional. Whether to replace an existing header of the same name.
+	 *        	Default true.
 	 */
-	public function header( $key, $value, $replace = true ) {
-		if ( $replace || ! isset( $this->headers[ $key ] ) ) {
-			$this->headers[ $key ] = $value;
+	public function header($key, $value, $replace = true) {
+		if ($replace || ! isset ( $this->headers [$key] )) {
+			$this->headers [$key] = $value;
 		} else {
-			$this->headers[ $key ] .= ', ' . $value;
+			$this->headers [$key] .= ', ' . $value;
 		}
 	}
-
+	
 	/**
 	 * Retrieves the HTTP return code for the response.
 	 *
 	 * @since 4.4.0
 	 * @access public
-	 *
+	 *        
 	 * @return int The 3-digit HTTP status code.
 	 */
 	public function get_status() {
 		return $this->status;
 	}
-
+	
 	/**
 	 * Sets the 3-digit HTTP status code.
 	 *
 	 * @since 4.4.0
 	 * @access public
-	 *
-	 * @param int $code HTTP status.
+	 *        
+	 * @param int $code
+	 *        	HTTP status.
 	 */
-	public function set_status( $code ) {
-		$this->status = absint( $code );
+	public function set_status($code) {
+		$this->status = absint ( $code );
 	}
-
+	
 	/**
 	 * Retrieves the response data.
 	 *
 	 * @since 4.4.0
 	 * @access public
-	 *
+	 *        
 	 * @return mixed Response data.
 	 */
 	public function get_data() {
 		return $this->data;
 	}
-
+	
 	/**
 	 * Sets the response data.
 	 *
 	 * @since 4.4.0
 	 * @access public
-	 *
-	 * @param mixed $data Response data.
+	 *        
+	 * @param mixed $data
+	 *        	Response data.
 	 */
-	public function set_data( $data ) {
+	public function set_data($data) {
 		$this->data = $data;
 	}
-
+	
 	/**
 	 * Retrieves the response data for JSON serialization.
 	 *
@@ -156,10 +165,10 @@ class WP_HTTP_Response {
 	 *
 	 * @since 4.4.0
 	 * @access public
-	 *
+	 *        
 	 * @return mixed Any JSON-serializable value.
 	 */
 	public function jsonSerialize() {
-		return $this->get_data();
+		return $this->get_data ();
 	}
 }

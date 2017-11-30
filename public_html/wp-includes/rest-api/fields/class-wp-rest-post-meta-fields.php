@@ -11,11 +11,11 @@
  * Core class used to manage meta values for posts via the REST API.
  *
  * @since 4.7.0
- *
+ *       
  * @see WP_REST_Meta_Fields
  */
 class WP_REST_Post_Meta_Fields extends WP_REST_Meta_Fields {
-
+	
 	/**
 	 * Post type to register fields for.
 	 *
@@ -24,37 +24,38 @@ class WP_REST_Post_Meta_Fields extends WP_REST_Meta_Fields {
 	 * @var string
 	 */
 	protected $post_type;
-
+	
 	/**
 	 * Constructor.
 	 *
 	 * @since 4.7.0
 	 * @access public
-	 *
-	 * @param string $post_type Post type to register fields for.
+	 *        
+	 * @param string $post_type
+	 *        	Post type to register fields for.
 	 */
-	public function __construct( $post_type ) {
+	public function __construct($post_type) {
 		$this->post_type = $post_type;
 	}
-
+	
 	/**
 	 * Retrieves the object meta type.
 	 *
 	 * @since 4.7.0
 	 * @access protected
-	 *
+	 *        
 	 * @return string The meta type.
 	 */
 	protected function get_meta_type() {
 		return 'post';
 	}
-
+	
 	/**
 	 * Retrieves the type for register_rest_field().
 	 *
 	 * @since 4.7.0
 	 * @access public
-	 *
+	 *        
 	 * @see register_rest_field()
 	 *
 	 * @return string The REST field type.

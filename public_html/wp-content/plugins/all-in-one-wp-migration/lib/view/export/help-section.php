@@ -8,16 +8,13 @@
 </p>
 
 <ul>
-	<li>
-		<i class="ai1wm-icon-arrow-right"></i>
+	<li><i class="ai1wm-icon-arrow-right"></i>
 		<?php _e( 'In the advanced settings section you can configure more precisely the way of exporting.', AI1WM_PLUGIN_NAME ); ?>
 	</li>
-	<li>
-		<i class="ai1wm-icon-arrow-right"></i>
+	<li><i class="ai1wm-icon-arrow-right"></i>
 		<?php _e( 'Press "Export" button and the site archive file will pop up in your browser.', AI1WM_PLUGIN_NAME ); ?>
 	</li>
-	<li>
-		<i class="ai1wm-icon-arrow-right"></i>
+	<li><i class="ai1wm-icon-arrow-right"></i>
 		<?php _e( 'Once the file is successfully downloaded on your computer, you can import it to any of your WordPress sites.', AI1WM_PLUGIN_NAME ); ?>
 	</li>
 </ul>

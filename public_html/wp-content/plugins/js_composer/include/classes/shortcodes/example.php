@@ -1,6 +1,6 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-	die( '-1' );
+if (! defined ( 'ABSPATH' )) {
+	die ( '-1' );
 }
 
 /**
@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * here[/my_hello_world]
  */
 class WPBakeryShortCode_my_hello_world extends WPBakeryShortCode {
-
+	
 	/*
 	 * Thi methods returns HTML code for frontend representation of your shortcode.
 	 * You can use your own html markup.
@@ -39,23 +39,22 @@ class WPBakeryShortCode_my_hello_world extends WPBakeryShortCode {
 	 * vc_filter: VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG vc_shortcodes_css_class - hook to edit element class
 	 * @return string
 	 */
-	protected function content( $atts, $content = null ) {
-
-		extract( shortcode_atts( array(
-			'width' => '1/2',
-			'el_position' => '',
-			'foo' => '',
-			'my_dropdown' => '',
+	protected function content($atts, $content = null) {
+		extract ( shortcode_atts ( array (
+				'width' => '1/2',
+				'el_position' => '',
+				'foo' => '',
+				'my_dropdown' => '' 
 		), $atts ) );
-
+		
 		$width_class = '';
-		$css_class = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, $width_class, $this->settings['base'], $atts );
+		$css_class = apply_filters ( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, $width_class, $this->settings ['base'], $atts );
 		$output = '<div class="' . $css_class . '">';
 		$output .= '<h3>' . $foo . '</h3>';
-		$output .= wpb_js_remove_wpautop( $content, true );
+		$output .= wpb_js_remove_wpautop ( $content, true );
 		$output .= '<p> Dropdown: ' . $my_dropdown . '</p>';
 		$output .= '</div>';
-
+		
 		return $output;
 	}
 }
@@ -70,9 +69,9 @@ class WPBakeryShortCode_my_hello_world extends WPBakeryShortCode {
  * base - shortcode base. Example my_hello_world
  * class - helper class to target your shortcode in css in visual composer edit mode
  * icon - in order to add icon for your shortcode in dropdown menu, add class name here and style it in
- *          your own css file. Note: bootstrap icons supported.
+ * your own css file. Note: bootstrap icons supported.
  * controls - in visual composer mode shortcodes can have different controls (popup_delete, edit_popup_delete, size_delete, popup_delete, full).
- 				Default is full.
+ * Default is full.
  * params - array which holds your shortcode params. This params will be editable in shortcode settings page.
  *
  * Available param types:
@@ -90,37 +89,41 @@ class WPBakeryShortCode_my_hello_world extends WPBakeryShortCode {
  *
  */
 
-vc_map( array(
-	'base' => 'my_hello_world',
-	'name' => __( 'Hello World', 'js_composer' ),
-	'class' => '',
-	'icon' => 'icon-heart',
-	'params' => array(
-		array(
-			'type' => 'textfield',
-			'holder' => 'h3',
-			'class' => '',
-			'heading' => __( 'Foo attribute', 'js_composer' ),
-			'param_name' => 'foo',
-			'value' => __( "I'm foo attribute", 'js_composer' ),
-			'description' => __( 'Enter foo value.', 'js_composer' ),
-		),
-		array(
-			'type' => 'textarea_html',
-			'holder' => 'div',
-			'class' => '',
-			'heading' => __( 'Text', 'js_composer' ),
-			'param_name' => 'content',
-			'value' => __( "I'm hello world", 'js_composer' ),
-			'description' => __( 'Enter your content.', 'js_composer' ),
-		),
-		array(
-			'type' => 'dropdown',
-			'heading' => __( 'Drop down example', 'js_composer' ),
-			'param_name' => 'my_dropdown',
-			'value' => array( 1, 2, 'three' ),
-			'description' => __( 'One, two or three?', 'js_composer' ),
-		),
-	),
+vc_map ( array (
+		'base' => 'my_hello_world',
+		'name' => __ ( 'Hello World', 'js_composer' ),
+		'class' => '',
+		'icon' => 'icon-heart',
+		'params' => array (
+				array (
+						'type' => 'textfield',
+						'holder' => 'h3',
+						'class' => '',
+						'heading' => __ ( 'Foo attribute', 'js_composer' ),
+						'param_name' => 'foo',
+						'value' => __ ( "I'm foo attribute", 'js_composer' ),
+						'description' => __ ( 'Enter foo value.', 'js_composer' ) 
+				),
+				array (
+						'type' => 'textarea_html',
+						'holder' => 'div',
+						'class' => '',
+						'heading' => __ ( 'Text', 'js_composer' ),
+						'param_name' => 'content',
+						'value' => __ ( "I'm hello world", 'js_composer' ),
+						'description' => __ ( 'Enter your content.', 'js_composer' ) 
+				),
+				array (
+						'type' => 'dropdown',
+						'heading' => __ ( 'Drop down example', 'js_composer' ),
+						'param_name' => 'my_dropdown',
+						'value' => array (
+								1,
+								2,
+								'three' 
+						),
+						'description' => __ ( 'One, two or three?', 'js_composer' ) 
+				) 
+		) 
 ) );
 

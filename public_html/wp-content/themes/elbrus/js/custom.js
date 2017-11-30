@@ -177,8 +177,6 @@
 				});
 			}
             $( window ).resize(function() {
-  
-                
                 	if ($(window).width() > 767) {
 				// Fixed Header
 				var topOffset = $(window).scrollTop();
@@ -294,7 +292,7 @@
 	}
 	fullWidthSection();
 	$(window).resize(function() {
-		fullWidthSection()
+		fullWidthSection();
 	});
 	/****** VC SECTION ANCHOR FULL-WIDTH ENDS */
 	$(window).load(function() {

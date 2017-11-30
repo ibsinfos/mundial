@@ -9,6 +9,7 @@
 .rwmb-upload-area .moxie-shim {
 	display: none;
 }
+
 .rwmb-upload-inside {
 	text-align: center;
 	position: absolute;
@@ -21,9 +22,11 @@
 	-ms-transform: translateY(-50%);
 	margin-top: 10px;
 }
+
 .rwmb-upload-inside p, .rwmb-upload-inside h3 {
 	text-align: center;
 }
+
 .rwmb-upload-inside h3 {
 	font-size: 20px;
 	line-height: 28px;

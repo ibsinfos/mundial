@@ -17,7 +17,7 @@ class Requests_Exception_HTTP_402 extends Requests_Exception_HTTP {
 	 * @var integer
 	 */
 	protected $code = 402;
-
+	
 	/**
 	 * Reason phrase
 	 *

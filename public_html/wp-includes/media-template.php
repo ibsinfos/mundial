@@ -14,30 +14,39 @@
  * @since 3.9.0
  */
 function wp_underscore_audio_template() {
-	$audio_types = wp_get_audio_extensions();
-?>
-<audio style="visibility: hidden"
-	controls
-	class="wp-audio-shortcode"
+	$audio_types = wp_get_audio_extensions ();
+	?>
+<audio style="visibility: hidden" controls class="wp-audio-shortcode"
 	width="{{ _.isUndefined( data.model.width ) ? 400 : data.model.width }}"
-	preload="{{ _.isUndefined( data.model.preload ) ? 'none' : data.model.preload }}"
-	<#
-	<?php foreach ( array( 'autoplay', 'loop' ) as $attr ):
-	?>if ( ! _.isUndefined( data.model.<?php echo $attr ?> ) && data.model.<?php echo $attr ?> ) {
+	preload="{{ _.isUndefined( data.model.preload ) ? 'none' : data.model.preload }}"<#
+	<?php
+	
+foreach ( array (
+			'autoplay',
+			'loop' 
+	) as $attr ) :
+		?>if ( ! _.isUndefined( data.model.<?php echo $attr ?> ) && data.model.<?php echo $attr ?> ) {
 		#> <?php echo $attr ?><#
 	}
 	<?php endforeach ?>#>
 >
 	<# if ( ! _.isEmpty( data.model.src ) ) { #>
-	<source src="{{ data.model.src }}" type="{{ wp.media.view.settings.embedMimes[ data.model.src.split('.').pop() ] }}" />
+	<source src="{{ data.model.src }}"
+		type="{{ wp.media.view.settings.embedMimes[ data.model.src.split('.').pop() ] }}" />
 	<# } #>
 
-	<?php foreach ( $audio_types as $type ):
-	?><# if ( ! _.isEmpty( data.model.<?php echo $type ?> ) ) { #>
-	<source src="{{ data.model.<?php echo $type ?> }}" type="{{ wp.media.view.settings.embedMimes[ '<?php echo $type ?>' ] }}" />
+	<?php
+	
+foreach ( $audio_types as $type ) :
+		?><# if ( ! _.isEmpty( data.model.<?php echo $type ?> ) ) { #>
+	<source src="{{ data.model.<?php echo $type ?> }}"
+		type="{{ wp.media.view.settings.embedMimes[ '<?php echo $type ?>' ] }}" />
 	<# } #>
-	<?php endforeach;
-?></audio>
+	<?php
+	
+endforeach
+	;
+	?></audio>
 <?php
 }
 
@@ -48,8 +57,8 @@ function wp_underscore_audio_template() {
  * @since 3.9.0
  */
 function wp_underscore_video_template() {
-	$video_types = wp_get_video_extensions();
-?>
+	$video_types = wp_get_video_extensions ();
+	?>
 <#  var w_rule = '', classes = [],
 		w, h, settings = wp.media.view.settings,
 		isYouTube = isVimeo = false;
@@ -84,26 +93,35 @@ function wp_underscore_video_template() {
 	}
 
 #>
-<div style="{{ w_rule }}" class="wp-video">
-<video controls
-	class="wp-video-shortcode {{ classes.join( ' ' ) }}"
-	<# if ( w ) { #>width="{{ w }}"<# } #>
+<div style="" class="wp-video">
+	<video controls class="wp-video-shortcode {{ classes.join( ' ' ) }}"<# if ( w ) { #>width="{{ w }}"<# } #>
 	<# if ( h ) { #>height="{{ h }}"<# } #>
 	<?php
-	$props = array( 'poster' => '', 'preload' => 'metadata' );
-	foreach ( $props as $key => $value ):
-		if ( empty( $value ) ) {
-		?><#
+	$props = array (
+			'poster' => '',
+			'preload' => 'metadata' 
+	);
+	foreach ( $props as $key => $value ) :
+		if (empty ( $value )) {
+			?><#
 		if ( ! _.isUndefined( data.model.<?php echo $key ?> ) && data.model.<?php echo $key ?> ) {
 			#> <?php echo $key ?>="{{ data.model.<?php echo $key ?> }}"<#
 		} #>
-		<?php } else {
-			echo $key ?>="{{ _.isUndefined( data.model.<?php echo $key ?> ) ? '<?php echo $value ?>' : data.model.<?php echo $key ?> }}"<?php
+		<?php
+		
+} else {
+			echo $key?>="{{ _.isUndefined( data.model.<?php echo $key ?> ) ? '<?php echo $value ?>' : data.model.<?php echo $key ?> }}"<?php
 		}
-	endforeach;
+	endforeach
+	;
 	?><#
-	<?php foreach ( array( 'autoplay', 'loop' ) as $attr ):
-	?> if ( ! _.isUndefined( data.model.<?php echo $attr ?> ) && data.model.<?php echo $attr ?> ) {
+	<?php
+	
+foreach ( array (
+			'autoplay',
+			'loop' 
+	) as $attr ) :
+		?> if ( ! _.isUndefined( data.model.<?php echo $attr ?> ) && data.model.<?php echo $attr ?> ) {
 		#> <?php echo $attr ?><#
 	}
 	<?php endforeach ?>#>
@@ -114,13 +132,17 @@ function wp_underscore_video_template() {
 		<# } else if ( isVimeo ) { #>
 		<source src="{{ data.model.src }}" type="video/vimeo" />
 		<# } else { #>
-		<source src="{{ data.model.src }}" type="{{ settings.embedMimes[ data.model.src.split('.').pop() ] }}" />
+		<source src="{{ data.model.src }}"
+			type="{{ settings.embedMimes[ data.model.src.split('.').pop() ] }}" />
 		<# }
 	} #>
 
-	<?php foreach ( $video_types as $type ):
-	?><# if ( data.model.<?php echo $type ?> ) { #>
-	<source src="{{ data.model.<?php echo $type ?> }}" type="{{ settings.embedMimes[ '<?php echo $type ?>' ] }}" />
+	<?php
+	
+foreach ( $video_types as $type ) :
+		?><# if ( data.model.<?php echo $type ?> ) { #>
+	<source src="{{ data.model.<?php echo $type ?> }}"
+			type="{{ settings.embedMimes[ '<?php echo $type ?>' ] }}" />
 	<# } #>
 	<?php endforeach; ?>
 	{{{ data.model.content }}}
@@ -133,16 +155,16 @@ function wp_underscore_video_template() {
  * Prints the templates used in the media manager.
  *
  * @since 3.5.0
- *
+ *       
  * @global bool $is_IE
  */
 function wp_print_media_templates() {
 	global $is_IE;
 	$class = 'media-modal wp-core-ui';
-	if ( $is_IE && strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 7') !== false )
+	if ($is_IE && strpos ( $_SERVER ['HTTP_USER_AGENT'], 'MSIE 7' ) !== false)
 		$class .= ' ie7';
 	?>
-	<!--[if lte IE 8]>
+<!--[if lte IE 8]>
 	<style>
 		.attachment:focus {
 			outline: #1e8cbe solid;
@@ -152,7 +174,7 @@ function wp_print_media_templates() {
 		}
 	</style>
 	<![endif]-->
-	<script type="text/html" id="tmpl-media-frame">
+<script type="text/html" id="tmpl-media-frame">
 		<div class="media-frame-menu"></div>
 		<div class="media-frame-title"></div>
 		<div class="media-frame-router"></div>
@@ -161,7 +183,7 @@ function wp_print_media_templates() {
 		<div class="media-frame-uploader"></div>
 	</script>
 
-	<script type="text/html" id="tmpl-media-modal">
+<script type="text/html" id="tmpl-media-modal">
 		<div class="<?php echo $class; ?>">
 			<button type="button" class="media-modal-close"><span class="media-modal-icon"><span class="screen-reader-text"><?php _e( 'Close media panel' ); ?></span></span></button>
 			<div class="media-modal-content"></div>
@@ -169,19 +191,19 @@ function wp_print_media_templates() {
 		<div class="media-modal-backdrop"></div>
 	</script>
 
-	<script type="text/html" id="tmpl-uploader-window">
+<script type="text/html" id="tmpl-uploader-window">
 		<div class="uploader-window-content">
 			<h1><?php _e( 'Drop files to upload' ); ?></h1>
 		</div>
 	</script>
 
-	<script type="text/html" id="tmpl-uploader-editor">
+<script type="text/html" id="tmpl-uploader-editor">
 		<div class="uploader-editor-content">
 			<div class="uploader-editor-title"><?php _e( 'Drop files to upload' ); ?></div>
 		</div>
 	</script>
 
-	<script type="text/html" id="tmpl-uploader-inline">
+<script type="text/html" id="tmpl-uploader-inline">
 		<# var messageClass = data.message ? 'has-upload-message' : 'no-upload-message'; #>
 		<# if ( data.canClose ) { #>
 		<button class="close dashicons dashicons-no"><span class="screen-reader-text"><?php _e( 'Close uploader' ); ?></span></button>
@@ -195,8 +217,11 @@ function wp_print_media_templates() {
 		<?php elseif ( is_multisite() && ! is_upload_space_available() ) : ?>
 			<h2 class="upload-instructions"><?php _e( 'Upload Limit Exceeded' ); ?></h2>
 			<?php
-			/** This action is documented in wp-admin/includes/media.php */
-			do_action( 'upload_ui_over_quota' ); ?>
+		/**
+		 * This action is documented in wp-admin/includes/media.php
+		 */
+		do_action ( 'upload_ui_over_quota' );
+		?>
 
 		<?php else : ?>
 			<div class="upload-ui">
@@ -209,29 +234,37 @@ function wp_print_media_templates() {
 
 			<div class="post-upload-ui">
 				<?php
-				/** This action is documented in wp-admin/includes/media.php */
-				do_action( 'pre-upload-ui' );
-				/** This action is documented in wp-admin/includes/media.php */
-				do_action( 'pre-plupload-upload-ui' );
-
-				if ( 10 === remove_action( 'post-plupload-upload-ui', 'media_upload_flash_bypass' ) ) {
-					/** This action is documented in wp-admin/includes/media.php */
-					do_action( 'post-plupload-upload-ui' );
-					add_action( 'post-plupload-upload-ui', 'media_upload_flash_bypass' );
-				} else {
-					/** This action is documented in wp-admin/includes/media.php */
-					do_action( 'post-plupload-upload-ui' );
-				}
-
-				$max_upload_size = wp_max_upload_size();
-				if ( ! $max_upload_size ) {
-					$max_upload_size = 0;
-				}
-				?>
+		/**
+		 * This action is documented in wp-admin/includes/media.php
+		 */
+		do_action ( 'pre-upload-ui' );
+		/**
+		 * This action is documented in wp-admin/includes/media.php
+		 */
+		do_action ( 'pre-plupload-upload-ui' );
+		
+		if (10 === remove_action ( 'post-plupload-upload-ui', 'media_upload_flash_bypass' )) {
+			/**
+			 * This action is documented in wp-admin/includes/media.php
+			 */
+			do_action ( 'post-plupload-upload-ui' );
+			add_action ( 'post-plupload-upload-ui', 'media_upload_flash_bypass' );
+		} else {
+			/**
+			 * This action is documented in wp-admin/includes/media.php
+			 */
+			do_action ( 'post-plupload-upload-ui' );
+		}
+		
+		$max_upload_size = wp_max_upload_size ();
+		if (! $max_upload_size) {
+			$max_upload_size = 0;
+		}
+		?>
 
 				<p class="max-upload-size"><?php
-					printf( __( 'Maximum upload file size: %s.' ), esc_html( size_format( $max_upload_size ) ) );
-				?></p>
+		printf ( __ ( 'Maximum upload file size: %s.' ), esc_html ( size_format ( $max_upload_size ) ) );
+		?></p>
 
 				<# if ( data.suggestedWidth && data.suggestedHeight ) { #>
 					<p class="suggested-dimensions">
@@ -240,14 +273,17 @@ function wp_print_media_templates() {
 				<# } #>
 
 				<?php
-				/** This action is documented in wp-admin/includes/media.php */
-				do_action( 'post-upload-ui' ); ?>
+		/**
+		 * This action is documented in wp-admin/includes/media.php
+		 */
+		do_action ( 'post-upload-ui' );
+		?>
 			</div>
 		<?php endif; ?>
 		</div>
 	</script>
 
-	<script type="text/html" id="tmpl-media-library-view-switcher">
+<script type="text/html" id="tmpl-media-library-view-switcher">
 		<a href="<?php echo esc_url( add_query_arg( 'mode', 'list', $_SERVER['REQUEST_URI'] ) ) ?>" class="view-list">
 			<span class="screen-reader-text"><?php _e( 'List View' ); ?></span>
 		</a>
@@ -256,7 +292,7 @@ function wp_print_media_templates() {
 		</a>
 	</script>
 
-	<script type="text/html" id="tmpl-uploader-status">
+<script type="text/html" id="tmpl-uploader-status">
 		<h2><?php _e( 'Uploading' ); ?></h2>
 		<button type="button" class="button-link upload-dismiss-errors"><span class="screen-reader-text"><?php _e( 'Dismiss Errors' ); ?></span></button>
 
@@ -271,12 +307,12 @@ function wp_print_media_templates() {
 		<div class="upload-errors"></div>
 	</script>
 
-	<script type="text/html" id="tmpl-uploader-status-error">
+<script type="text/html" id="tmpl-uploader-status-error">
 		<span class="upload-error-filename">{{{ data.filename }}}</span>
 		<span class="upload-error-message">{{ data.message }}</span>
 	</script>
 
-	<script type="text/html" id="tmpl-edit-attachment-frame">
+<script type="text/html" id="tmpl-edit-attachment-frame">
 		<div class="edit-media-header">
 			<button class="left dashicons <# if ( ! data.hasPrevious ) { #> disabled <# } #>"><span class="screen-reader-text"><?php _e( 'Edit previous media item' ); ?></span></button>
 			<button class="right dashicons <# if ( ! data.hasNext ) { #> disabled <# } #>"><span class="screen-reader-text"><?php _e( 'Edit next media item' ); ?></span></button>
@@ -285,7 +321,7 @@ function wp_print_media_templates() {
 		<div class="media-frame-content"></div>
 	</script>
 
-	<script type="text/html" id="tmpl-attachment-details-two-column">
+<script type="text/html" id="tmpl-attachment-details-two-column">
 		<div class="attachment-media-view {{ data.orientation }}">
 			<div class="thumbnail thumbnail-{{ data.type }}">
 				<# if ( data.uploading ) { #>
@@ -381,10 +417,13 @@ function wp_print_media_templates() {
 				</label>
 				<?php endif; ?>
 				<# if ( 'audio' === data.type ) { #>
-				<?php foreach ( array(
-					'artist' => __( 'Artist' ),
-					'album' => __( 'Album' ),
-				) as $key => $label ) : ?>
+				<?php
+	
+foreach ( array (
+			'artist' => __ ( 'Artist' ),
+			'album' => __ ( 'Album' ) 
+	) as $key => $label ) :
+		?>
 				<label class="setting" data-setting="<?php echo esc_attr( $key ) ?>">
 					<span class="name"><?php echo $label ?></span>
 					<input type="text" value="{{ data.<?php echo $key ?> || data.meta.<?php echo $key ?> || '' }}" />
@@ -443,7 +482,7 @@ function wp_print_media_templates() {
 		</div>
 	</script>
 
-	<script type="text/html" id="tmpl-attachment">
+<script type="text/html" id="tmpl-attachment">
 		<div class="attachment-preview js--select-attachment type-{{ data.type }} subtype-{{ data.subtype }} {{ data.orientation }}">
 			<div class="thumbnail">
 				<# if ( data.uploading ) { #>
@@ -493,7 +532,7 @@ function wp_print_media_templates() {
 		} #>
 	</script>
 
-	<script type="text/html" id="tmpl-attachment-details">
+<script type="text/html" id="tmpl-attachment-details">
 		<h2>
 			<?php _e( 'Attachment Details' ); ?>
 			<span class="settings-save-status">
@@ -562,10 +601,13 @@ function wp_print_media_templates() {
 		</label>
 		<?php endif; ?>
 		<# if ( 'audio' === data.type ) { #>
-		<?php foreach ( array(
-			'artist' => __( 'Artist' ),
-			'album' => __( 'Album' ),
-		) as $key => $label ) : ?>
+		<?php
+	
+foreach ( array (
+			'artist' => __ ( 'Artist' ),
+			'album' => __ ( 'Album' ) 
+	) as $key => $label ) :
+		?>
 		<label class="setting" data-setting="<?php echo esc_attr( $key ) ?>">
 			<span class="name"><?php echo $label ?></span>
 			<input type="text" value="{{ data.<?php echo $key ?> || data.meta.<?php echo $key ?> || '' }}" />
@@ -588,7 +630,7 @@ function wp_print_media_templates() {
 		</label>
 	</script>
 
-	<script type="text/html" id="tmpl-media-selection">
+<script type="text/html" id="tmpl-media-selection">
 		<div class="selection-info">
 			<span class="count"></span>
 			<# if ( data.editable ) { #>
@@ -601,7 +643,7 @@ function wp_print_media_templates() {
 		<div class="selection-view"></div>
 	</script>
 
-	<script type="text/html" id="tmpl-attachment-display-settings">
+<script type="text/html" id="tmpl-attachment-display-settings">
 		<h2><?php _e( 'Attachment Display Settings' ); ?></h2>
 
 		<# if ( 'image' === data.type ) { #>
@@ -686,15 +728,18 @@ function wp_print_media_templates() {
 						data-user-setting="imgsize"
 					<# } #>>
 					<?php
-					/** This filter is documented in wp-admin/includes/media.php */
-					$sizes = apply_filters( 'image_size_names_choose', array(
-						'thumbnail' => __('Thumbnail'),
-						'medium'    => __('Medium'),
-						'large'     => __('Large'),
-						'full'      => __('Full Size'),
-					) );
-
-					foreach ( $sizes as $value => $name ) : ?>
+	/**
+	 * This filter is documented in wp-admin/includes/media.php
+	 */
+	$sizes = apply_filters ( 'image_size_names_choose', array (
+			'thumbnail' => __ ( 'Thumbnail' ),
+			'medium' => __ ( 'Medium' ),
+			'large' => __ ( 'Large' ),
+			'full' => __ ( 'Full Size' ) 
+	) );
+	
+	foreach ( $sizes as $value => $name ) :
+		?>
 						<#
 						var size = data.sizes['<?php echo esc_js( $value ); ?>'];
 						if ( size ) { #>
@@ -708,7 +753,7 @@ function wp_print_media_templates() {
 		<# } #>
 	</script>
 
-	<script type="text/html" id="tmpl-gallery-settings">
+<script type="text/html" id="tmpl-gallery-settings">
 		<h2><?php _e( 'Gallery Settings' ); ?></h2>
 
 		<label class="setting">
@@ -761,15 +806,16 @@ function wp_print_media_templates() {
 				<# } #>
 				>
 				<?php
-				// This filter is documented in wp-admin/includes/media.php
-				$size_names = apply_filters( 'image_size_names_choose', array(
-					'thumbnail' => __( 'Thumbnail' ),
-					'medium'    => __( 'Medium' ),
-					'large'     => __( 'Large' ),
-					'full'      => __( 'Full Size' ),
-				) );
-
-				foreach ( $size_names as $size => $label ) : ?>
+	// This filter is documented in wp-admin/includes/media.php
+	$size_names = apply_filters ( 'image_size_names_choose', array (
+			'thumbnail' => __ ( 'Thumbnail' ),
+			'medium' => __ ( 'Medium' ),
+			'large' => __ ( 'Large' ),
+			'full' => __ ( 'Full Size' ) 
+	) );
+	
+	foreach ( $size_names as $size => $label ) :
+		?>
 					<option value="<?php echo esc_attr( $size ); ?>">
 						<?php echo esc_html( $label ); ?>
 					</option>
@@ -778,7 +824,7 @@ function wp_print_media_templates() {
 		</label>
 	</script>
 
-	<script type="text/html" id="tmpl-playlist-settings">
+<script type="text/html" id="tmpl-playlist-settings">
 		<h2><?php _e( 'Playlist Settings' ); ?></h2>
 
 		<# var emptyModel = _.isEmpty( data.model ),
@@ -812,7 +858,7 @@ function wp_print_media_templates() {
 		</label>
 	</script>
 
-	<script type="text/html" id="tmpl-embed-link-settings">
+<script type="text/html" id="tmpl-embed-link-settings">
 		<label class="setting link-text">
 			<span><?php _e( 'Link Text' ); ?></span>
 			<input type="text" class="alignment" data-setting="linkText" />
@@ -822,14 +868,17 @@ function wp_print_media_templates() {
 		</div>
 	</script>
 
-	<script type="text/html" id="tmpl-embed-image-settings">
+<script type="text/html" id="tmpl-embed-image-settings">
 		<div class="thumbnail">
 			<img src="{{ data.model.url }}" draggable="false" alt="" />
 		</div>
 
 		<?php
-		/** This filter is documented in wp-admin/includes/media.php */
-		if ( ! apply_filters( 'disable_captions', '' ) ) : ?>
+	/**
+	 * This filter is documented in wp-admin/includes/media.php
+	 */
+	if (! apply_filters ( 'disable_captions', '' )) :
+		?>
 			<label class="setting caption">
 				<span><?php _e('Caption'); ?></span>
 				<textarea data-setting="caption" />
@@ -876,7 +925,7 @@ function wp_print_media_templates() {
 		</div>
 	</script>
 
-	<script type="text/html" id="tmpl-image-details">
+<script type="text/html" id="tmpl-image-details">
 		<div class="media-embed">
 			<div class="embed-media-settings">
 				<div class="column-image">
@@ -893,8 +942,11 @@ function wp_print_media_templates() {
 				</div>
 				<div class="column-settings">
 					<?php
-					/** This filter is documented in wp-admin/includes/media.php */
-					if ( ! apply_filters( 'disable_captions', '' ) ) : ?>
+	/**
+	 * This filter is documented in wp-admin/includes/media.php
+	 */
+	if (! apply_filters ( 'disable_captions', '' )) :
+		?>
 						<label class="setting caption">
 							<span><?php _e('Caption'); ?></span>
 							<textarea data-setting="caption">{{ data.model.caption }}</textarea>
@@ -935,15 +987,18 @@ function wp_print_media_templates() {
 										data-user-setting="imgsize"
 									<# } #>>
 									<?php
-									/** This filter is documented in wp-admin/includes/media.php */
-									$sizes = apply_filters( 'image_size_names_choose', array(
-										'thumbnail' => __('Thumbnail'),
-										'medium'    => __('Medium'),
-										'large'     => __('Large'),
-										'full'      => __('Full Size'),
-									) );
-
-									foreach ( $sizes as $value => $name ) : ?>
+	/**
+	 * This filter is documented in wp-admin/includes/media.php
+	 */
+	$sizes = apply_filters ( 'image_size_names_choose', array (
+			'thumbnail' => __ ( 'Thumbnail' ),
+			'medium' => __ ( 'Medium' ),
+			'large' => __ ( 'Large' ),
+			'full' => __ ( 'Full Size' ) 
+	) );
+	
+	foreach ( $sizes as $value => $name ) :
+		?>
 										<#
 										var size = data.sizes['<?php echo esc_js( $value ); ?>'];
 										if ( size ) { #>
@@ -1020,12 +1075,12 @@ function wp_print_media_templates() {
 		</div>
 	</script>
 
-	<script type="text/html" id="tmpl-image-editor">
+<script type="text/html" id="tmpl-image-editor">
 		<div id="media-head-{{ data.id }}"></div>
 		<div id="image-editor-{{ data.id }}"></div>
 	</script>
 
-	<script type="text/html" id="tmpl-audio-details">
+<script type="text/html" id="tmpl-audio-details">
 		<# var ext, html5types = {
 			mp3: wp.media.view.settings.embedMimes.mp3,
 			ogg: wp.media.view.settings.embedMimes.ogg
@@ -1034,7 +1089,7 @@ function wp_print_media_templates() {
 		<?php $audio_types = wp_get_audio_extensions(); ?>
 		<div class="media-embed media-embed-details">
 			<div class="embed-media-settings embed-audio-settings">
-				<?php wp_underscore_audio_template() ?>
+				<?php wp_underscore_audio_template()?>
 
 				<# if ( ! _.isEmpty( data.model.src ) ) {
 					ext = data.model.src.split('.').pop();
@@ -1049,9 +1104,9 @@ function wp_print_media_templates() {
 				</label>
 				<# } #>
 				<?php
-
-				foreach ( $audio_types as $type ):
-				?><# if ( ! _.isEmpty( data.model.<?php echo $type ?> ) ) {
+	
+	foreach ( $audio_types as $type ) :
+		?><# if ( ! _.isEmpty( data.model.<?php echo $type ?> ) ) {
 					if ( ! _.isUndefined( html5types.<?php echo $type ?> ) ) {
 						delete html5types.<?php echo $type ?>;
 					}
@@ -1097,7 +1152,7 @@ function wp_print_media_templates() {
 		</div>
 	</script>
 
-	<script type="text/html" id="tmpl-video-details">
+<script type="text/html" id="tmpl-video-details">
 		<# var ext, html5types = {
 			mp4: wp.media.view.settings.embedMimes.mp4,
 			ogv: wp.media.view.settings.embedMimes.ogv,
@@ -1117,7 +1172,7 @@ function wp_print_media_templates() {
 				}
 				#>
 
-				<?php wp_underscore_video_template() ?>
+				<?php wp_underscore_video_template()?>
 
 				<# if ( ! _.isEmpty( data.model.src ) ) {
 					ext = data.model.src.split('.').pop();
@@ -1131,8 +1186,10 @@ function wp_print_media_templates() {
 					<button type="button" class="button-link remove-setting"><?php _e( 'Remove video source' ); ?></button>
 				</label>
 				<# } #>
-				<?php foreach ( $video_types as $type ):
-				?><# if ( ! _.isEmpty( data.model.<?php echo $type ?> ) ) {
+				<?php
+	
+foreach ( $video_types as $type ) :
+		?><# if ( ! _.isEmpty( data.model.<?php echo $type ?> ) ) {
 					if ( ! _.isUndefined( html5types.<?php echo $type ?> ) ) {
 						delete html5types.<?php echo $type ?>;
 					}
@@ -1205,7 +1262,7 @@ function wp_print_media_templates() {
 		</div>
 	</script>
 
-	<script type="text/html" id="tmpl-editor-gallery">
+<script type="text/html" id="tmpl-editor-gallery">
 		<# if ( data.attachments.length ) { #>
 			<div class="gallery gallery-columns-{{ data.columns }}">
 				<# _.each( data.attachments, function( attachment, index ) { #>
@@ -1235,12 +1292,12 @@ function wp_print_media_templates() {
 		<# } #>
 	</script>
 
-	<script type="text/html" id="tmpl-crop-content">
+<script type="text/html" id="tmpl-crop-content">
 		<img class="crop-image" src="{{ data.url }}" alt="<?php esc_attr_e( 'Image crop area preview. Requires mouse interaction.' ); ?>">
 		<div class="upload-errors"></div>
 	</script>
 
-	<script type="text/html" id="tmpl-site-icon-preview">
+<script type="text/html" id="tmpl-site-icon-preview">
 		<h2><?php _e( 'Preview' ); ?></h2>
 		<strong aria-hidden="true"><?php _e( 'As a browser icon' ); ?></strong>
 		<div class="favicon-preview">
@@ -1258,12 +1315,12 @@ function wp_print_media_templates() {
 		</div>
 	</script>
 
-	<?php
-
+<?php
+	
 	/**
 	 * Fires when the custom Backbone media templates are printed.
 	 *
 	 * @since 3.5.0
 	 */
-	do_action( 'print_media_templates' );
+	do_action ( 'print_media_templates' );
 }

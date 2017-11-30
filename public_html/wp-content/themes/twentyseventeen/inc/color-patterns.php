@@ -11,17 +11,17 @@
  * Generate the CSS for the current custom color scheme.
  */
 function twentyseventeen_custom_colors_css() {
-	$hue = absint( get_theme_mod( 'colorscheme_hue', 250 ) );
-
+	$hue = absint ( get_theme_mod ( 'colorscheme_hue', 250 ) );
+	
 	/**
 	 * Filter Twenty Seventeen default saturation level.
 	 *
 	 * @since Twenty Seventeen 1.0
-	 *
-	 * @param $saturation integer
+	 *       
+	 * @param $saturation integer        	
 	 */
-	$saturation = absint( apply_filters( 'twentyseventeen_custom_colors_saturation', 50 ) );
-	$reduced_saturation = ( .8 * $saturation ) . '%';
+	$saturation = absint ( apply_filters ( 'twentyseventeen_custom_colors_saturation', 50 ) );
+	$reduced_saturation = (.8 * $saturation) . '%';
 	$saturation = $saturation . '%';
 	$css = '
 /**
@@ -95,7 +95,7 @@ function twentyseventeen_custom_colors_css() {
 .colors-custom .site-footer .widget-area a,
 .colors-custom .posts-navigation a,
 .colors-custom .widget_authors a strong {
-	-webkit-box-shadow: inset 0 -1px 0 hsl( ' . $hue . ', ' . $saturation  . ', 6% ); /* base: rgba(15, 15, 15, 1); */
+	-webkit-box-shadow: inset 0 -1px 0 hsl( ' . $hue . ', ' . $saturation . ', 6% ); /* base: rgba(15, 15, 15, 1); */
 	box-shadow: inset 0 -1px 0 hsl( ' . $hue . ', ' . $saturation . ', 6% ); /* base: rgba(15, 15, 15, 1); */
 }
 
@@ -201,7 +201,7 @@ function twentyseventeen_custom_colors_css() {
 .colors-custom .widget ul li a:focus,
 .colors-custom .widget ul li a:hover {
 	-webkit-box-shadow: inset 0 0 0 hsl( ' . $hue . ', ' . $saturation . ', 13% ), 0 3px 0 hsl( ' . $hue . ', ' . $saturation . ', 13% );
-	box-shadow: inset 0 0 0 hsl( ' . $hue . ', ' . $saturation. ' , 13% ), 0 3px 0 hsl( ' . $hue . ', ' . $saturation . ', 13% );
+	box-shadow: inset 0 0 0 hsl( ' . $hue . ', ' . $saturation . ' , 13% ), 0 3px 0 hsl( ' . $hue . ', ' . $saturation . ', 13% );
 }
 
 body.colors-custom,
@@ -317,7 +317,7 @@ body.colors-custom,
 .colors-custom .next.page-numbers:hover,
 .colors-custom .site-content .wp-playlist-light .wp-playlist-item:hover,
 .colors-custom .site-content .wp-playlist-light .wp-playlist-item:focus {
-	background: hsl( ' . esc_attr( $hue ) . ', ' . esc_attr( $saturation ) . ', 46% ); /* base: #767676; */
+	background: hsl( ' . esc_attr ( $hue ) . ', ' . esc_attr ( $saturation ) . ', 46% ); /* base: #767676; */
 }
 
 .colors-custom button.secondary:hover,
@@ -559,16 +559,18 @@ body.colors-custom,
 		color: hsl( ' . $hue . ', ' . $saturation . ', 100% ); /* base: #fff; */
 	}
 }';
-
-
+	
 	/**
 	 * Filters Twenty Seventeen custom colors CSS.
 	 *
 	 * @since Twenty Seventeen 1.0
-	 *
-	 * @param $css        string Base theme colors CSS.
-	 * @param $hue        int    The user's selected color hue.
-	 * @param $saturation string Filtered theme color saturation level.
+	 *       
+	 * @param $css string
+	 *        	Base theme colors CSS.
+	 * @param $hue int
+	 *        	The user's selected color hue.
+	 * @param $saturation string
+	 *        	Filtered theme color saturation level.
 	 */
-	return apply_filters( 'twentyseventeen_custom_colors_css', $css, $hue, $saturation );
+	return apply_filters ( 'twentyseventeen_custom_colors_css', $css, $hue, $saturation );
 }

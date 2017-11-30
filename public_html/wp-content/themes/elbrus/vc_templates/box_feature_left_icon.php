@@ -20,45 +20,43 @@
  * Shortcode class
  * @var $this WPBakeryShortCode_Box_Feature_Left_Icon
  */
-$type = $icon_pixstrokegap = $icon_pixflaticon = $icon_pixfontawesome =
-$icon_pixelegant = $icon_pixicomoon = $icon_pixsimple = $icon_fontawesome =
-$icon_openiconic = $icon_typicons = $icon_entypo = $icon_linecons = '';
+$type = $icon_pixstrokegap = $icon_pixflaticon = $icon_pixfontawesome = $icon_pixelegant = $icon_pixicomoon = $icon_pixsimple = $icon_fontawesome = $icon_openiconic = $icon_typicons = $icon_entypo = $icon_linecons = '';
 
 $title = $under_title = $link = $link_title = $link_icon = $css_animation = '';
 
-$atts = vc_map_get_attributes( $this->getShortcode(), $atts );
-extract( $atts );
+$atts = vc_map_get_attributes ( $this->getShortcode (), $atts );
+extract ( $atts );
 
 $out = '';
 // Enqueue needed icon font.
-vc_icon_element_fonts_enqueue( $type );
-$icon = isset( ${"icon_" . $type} ) ? esc_attr( ${"icon_" . $type} ) : '';
+vc_icon_element_fonts_enqueue ( $type );
+$icon = isset ( ${"icon_" . $type} ) ? esc_attr ( ${"icon_" . $type} ) : '';
 
-$href = vc_build_link( $link );
-if ( strlen( $href['url'] ) > 0 ) {
-	$a_target = strlen( $href['target'] ) > 0 ? $href['target'] : '_self';
-	$link_title = '<a href="'.esc_url($href['url']).'" title="'.esc_attr($href['title']).'" target="'.esc_attr($a_target).'">'.wp_kses_post($title).'</a>';
-	$link_icon = '<a href="'.esc_url($href['url']).'" title="'.esc_attr($href['title']).'" target="'.esc_attr($a_target).'"><span class="'.esc_attr($icon).'"></span></a>';
+$href = vc_build_link ( $link );
+if (strlen ( $href ['url'] ) > 0) {
+	$a_target = strlen ( $href ['target'] ) > 0 ? $href ['target'] : '_self';
+	$link_title = '<a href="' . esc_url ( $href ['url'] ) . '" title="' . esc_attr ( $href ['title'] ) . '" target="' . esc_attr ( $a_target ) . '">' . wp_kses_post ( $title ) . '</a>';
+	$link_icon = '<a href="' . esc_url ( $href ['url'] ) . '" title="' . esc_attr ( $href ['title'] ) . '" target="' . esc_attr ( $a_target ) . '"><span class="' . esc_attr ( $icon ) . '"></span></a>';
 } else {
 	$link_title = $title;
-	$link_icon = '<span class="'.esc_attr($icon).'"></span>';
+	$link_icon = '<span class="' . esc_attr ( $icon ) . '"></span>';
 }
 
 $css_animation_class = $css_animation != '' ? ' wow ' . $css_animation : '';
 
 $out .= '
-	<div class="service-item '. esc_attr($css_animation_class) . '">
+	<div class="service-item ' . esc_attr ( $css_animation_class ) . '">
         <div class="media-left">
             <div class="wrap-service-icon">
                 <div class="service-icon">
-                    '.wp_kses_post($link_icon).'
+                    ' . wp_kses_post ( $link_icon ) . '
                 </div>
             </div>
         </div>
         <div class="media-body">
-            <h5>'.wp_kses_post($link_title).'</h5>
-            <div class="under_title">'.wp_kses_post($under_title).'</div>
-            <div class="service-item-text">'.do_shortcode($content).'</div>
+            <h5>' . wp_kses_post ( $link_title ) . '</h5>
+            <div class="under_title">' . wp_kses_post ( $under_title ) . '</div>
+            <div class="service-item-text">' . do_shortcode ( $content ) . '</div>
         </div>
     </div>
 ';

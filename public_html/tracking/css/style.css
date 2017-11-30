@@ -1,130 +1,133 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import
+	url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic)
+	;
+
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body {
-  font-family: lato;
+	font-family: lato;
 }
 
 .section-header, .steps-header, .steps-name {
-  color: #a0a0a0;
-  font-weight: 400;
-  font-size: 1.4em;
+	color: #a0a0a0;
+	font-weight: 400;
+	font-size: 1.4em;
 }
 
 .steps-header {
-  margin-bottom: 20px;
-  text-align: center;
+	margin-bottom: 20px;
+	text-align: center;
 }
 
 .steps-timeline {
-  outline: 1px dashed rgba(255, 0, 0, 0);
+	outline: 1px dashed rgba(255, 0, 0, 0);
 }
+
 @media screen and (max-width: 500px) {
-  .steps-timeline {
-    border-left: 4px solid #f47c24;
-    margin-left: 35px;
-  }
+	.steps-timeline {
+		border-left: 4px solid #f47c24;
+		margin-left: 35px;
+	}
 }
+
 @media screen and (min-width: 600px) {
-  .steps-timeline {
-    border-top: 4px solid #f47c24;
-    padding-top: 0px;
-    margin-top: 180px;
-    margin-left: 16.65%;
-    margin-right: 16.65%;
-  }
+	.steps-timeline {
+		border-top: 4px solid #f47c24;
+		padding-top: 0px;
+		margin-top: 180px;
+		margin-left: 16.65%;
+		margin-right: 16.65%;
+	}
 }
+
 .steps-timeline:after {
-  content: "";
-  display: table;
-  clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
-.steps-one,
-.steps-two,
-.steps-three {
-  outline: 1px dashed rgba(0, 128, 0, 0);
-}
-@media screen and (max-width: 500px) {
-  .steps-one,
-  .steps-two,
-  .steps-three {
-    margin-left: -45px;
-  }
-}
-@media screen and (min-width: 500px) {
-  .steps-one,
-  .steps-two,
-  .steps-three {
-    float: left;
-    width: 33%;
-    margin-top: -50px;
-  }
+.steps-one, .steps-two, .steps-three {
+	outline: 1px dashed rgba(0, 128, 0, 0);
 }
 
 @media screen and (max-width: 500px) {
-  .steps-one,
-  .steps-two {
-    padding-bottom: 40px;
-  }
+	.steps-one, .steps-two, .steps-three {
+		margin-left: -45px;
+	}
 }
 
 @media screen and (min-width: 500px) {
-  .steps-one {
-    margin-left: -16.65%;
-    margin-right: 16.65%;
-  }
+	.steps-one, .steps-two, .steps-three {
+		float: left;
+		width: 33%;
+		margin-top: -50px;
+	}
 }
 
 @media screen and (max-width: 500px) {
-  .steps-three {
-    margin-bottom: -100%;
-  }
+	.steps-one, .steps-two {
+		padding-bottom: 40px;
+	}
 }
+
 @media screen and (min-width: 500px) {
-  .steps-three {
-    margin-left: 16.65%;
-    margin-right: -16.65%;
-  }
+	.steps-one {
+		margin-left: -16.65%;
+		margin-right: 16.65%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.steps-three {
+		margin-bottom: -100%;
+	}
+}
+
+@media screen and (min-width: 500px) {
+	.steps-three {
+		margin-left: 16.65%;
+		margin-right: -16.65%;
+	}
 }
 
 .steps-img {
-  display: block;
-  margin: auto;
-  width: 90px;
-  height: 90px;
-  border-radius: 60%;
+	display: block;
+	margin: auto;
+	width: 90px;
+	height: 90px;
+	border-radius: 60%;
 }
+
 @media screen and (max-width: 500px) {
-  .steps-img {
-    float: left;
-    margin-right: 20px;
-  }
+	.steps-img {
+		float: left;
+		margin-right: 20px;
+	}
 }
 
-.steps-name,
-.steps-description {
-  margin: 0;
-  text-align:justify;
+.steps-name, .steps-description {
+	margin: 0;
+	text-align: justify;
 }
 
 @media screen and (min-width: 500px) {
-  .steps-name {
-    text-align: center;
-  }
+	.steps-name {
+		text-align: center;
+	}
 }
 
 .steps-description {
-  overflow: hidden;
+	overflow: hidden;
 }
+
 @media screen and (min-width: 500px) {
-  .steps-description {
-    text-align: center;
-  }
+	.steps-description {
+		text-align: center;
+	}
 }

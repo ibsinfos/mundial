@@ -34,7 +34,7 @@
 	border-radius: 2px 0 0 2px;
 	border-right: 1px solid #ccc;
 	color: #555;
-	content: attr( title );
+	content: attr(title);
 	display: block;
 	font-size: 11px;
 	line-height: 22px;
@@ -45,15 +45,13 @@
 	top: 0;
 }
 
-.wp-color-result:hover,
-.wp-color-result:focus {
+.wp-color-result:hover, .wp-color-result:focus {
 	background: #fafafa;
 	border-color: #999;
 	color: #23282d;
 }
 
-.wp-color-result:hover:after,
-.wp-color-result:focus:after {
+.wp-color-result:hover:after, .wp-color-result:focus:after {
 	color: #23282d;
 	border-color: #a0a5aa;
 	border-right: 1px solid #999;
@@ -64,7 +62,7 @@
 }
 
 .wp-color-result.wp-picker-open:after {
-	content: attr( data-current );
+	content: attr(data-current);
 }
 
 .wp-picker-container, .wp-picker-container:active {
@@ -74,11 +72,11 @@
 
 .wp-color-result:focus {
 	border-color: #5b9dd9;
-	-webkit-box-shadow: 0 0 3px rgba( 0, 115, 170, .8 );
-	box-shadow: 0 0 3px rgba( 0, 115, 170, .8 );
+	-webkit-box-shadow: 0 0 3px rgba(0, 115, 170, .8);
+	box-shadow: 0 0 3px rgba(0, 115, 170, .8);
 }
 
-.wp-picker-open + .wp-picker-input-wrap {
+.wp-picker-open+.wp-picker-input-wrap {
 	display: inline-block;
 	vertical-align: top;
 }
@@ -125,12 +123,9 @@
 	color: #000;
 }
 
-.iris-picker .ui-square-handle:focus,
-.iris-picker .iris-strip .ui-slider-handle:focus {
-	-webkit-box-shadow:
-		0 0 0 1px #5b9dd9,
-		0 0 2px 1px rgba(30, 140, 190, .8);
-	box-shadow:
-		0 0 0 1px #5b9dd9,
-		0 0 2px 1px rgba(30, 140, 190, .8);
+.iris-picker .ui-square-handle:focus, .iris-picker .iris-strip .ui-slider-handle:focus
+	{
+	-webkit-box-shadow: 0 0 0 1px #5b9dd9, 0 0 2px 1px
+		rgba(30, 140, 190, .8);
+	box-shadow: 0 0 0 1px #5b9dd9, 0 0 2px 1px rgba(30, 140, 190, .8);
 }

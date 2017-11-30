@@ -2,9 +2,8 @@
 Theme Name: Twenty Fifteen
 Description: IE7 specific style.
 */
-
 .screen-reader-text {
-	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
 }
 
 .secondary-toggle {
@@ -14,8 +13,7 @@ Description: IE7 specific style.
 	width: auto;
 }
 
-.pagination .prev,
-.pagination .next {
+.pagination .prev, .pagination .next {
 	font-size: 16px;
 	font-weight: 700;
 	line-height: 64px;
@@ -23,8 +21,7 @@ Description: IE7 specific style.
 	width: auto;
 }
 
-.image-navigation,
-.comment-navigation {
+.image-navigation, .comment-navigation {
 	width: 662px;
 }
 
@@ -51,8 +48,7 @@ Description: IE7 specific style.
 	text-align: left;
 }
 
-.comment-list,
-.comment-navigation {
+.comment-list, .comment-navigation {
 	margin-bottom: 1.6471em;
 }
 

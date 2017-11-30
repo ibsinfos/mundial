@@ -6,10 +6,8 @@
 	font-family: Helvetica, Arial;
 }
 
-.mejs-container,
-.mejs-embed,
-.mejs-embed body,
-.mejs-container .mejs-controls {
+.mejs-container, .mejs-embed, .mejs-embed body, .mejs-container .mejs-controls
+	{
 	background: #222;
 }
 
@@ -17,8 +15,8 @@
 	display: table;
 }
 
-.mejs-controls .mejs-time-rail .mejs-time-loaded,
-.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+.mejs-controls .mejs-time-rail .mejs-time-loaded, .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current
+	{
 	background: #fff;
 }
 
@@ -26,14 +24,14 @@
 	background: #0073aa;
 }
 
-.mejs-controls .mejs-time-rail .mejs-time-total,
-.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+.mejs-controls .mejs-time-rail .mejs-time-total, .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total
+	{
 	background: rgba(255, 255, 255, .33);
 }
 
-.mejs-controls .mejs-time-rail span,
-.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
-.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+.mejs-controls .mejs-time-rail span, .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+	.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current
+	{
 	border-radius: 0;
 }
 
@@ -42,7 +40,7 @@
 	position: absolute;
 }
 
-.mejs-controls a:focus > .mejs-offscreen {
+.mejs-controls a:focus>.mejs-offscreen {
 	background-color: #f1f1f1;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -105,8 +103,8 @@
 	max-width: 600px;
 }
 
-.media-embed-details .setting p,
-.media-embed-details .setting .remove-setting {
+.media-embed-details .setting p, .media-embed-details .setting .remove-setting
+	{
 	color: #a00;
 	font-size: 10px;
 	text-transform: uppercase;
@@ -130,13 +128,12 @@
 	height: auto;
 }
 
-.wp_attachment_holder .wp-video,
-.wp_attachment_holder .wp-audio-shortcode {
+.wp_attachment_holder .wp-video, .wp_attachment_holder .wp-audio-shortcode
+	{
 	margin-top: 18px;
 }
 
-video.wp-video-shortcode,
-.wp-video-shortcode video {
+video.wp-video-shortcode, .wp-video-shortcode video {
 	max-width: 100%;
 	display: inline-block;
 }
@@ -301,7 +298,7 @@ video.wp-video-shortcode,
 }
 
 .wp-playlist-current-item .wp-playlist-item-title,
-.wp-playlist-current-item .wp-playlist-item-artist {
+	.wp-playlist-current-item .wp-playlist-item-artist {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;

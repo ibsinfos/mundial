@@ -37,7 +37,7 @@ class WP_Metadata_Lazyloader {
 	 * @var array
 	 */
 	protected $pending_objects;
-
+	
 	/**
 	 * Settings for supported object types.
 	 *
@@ -45,8 +45,8 @@ class WP_Metadata_Lazyloader {
 	 * @access protected
 	 * @var array
 	 */
-	protected $settings = array();
-
+	protected $settings = array ();
+	
 	/**
 	 * Constructor.
 	 *
@@ -54,80 +54,92 @@ class WP_Metadata_Lazyloader {
 	 * @access public
 	 */
 	public function __construct() {
-		$this->settings = array(
-			'term' => array(
-				'filter'   => 'get_term_metadata',
-				'callback' => array( $this, 'lazyload_term_meta' ),
-			),
-			'comment' => array(
-				'filter'   => 'get_comment_metadata',
-				'callback' => array( $this, 'lazyload_comment_meta' ),
-			),
+		$this->settings = array (
+				'term' => array (
+						'filter' => 'get_term_metadata',
+						'callback' => array (
+								$this,
+								'lazyload_term_meta' 
+						) 
+				),
+				'comment' => array (
+						'filter' => 'get_comment_metadata',
+						'callback' => array (
+								$this,
+								'lazyload_comment_meta' 
+						) 
+				) 
 		);
 	}
-
+	
 	/**
 	 * Adds objects to the metadata lazy-load queue.
 	 *
 	 * @since 4.5.0
 	 * @access public
-	 *
-	 * @param string $object_type Type of object whose meta is to be lazy-loaded. Accepts 'term' or 'comment'.
-	 * @param array  $object_ids  Array of object IDs.
+	 *        
+	 * @param string $object_type
+	 *        	Type of object whose meta is to be lazy-loaded. Accepts 'term' or 'comment'.
+	 * @param array $object_ids
+	 *        	Array of object IDs.
 	 * @return bool|WP_Error True on success, WP_Error on failure.
 	 */
-	public function queue_objects( $object_type, $object_ids ) {
-		if ( ! isset( $this->settings[ $object_type ] ) ) {
-			return new WP_Error( 'invalid_object_type', __( 'Invalid object type' ) );
+	public function queue_objects($object_type, $object_ids) {
+		if (! isset ( $this->settings [$object_type] )) {
+			return new WP_Error ( 'invalid_object_type', __ ( 'Invalid object type' ) );
 		}
-
-		$type_settings = $this->settings[ $object_type ];
-
-		if ( ! isset( $this->pending_objects[ $object_type ] ) ) {
-			$this->pending_objects[ $object_type ] = array();
+		
+		$type_settings = $this->settings [$object_type];
+		
+		if (! isset ( $this->pending_objects [$object_type] )) {
+			$this->pending_objects [$object_type] = array ();
 		}
-
+		
 		foreach ( $object_ids as $object_id ) {
 			// Keyed by ID for faster lookup.
-			if ( ! isset( $this->pending_objects[ $object_type ][ $object_id ] ) ) {
-				$this->pending_objects[ $object_type ][ $object_id ] = 1;
+			if (! isset ( $this->pending_objects [$object_type] [$object_id] )) {
+				$this->pending_objects [$object_type] [$object_id] = 1;
 			}
 		}
-
-		add_filter( $type_settings['filter'], $type_settings['callback'] );
-
+		
+		add_filter ( $type_settings ['filter'], $type_settings ['callback'] );
+		
 		/**
 		 * Fires after objects are added to the metadata lazy-load queue.
 		 *
 		 * @since 4.5.0
-		 *
-		 * @param array                  $object_ids  Object IDs.
-		 * @param string                 $object_type Type of object being queued.
-		 * @param WP_Metadata_Lazyloader $lazyloader  The lazy-loader object.
+		 *       
+		 * @param array $object_ids
+		 *        	Object IDs.
+		 * @param string $object_type
+		 *        	Type of object being queued.
+		 * @param WP_Metadata_Lazyloader $lazyloader
+		 *        	The lazy-loader object.
 		 */
-		do_action( 'metadata_lazyloader_queued_objects', $object_ids, $object_type, $this );
+		do_action ( 'metadata_lazyloader_queued_objects', $object_ids, $object_type, $this );
 	}
-
+	
 	/**
 	 * Resets lazy-load queue for a given object type.
 	 *
 	 * @since 4.5.0
 	 * @access public
-	 *
-	 * @param string $object_type Object type. Accepts 'comment' or 'term'.
+	 *        
+	 * @param string $object_type
+	 *        	Object type. Accepts 'comment' or 'term'.
 	 * @return bool|WP_Error True on success, WP_Error on failure.
 	 */
-	public function reset_queue( $object_type ) {
-		if ( ! isset( $this->settings[ $object_type ] ) ) {
-			return new WP_Error( 'invalid_object_type', __( 'Invalid object type' ) );
+	public function reset_queue($object_type) {
+		if (! isset ( $this->settings [$object_type] )) {
+			return new WP_Error ( 'invalid_object_type', __ ( 'Invalid object type' ) );
 		}
-
-		$type_settings = $this->settings[ $object_type ];
-
-		$this->pending_objects[ $object_type ] = array();
-		remove_filter( $type_settings['filter'], $type_settings['callback'] );
+		
+		$type_settings = $this->settings [$object_type];
+		
+		$this->pending_objects [$object_type] = array ();
+		remove_filter ( $type_settings ['filter'], $type_settings ['callback'] );
 	}
-
+	
 	/**
 	 * Lazy-loads term meta for queued terms.
 	 *
@@ -136,22 +148,23 @@ class WP_Metadata_Lazyloader {
 	 *
 	 * @since 4.5.0
 	 * @access public
-	 *
-	 * @param mixed $check The `$check` param passed from the 'get_term_metadata' hook.
+	 *        
+	 * @param mixed $check
+	 *        	The `$check` param passed from the 'get_term_metadata' hook.
 	 * @return mixed In order not to short-circuit `get_metadata()`. Generally, this is `null`, but it could be
-	 *               another value if filtered by a plugin.
+	 *         another value if filtered by a plugin.
 	 */
-	public function lazyload_term_meta( $check ) {
-		if ( ! empty( $this->pending_objects['term'] ) ) {
-			update_termmeta_cache( array_keys( $this->pending_objects['term'] ) );
-
+	public function lazyload_term_meta($check) {
+		if (! empty ( $this->pending_objects ['term'] )) {
+			update_termmeta_cache ( array_keys ( $this->pending_objects ['term'] ) );
+			
 			// No need to run again for this set of terms.
-			$this->reset_queue( 'term' );
+			$this->reset_queue ( 'term' );
 		}
-
+		
 		return $check;
 	}
-
+	
 	/**
 	 * Lazy-loads comment meta for queued comments.
 	 *
@@ -159,18 +172,19 @@ class WP_Metadata_Lazyloader {
 	 * directly, from either inside or outside the `WP_Query` object.
 	 *
 	 * @since 4.5.0
-	 *
-	 * @param mixed $check The `$check` param passed from the {@see 'get_comment_metadata'} hook.
+	 *       
+	 * @param mixed $check
+	 *        	The `$check` param passed from the {@see 'get_comment_metadata'} hook.
 	 * @return mixed The original value of `$check`, so as not to short-circuit `get_comment_metadata()`.
 	 */
-	public function lazyload_comment_meta( $check ) {
-		if ( ! empty( $this->pending_objects['comment'] ) ) {
-			update_meta_cache( 'comment', array_keys( $this->pending_objects['comment'] ) );
-
+	public function lazyload_comment_meta($check) {
+		if (! empty ( $this->pending_objects ['comment'] )) {
+			update_meta_cache ( 'comment', array_keys ( $this->pending_objects ['comment'] ) );
+			
 			// No need to run again for this set of comments.
-			$this->reset_queue( 'comment' );
+			$this->reset_queue ( 'comment' );
 		}
-
+		
 		return $check;
 	}
 }

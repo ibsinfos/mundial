@@ -42,7 +42,6 @@
  * @license http://www.opensource.org/licenses/bsd-license.php BSD License
  */
 
-
 /**
  * Handles `<media:text>` captions as defined in Media RSS.
  *
@@ -53,8 +52,7 @@
  * @package SimplePie
  * @subpackage API
  */
-class SimplePie_Caption
-{
+class SimplePie_Caption {
 	/**
 	 * Content type
 	 *
@@ -62,7 +60,7 @@ class SimplePie_Caption
 	 * @see get_type()
 	 */
 	var $type;
-
+	
 	/**
 	 * Language
 	 *
@@ -70,7 +68,7 @@ class SimplePie_Caption
 	 * @see get_language()
 	 */
 	var $lang;
-
+	
 	/**
 	 * Start time
 	 *
@@ -78,7 +76,7 @@ class SimplePie_Caption
 	 * @see get_starttime()
 	 */
 	var $startTime;
-
+	
 	/**
 	 * End time
 	 *
@@ -86,7 +84,7 @@ class SimplePie_Caption
 	 * @see get_endtime()
 	 */
 	var $endTime;
-
+	
 	/**
 	 * Caption text
 	 *
@@ -94,115 +92,93 @@ class SimplePie_Caption
 	 * @see get_text()
 	 */
 	var $text;
-
+	
 	/**
 	 * Constructor, used to input the data
 	 *
 	 * For documentation on all the parameters, see the corresponding
 	 * properties and their accessors
 	 */
-	public function __construct($type = null, $lang = null, $startTime = null, $endTime = null, $text = null)
-	{
+	public function __construct($type = null, $lang = null, $startTime = null, $endTime = null, $text = null) {
 		$this->type = $type;
 		$this->lang = $lang;
 		$this->startTime = $startTime;
 		$this->endTime = $endTime;
 		$this->text = $text;
 	}
-
+	
 	/**
 	 * String-ified version
 	 *
 	 * @return string
 	 */
-	public function __toString()
-	{
+	public function __toString() {
 		// There is no $this->data here
-		return md5(serialize($this));
+		return md5 ( serialize ( $this ) );
 	}
-
+	
 	/**
 	 * Get the end time
 	 *
 	 * @return string|null Time in the format 'hh:mm:ss.SSS'
 	 */
-	public function get_endtime()
-	{
-		if ($this->endTime !== null)
-		{
+	public function get_endtime() {
+		if ($this->endTime !== null) {
 			return $this->endTime;
-		}
-		else
-		{
+		} else {
 			return null;
 		}
 	}
-
+	
 	/**
 	 * Get the language
 	 *
 	 * @link http://tools.ietf.org/html/rfc3066
 	 * @return string|null Language code as per RFC 3066
 	 */
-	public function get_language()
-	{
-		if ($this->lang !== null)
-		{
+	public function get_language() {
+		if ($this->lang !== null) {
 			return $this->lang;
-		}
-		else
-		{
+		} else {
 			return null;
 		}
 	}
-
+	
 	/**
 	 * Get the start time
 	 *
 	 * @return string|null Time in the format 'hh:mm:ss.SSS'
 	 */
-	public function get_starttime()
-	{
-		if ($this->startTime !== null)
-		{
+	public function get_starttime() {
+		if ($this->startTime !== null) {
 			return $this->startTime;
-		}
-		else
-		{
+		} else {
 			return null;
 		}
 	}
-
+	
 	/**
 	 * Get the text of the caption
 	 *
 	 * @return string|null
 	 */
-	public function get_text()
-	{
-		if ($this->text !== null)
-		{
+	public function get_text() {
+		if ($this->text !== null) {
 			return $this->text;
-		}
-		else
-		{
+		} else {
 			return null;
 		}
 	}
-
+	
 	/**
 	 * Get the content type (not MIME type)
 	 *
 	 * @return string|null Either 'text' or 'html'
 	 */
-	public function get_type()
-	{
-		if ($this->type !== null)
-		{
+	public function get_type() {
+		if ($this->type !== null) {
 			return $this->type;
-		}
-		else
-		{
+		} else {
 			return null;
 		}
 	}

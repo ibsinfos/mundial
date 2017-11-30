@@ -52,8 +52,7 @@
  * @package SimplePie
  * @subpackage API
  */
-class SimplePie_Rating
-{
+class SimplePie_Rating {
 	/**
 	 * Rating scheme
 	 *
@@ -61,7 +60,7 @@ class SimplePie_Rating
 	 * @see get_scheme()
 	 */
 	var $scheme;
-
+	
 	/**
 	 * Rating value
 	 *
@@ -69,60 +68,50 @@ class SimplePie_Rating
 	 * @see get_value()
 	 */
 	var $value;
-
+	
 	/**
 	 * Constructor, used to input the data
 	 *
 	 * For documentation on all the parameters, see the corresponding
 	 * properties and their accessors
 	 */
-	public function __construct($scheme = null, $value = null)
-	{
+	public function __construct($scheme = null, $value = null) {
 		$this->scheme = $scheme;
 		$this->value = $value;
 	}
-
+	
 	/**
 	 * String-ified version
 	 *
 	 * @return string
 	 */
-	public function __toString()
-	{
+	public function __toString() {
 		// There is no $this->data here
-		return md5(serialize($this));
+		return md5 ( serialize ( $this ) );
 	}
-
+	
 	/**
 	 * Get the organizational scheme for the rating
 	 *
 	 * @return string|null
 	 */
-	public function get_scheme()
-	{
-		if ($this->scheme !== null)
-		{
+	public function get_scheme() {
+		if ($this->scheme !== null) {
 			return $this->scheme;
-		}
-		else
-		{
+		} else {
 			return null;
 		}
 	}
-
+	
 	/**
 	 * Get the value of the rating
 	 *
 	 * @return string|null
 	 */
-	public function get_value()
-	{
-		if ($this->value !== null)
-		{
+	public function get_value() {
+		if ($this->value !== null) {
 			return $this->value;
-		}
-		else
-		{
+		} else {
 			return null;
 		}
 	}

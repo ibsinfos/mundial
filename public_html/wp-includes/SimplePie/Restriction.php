@@ -52,8 +52,7 @@
  * @package SimplePie
  * @subpackage API
  */
-class SimplePie_Restriction
-{
+class SimplePie_Restriction {
 	/**
 	 * Relationship ('allow'/'deny')
 	 *
@@ -61,7 +60,7 @@ class SimplePie_Restriction
 	 * @see get_relationship()
 	 */
 	var $relationship;
-
+	
 	/**
 	 * Type of restriction
 	 *
@@ -69,7 +68,7 @@ class SimplePie_Restriction
 	 * @see get_type()
 	 */
 	var $type;
-
+	
 	/**
 	 * Restricted values
 	 *
@@ -77,78 +76,64 @@ class SimplePie_Restriction
 	 * @see get_value()
 	 */
 	var $value;
-
+	
 	/**
 	 * Constructor, used to input the data
 	 *
 	 * For documentation on all the parameters, see the corresponding
 	 * properties and their accessors
 	 */
-	public function __construct($relationship = null, $type = null, $value = null)
-	{
+	public function __construct($relationship = null, $type = null, $value = null) {
 		$this->relationship = $relationship;
 		$this->type = $type;
 		$this->value = $value;
 	}
-
+	
 	/**
 	 * String-ified version
 	 *
 	 * @return string
 	 */
-	public function __toString()
-	{
+	public function __toString() {
 		// There is no $this->data here
-		return md5(serialize($this));
+		return md5 ( serialize ( $this ) );
 	}
-
+	
 	/**
 	 * Get the relationship
 	 *
 	 * @return string|null Either 'allow' or 'deny'
 	 */
-	public function get_relationship()
-	{
-		if ($this->relationship !== null)
-		{
+	public function get_relationship() {
+		if ($this->relationship !== null) {
 			return $this->relationship;
-		}
-		else
-		{
+		} else {
 			return null;
 		}
 	}
-
+	
 	/**
 	 * Get the type
 	 *
 	 * @return string|null
 	 */
-	public function get_type()
-	{
-		if ($this->type !== null)
-		{
+	public function get_type() {
+		if ($this->type !== null) {
 			return $this->type;
-		}
-		else
-		{
+		} else {
 			return null;
 		}
 	}
-
+	
 	/**
 	 * Get the list of restricted things
 	 *
 	 * @return string|null
 	 */
-	public function get_value()
-	{
-		if ($this->value !== null)
-		{
+	public function get_value() {
+		if ($this->value !== null) {
 			return $this->value;
-		}
-		else
-		{
+		} else {
 			return null;
 		}
 	}

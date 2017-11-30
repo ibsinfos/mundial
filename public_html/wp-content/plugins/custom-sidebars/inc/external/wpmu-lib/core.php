@@ -29,10 +29,9 @@
  *     define( 'WDEV_SEND_P3P', false ) // Disable P3P
  *     define( 'WDEV_SEND_P3P', 'CP="CAO OUR"' ) // Overwrite default P3P header
  */
-
 $version = '3.0.4';
 
-if ( ! function_exists( 'lib3' ) ) {
+if (! function_exists ( 'lib3' )) {
 	/**
 	 * This is a shortcut function to access the latest TheLib_Core object.
 	 *
@@ -43,10 +42,10 @@ if ( ! function_exists( 'lib3' ) ) {
 	 * The main version is only increased when backwards compatibility fails!
 	 *
 	 * Usage:
-	 *   lib3()->ui->admin_message();
+	 * lib3()->ui->admin_message();
 	 */
 	function lib3() {
-		return TheLib3_Wrap::get_obj();
+		return TheLib3_Wrap::get_obj ();
 	}
 }
 
@@ -54,20 +53,20 @@ if ( ! function_exists( 'lib3' ) ) {
 // Internal module definition:
 
 // Define the absolute paths to all class files of this submodule.
-$dirname = dirname( __FILE__ ) . '/inc/';
-$files = array(
-	'TheLib'         => $dirname . 'class-thelib.php',
-	'TheLib_Core'    => $dirname . 'class-thelib-core.php',
-	'TheLib_Array'   => $dirname . 'class-thelib-array.php',
-	'TheLib_Debug'   => $dirname . 'class-thelib-debug.php',
-	'TheLib_Html'    => $dirname . 'class-thelib-html.php',
-	'TheLib_Net'     => $dirname . 'class-thelib-net.php',
-	'TheLib_Session' => $dirname . 'class-thelib-session.php',
-	'TheLib_Updates' => $dirname . 'class-thelib-updates.php',
-	'TheLib_Ui'      => $dirname . 'class-thelib-ui.php',
+$dirname = dirname ( __FILE__ ) . '/inc/';
+$files = array (
+		'TheLib' => $dirname . 'class-thelib.php',
+		'TheLib_Core' => $dirname . 'class-thelib-core.php',
+		'TheLib_Array' => $dirname . 'class-thelib-array.php',
+		'TheLib_Debug' => $dirname . 'class-thelib-debug.php',
+		'TheLib_Html' => $dirname . 'class-thelib-html.php',
+		'TheLib_Net' => $dirname . 'class-thelib-net.php',
+		'TheLib_Session' => $dirname . 'class-thelib-session.php',
+		'TheLib_Updates' => $dirname . 'class-thelib-updates.php',
+		'TheLib_Ui' => $dirname . 'class-thelib-ui.php' 
 );
 
-if ( ! class_exists( 'TheLib3_Wrap' ) ) {
+if (! class_exists ( 'TheLib3_Wrap' )) {
 	/**
 	 * The wrapper class is used to handle situations when some plugins include
 	 * different versions of TheLib.
@@ -77,37 +76,39 @@ if ( ! class_exists( 'TheLib3_Wrap' ) ) {
 	 * @internal Use function `lib3()` instead!
 	 */
 	class TheLib3_Wrap {
-		static protected $version = '0.0.0';
-		static protected $files = array();
-		static protected $object = null;
-
+		protected static $version = '0.0.0';
+		protected static $files = array ();
+		protected static $object = null;
+		
 		/**
 		 * Store the module files if they are the highest module-version
 		 */
-		static public function set_version( $version, $files ) {
-			if ( null !== self::$object ) { return; }
-
-			if ( version_compare( $version, self::$version, '>' ) ) {
+		static public function set_version($version, $files) {
+			if (null !== self::$object) {
+				return;
+			}
+			
+			if (version_compare ( $version, self::$version, '>' )) {
 				self::$version = $version;
 				self::$files = $files;
 			}
 		}
-
+		
 		/**
 		 * Return the module object.
 		 */
 		static public function get_obj() {
-			if ( null === self::$object ) {
+			if (null === self::$object) {
 				foreach ( self::$files as $class_name => $class_file ) {
-					if ( ! class_exists( $class_name ) && file_exists( $class_file ) ) {
+					if (! class_exists ( $class_name ) && file_exists ( $class_file )) {
 						require_once $class_file;
 					}
 				}
-				self::$object = new TheLib_Core();
+				self::$object = new TheLib_Core ();
 			}
 			return self::$object;
 		}
 	} // End: TheLib3_Wrap
 }
 // Stores the lib-directory if it contains the highest version files.
-TheLib3_Wrap::set_version( $version, $files );
+TheLib3_Wrap::set_version ( $version, $files );

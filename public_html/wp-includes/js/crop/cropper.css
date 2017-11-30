@@ -6,21 +6,20 @@
 }
 
 /* an extra classname is applied for Opera < 9.0 to fix its lack of opacity support */
-.imgCrop_wrap.opera8 .imgCrop_overlay,
-.imgCrop_wrap.opera8 .imgCrop_clickArea { 
+.imgCrop_wrap.opera8 .imgCrop_overlay, .imgCrop_wrap.opera8 .imgCrop_clickArea
+	{
 	background-color: transparent;
 }
 
 /* fix for IE displaying all boxes at line-height by default, although they are still 1 pixel high until we combine them with the pointless span */
-.imgCrop_wrap,
-.imgCrop_wrap * {
+.imgCrop_wrap, .imgCrop_wrap * {
 	font-size: 0;
 }
 
 .imgCrop_overlay {
 	background-color: #000;
 	opacity: 0.5;
-	filter:alpha(opacity=50);
+	filter: alpha(opacity = 50);
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -45,7 +44,7 @@
 	height: 100%;
 	background-color: #FFF;
 	opacity: 0.01;
-	filter:alpha(opacity=01);
+	filter: alpha(opacity = 01);
 }
 
 .imgCrop_marqueeHoriz {
@@ -64,11 +63,25 @@
 	z-index: 3;
 }
 
-.imgCrop_marqueeNorth { top: 0; left: 0; }
-.imgCrop_marqueeEast  { top: 0; right: 0; }
-.imgCrop_marqueeSouth { bottom: 0px; left: 0; }
-.imgCrop_marqueeWest  { top: 0; left: 0; }
+.imgCrop_marqueeNorth {
+	top: 0;
+	left: 0;
+}
 
+.imgCrop_marqueeEast {
+	top: 0;
+	right: 0;
+}
+
+.imgCrop_marqueeSouth {
+	bottom: 0px;
+	left: 0;
+}
+
+.imgCrop_marqueeWest {
+	top: 0;
+	left: 0;
+}
 
 .imgCrop_handle {
 	position: absolute;
@@ -77,7 +90,7 @@
 	height: 6px;
 	background: #FFF;
 	opacity: 0.5;
-	filter:alpha(opacity=50);
+	filter: alpha(opacity = 50);
 	z-index: 4;
 }
 
@@ -96,7 +109,7 @@
 	cursor: n-resize;
 }
 
-.imgCrop_handleNE { 
+.imgCrop_handleNE {
 	top: -3px;
 	right: -3px;
 	cursor: ne-resize;

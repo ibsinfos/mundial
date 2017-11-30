@@ -1,6 +1,6 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-	die( '-1' );
+if (! defined ( 'ABSPATH' )) {
+	die ( '-1' );
 }
 
 ?>
@@ -60,7 +60,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		{# } #}
 	</div><!-- end vc_controls-column -->
 </script>
-<script type="text/html" id="vc_controls-template-container-width-parent">
+<script type="text/html"
+	id="vc_controls-template-container-width-parent">
 	<div class="vc_controls-column">
 		<div class="vc_controls-out-tl">
 			<div class="vc_parent parent-{{ parent_tag }}"><a

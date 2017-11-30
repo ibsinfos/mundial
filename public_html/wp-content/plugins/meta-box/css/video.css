@@ -41,7 +41,7 @@
 
 .rwmb-video-item .rwmb-media-info h4 {
 	white-space: nowrap;
-  overflow: hidden;
-  display: block;
-  text-overflow: ellipsis;
+	overflow: hidden;
+	display: block;
+	text-overflow: ellipsis;
 }

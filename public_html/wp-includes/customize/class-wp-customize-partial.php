@@ -17,7 +17,7 @@
  * @since 4.5.0
  */
 class WP_Customize_Partial {
-
+	
 	/**
 	 * Component.
 	 *
@@ -26,7 +26,7 @@ class WP_Customize_Partial {
 	 * @var WP_Customize_Selective_Refresh
 	 */
 	public $component;
-
+	
 	/**
 	 * Unique identifier for the partial.
 	 *
@@ -38,19 +38,19 @@ class WP_Customize_Partial {
 	 * @var string
 	 */
 	public $id;
-
+	
 	/**
 	 * Parsed ID.
 	 *
 	 * @since 4.5.0
 	 * @access private
 	 * @var array {
-	 *     @type string $base ID base.
-	 *     @type array  $keys Keys for multidimensional.
-	 * }
+	 *      @type string $base ID base.
+	 *      @type array $keys Keys for multidimensional.
+	 *      }
 	 */
-	protected $id_data = array();
-
+	protected $id_data = array ();
+	
 	/**
 	 * Type of this partial.
 	 *
@@ -59,7 +59,7 @@ class WP_Customize_Partial {
 	 * @var string
 	 */
 	public $type = 'default';
-
+	
 	/**
 	 * The jQuery selector to find the container element for the partial.
 	 *
@@ -68,7 +68,7 @@ class WP_Customize_Partial {
 	 * @var string
 	 */
 	public $selector;
-
+	
 	/**
 	 * IDs for settings tied to the partial.
 	 *
@@ -77,7 +77,7 @@ class WP_Customize_Partial {
 	 * @var array
 	 */
 	public $settings;
-
+	
 	/**
 	 * The ID for the setting that this partial is primarily responsible for rendering.
 	 *
@@ -88,7 +88,7 @@ class WP_Customize_Partial {
 	 * @var string
 	 */
 	public $primary_setting;
-
+	
 	/**
 	 * Capability required to edit this partial.
 	 *
@@ -100,7 +100,7 @@ class WP_Customize_Partial {
 	 * @var string
 	 */
 	public $capability;
-
+	
 	/**
 	 * Render callback.
 	 *
@@ -108,11 +108,11 @@ class WP_Customize_Partial {
 	 * @access public
 	 * @see WP_Customize_Partial::render()
 	 * @var callable Callback is called with one argument, the instance of
-	 *                 WP_Customize_Partial. The callback can either echo the
-	 *                 partial or return the partial as a string, or return false if error.
+	 *      WP_Customize_Partial. The callback can either echo the
+	 *      partial or return the partial as a string, or return false if error.
 	 */
 	public $render_callback;
-
+	
 	/**
 	 * Whether the container element is included in the partial, or if only the contents are rendered.
 	 *
@@ -121,7 +121,7 @@ class WP_Customize_Partial {
 	 * @var bool
 	 */
 	public $container_inclusive = false;
-
+	
 	/**
 	 * Whether to refresh the entire preview in case a partial cannot be refreshed.
 	 *
@@ -132,7 +132,7 @@ class WP_Customize_Partial {
 	 * @var bool
 	 */
 	public $fallback_refresh = true;
-
+	
 	/**
 	 * Constructor.
 	 *
@@ -142,121 +142,138 @@ class WP_Customize_Partial {
 	 *
 	 * @since 4.5.0
 	 * @access public
-	 *
-	 * @param WP_Customize_Selective_Refresh $component Customize Partial Refresh plugin instance.
-	 * @param string                         $id        Control ID.
-	 * @param array                          $args      {
-	 *     Optional. Arguments to override class property defaults.
-	 *
-	 *     @type array|string $settings All settings IDs tied to the partial. If undefined, `$id` will be used.
-	 * }
+	 *        
+	 * @param WP_Customize_Selective_Refresh $component
+	 *        	Customize Partial Refresh plugin instance.
+	 * @param string $id
+	 *        	Control ID.
+	 * @param array $args
+	 *        	{
+	 *        	Optional. Arguments to override class property defaults.
+	 *        	
+	 *        	@type array|string $settings All settings IDs tied to the partial. If undefined, `$id` will be used.
+	 *        	}
 	 */
-	public function __construct( WP_Customize_Selective_Refresh $component, $id, $args = array() ) {
-		$keys = array_keys( get_object_vars( $this ) );
+	public function __construct(WP_Customize_Selective_Refresh $component, $id, $args = array()) {
+		$keys = array_keys ( get_object_vars ( $this ) );
 		foreach ( $keys as $key ) {
-			if ( isset( $args[ $key ] ) ) {
-				$this->$key = $args[ $key ];
+			if (isset ( $args [$key] )) {
+				$this->$key = $args [$key];
 			}
 		}
-
-		$this->component       = $component;
-		$this->id              = $id;
-		$this->id_data['keys'] = preg_split( '/\[/', str_replace( ']', '', $this->id ) );
-		$this->id_data['base'] = array_shift( $this->id_data['keys'] );
-
-		if ( empty( $this->render_callback ) ) {
-			$this->render_callback = array( $this, 'render_callback' );
+		
+		$this->component = $component;
+		$this->id = $id;
+		$this->id_data ['keys'] = preg_split ( '/\[/', str_replace ( ']', '', $this->id ) );
+		$this->id_data ['base'] = array_shift ( $this->id_data ['keys'] );
+		
+		if (empty ( $this->render_callback )) {
+			$this->render_callback = array (
+					$this,
+					'render_callback' 
+			);
 		}
-
+		
 		// Process settings.
-		if ( ! isset( $this->settings ) ) {
-			$this->settings = array( $id );
-		} else if ( is_string( $this->settings ) ) {
-			$this->settings = array( $this->settings );
+		if (! isset ( $this->settings )) {
+			$this->settings = array (
+					$id 
+			);
+		} else if (is_string ( $this->settings )) {
+			$this->settings = array (
+					$this->settings 
+			);
 		}
-
-		if ( empty( $this->primary_setting ) ) {
-			$this->primary_setting = current( $this->settings );
+		
+		if (empty ( $this->primary_setting )) {
+			$this->primary_setting = current ( $this->settings );
 		}
 	}
-
+	
 	/**
 	 * Retrieves parsed ID data for multidimensional setting.
 	 *
 	 * @since 4.5.0
 	 * @access public
-	 *
+	 *        
 	 * @return array {
-	 *     ID data for multidimensional partial.
-	 *
-	 *     @type string $base ID base.
-	 *     @type array  $keys Keys for multidimensional array.
-	 * }
+	 *         ID data for multidimensional partial.
+	 *        
+	 *         @type string $base ID base.
+	 *         @type array $keys Keys for multidimensional array.
+	 *         }
 	 */
 	final public function id_data() {
 		return $this->id_data;
 	}
-
+	
 	/**
 	 * Renders the template partial involving the associated settings.
 	 *
 	 * @since 4.5.0
 	 * @access public
-	 *
-	 * @param array $container_context Optional. Array of context data associated with the target container (placement).
-	 *                                 Default empty array.
+	 *        
+	 * @param array $container_context
+	 *        	Optional. Array of context data associated with the target container (placement).
+	 *        	Default empty array.
 	 * @return string|array|false The rendered partial as a string, raw data array (for client-side JS template),
-	 *                            or false if no render applied.
+	 *         or false if no render applied.
 	 */
-	final public function render( $container_context = array() ) {
-		$partial  = $this;
+	final public function render($container_context = array()) {
+		$partial = $this;
 		$rendered = false;
-
-		if ( ! empty( $this->render_callback ) ) {
-			ob_start();
-			$return_render = call_user_func( $this->render_callback, $this, $container_context );
-			$ob_render = ob_get_clean();
-
-			if ( null !== $return_render && '' !== $ob_render ) {
-				_doing_it_wrong( __FUNCTION__, __( 'Partial render must echo the content or return the content string (or array), but not both.' ), '4.5.0' );
+		
+		if (! empty ( $this->render_callback )) {
+			ob_start ();
+			$return_render = call_user_func ( $this->render_callback, $this, $container_context );
+			$ob_render = ob_get_clean ();
+			
+			if (null !== $return_render && '' !== $ob_render) {
+				_doing_it_wrong ( __FUNCTION__, __ ( 'Partial render must echo the content or return the content string (or array), but not both.' ), '4.5.0' );
 			}
-
+			
 			/*
 			 * Note that the string return takes precedence because the $ob_render may just\
 			 * include PHP warnings or notices.
 			 */
 			$rendered = null !== $return_render ? $return_render : $ob_render;
 		}
-
+		
 		/**
 		 * Filters partial rendering.
 		 *
 		 * @since 4.5.0
-		 *
-		 * @param string|array|false   $rendered          The partial value. Default false.
-		 * @param WP_Customize_Partial $partial           WP_Customize_Setting instance.
-		 * @param array                $container_context Optional array of context data associated with
-		 *                                                the target container.
+		 *       
+		 * @param string|array|false $rendered
+		 *        	The partial value. Default false.
+		 * @param WP_Customize_Partial $partial
+		 *        	WP_Customize_Setting instance.
+		 * @param array $container_context
+		 *        	Optional array of context data associated with
+		 *        	the target container.
 		 */
-		$rendered = apply_filters( 'customize_partial_render', $rendered, $partial, $container_context );
-
+		$rendered = apply_filters ( 'customize_partial_render', $rendered, $partial, $container_context );
+		
 		/**
 		 * Filters partial rendering for a specific partial.
 		 *
 		 * The dynamic portion of the hook name, `$partial->ID` refers to the partial ID.
 		 *
 		 * @since 4.5.0
-		 *
-		 * @param string|array|false   $rendered          The partial value. Default false.
-		 * @param WP_Customize_Partial $partial           WP_Customize_Setting instance.
-		 * @param array                $container_context Optional array of context data associated with
-		 *                                                the target container.
+		 *       
+		 * @param string|array|false $rendered
+		 *        	The partial value. Default false.
+		 * @param WP_Customize_Partial $partial
+		 *        	WP_Customize_Setting instance.
+		 * @param array $container_context
+		 *        	Optional array of context data associated with
+		 *        	the target container.
 		 */
-		$rendered = apply_filters( "customize_partial_render_{$partial->id}", $rendered, $partial, $container_context );
-
+		$rendered = apply_filters ( "customize_partial_render_{$partial->id}", $rendered, $partial, $container_context );
+		
 		return $rendered;
 	}
-
+	
 	/**
 	 * Default callback used when invoking WP_Customize_Control::render().
 	 *
@@ -271,36 +288,38 @@ class WP_Customize_Partial {
 	 *
 	 * @since 4.5.0
 	 * @access public
-	 *
-	 * @param WP_Customize_Partial $partial Partial.
-	 * @param array                $context Context.
+	 *        
+	 * @param WP_Customize_Partial $partial
+	 *        	Partial.
+	 * @param array $context
+	 *        	Context.
 	 * @return string|array|false
 	 */
-	public function render_callback( WP_Customize_Partial $partial, $context = array() ) {
-		unset( $partial, $context );
+	public function render_callback(WP_Customize_Partial $partial, $context = array()) {
+		unset ( $partial, $context );
 		return false;
 	}
-
+	
 	/**
 	 * Retrieves the data to export to the client via JSON.
 	 *
 	 * @since 4.5.0
 	 * @access public
-	 *
+	 *        
 	 * @return array Array of parameters passed to the JavaScript.
 	 */
 	public function json() {
-		$exports = array(
-			'settings'           => $this->settings,
-			'primarySetting'     => $this->primary_setting,
-			'selector'           => $this->selector,
-			'type'               => $this->type,
-			'fallbackRefresh'    => $this->fallback_refresh,
-			'containerInclusive' => $this->container_inclusive,
+		$exports = array (
+				'settings' => $this->settings,
+				'primarySetting' => $this->primary_setting,
+				'selector' => $this->selector,
+				'type' => $this->type,
+				'fallbackRefresh' => $this->fallback_refresh,
+				'containerInclusive' => $this->container_inclusive 
 		);
 		return $exports;
 	}
-
+	
 	/**
 	 * Checks if the user can refresh this partial.
 	 *
@@ -309,17 +328,17 @@ class WP_Customize_Partial {
 	 *
 	 * @since 4.5.0
 	 * @access public
-	 *
+	 *        
 	 * @return bool False if user can't edit one one of the related settings,
-	 *                    or if one of the associated settings does not exist.
+	 *         or if one of the associated settings does not exist.
 	 */
 	final public function check_capabilities() {
-		if ( ! empty( $this->capability ) && ! current_user_can( $this->capability ) ) {
+		if (! empty ( $this->capability ) && ! current_user_can ( $this->capability )) {
 			return false;
 		}
 		foreach ( $this->settings as $setting_id ) {
-			$setting = $this->component->manager->get_setting( $setting_id );
-			if ( ! $setting || ! $setting->check_capabilities() ) {
+			$setting = $this->component->manager->get_setting ( $setting_id );
+			if (! $setting || ! $setting->check_capabilities ()) {
 				return false;
 			}
 		}

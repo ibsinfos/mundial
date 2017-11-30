@@ -1,5 +1,4 @@
 /* General Widgets Styles */
-
 .widget {
 	margin: 0 auto 10px;
 	position: relative;
@@ -14,16 +13,14 @@
 	background: #f7f7f7;
 }
 
-.widget-top a.widget-action,
-.widget-top a.widget-action:hover {
+.widget-top a.widget-action, .widget-top a.widget-action:hover {
 	-webkit-box-shadow: none;
 	box-shadow: none;
 	outline: none;
 	text-decoration: none;
 }
 
-.widget-title h3,
-.widget-title h4 {
+.widget-title h3, .widget-title h4 {
 	margin: 0;
 	padding: 15px;
 	font-size: 1em;
@@ -43,14 +40,12 @@
 	line-height: 16px;
 }
 
-.in-widget-title,
-#widgets-right a.widget-control-edit,
-#available-widgets .widget-description {
+.in-widget-title, #widgets-right a.widget-control-edit,
+	#available-widgets .widget-description {
 	color: #666;
 }
 
-.deleting .widget-title,
-.deleting .widget-top a.widget-action:after {
+.deleting .widget-title, .deleting .widget-top a.widget-action:after {
 	color: #a0a5aa;
 }
 
@@ -102,8 +97,7 @@
 	cursor: pointer;
 }
 
-.sidebar-name h2,
-.sidebar-name h3 {
+.sidebar-name h2, .sidebar-name h3 {
 	margin: 0;
 	padding: 8px 10px;
 	overflow: hidden;
@@ -117,8 +111,7 @@
 	color: #72777c;
 }
 
-.widget-holder .description,
-.inactive-sidebar .description {
+.widget-holder .description, .inactive-sidebar .description {
 	color: #555d66;
 }
 
@@ -140,18 +133,16 @@ div.widget-liquid-right {
 }
 
 /* Widgets Left - Available Widgets */
-
 div#widgets-left {
 	padding-top: 12px;
 }
 
-div#widgets-left .closed .sidebar-name,
-div#widgets-left .inactive-sidebar.closed .sidebar-name {
+div#widgets-left .closed .sidebar-name, div#widgets-left .inactive-sidebar.closed .sidebar-name
+	{
 	margin-bottom: 10px;
 }
 
-div#widgets-left .sidebar-name h2,
-div#widgets-left .sidebar-name h3 {
+div#widgets-left .sidebar-name h2, div#widgets-left .sidebar-name h3 {
 	padding: 10px 0;
 	margin: 0 10px 0 0;
 }
@@ -160,8 +151,7 @@ div#widgets-left .sidebar-name h3 {
 	padding: 9px;
 }
 
-#widgets-left .widgets-holder-wrap,
-div#widgets-left .widget-holder {
+#widgets-left .widgets-holder-wrap, div#widgets-left .widget-holder {
 	background: transparent;
 	border: none;
 }
@@ -229,9 +219,8 @@ div#widgets-left .inactive-sidebar .widgets-sortables {
 }
 
 /* Widgets Right */
-
-div#widgets-right .sidebars-column-1,
-div#widgets-right .sidebars-column-2 {
+div#widgets-right .sidebars-column-1, div#widgets-right .sidebars-column-2
+	{
 	max-width: 450px;
 }
 
@@ -244,8 +233,7 @@ div#widgets-right .sidebar-description {
 	margin-top: -5px;
 }
 
-div#widgets-right .sidebar-name h2,
-div#widgets-right .sidebar-name h3 {
+div#widgets-right .sidebar-name h2, div#widgets-right .sidebar-name h3 {
 	padding: 15px 7px;
 }
 
@@ -269,8 +257,7 @@ div#widgets-right .closed .widgets-sortables {
 	margin-bottom: 0;
 }
 
-.sidebar-name .spinner,
-.remove-inactive-widgets .spinner {
+.sidebar-name .spinner, .remove-inactive-widgets .spinner {
 	float: none;
 	position: relative;
 	top: -2px;
@@ -280,8 +267,8 @@ div#widgets-right .closed .widgets-sortables {
 /* Dragging a widget over a closed sidebar */
 #widgets-right .widgets-holder-wrap.widget-hover {
 	border-color: #72777c;
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
-	box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* Accessibility Mode */
@@ -290,19 +277,18 @@ div#widgets-right .closed .widgets-sortables {
 }
 
 .widgets_access #wpwrap .widgets-holder-wrap.closed .sidebar-description,
-.widgets_access #wpwrap .widgets-holder-wrap.closed .widget,
-.widgets_access #wpwrap .widget-control-edit {
+	.widgets_access #wpwrap .widgets-holder-wrap.closed .widget,
+	.widgets_access #wpwrap .widget-control-edit {
 	display: block;
 }
 
-.widgets_access #widgets-left .widget .widget-top:hover,
-.widgets_access #widgets-right .widget .widget-top:hover {
+.widgets_access #widgets-left .widget .widget-top:hover, .widgets_access #widgets-right .widget .widget-top:hover
+	{
 	border-color: #ddd;
 }
 
-#available-widgets .widget-control-edit .edit,
-#widgets-left .inactive-sidebar .widget-control-edit .add,
-#widgets-right .widget-control-edit .add {
+#available-widgets .widget-control-edit .edit, #widgets-left .inactive-sidebar .widget-control-edit .add,
+	#widgets-right .widget-control-edit .add {
 	display: none;
 }
 
@@ -315,16 +301,16 @@ div#widgets-right .closed .widgets-sortables {
 	border-left: 1px solid #DDD;
 }
 
-#widgets-left .widget-control-edit:hover,
-#widgets-right .widget-control-edit:hover {
+#widgets-left .widget-control-edit:hover, #widgets-right .widget-control-edit:hover
+	{
 	color: #fff;
 	background: #444;
 	border-left: 0;
 	outline: 1px solid #444;
 }
 
-.widgets-holder-wrap .sidebar-name,
-.widgets-holder-wrap .sidebar-description {
+.widgets-holder-wrap .sidebar-name, .widgets-holder-wrap .sidebar-description
+	{
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -344,11 +330,9 @@ div#widgets-right .closed .widgets-sortables {
 	margin-top: 20px;
 }
 
-.js .widgets-holder-wrap.closed .widget,
-.js .widgets-holder-wrap.closed .sidebar-description,
-.js .widgets-holder-wrap.closed .remove-inactive-widgets,
-.js .widgets-holder-wrap.closed .description,
-.js .closed br.clear {
+.js .widgets-holder-wrap.closed .widget, .js .widgets-holder-wrap.closed .sidebar-description,
+	.js .widgets-holder-wrap.closed .remove-inactive-widgets, .js .widgets-holder-wrap.closed .description,
+	.js .closed br.clear {
 	display: none;
 }
 
@@ -357,8 +341,7 @@ div#widgets-right .closed .widgets-sortables {
 }
 
 /* Hide Widget Settings by Default */
-.widget-inside,
-.widget-description {
+.widget-inside, .widget-description {
 	display: none;
 }
 
@@ -380,18 +363,14 @@ div#widgets-right .closed .widgets-sortables {
 	color: #00a0d2;
 }
 
-.widget-control-noform,
-#access-off,
-.widgets_access .widget-action,
-.widgets_access .sidebar-name-arrow,
-.widgets_access #access-on,
-.widgets_access .widget-holder .description,
-.no-js .widget-holder .description {
+.widget-control-noform, #access-off, .widgets_access .widget-action,
+	.widgets_access .sidebar-name-arrow, .widgets_access #access-on,
+	.widgets_access .widget-holder .description, .no-js .widget-holder .description
+	{
 	display: none;
 }
 
-.widgets_access .widget-holder,
-.widgets_access #widget-list {
+.widgets_access .widget-holder, .widgets_access #widget-list {
 	padding-top: 10px;
 }
 
@@ -399,40 +378,37 @@ div#widgets-right .closed .widgets-sortables {
 	display: inline;
 }
 
-.widgets_access .sidebar-name,
-.widgets_access .widget .widget-top {
+.widgets_access .sidebar-name, .widgets_access .widget .widget-top {
 	cursor: default;
 }
 
-
 /* Widgets Area Chooser */
 .widget-liquid-left #widgets-left.chooser #available-widgets .widget,
-.widget-liquid-left #widgets-left.chooser .inactive-sidebar {
+	.widget-liquid-left #widgets-left.chooser .inactive-sidebar {
 	-webkit-transition: opacity 0.1s linear;
 	transition: opacity 0.1s linear;
 }
 
 .widget-liquid-left #widgets-left.chooser #available-widgets .widget,
-.widget-liquid-left #widgets-left.chooser .inactive-sidebar {
+	.widget-liquid-left #widgets-left.chooser .inactive-sidebar {
 	/* -webkit-filter: blur(1px); */
 	opacity: 0.2;
 	pointer-events: none;
 }
 
-.widget-liquid-left #widgets-left.chooser #available-widgets .widget-in-question {
+.widget-liquid-left #widgets-left.chooser #available-widgets .widget-in-question
+	{
 	/* -webkit-filter: none; */
 	opacity: 1;
 	pointer-events: auto;
 }
 
-.widgets-chooser ul,
-#widgets-left .widget-in-question .widget-top,
-#available-widgets .widget-top:hover,
-div#widgets-right .widget-top:hover,
-#widgets-left .widget-top:hover {
+.widgets-chooser ul, #widgets-left .widget-in-question .widget-top,
+	#available-widgets .widget-top:hover, div#widgets-right .widget-top:hover,
+	#widgets-left .widget-top:hover {
 	border-color: #999;
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-	box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .widgets-chooser ul.widgets-chooser-sidebars {
@@ -462,10 +438,9 @@ div#widgets-right .widget-top:hover,
 	transition: background 0.2s ease-in-out;
 }
 
- /* @todo looks like these hover/focus states are overridden by .widgets-chooser-selected */
-.widgets-chooser li:hover,
-.widgets-chooser li:focus {
-	background: rgba(255,255,255,0.7);
+/* @todo looks like these hover/focus states are overridden by .widgets-chooser-selected */
+.widgets-chooser li:hover, .widgets-chooser li:focus {
+	background: rgba(255, 255, 255, 0.7);
 }
 
 .widgets-chooser li:focus:before {
@@ -488,8 +463,8 @@ div#widgets-right .widget-top:hover,
 	color: #fff;
 }
 
-.widgets-chooser li.widgets-chooser-selected:before,
-.widgets-chooser li.widgets-chooser-selected:focus:before {
+.widgets-chooser li.widgets-chooser-selected:before, .widgets-chooser li.widgets-chooser-selected:focus:before
+	{
 	content: "\f147";
 	display: block;
 	-webkit-font-smoothing: antialiased;
@@ -519,7 +494,6 @@ div#widgets-right .widget-top:hover,
 
 /* =Media Queries
 -------------------------------------------------------------- */
-
 @media screen and (max-width: 480px) {
 	div.widget-liquid-left {
 		width: 100%;
@@ -527,24 +501,19 @@ div#widgets-right .widget-top:hover,
 		border-right: none;
 		padding-right: 0;
 	}
-
 	#widgets-left .sidebar-name {
 		margin-right: 0;
 	}
-
 	#widgets-left #available-widgets .widget-top {
 		margin-right: 0;
 	}
-
 	#widgets-left .inactive-sidebar .widgets-sortables {
 		margin-right: 0;
 	}
-
 	div.widget-liquid-right {
 		width: 100%;
 		float: none;
 	}
-
 	div.widget {
 		margin: 0 auto 10px !important;
 		max-width: 480px;
@@ -562,27 +531,21 @@ div#widgets-right .widget-top:hover,
 		width: 49%;
 		float: left;
 	}
-
 	.widget.ui-draggable-dragging {
 		min-width: 49%;
 	}
-
 	#widgets-left #available-widgets .widget:nth-child(even) {
 		float: right;
 	}
-
-	#widgets-right .sidebars-column-1,
-	#widgets-right .sidebars-column-2 {
+	#widgets-right .sidebars-column-1, #widgets-right .sidebars-column-2 {
 		float: left;
 		width: 49%;
 	}
-
 	#widgets-right .sidebars-column-1 {
 		margin-right: 2%;
 	}
-
-	#widgets-right.single-sidebar .sidebars-column-1,
-	#widgets-right.single-sidebar .sidebars-column-2 {
+	#widgets-right.single-sidebar .sidebars-column-1, #widgets-right.single-sidebar .sidebars-column-2
+		{
 		float: none;
 		width: 100%;
 		margin: 0;

@@ -16,7 +16,7 @@
 	text-align: right;
 }
 
-.tag-generator-panel .control-box > fieldset legend {
+.tag-generator-panel .control-box>fieldset legend {
 	border: 1px solid #dfdfdf;
 	border-right: 4px solid #00a0d2;
 }
@@ -39,8 +39,8 @@
 /*
  * Welcome Panel
  */
-.welcome-panel .welcome-panel-column,
-.welcome-panel .welcome-panel-column:first-child {
+.welcome-panel .welcome-panel-column, .welcome-panel .welcome-panel-column:first-child
+	{
 	padding: 0 0 0 2%;
 }
 

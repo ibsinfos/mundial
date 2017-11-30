@@ -11,11 +11,11 @@
  * Customize control to represent the auto_add field for a given menu.
  *
  * @since 4.3.0
- *
+ *       
  * @see WP_Customize_Control
  */
 class WP_Customize_Nav_Menu_Auto_Add_Control extends WP_Customize_Control {
-
+	
 	/**
 	 * Type of control, used by JS.
 	 *
@@ -24,15 +24,16 @@ class WP_Customize_Nav_Menu_Auto_Add_Control extends WP_Customize_Control {
 	 * @var string
 	 */
 	public $type = 'nav_menu_auto_add';
-
+	
 	/**
 	 * No-op since we're using JS template.
 	 *
 	 * @since 4.3.0
 	 * @access protected
 	 */
-	protected function render_content() {}
-
+	protected function render_content() {
+	}
+	
 	/**
 	 * Render the Underscore template for this control.
 	 *
@@ -41,11 +42,10 @@ class WP_Customize_Nav_Menu_Auto_Add_Control extends WP_Customize_Control {
 	 */
 	protected function content_template() {
 		?>
-		<span class="customize-control-title"><?php _e( 'Menu Options' ); ?></span>
-		<label>
-			<input type="checkbox" class="auto_add" />
+<span class="customize-control-title"><?php _e( 'Menu Options' ); ?></span>
+<label> <input type="checkbox" class="auto_add" />
 			<?php _e( 'Automatically add new top-level pages to this menu' ); ?>
 		</label>
-		<?php
+<?php
 	}
 }

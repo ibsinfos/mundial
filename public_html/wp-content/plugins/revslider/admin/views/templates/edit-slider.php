@@ -3,7 +3,7 @@
 
 <?php
 $is_edit = true;
-require self::getPathTemplate('slider-main-options');
+require self::getPathTemplate ( 'slider-main-options' );
 ?>
 
 <script type="text/javascript">

@@ -29,7 +29,8 @@ interface Requests_Proxy {
 	 * hooks you'll need.
 	 *
 	 * @see Requests_Hooks::register
-	 * @param Requests_Hooks $hooks Hook system
+	 * @param Requests_Hooks $hooks
+	 *        	Hook system
 	 */
 	public function register(Requests_Hooks &$hooks);
 }

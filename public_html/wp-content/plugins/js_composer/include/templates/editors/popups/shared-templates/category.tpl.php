@@ -1,8 +1,8 @@
 <?php
 /** @var Vc_Shared_Templates $controller */
 /** @var array $templates */
-if ( ! defined( 'ABSPATH' ) ) {
-	die( '-1' );
+if (! defined ( 'ABSPATH' )) {
+	die ( '-1' );
 }
 
 ?>
@@ -14,61 +14,72 @@ if ( ! defined( 'ABSPATH' ) ) {
 </script>
 <div class="vc_ui-panel-popup vc_ui-hidden">
 	<?php
-	/*<div class="vc_ui-panel-close">
-		<button type="button" class="vc_general vc_ui-control-button vc_ui-panel-close-button">
-			<i class="vc-composer-icon vc-c-icon-arrow_back"></i>
-		</button>
-	</div> */
+	/*
+	 * <div class="vc_ui-panel-close">
+	 * <button type="button" class="vc_general vc_ui-control-button vc_ui-panel-close-button">
+	 * <i class="vc-composer-icon vc-c-icon-arrow_back"></i>
+	 * </button>
+	 * </div>
+	 */
 	?>
-	<div class="vc_ui-panel-template-content vc_ui-panel-popup-item vc_ui-hidden">
-		<button type="button" class="vc_general vc_ui-control-button vc_ui-panel-close-button">
-			<i class="vc-composer-icon vc-c-icon-arrow_back"></i>
-			<span class="vc_ui-control-button-text">Exit Template Library</span>
+	<div
+		class="vc_ui-panel-template-content vc_ui-panel-popup-item vc_ui-hidden">
+		<button type="button"
+			class="vc_general vc_ui-control-button vc_ui-panel-close-button">
+			<i class="vc-composer-icon vc-c-icon-arrow_back"></i> <span
+				class="vc_ui-control-button-text">Exit Template Library</span>
 		</button>
 		<?php
-		if ( ! vc_license()->isActivated() ) :
+		if (! vc_license ()->isActivated ()) :
 			?>
 			<div class="vc_ui-panel-message">
-				<h3 class="vc_ui-panel-title"><?php _e( 'Activate Visual Composer', 'js_composer' ); ?></h3>
-				<p class="vc_description"><?php _e( 'Visual Composer Template Library downloads are available for activated	versions only. Activate Visual Composer direct license to access Template Library and receive other benefits.', 'js_composer' ); ?></p>
-				<a href="<?php echo admin_url( 'admin.php?page=vc-updater' ); ?>" target="_blank" class="vc_general vc_ui-button vc_ui-button-size-sm vc_ui-button-shape-rounded vc_ui-button-action">
+			<h3 class="vc_ui-panel-title"><?php _e( 'Activate Visual Composer', 'js_composer' ); ?></h3>
+			<p class="vc_description"><?php _e( 'Visual Composer Template Library downloads are available for activated	versions only. Activate Visual Composer direct license to access Template Library and receive other benefits.', 'js_composer' ); ?></p>
+			<a href="<?php echo admin_url( 'admin.php?page=vc-updater' ); ?>"
+				target="_blank"
+				class="vc_general vc_ui-button vc_ui-button-size-sm vc_ui-button-shape-rounded vc_ui-button-action">
 					<?php _e( 'Activate License', 'js_composer' ); ?>
 				</a>
-			</div>
+		</div>
 		<?php endif; ?>
 		<div class="vc_ui-search-box vc_ui-panel-search-box">
 			<div class="vc_ui-search-box-input vc_ui-panel-search">
-				<input type="search" id="vc_template_lib_name_filter" data-vc-template-lib-name-filter=""
+				<input type="search" id="vc_template_lib_name_filter"
+					data-vc-template-lib-name-filter=""
 					placeholder="<?php _e( 'Search template by name', 'js_composer' ); ?>">
-				<label for="vc_template_lib_name_filter"><i class="vc-composer-icon vc-c-icon-search"></i></label>
+				<label for="vc_template_lib_name_filter"><i
+					class="vc-composer-icon vc-c-icon-search"></i></label>
 			</div>
 		</div>
-		<div class="vc_ui-panel-template-grid" id="vc_template-library-template-grid">
-
-		</div>
+		<div class="vc_ui-panel-template-grid"
+			id="vc_template-library-template-grid"></div>
 	</div>
-	<div class="vc_ui-panel-template-preview vc_ui-panel-popup-item vc_ui-hidden">
+	<div
+		class="vc_ui-panel-template-preview vc_ui-panel-popup-item vc_ui-hidden">
 		<div class="vc_ui-panel-template-preview-inner">
-			<button type="button" class="vc_general vc_ui-control-button vc_ui-panel-back-button">
+			<button type="button"
+				class="vc_general vc_ui-control-button vc_ui-panel-back-button">
 				<i class="vc-composer-icon vc-c-icon-arrow_back"></i>
 			</button>
 			<h3 class="vc_ui-panel-title"></h3>
 			<?php if ( vc_license()->isActivated() ) : ?>
 				<?php
 				/*
-				<div class="vc_ui-panel-template-update vc_ui-hidden" id="vc_template-library-update">
-					<p class="vc_description"><?php _e( 'Update for template available.', 'js_composer' ); ?></p>
-					<button id="vc_template-library-update-btn" class="vc_general vc_ui-button vc_ui-button-size-sm vc_ui-button-shape-rounded vc_ui-button-action">
-						<?php _e( 'Update Template', 'js_composer' ); ?>
-					</button>
-				</div>
-				*/
+				 * <div class="vc_ui-panel-template-update vc_ui-hidden" id="vc_template-library-update">
+				 * <p class="vc_description"><?php _e( 'Update for template available.', 'js_composer' ); ?></p>
+				 * <button id="vc_template-library-update-btn" class="vc_general vc_ui-button vc_ui-button-size-sm vc_ui-button-shape-rounded vc_ui-button-action">
+				 * <?php _e( 'Update Template', 'js_composer' ); ?>
+				 * </button>
+				 * </div>
+				 */
 				?>
-				<div class="vc_ui-panel-template-download vc_ui-hidden" id="vc_template-library-download">
-					<button id="vc_template-library-download-btn" class="vc_general vc_ui-button vc_ui-button-size-sm vc_ui-button-shape-rounded vc_ui-button-action">
+				<div class="vc_ui-panel-template-download vc_ui-hidden"
+				id="vc_template-library-download">
+				<button id="vc_template-library-download-btn"
+					class="vc_general vc_ui-button vc_ui-button-size-sm vc_ui-button-shape-rounded vc_ui-button-action">
 						<?php _e( 'Download Template', 'js_composer' ); ?>
 					</button>
-				</div>
+			</div>
 			<?php endif; ?>
 		</div>
 		<div class="vc_ui-panel-preview-content">
@@ -79,21 +90,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="vc_ui-panel-loading-content">
 			<div class="vc_preloader-box"></div>
 			<h3 class="vc_ui-panel-title"><?php _e( 'Downloading template ... please wait!', 'js_composer' ); ?></h3>
-			<p class="vc_description"><?php _e( 'Don\'t close this window until download is complete - you will
-				be redirected back to Template Library automatically.', 'js_composer' ); ?></p>
+			<p class="vc_description"><?php
+			
+_e ( 'Don\'t close this window until download is complete - you will
+				be redirected back to Template Library automatically.', 'js_composer' );
+			?></p>
 		</div>
 	</div>
 	<?php
 	/*
-	<div class="vc_ui-panel-update vc_ui-panel-popup-item vc_ui-hidden">
-		<div class="vc_ui-panel-loading-content">
-			<div class="vc_preloader-box"></div>
-			<h3 class="vc_ui-panel-title"><?php _e( 'Updating template ... please wait!', 'js_composer' ); ?></h3>
-			<p class="vc_description"><?php _e( 'Don\'t close this window until update is complete - you will
-				be redirected back to Template Library automatically.', 'js_composer' ); ?></p>
-		</div>
-	</div>
-	*/
+	 * <div class="vc_ui-panel-update vc_ui-panel-popup-item vc_ui-hidden">
+	 * <div class="vc_ui-panel-loading-content">
+	 * <div class="vc_preloader-box"></div>
+	 * <h3 class="vc_ui-panel-title"><?php _e( 'Updating template ... please wait!', 'js_composer' ); ?></h3>
+	 * <p class="vc_description"><?php _e( 'Don\'t close this window until update is complete - you will
+	 * be redirected back to Template Library automatically.', 'js_composer' ); ?></p>
+	 * </div>
+	 * </div>
+	 */
 	?>
 </div>
 
@@ -102,31 +116,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div>
 <div class="vc_ui-templates-content">
 <?php
-if ( vc_user_access()->part( 'templates' )->checkStateAny( true, null )->get() ) :
+if (vc_user_access ()->part ( 'templates' )->checkStateAny ( true, null )->get ()) :
 	?>
 	<div class="vc_column vc_col-sm-12 vc_access-library-col">
 		<h3 class="vc_ui-panel-title"><?php _e( 'Download Templates', 'js_composer' ); ?></h3>
-		<p class="vc_description"><?php _e( 'Access Visual Composer Template Library for unique layout
+		<p class="vc_description"><?php
+	
+_e ( 'Access Visual Composer Template Library for unique layout
 		templates. Download chosen templates and discover new layouts with regular template
-		updates from Visual Composer team.', 'js_composer' ); ?></p>
-		<button class="vc_general vc_ui-button vc_ui-button-size-sm vc_ui-button-shape-rounded vc_ui-button-action vc_ui-access-library-btn">
+		updates from Visual Composer team.', 'js_composer' );
+	?></p>
+		<button
+			class="vc_general vc_ui-button vc_ui-button-size-sm vc_ui-button-shape-rounded vc_ui-button-action vc_ui-access-library-btn">
 			<?php _e( 'Access Library', 'js_composer' ); ?>
 		</button>
 	</div>
-	<?php
-else :
+	
+ <?phpelse :
 	?>
 	<div class="vc_column vc_col-sm-12 vc_access-library-col">
 		<h3 class="vc_ui-panel-title"><?php _e( 'Template library', 'js_composer' ); ?></h3>
 	</div>
-	<?php
-endif;
+	
+<?phpendif;
 ?>
 
 <div class="vc_column vc_col-sm-12">
-	<div class="vc_ui-template-list vc_templates-list-shared_templates vc_ui-list-bar" id="vc_template-library-shared_templates">
+		<div
+			class="vc_ui-template-list vc_templates-list-shared_templates vc_ui-list-bar"
+			id="vc_template-library-shared_templates"></div>
 	</div>
-</div>
 </div>
 
 <script type="text/html" id="vc_template-item">

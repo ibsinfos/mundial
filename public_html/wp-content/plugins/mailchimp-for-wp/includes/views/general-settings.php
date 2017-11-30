@@ -1,5 +1,5 @@
 <?php
-defined( 'ABSPATH' ) or exit;
+defined ( 'ABSPATH' ) or exit ();
 ?>
 <div id="mc4wp-admin" class="wrap mc4wp-settings">
 
@@ -20,11 +20,12 @@ defined( 'ABSPATH' ) or exit;
 
 			<h2 style="display: none;"></h2>
 			<?php
-			settings_errors();
-			$this->messages->show();
+			settings_errors ();
+			$this->messages->show ();
 			?>
 
-			<form action="<?php echo admin_url( 'options.php' ); ?>" method="post">
+			<form action="<?php echo admin_url( 'options.php' ); ?>"
+				method="post">
 				<?php settings_fields( 'mc4wp_settings' ); ?>
 
 				<h3>
@@ -49,13 +50,15 @@ defined( 'ABSPATH' ) or exit;
 
 					<tr valign="top">
 						<th scope="row"><label for="mailchimp_api_key"><?php _e( 'API Key', 'mailchimp-for-wp' ); ?></label></th>
-						<td>
-							<input type="text" class="widefat" placeholder="<?php _e( 'Your MailChimp API key', 'mailchimp-for-wp' ); ?>" id="mailchimp_api_key" name="mc4wp[api_key]" value="<?php echo esc_attr( $obfuscated_api_key ); ?>" />
+						<td><input type="text" class="widefat"
+							placeholder="<?php _e( 'Your MailChimp API key', 'mailchimp-for-wp' ); ?>"
+							id="mailchimp_api_key" name="mc4wp[api_key]"
+							value="<?php echo esc_attr( $obfuscated_api_key ); ?>" />
 							<p class="help">
 								<?php _e( 'The API key for connecting with your MailChimp account.', 'mailchimp-for-wp' ); ?>
-								<a target="_blank" href="https://admin.mailchimp.com/account/api"><?php _e( 'Get your API key here.', 'mailchimp-for-wp' ); ?></a>
-							</p>
-						</td>
+								<a target="_blank"
+									href="https://admin.mailchimp.com/account/api"><?php _e( 'Get your API key here.', 'mailchimp-for-wp' ); ?></a>
+							</p></td>
 
 					</tr>
 
@@ -66,22 +69,23 @@ defined( 'ABSPATH' ) or exit;
 			</form>
 
 			<?php
-
+			
 			/**
 			 * Runs right after general settings are outputted in admin.
 			 *
 			 * @since 3.0
 			 * @ignore
+			 *
 			 */
-			do_action( 'mc4wp_admin_after_general_settings' );
-
-			if( ! empty( $opts['api_key'] ) ) {
+			do_action ( 'mc4wp_admin_after_general_settings' );
+			
+			if (! empty ( $opts ['api_key'] )) {
 				echo '<hr />';
-				include dirname( __FILE__ ) . '/parts/lists-overview.php';
+				include dirname ( __FILE__ ) . '/parts/lists-overview.php';
 			}
-
-			include dirname( __FILE__ ) . '/parts/admin-footer.php';
-
+			
+			include dirname ( __FILE__ ) . '/parts/admin-footer.php';
+			
 			?>
 		</div>
 

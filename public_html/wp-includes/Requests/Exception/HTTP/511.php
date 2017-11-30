@@ -19,7 +19,7 @@ class Requests_Exception_HTTP_511 extends Requests_Exception_HTTP {
 	 * @var integer
 	 */
 	protected $code = 511;
-
+	
 	/**
 	 * Reason phrase
 	 *

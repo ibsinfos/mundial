@@ -5,64 +5,78 @@
  * @link      http://revolution.themepunch.com/
  * @copyright 2015 ThemePunch
  */
- 
-if( !defined( 'ABSPATH') ) exit();
+if (! defined ( 'ABSPATH' ))
+	exit ();
 
-$nav = new RevSliderNavigation();
+$nav = new RevSliderNavigation ();
 
-$navigation = intval(RevSliderBase::getGetVar('navigation', 0));
+$navigation = intval ( RevSliderBase::getGetVar ( 'navigation', 0 ) );
 
-$navigs = $nav->get_all_navigations();
+$navigs = $nav->get_all_navigations ();
 
-$rsopr = new RevSliderOperations();
+$rsopr = new RevSliderOperations ();
 
-
-$font_families = $rsopr->getArrFontFamilys();
+$font_families = $rsopr->getArrFontFamilys ();
 ?>
 
 <div class='wrap'>
 	<div class="clear_both"></div>
 
-	<div class="title_line nobgnopd" style="margin-bottom: 20px !important;">
-		<?php 
-			$icon_general = '<div class="icon32" id="icon-options-general"></div>';
-			echo apply_filters( 'rev_icon_general_filter', $icon_general ); 
+	<div class="title_line nobgnopd"
+		style="margin-bottom: 20px !important;">
+		<?php
+		$icon_general = '<div class="icon32" id="icon-options-general"></div>';
+		echo apply_filters ( 'rev_icon_general_filter', $icon_general );
 		?>
 		<div class="view_title">
 			<?php _e('Navigation Editor', 'revslider'); ?>
 		</div>
 	</div>
-	
+
 	<div class="setting_box navig" style="margin-bottom: 20px;">
-		<h3><span class="setting-step-number">1</span><span style="max-width: 400px;"><?php _e('Select the Navigation Category to Edit', 'revslider'); ?></span> <a original-title="" class="button-primary revblue" id="rs-add-new-navigation-element" href="javascript:void(0);"><?php _e('Add New', 'revslider'); ?></a></h3>
-		
-		<div class="table-titles">				
+		<h3>
+			<span class="setting-step-number">1</span><span
+				style="max-width: 400px;"><?php _e('Select the Navigation Category to Edit', 'revslider'); ?></span>
+			<a original-title="" class="button-primary revblue"
+				id="rs-add-new-navigation-element" href="javascript:void(0);"><?php _e('Add New', 'revslider'); ?></a>
+		</h3>
+
+		<div class="table-titles">
 			<div class="rs-nav-table-cell rs-nav-table-title"><?php _e('#ID', 'revslider'); ?></div>
 			<div class="rs-nav-table-cell rs-nav-table-title"><?php _e('Skin Name', 'revslider'); ?></div>
 			<div class="rs-nav-table-cell rs-nav-table-title"><?php _e('Arrows', 'revslider'); ?></div>
 			<div class="rs-nav-table-cell rs-nav-table-title"><?php _e('Bullets', 'revslider'); ?></div>
 			<div class="rs-nav-table-cell rs-nav-table-title"><?php _e('Thumbs', 'revslider'); ?></div>
-			<div class="rs-nav-table-cell rs-nav-table-title"><?php _e('Tabs', 'revslider'); ?></div>	
-			<div class="rs-nav-table-cell rs-nav-table-title" style="width:auto;text-align:left;padding:0px 20px;"><?php _e('Actions', 'revslider'); ?></div>
+			<div class="rs-nav-table-cell rs-nav-table-title"><?php _e('Tabs', 'revslider'); ?></div>
+			<div class="rs-nav-table-cell rs-nav-table-title"
+				style="width: auto; text-align: left; padding: 0px 20px;"><?php _e('Actions', 'revslider'); ?></div>
 		</div>
-		
-		<div id="list-of-navigations" style="max-height:430px;overflow:hidden;position:relative;top:0px;left:0px;">  
+
+		<div id="list-of-navigations"
+			style="max-height: 430px; overflow: hidden; position: relative; top: 0px; left: 0px;">
 			<div class="rs-nav-table tablecontent">
 				<?php
-				//all will be added here through JavaScript
+				// all will be added here through JavaScript
 				?>
 			</div>
 		</div>
 	</div>
-	
+
 	<div style="clear: both;"></div>
-	
+
 	<div class="setting_box navig" style="margin-bottom: 20px;">
 		<div class="rs-editing-wrapper" style="display: none;">
-			<h3 style="border:0;"><span class="setting-step-number">2</span><span style="max-width: 400px;"><?php _e('Editing', 'revslider'); ?> <span class="rs-nav-editing-title"></span></span> <a href="javascript:void(0);" class="button-primary revred rs-remove-nav-element"><?php _e('Remove', 'revslider'); ?></a></h3>
+			<h3 style="border: 0;">
+				<span class="setting-step-number">2</span><span
+					style="max-width: 400px;"><?php _e('Editing', 'revslider'); ?> <span
+					class="rs-nav-editing-title"></span></span> <a
+					href="javascript:void(0);"
+					class="button-primary revred rs-remove-nav-element"><?php _e('Remove', 'revslider'); ?></a>
+			</h3>
 			<div class="rs-editing-markups-wrap">
 				<div class="rs-markup-selector">
-					<div class="rs-selector-title"><?php _e('Markup', 'revslider'); ?></div> <span class="rs-editor-open-field"><i class="revicon-list-add"></i></span>
+					<div class="rs-selector-title"><?php _e('Markup', 'revslider'); ?></div>
+					<span class="rs-editor-open-field"><i class="revicon-list-add"></i></span>
 				</div>
 				<div class="rs-markup-wrapper" style="display: none;">
 					<div class="rs-markup-elements">
@@ -70,23 +84,26 @@ $font_families = $rsopr->getArrFontFamilys();
 							<div class="helper-wrappers">
 								<h4><?php _e('Actions', 'revslider'); ?></h4>
 								<ul class="rs-element-list">
-								<!--	<li id="reset-markup-arrow" data-call="arrows_markup"><span class="libtn"><?php _e('Reset Defaults', 'revslider'); ?><span class="more-values-available resetme"></span></span></li>
+									<!--	<li id="reset-markup-arrow" data-call="arrows_markup"><span class="libtn"><?php _e('Reset Defaults', 'revslider'); ?><span class="more-values-available resetme"></span></span></li>
 									<li id="reset-markup-bullets" data-call="bullets_markup"><span class="libtn"><?php _e('Reset Defaults', 'revslider'); ?><span class="more-values-available resetme"></span></span></li>
 									<li id="reset-markup-thumbs" data-call="thumbs_markup"><span class="libtn"><?php _e('Reset Defaults', 'revslider'); ?><span class="more-values-available resetme"></span></span></li>
 									<li id="reset-markup-tabs" data-call="tabs_markup"><span class="libtn"><?php _e('Reset Defaults', 'revslider'); ?><span class="more-values-available resetme"></span></span></li>-->
-									<li><span class="libtn"><?php _e('Parameters', 'revslider'); ?><span class="more-values-available"></span></span>
+									<li><span class="libtn"><?php _e('Parameters', 'revslider'); ?><span
+											class="more-values-available"></span></span>
 										<ul style="display: none;" class="rs-element-add">
-											<li data-call="params_special" data-paramid="title"><span class="libtn"><?php _e('Slide Title', 'revslider'); ?></span></li>
-											<li data-call="params_special" data-paramid="description"><span class="libtn"><?php _e('Slide Description', 'revslider'); ?></span></li>
+											<li data-call="params_special" data-paramid="title"><span
+												class="libtn"><?php _e('Slide Title', 'revslider'); ?></span></li>
+											<li data-call="params_special" data-paramid="description"><span
+												class="libtn"><?php _e('Slide Description', 'revslider'); ?></span></li>
 											<?php
-											for($i=1;$i<=10;$i++){
+											for($i = 1; $i <= 10; $i ++) {
 												?>
-												<li data-call="params_markup" data-paramid="<?php echo $i; ?>"><span class="libtn"><?php _e('Parameter ', 'revslider'); ?> <?php echo $i; ?></span></li>
+												<li data-call="params_markup"
+												data-paramid="<?php echo $i; ?>"><span class="libtn"><?php _e('Parameter ', 'revslider'); ?> <?php echo $i; ?></span></li>
 												<?php
 											}
 											?>
-										</ul>
-									</li>
+										</ul></li>
 								</ul>
 							</div>
 						</div>
@@ -94,96 +111,121 @@ $font_families = $rsopr->getArrFontFamilys();
 					</div>
 
 					<textarea name="rs-cm-markup" id="rs-cm-markup"></textarea>
-				</div><div class="rs-css-selector open">
-					<div class="rs-selector-title"><?php _e('CSS', 'revslider'); ?></div> <span class="rs-editor-open-field"><i class="revicon-list-add"></i></span>
+				</div>
+				<div class="rs-css-selector open">
+					<div class="rs-selector-title"><?php _e('CSS', 'revslider'); ?></div>
+					<span class="rs-editor-open-field"><i class="revicon-list-add"></i></span>
 				</div>
 				<div class="rs-css-wrapper" style="display: none;">
 					<div class="rs-css-elements">
 						<div style="padding: 20px;" class="closemeshowhide">
 							<div class="helper-wrappers rea-open">
-								<h4><span class="libtn"><?php _e('Style Helper', 'revslider'); ?><span class="more-values-available"></span></span></h4>
-								<ul class="rs-element-list collapsable" style="display:block">
-									<li data-call="color_value"><span class="libtn"><?php _e('Color Value', 'revslider'); ?><span class="more-values-available"></span></span>
-										<div style="display: none;" class="rs-element-add rs-element-add-color">										
-											<input type="text" name="rs-color" class="my-color-field" value="#000000">
-											<span class="tp-clearfix"></span>
-											<a href="javascript:void(0);" id="rs-add-css-color" class="button-primary revblue" original-title=""><?php _e('Add', 'revslider'); ?></a>
-										</div>
-									</li>
-									<li data-call="border_radius"><span class="libtn"><?php _e('Border Radius', 'revslider'); ?><span class="more-values-available"></span></span>
-										<div style="display: none;" class="rs-element-add rs-element-add-border-radius">
-											<label><?php _e('Top Left', 'revslider'); ?></label>
-											<input class="rs-small-input" type="text" name="rs-border-radius-top-left" value="1"></td>
-											<label><?php _e('Top Right', 'revslider'); ?></label>
-											<input class="rs-small-input" type="text" name="rs-border-radius-top-right" value="1"></td>
-											<label><?php _e('Bottom Right', 'revslider'); ?></label>
-											<input class="rs-small-input" type="text" name="rs-border-radius-bottom-right" value="1"></td>
-											<label><?php _e('Bottom Left', 'revslider'); ?></label>
-											<input class="rs-small-input" type="text" name="rs-border-radius-bottom-left" value="1"></td>
-											<span class="tp-clearfix"></span>
-											<a href="javascript:void(0);" id="rs-add-css-border-radius" class="button-primary revblue" original-title=""><?php _e('Add', 'revslider'); ?></a>
-										</div>
-									</li>
-									<li data-call="border"><span class="libtn"><?php _e('Border', 'revslider'); ?><span class="more-values-available"></span></span>
-										<div style="display: none;" class="rs-element-add rs-element-add-border">
-											<label><?php _e('Top', 'revslider'); ?></label>
-											<input class="rs-small-input" type="text" name="rs-border-top" value="1">
-											<label><?php _e('Right', 'revslider'); ?></label>
-											<input class="rs-small-input" type="text" name="rs-border-right" value="1">
-											<label><?php _e('Bottom', 'revslider'); ?></label>
-											<input class="rs-small-input" type="text" name="rs-border-bottom" value="1">
-											<label><?php _e('Left', 'revslider'); ?></label>
-											<input class="rs-small-input" type="text" name="rs-border-left" value="1">											
-											<span class="tp-clearfix"></span>														
-											<input type="text" name="rs-border-color" class="my-color-field" value="#000000">
-											<span class="tp-clearfix"></span>																				
-											<a href="javascript:void(0);" id="rs-add-css-border" class="button-primary revblue" original-title=""><?php _e('Add', 'revslider'); ?></a>
-										</div>
-									</li>
-									<li data-call="text_shadow"><span class="libtn"><?php _e('Text-Shadow', 'revslider'); ?><span class="more-values-available"></span></span>
-										<div style="display: none;" class="rs-element-add rs-element-add-text-shadow">
-											<label><?php _e('Angle', 'revslider'); ?></label>
-											<input class="rs-small-input" type="text" name="rs-text-shadow-angle" value="0">
-											<label><?php _e('Distance', 'revslider'); ?></label>
-											<input class="rs-small-input" type="text" name="rs-text-shadow-distance" value="0">
-											<label><?php _e('Blur', 'revslider'); ?></label>
-											<input class="rs-small-input" type="text" name="rs-text-shadow-blur" value="0">											
-											<span class="tp-clearfix"></span>
-											<input type="text" name="rs-text-shadow-color" class="my-color-field" value="#000000">
-											<span class="tp-clearfix"></span>										
-											<a href="javascript:void(0);" id="rs-add-css-text-shadow" class="button-primary revblue" original-title=""><?php _e('Add', 'revslider'); ?></a>
-										</div>
-									</li>
-									<li data-call="box_shadow"><span class="libtn"><?php _e('Box-Shadow', 'revslider'); ?><span class="more-values-available"></span></span>
-										<div style="display: none;" class="rs-element-add rs-element-add-box-shadow">
-											<label><?php _e('Angle', 'revslider'); ?></label>
-											<input class="rs-small-input" type="text" name="rs-box-shadow-angle" value="0">
-											<label><?php _e('Distance', 'revslider'); ?></label>
-											<input class="rs-small-input" type="text" name="rs-box-shadow-distance" value="0">
-											<label><?php _e('Blur', 'revslider'); ?></label>
-											<input class="rs-small-input" type="text" name="rs-box-shadow-blur" value="0">																					
-											<span class="tp-clearfix"></span>
-											<input type="text" name="rs-box-shadow-color" class="my-color-field" value="#000000">
-											<span class="tp-clearfix"></span>										
-											<a href="javascript:void(0);" id="rs-add-css-box-shadow" class="button-primary revblue" original-title=""><?php _e('Add', 'revslider'); ?></a>
-										</div>
-									</li>
-									<li data-call="font_families"><span class="libtn"><?php _e('Font Family', 'revslider'); ?><span class="more-values-available"></span></span>
-										<div style="display: none;" class="rs-element-add rs-element-add-box-shadow">
+								<h4>
+									<span class="libtn"><?php _e('Style Helper', 'revslider'); ?><span
+										class="more-values-available"></span></span>
+								</h4>
+								<ul class="rs-element-list collapsable" style="display: block">
+									<li data-call="color_value"><span class="libtn"><?php _e('Color Value', 'revslider'); ?><span
+											class="more-values-available"></span></span>
+										<div style="display: none;"
+											class="rs-element-add rs-element-add-color">
+											<input type="text" name="rs-color" class="my-color-field"
+												value="#000000"> <span class="tp-clearfix"></span> <a
+												href="javascript:void(0);" id="rs-add-css-color"
+												class="button-primary revblue" original-title=""><?php _e('Add', 'revslider'); ?></a>
+										</div></li>
+									<li data-call="border_radius"><span class="libtn"><?php _e('Border Radius', 'revslider'); ?><span
+											class="more-values-available"></span></span>
+										<div style="display: none;"
+											class="rs-element-add rs-element-add-border-radius">
+											<label><?php _e('Top Left', 'revslider'); ?></label> <input
+												class="rs-small-input" type="text"
+												name="rs-border-radius-top-left" value="1">
+											</td> <label><?php _e('Top Right', 'revslider'); ?></label> <input
+												class="rs-small-input" type="text"
+												name="rs-border-radius-top-right" value="1">
+											</td> <label><?php _e('Bottom Right', 'revslider'); ?></label>
+											<input class="rs-small-input" type="text"
+												name="rs-border-radius-bottom-right" value="1">
+											</td> <label><?php _e('Bottom Left', 'revslider'); ?></label>
+											<input class="rs-small-input" type="text"
+												name="rs-border-radius-bottom-left" value="1">
+											</td> <span class="tp-clearfix"></span> <a
+												href="javascript:void(0);" id="rs-add-css-border-radius"
+												class="button-primary revblue" original-title=""><?php _e('Add', 'revslider'); ?></a>
+										</div></li>
+									<li data-call="border"><span class="libtn"><?php _e('Border', 'revslider'); ?><span
+											class="more-values-available"></span></span>
+										<div style="display: none;"
+											class="rs-element-add rs-element-add-border">
+											<label><?php _e('Top', 'revslider'); ?></label> <input
+												class="rs-small-input" type="text" name="rs-border-top"
+												value="1"> <label><?php _e('Right', 'revslider'); ?></label>
+											<input class="rs-small-input" type="text"
+												name="rs-border-right" value="1"> <label><?php _e('Bottom', 'revslider'); ?></label>
+											<input class="rs-small-input" type="text"
+												name="rs-border-bottom" value="1"> <label><?php _e('Left', 'revslider'); ?></label>
+											<input class="rs-small-input" type="text"
+												name="rs-border-left" value="1"> <span class="tp-clearfix"></span>
+											<input type="text" name="rs-border-color"
+												class="my-color-field" value="#000000"> <span
+												class="tp-clearfix"></span> <a href="javascript:void(0);"
+												id="rs-add-css-border" class="button-primary revblue"
+												original-title=""><?php _e('Add', 'revslider'); ?></a>
+										</div></li>
+									<li data-call="text_shadow"><span class="libtn"><?php _e('Text-Shadow', 'revslider'); ?><span
+											class="more-values-available"></span></span>
+										<div style="display: none;"
+											class="rs-element-add rs-element-add-text-shadow">
+											<label><?php _e('Angle', 'revslider'); ?></label> <input
+												class="rs-small-input" type="text"
+												name="rs-text-shadow-angle" value="0"> <label><?php _e('Distance', 'revslider'); ?></label>
+											<input class="rs-small-input" type="text"
+												name="rs-text-shadow-distance" value="0"> <label><?php _e('Blur', 'revslider'); ?></label>
+											<input class="rs-small-input" type="text"
+												name="rs-text-shadow-blur" value="0"> <span
+												class="tp-clearfix"></span> <input type="text"
+												name="rs-text-shadow-color" class="my-color-field"
+												value="#000000"> <span class="tp-clearfix"></span> <a
+												href="javascript:void(0);" id="rs-add-css-text-shadow"
+												class="button-primary revblue" original-title=""><?php _e('Add', 'revslider'); ?></a>
+										</div></li>
+									<li data-call="box_shadow"><span class="libtn"><?php _e('Box-Shadow', 'revslider'); ?><span
+											class="more-values-available"></span></span>
+										<div style="display: none;"
+											class="rs-element-add rs-element-add-box-shadow">
+											<label><?php _e('Angle', 'revslider'); ?></label> <input
+												class="rs-small-input" type="text"
+												name="rs-box-shadow-angle" value="0"> <label><?php _e('Distance', 'revslider'); ?></label>
+											<input class="rs-small-input" type="text"
+												name="rs-box-shadow-distance" value="0"> <label><?php _e('Blur', 'revslider'); ?></label>
+											<input class="rs-small-input" type="text"
+												name="rs-box-shadow-blur" value="0"> <span
+												class="tp-clearfix"></span> <input type="text"
+												name="rs-box-shadow-color" class="my-color-field"
+												value="#000000"> <span class="tp-clearfix"></span> <a
+												href="javascript:void(0);" id="rs-add-css-box-shadow"
+												class="button-primary revblue" original-title=""><?php _e('Add', 'revslider'); ?></a>
+										</div></li>
+									<li data-call="font_families"><span class="libtn"><?php _e('Font Family', 'revslider'); ?><span
+											class="more-values-available"></span></span>
+										<div style="display: none;"
+											class="rs-element-add rs-element-add-box-shadow">
 											<select name="rs-font-family" style="width: 160px">
 												<?php
-												foreach($font_families as $handle => $name){
-													if($name['label'] == 'Dont Show Me') continue;
+												foreach ( $font_families as $handle => $name ) {
+													if ($name ['label'] == 'Dont Show Me')
+														continue;
 													?>
 													<option value="<?php echo esc_attr($name['label']); ?>"><?php echo esc_attr($name['label']); ?></option>
 													<?php
 												}
 												?>
-											</select>
-											<a href="javascript:void(0);" id="rs-add-css-font-family" class="button-primary revblue" original-title=""><?php _e('Add', 'revslider'); ?></a>
-										</div>
-									</li>
-								</ul>								
+											</select> <a href="javascript:void(0);"
+												id="rs-add-css-font-family" class="button-primary revblue"
+												original-title=""><?php _e('Add', 'revslider'); ?></a>
+										</div></li>
+								</ul>
 							</div>
 							<div class="helper-wrappers">
 								<!--<h4><span class="libtn"><?php _e('Resets', 'revslider'); ?><span class="more-values-available"></span></span></h4>
@@ -196,14 +238,19 @@ $font_families = $rsopr->getArrFontFamilys();
 									<li id="reset-css-thumbs-empty" data-call="thumbs_css_empty"><span class="libtn"><?php _e('Only Classes', 'revslider'); ?><span class="more-values-available resetme"></span></span></li>
 									<li id="reset-css-tabs" data-call="tabs_css"><span class="libtn"><?php _e('Classes & Style', 'revslider'); ?><span class="more-values-available resetme"></span></span></li>
 									<li id="reset-css-tabs-empty" data-call="tabs_css_empty"><span class="libtn"><?php _e('Only Classes', 'revslider'); ?><span class="more-values-available resetme"></span></span></li>
-								</ul>-->		
+								</ul>-->
 							</div>
 							<div class="helper-wrappers">
-								<h4><span class="libtn"><?php _e('Dynamic Values', 'revslider'); ?><span class="more-values-available"></span></span></h4>
-								<ul class="rs-element-list collapsable" id="rs-placeholder-container" style="display:none">
+								<h4>
+									<span class="libtn"><?php _e('Dynamic Values', 'revslider'); ?><span
+										class="more-values-available"></span></span>
+								</h4>
+								<ul class="rs-element-list collapsable"
+									id="rs-placeholder-container" style="display: none">
 									<li class="rs-always-stay">
 										<div class="rs-element-add rs-element-add-placeholder">
-											<a href="javascript:void(0);" id="rs-add-placeholder" class="button-primary revblue" original-title=""><?php _e('Add', 'revslider'); ?></a>
+											<a href="javascript:void(0);" id="rs-add-placeholder"
+												class="button-primary revblue" original-title=""><?php _e('Add', 'revslider'); ?></a>
 										</div>
 									</li>
 								</ul>
@@ -223,13 +270,16 @@ $font_families = $rsopr->getArrFontFamilys();
 				<div class="rs-bullets-preview"></div>
 				<div class="rs-thumbs-preview"></div>
 				<div class="rs-tabs-preview"></div>
-				<input id="rs-preview-color-changer" type="text" name="rs-preview-color" class="bg-color-field" value="#000000">
-				<span class="little-info"><?php _e('Live Preview - Hover & Click for test', 'revslider'); ?></span>
+				<input id="rs-preview-color-changer" type="text"
+					name="rs-preview-color" class="bg-color-field" value="#000000"> <span
+					class="little-info"><?php _e('Live Preview - Hover & Click for test', 'revslider'); ?></span>
 				<span class="little-sizes">
 					<?php _e('Suggested Width:', 'revslider'); ?>
-					<input class="rs-small-input" type="text" name="rs-test-width" value="160" style="width:45px !important; margin-right:15px;">
+					<input class="rs-small-input" type="text" name="rs-test-width"
+					value="160" style="width: 45px !important; margin-right: 15px;">
 					<?php _e('Suggested Height:', 'revslider'); ?>
-					<input class="rs-small-input" type="text" name="rs-test-height" value="160" style="width:45px !important;">
+					<input class="rs-small-input" type="text" name="rs-test-height"
+					value="160" style="width: 45px !important;">
 				</span>
 			</div>
 			<div style="clear: both;"></div>
@@ -246,10 +296,10 @@ $font_families = $rsopr->getArrFontFamilys();
 		<div class="rs-thumbs-preview"></div>
 		<div class="rs-tabs-preview"></div>
 	</div>
-	
+
 	<!--a class="button-primary revgreen" id="rs-save-navigation-style" href="javascript:void(0);"><i class="rs-icon-save-light"></i><?php _e('Save All Changes','revslider'); ?></a-->
-	
-	
+
+
 	<script type="text/javascript">
 		var rs_navigations = jQuery.parseJSON(<?php echo RevSliderFunctions::jsonEncodeForClientSide($navigs); ?>) || new Array();
 
@@ -1830,7 +1880,7 @@ $font_families = $rsopr->getArrFontFamilys();
 		
 	</script>
 
-	
+
 </div>
 
 <script type="text/html" id="tmpl-rs-navigation-header-wrap">
@@ -1882,56 +1932,44 @@ $font_families = $rsopr->getArrFontFamilys();
 <div id="add-placeholder-dialog" style="display: none">
 	<input type="hidden" name="ph-id" value="NEW">
 	<ul id="placeholder-options">
-		<li data-menu="never" style="display: none;">
-			<label><?php _e('On Navigation:', 'revslider'); ?></label>
+		<li data-menu="never" style="display: none;"><label><?php _e('On Navigation:', 'revslider'); ?></label>
 			<select name="ph-nav-type">
 				<option value="arrows"><?php _e('Arrows', 'revslider'); ?></option>
 				<option value="bullets"><?php _e('Bullets', 'revslider'); ?></option>
 				<option value="thumbs"><?php _e('Thumbs', 'revslider'); ?></option>
 				<option value="tabs"><?php _e('Tabs', 'revslider'); ?></option>
-			</select>
-		</li>
-		<li>
-			<label><?php _e('Type:', 'revslider'); ?></label>
-			<select name="ph-type">
+		</select></li>
+		<li><label><?php _e('Type:', 'revslider'); ?></label> <select
+			name="ph-type">
 				<option value="color"><?php _e('Color RGB', 'revslider'); ?></option>
 				<option value="color-rgba"><?php _e('Color RGBA', 'revslider'); ?></option>
 				<option value="font-family"><?php _e('Font Family', 'revslider'); ?></option>
 				<option value="custom"><?php _e('Text/Custom', 'revslider'); ?></option>
-			</select>
-		</li>
-		<li data-menu="always">
-			<label><?php _e('Title:', 'revslider'); ?></label>
-			<input type="text" name="ph-title" value="">
-		</li>
-		<li data-menu="always">
-			<label><?php _e('Handle:', 'revslider'); ?></label>
-			<span style="margin-left:-20px">##<input type="text" name="ph-handle" value="">##</span>
-		</li>
-		<li data-menu="color">
-			<label><?php _e('Default Value:', 'revslider'); ?></label>
-			<input type="text" name="ph-color" class="my-color-field" value="#000000">
-		</li>
-		<li data-menu="color-rgba">
-			<label><?php _e('Default Value:', 'revslider'); ?></label>
-			<input type="text" name="ph-color-rgba" class="my-color-field" value="0,0,0,0">
-		</li>
-		<li data-menu="font-family">
-			<label><?php _e('Default Value:', 'revslider'); ?></label>
+		</select></li>
+		<li data-menu="always"><label><?php _e('Title:', 'revslider'); ?></label>
+			<input type="text" name="ph-title" value=""></li>
+		<li data-menu="always"><label><?php _e('Handle:', 'revslider'); ?></label>
+			<span style="margin-left: -20px">##<input type="text"
+				name="ph-handle" value="">##
+		</span></li>
+		<li data-menu="color"><label><?php _e('Default Value:', 'revslider'); ?></label>
+			<input type="text" name="ph-color" class="my-color-field"
+			value="#000000"></li>
+		<li data-menu="color-rgba"><label><?php _e('Default Value:', 'revslider'); ?></label>
+			<input type="text" name="ph-color-rgba" class="my-color-field"
+			value="0,0,0,0"></li>
+		<li data-menu="font-family"><label><?php _e('Default Value:', 'revslider'); ?></label>
 			<select name="ph-font-family" style="width: 112px;">
 				<?php
-				foreach($font_families as $handle => $name){
-					if($name['label'] == 'Dont Show Me') continue;
+				foreach ( $font_families as $handle => $name ) {
+					if ($name ['label'] == 'Dont Show Me') continue;
 					?>
 					<option value="<?php echo esc_attr($name['label']); ?>"><?php echo esc_attr($name['label']); ?></option>
 					<?php
 				}
 				?>
-			</select>
-		</li>
-		<li data-menu="custom">
-			<label><?php _e('Default Value:', 'revslider'); ?></label>
-			<input type="text" name="ph-custom" value="">
-		</li>
+			</select></li>
+		<li data-menu="custom"><label><?php _e('Default Value:', 'revslider'); ?></label>
+			<input type="text" name="ph-custom" value=""></li>
 	</ul>
 </div>

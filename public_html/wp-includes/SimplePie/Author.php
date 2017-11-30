@@ -52,8 +52,7 @@
  * @package SimplePie
  * @subpackage API
  */
-class SimplePie_Author
-{
+class SimplePie_Author {
 	/**
 	 * Author's name
 	 *
@@ -61,7 +60,7 @@ class SimplePie_Author
 	 * @see get_name()
 	 */
 	var $name;
-
+	
 	/**
 	 * Author's link
 	 *
@@ -69,7 +68,7 @@ class SimplePie_Author
 	 * @see get_link()
 	 */
 	var $link;
-
+	
 	/**
 	 * Author's email address
 	 *
@@ -77,79 +76,65 @@ class SimplePie_Author
 	 * @see get_email()
 	 */
 	var $email;
-
+	
 	/**
 	 * Constructor, used to input the data
 	 *
-	 * @param string $name
-	 * @param string $link
-	 * @param string $email
+	 * @param string $name        	
+	 * @param string $link        	
+	 * @param string $email        	
 	 */
-	public function __construct($name = null, $link = null, $email = null)
-	{
+	public function __construct($name = null, $link = null, $email = null) {
 		$this->name = $name;
 		$this->link = $link;
 		$this->email = $email;
 	}
-
+	
 	/**
 	 * String-ified version
 	 *
 	 * @return string
 	 */
-	public function __toString()
-	{
+	public function __toString() {
 		// There is no $this->data here
-		return md5(serialize($this));
+		return md5 ( serialize ( $this ) );
 	}
-
+	
 	/**
 	 * Author's name
 	 *
 	 * @return string|null
 	 */
-	public function get_name()
-	{
-		if ($this->name !== null)
-		{
+	public function get_name() {
+		if ($this->name !== null) {
 			return $this->name;
-		}
-		else
-		{
+		} else {
 			return null;
 		}
 	}
-
+	
 	/**
 	 * Author's link
 	 *
 	 * @return string|null
 	 */
-	public function get_link()
-	{
-		if ($this->link !== null)
-		{
+	public function get_link() {
+		if ($this->link !== null) {
 			return $this->link;
-		}
-		else
-		{
+		} else {
 			return null;
 		}
 	}
-
+	
 	/**
 	 * Author's email address
 	 *
 	 * @return string|null
 	 */
-	public function get_email()
-	{
-		if ($this->email !== null)
-		{
+	public function get_email() {
+		if ($this->email !== null) {
 			return $this->email;
-		}
-		else
-		{
+		} else {
 			return null;
 		}
 	}

@@ -24,27 +24,25 @@
  * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
- * @category  Exceptions
- * @package   Bandar
- * @author    Yani Iliev <yani@iliev.me>
+ * @category Exceptions
+ * @package Bandar
+ * @author Yani Iliev <yani@iliev.me>
  * @copyright 2013 Yani Iliev
- * @license   https://raw.github.com/yani-/bandar/master/LICENSE The MIT License (MIT)
- * @version   GIT: 3.0.0
- * @link      https://github.com/yani-/bandar/
+ * @license https://raw.github.com/yani-/bandar/master/LICENSE The MIT License (MIT)
+ * @version GIT: 3.0.0
+ * @link https://github.com/yani-/bandar/
  */
 
 /**
  * TemplateDoesNotExistException
  *
- * @category  Exceptions
- * @package   Bandar
- * @author    Yani Iliev <yani@iliev.me>
+ * @category Exceptions
+ * @package Bandar
+ * @author Yani Iliev <yani@iliev.me>
  * @copyright 2013 Yani Iliev
- * @license   https://raw.github.com/yani-/bandar/master/LICENSE The MIT License (MIT)
- * @version   Release: 2.0.1
- * @link      https://github.com/yani-/bandar/
+ * @license https://raw.github.com/yani-/bandar/master/LICENSE The MIT License (MIT)
+ * @version Release: 2.0.1
+ * @link https://github.com/yani-/bandar/
  */
-class TemplateDoesNotExistException extends Exception
-{
-
+class TemplateDoesNotExistException extends Exception {
 }

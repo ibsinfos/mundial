@@ -25,18 +25,13 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-
-if (!class_exists('Error', false)) {
-    // We can't really avoid making this extend Exception in PHP 5.
-    class Error extends Exception
-    {
-        
-    }
+if (! class_exists ( 'Error', false )) {
+	// We can't really avoid making this extend Exception in PHP 5.
+	class Error extends Exception {
+	}
 }
 
-if (!class_exists('TypeError', false)) {
-    class TypeError extends Error
-    {
-        
-    }
+if (! class_exists ( 'TypeError', false )) {
+	class TypeError extends Error {
+	}
 }

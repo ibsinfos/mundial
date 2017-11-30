@@ -12,10 +12,11 @@
 
 <div class="more-page">
 	<?php
-		$args = array(
-		 'link_before'      => '<span>'
-		,'link_after'       => '</span>' );
-
-		wp_link_pages( $args );
+	$args = array (
+			'link_before' => '<span>',
+			'link_after' => '</span>' 
+	);
+	
+	wp_link_pages ( $args );
 	?>
 </div>

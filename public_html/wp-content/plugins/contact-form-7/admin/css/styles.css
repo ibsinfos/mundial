@@ -16,7 +16,7 @@ span.shortcode.old {
 	color: #fff;
 }
 
-span.shortcode > input {
+span.shortcode>input {
 	background: inherit;
 	color: inherit;
 	font-size: 12px;
@@ -110,8 +110,8 @@ ul.config-error li a.external {
 	background-color: #fff;
 }
 
-#contact-form-editor-tabs li.ui-tabs-active,
-#contact-form-editor-tabs li.ui-tabs-active:hover {
+#contact-form-editor-tabs li.ui-tabs-active, #contact-form-editor-tabs li.ui-tabs-active:hover
+	{
 	border-top: 1px solid #aaa;
 	border-right: 1px solid #aaa;
 	border-left: 1px solid #aaa;
@@ -195,7 +195,7 @@ ul.config-error li a.external {
 	overflow: auto;
 }
 
-.tag-generator-panel .control-box > fieldset legend {
+.tag-generator-panel .control-box>fieldset legend {
 	border: 1px solid #dfdfdf;
 	border-left: 4px solid #00a0d2;
 	background: #f7fcfe;
@@ -230,7 +230,7 @@ ul.config-error li a.external {
 }
 
 .tag-generator-panel .control-box input[type="number"],
-.tag-generator-panel .control-box input[type="date"] {
+	.tag-generator-panel .control-box input[type="date"] {
 	width: 88px;
 }
 
@@ -246,7 +246,8 @@ ul.config-error li a.external {
 	line-height: 1.1em;
 }
 
-.tag-generator-panel .control-box table.form-table td label .description {
+.tag-generator-panel .control-box table.form-table td label .description
+	{
 	line-height: 1.4em;
 }
 
@@ -323,16 +324,16 @@ ul.config-error li a.external {
 /*
  * Welcome Panel
  */
-.welcome-panel .welcome-panel-column,
-.welcome-panel .welcome-panel-column:first-child {
+.welcome-panel .welcome-panel-column, .welcome-panel .welcome-panel-column:first-child
+	{
 	width: 48%;
 	padding: 0 2% 0 0;
 	margin: 0 0 1em 0;
 }
 
 @media screen and (max-width: 870px) {
-	.welcome-panel .welcome-panel-column,
-	.welcome-panel .welcome-panel-column:first-child {
+	.welcome-panel .welcome-panel-column, .welcome-panel .welcome-panel-column:first-child
+		{
 		display: block;
 		float: none;
 		width: 100%;

@@ -5,11 +5,11 @@
  * @version 2.0.0
  * @package Core
  */
-
-if ( ! class_exists( 'wpp_Model_Shortcode' ) ) {
-
+if (! class_exists ( 'wpp_Model_Shortcode' )) {
+	
 	/**
 	 * Shortcode model to display output on frontend.
+	 * 
 	 * @package Core
 	 * @author Flipper Code <hello@flippercode.com>
 	 */
@@ -21,10 +21,11 @@ if ( ! class_exists( 'wpp_Model_Shortcode' ) ) {
 		}
 		/**
 		 * Admin menu for Settings Operation
+		 * 
 		 * @return array Admin menu navigation(s).
 		 */
 		function navigation() {
-			return array();
+			return array ();
 		}
 	}
 }

@@ -22,30 +22,43 @@
  */
 
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
+if (! defined ( 'WPINC' )) {
+	die ();
 }
 
-/*----------------------------------------------------------------------------*
+/*
+ * ----------------------------------------------------------------------------*
  * Public-Facing Functionality
- *----------------------------------------------------------------------------*/
+ * ----------------------------------------------------------------------------
+ */
 
-require_once( plugin_dir_path( __FILE__ ) . 'public' . DIRECTORY_SEPARATOR .
-	'class-favicon-by-realfavicongenerator.php' );
+require_once (plugin_dir_path ( __FILE__ ) . 'public' . DIRECTORY_SEPARATOR . 'class-favicon-by-realfavicongenerator.php');
 
-register_activation_hook( __FILE__, array( 'Favicon_By_RealFaviconGenerator', 'activate' ) );
-register_deactivation_hook( __FILE__, array( 'Favicon_By_RealFaviconGenerator', 'deactivate' ) );
+register_activation_hook ( __FILE__, array (
+		'Favicon_By_RealFaviconGenerator',
+		'activate' 
+) );
+register_deactivation_hook ( __FILE__, array (
+		'Favicon_By_RealFaviconGenerator',
+		'deactivate' 
+) );
 
-add_action( 'plugins_loaded', array( 'Favicon_By_RealFaviconGenerator', 'get_instance' ) );
+add_action ( 'plugins_loaded', array (
+		'Favicon_By_RealFaviconGenerator',
+		'get_instance' 
+) );
 
-/*----------------------------------------------------------------------------*
+/*
+ * ----------------------------------------------------------------------------*
  * Dashboard and Administrative Functionality
- *----------------------------------------------------------------------------*/
+ * ----------------------------------------------------------------------------
+ */
 
-if ( is_admin() ) {
-
-	require_once( plugin_dir_path( __FILE__ ) . 'admin' . DIRECTORY_SEPARATOR .
-		'class-favicon-by-realfavicongenerator-admin.php' );
-	add_action( 'plugins_loaded', array( 'Favicon_By_RealFaviconGenerator_Admin', 'get_instance' ) );
-
+if (is_admin ()) {
+	
+	require_once (plugin_dir_path ( __FILE__ ) . 'admin' . DIRECTORY_SEPARATOR . 'class-favicon-by-realfavicongenerator-admin.php');
+	add_action ( 'plugins_loaded', array (
+			'Favicon_By_RealFaviconGenerator_Admin',
+			'get_instance' 
+	) );
 }

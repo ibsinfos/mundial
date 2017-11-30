@@ -2,32 +2,20 @@
 Theme Name: Twenty Sixteen
 Description: IE7 specific style.
 */
-
 .site-inner {
 	max-width: 656px;
 }
 
-.post-navigation,
-.pagination,
-.image-navigation,
-.entry-header,
-.entry-summary,
-.entry-content,
-.entry-footer,
-.page-header,
-.page-content,
-.post-thumbnail,
-.content-bottom-widgets,
-.comments-area {
+.post-navigation, .pagination, .image-navigation, .entry-header,
+	.entry-summary, .entry-content, .entry-footer, .page-header,
+	.page-content, .post-thumbnail, .content-bottom-widgets, .comments-area
+	{
 	margin-right: 28px;
 	margin-left: 28px;
 	max-width: 100%;
 }
 
-.site-header,
-.sidebar,
-.site-footer,
-.widecolumn {
+.site-header, .sidebar, .site-footer, .widecolumn {
 	padding-right: 28px;
 	padding-left: 28px;
 }
@@ -46,16 +34,14 @@ Description: IE7 specific style.
 	width: auto;
 }
 
-.image-navigation .nav-previous,
-.image-navigation .nav-next,
-.comment-navigation .nav-previous,
-.comment-navigation .nav-next {
+.image-navigation .nav-previous, .image-navigation .nav-next,
+	.comment-navigation .nav-previous, .comment-navigation .nav-next {
 	*display: inline;
 	zoom: 1;
 }
 
-.image-navigation .nav-previous + .nav-next,
-.comment-navigation .nav-previous + .nav-next {
+.image-navigation .nav-previous+.nav-next, .comment-navigation .nav-previous+.nav-next
+	{
 	margin-left: 14px;
 }
 
@@ -69,8 +55,7 @@ Description: IE7 specific style.
 	padding: 18px 0;
 }
 
-.pagination .prev,
-.pagination .next {
+.pagination .prev, .pagination .next {
 	display: inline-block;
 	font-size: 16px;
 	font-weight: 700;
@@ -110,11 +95,11 @@ Description: IE7 specific style.
 }
 
 .site-header-main {
-	overflow : hidden;
-	zoom : 1;
+	overflow: hidden;
+	zoom: 1;
 }
 
-.entry-footer > span {
+.entry-footer>span {
 	margin-right: 14px;
 }
 
@@ -159,13 +144,13 @@ Description: IE7 specific style.
 	max-width: 8%;
 }
 
-.rtl .image-navigation .nav-previous + .nav-next,
-.rtl .comment-navigation .nav-previous + .nav-next {
+.rtl .image-navigation .nav-previous+.nav-next, .rtl .comment-navigation .nav-previous+.nav-next
+	{
 	margin-right: 14px;
 	margin-left: 0;
 }
 
-.rtl .entry-footer > span {
+.rtl .entry-footer>span {
 	margin-right: 14px;
 	margin-left: 0;
 }

@@ -18,80 +18,85 @@ class Requests_Utility_CaseInsensitiveDictionary implements ArrayAccess, Iterato
 	 *
 	 * @var array
 	 */
-	protected $data = array();
-
+	protected $data = array ();
+	
 	/**
 	 * Creates a case insensitive dictionary.
 	 *
-	 * @param array $data Dictionary/map to convert to case-insensitive
+	 * @param array $data
+	 *        	Dictionary/map to convert to case-insensitive
 	 */
 	public function __construct(array $data = array()) {
-		foreach ($data as $key => $value) {
-			$this->offsetSet($key, $value);
+		foreach ( $data as $key => $value ) {
+			$this->offsetSet ( $key, $value );
 		}
 	}
-
+	
 	/**
 	 * Check if the given item exists
 	 *
-	 * @param string $key Item key
+	 * @param string $key
+	 *        	Item key
 	 * @return boolean Does the item exist?
 	 */
 	public function offsetExists($key) {
-		$key = strtolower($key);
-		return isset($this->data[$key]);
+		$key = strtolower ( $key );
+		return isset ( $this->data [$key] );
 	}
-
+	
 	/**
 	 * Get the value for the item
 	 *
-	 * @param string $key Item key
+	 * @param string $key
+	 *        	Item key
 	 * @return string Item value
 	 */
 	public function offsetGet($key) {
-		$key = strtolower($key);
-		if (!isset($this->data[$key])) {
+		$key = strtolower ( $key );
+		if (! isset ( $this->data [$key] )) {
 			return null;
 		}
-
-		return $this->data[$key];
+		
+		return $this->data [$key];
 	}
-
+	
 	/**
 	 * Set the given item
 	 *
 	 * @throws Requests_Exception On attempting to use dictionary as list (`invalidset`)
-	 *
-	 * @param string $key Item name
-	 * @param string $value Item value
+	 *        
+	 * @param string $key
+	 *        	Item name
+	 * @param string $value
+	 *        	Item value
 	 */
 	public function offsetSet($key, $value) {
 		if ($key === null) {
-			throw new Requests_Exception('Object is a dictionary, not a list', 'invalidset');
+			throw new Requests_Exception ( 'Object is a dictionary, not a list', 'invalidset' );
 		}
-
-		$key = strtolower($key);
-		$this->data[$key] = $value;
+		
+		$key = strtolower ( $key );
+		$this->data [$key] = $value;
 	}
-
+	
 	/**
 	 * Unset the given header
 	 *
-	 * @param string $key
+	 * @param string $key        	
 	 */
 	public function offsetUnset($key) {
-		unset($this->data[strtolower($key)]);
+		unset ( $this->data [strtolower ( $key )] );
 	}
-
+	
 	/**
 	 * Get an iterator for the data
 	 *
 	 * @return ArrayIterator
 	 */
 	public function getIterator() {
-		return new ArrayIterator($this->data);
+		return new ArrayIterator ( $this->data );
 	}
-
+	
 	/**
 	 * Get the headers as an array
 	 *

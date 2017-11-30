@@ -18,29 +18,32 @@ abstract class RWMB_Multiple_Values_Field extends RWMB_Field {
 	/**
 	 * Normalize parameters for field.
 	 *
-	 * @param array $field Field parameters.
-	 *
+	 * @param array $field
+	 *        	Field parameters.
+	 *        	
 	 * @return array
 	 */
-	public static function normalize( $field ) {
-		$field               = parent::normalize( $field );
-		$field['multiple']   = true;
-		$field['field_name'] = $field['id'];
-		if ( ! $field['clone'] ) {
-			$field['field_name'] .= '[]';
+	public static function normalize($field) {
+		$field = parent::normalize ( $field );
+		$field ['multiple'] = true;
+		$field ['field_name'] = $field ['id'];
+		if (! $field ['clone']) {
+			$field ['field_name'] .= '[]';
 		}
-
+		
 		return $field;
 	}
-
+	
 	/**
 	 * Format a single value for the helper functions.
 	 *
-	 * @param array  $field Field parameters.
-	 * @param string $value The value.
+	 * @param array $field
+	 *        	Field parameters.
+	 * @param string $value
+	 *        	The value.
 	 * @return string
 	 */
-	public static function format_single_value( $field, $value ) {
-		return $field['options'][ $value ];
+	public static function format_single_value($field, $value) {
+		return $field ['options'] [$value];
 	}
 }

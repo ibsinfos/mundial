@@ -14,9 +14,10 @@
 .ui-helper-hidden {
 	display: none;
 }
+
 .ui-helper-hidden-accessible {
 	border: 0;
-	clip: rect(0 0 0 0);
+	clip: rect(0, 0, 0, 0);
 	height: 1px;
 	margin: -1px;
 	overflow: hidden;
@@ -24,6 +25,7 @@
 	position: absolute;
 	width: 1px;
 }
+
 .ui-helper-reset {
 	margin: 0;
 	padding: 0;
@@ -34,18 +36,21 @@
 	font-size: 100%;
 	list-style: none;
 }
-.ui-helper-clearfix:before,
-.ui-helper-clearfix:after {
+
+.ui-helper-clearfix:before, .ui-helper-clearfix:after {
 	content: "";
 	display: table;
 	border-collapse: collapse;
 }
+
 .ui-helper-clearfix:after {
 	clear: both;
 }
+
 .ui-helper-clearfix {
 	min-height: 0; /* support: IE7 */
 }
+
 .ui-helper-zfix {
 	width: 100%;
 	height: 100%;
@@ -53,20 +58,18 @@
 	right: 0;
 	position: absolute;
 	opacity: 0;
-	filter:Alpha(Opacity=0); /* support: IE8 */
+	filter: Alpha(Opacity = 0); /* support: IE8 */
 }
 
 .ui-front {
 	z-index: 100;
 }
 
-
 /* Interaction Cues
 ----------------------------------*/
 .ui-state-disabled {
 	cursor: default !important;
 }
-
 
 /* Icons
 ----------------------------------*/
@@ -78,7 +81,6 @@
 	overflow: hidden;
 	background-repeat: no-repeat;
 }
-
 
 /* Misc visuals
 ----------------------------------*/
@@ -103,6 +105,7 @@
 .ui-resizable {
 	position: relative;
 }
+
 .ui-resizable-handle {
 	position: absolute;
 	font-size: 0.1px;
@@ -110,10 +113,12 @@
 	-ms-touch-action: none;
 	touch-action: none;
 }
-.ui-resizable-disabled .ui-resizable-handle,
-.ui-resizable-autohide .ui-resizable-handle {
+
+.ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle
+	{
 	display: none;
 }
+
 .ui-resizable-n {
 	cursor: n-resize;
 	height: 7px;
@@ -121,6 +126,7 @@
 	top: -5px;
 	right: 0;
 }
+
 .ui-resizable-s {
 	cursor: s-resize;
 	height: 7px;
@@ -178,7 +184,6 @@
 }
 
 /* WP buttons: see buttons.css. */
-
 .ui-button {
 	display: inline-block;
 	text-decoration: none;
@@ -202,11 +207,10 @@
 	background: #f7f7f7;
 	-webkit-box-shadow: 0 1px 0 #cccccc;
 	box-shadow: 0 1px 0 #cccccc;
- 	vertical-align: top;
+	vertical-align: top;
 }
 
-.ui-button:active,
-.ui-button:focus {
+.ui-button:active, .ui-button:focus {
 	outline: none;
 }
 
@@ -217,8 +221,7 @@
 	padding: 0;
 }
 
-.ui-button:hover,
-.ui-button:focus {
+.ui-button:hover, .ui-button:focus {
 	background: #fafafa;
 	border-color: #999;
 	color: #23282d;
@@ -226,22 +229,21 @@
 
 .ui-button:focus {
 	border-color: #5b9dd9;
-	-webkit-box-shadow: 0 0 3px rgba( 0, 115, 170, .8 );
-	box-shadow: 0 0 3px rgba( 0, 115, 170, .8 );
+	-webkit-box-shadow: 0 0 3px rgba(0, 115, 170, .8);
+	box-shadow: 0 0 3px rgba(0, 115, 170, .8);
 }
 
 .ui-button:active {
 	background: #eee;
 	border-color: #999;
-	-webkit-box-shadow: inset 0 2px 5px -3px rgba( 0, 0, 0, 0.5 );
-	box-shadow: inset 0 2px 5px -3px rgba( 0, 0, 0, 0.5 );
+	-webkit-box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
 	-webkit-transform: translateY(1px);
 	-ms-transform: translateY(1px);
 	transform: translateY(1px);
 }
 
-.ui-button[disabled],
-.ui-button:disabled {
+.ui-button[disabled], .ui-button:disabled {
 	color: #a0a5aa !important;
 	border-color: #ddd !important;
 	background: #f7f7f7 !important;
@@ -255,7 +257,6 @@
 }
 
 @media screen and ( max-width: 782px ) {
-
 	.ui-button {
 		padding: 6px 14px;
 		line-height: normal;
@@ -264,19 +265,17 @@
 		height: auto;
 		margin-bottom: 4px;
 	}
-
 }
 
 /* WP Theme */
-
 .ui-dialog {
 	position: absolute;
 	top: 0;
 	right: 0;
 	z-index: 100102;
 	background-color: #fff;
-	-webkit-box-shadow: 0 3px 6px rgba( 0, 0, 0, 0.3 );
-	box-shadow: 0 3px 6px rgba( 0, 0, 0, 0.3 );
+	-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .ui-dialog-titlebar {
@@ -358,6 +357,6 @@
 	min-height: 360px;
 	background: #000;
 	opacity: 0.7;
-	filter: alpha(opacity=70);
+	filter: alpha(opacity = 70);
 	z-index: 100101;
 }

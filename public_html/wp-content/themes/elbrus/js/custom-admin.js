@@ -1,5 +1,4 @@
 jQuery(function($){
-
 	// post type toogle
 	var postType = $('#post-formats-select').find('input:checked').val();
 	if( postType == 0 ){
@@ -11,7 +10,6 @@ jQuery(function($){
 		$( 'label[for*="' + postType + '"]' ).closest('.rwmb-field').fadeIn();
 	}
 	$('#post-formats-select').find('input').change( function() {
-
 		var postType = $(this).val();
 
 		if ( postType == 0 ) {
@@ -21,10 +19,7 @@ jQuery(function($){
 			$( 'label[for*="' + postType + '"]' ).closest('.rwmb-field').siblings('.rwmb-field').hide();
 			$( 'label[for*="' + postType + '"]' ).closest('.rwmb-field').fadeIn();
 		}
-
 	});
-
-
 	// portfolio type toogle
 	var portfolioType = $("#post_types_select :selected").val();
 	$('#post_types .rwmb-meta-box .rwmb-field').not(':eq(0)').hide();
@@ -34,7 +29,6 @@ jQuery(function($){
 		$('#post_types .rwmb-meta-box .rwmb-field').eq(0).show();
 	}
 	$('#post_types_select').change( function() {
-
 		var portfolioType = $(this).val();
 		if(portfolioType == "link"){
 			$('#post_types .rwmb-meta-box .rwmb-field').not(':eq(0)').hide();
@@ -45,7 +39,6 @@ jQuery(function($){
 			$('#post_types .rwmb-meta-box .rwmb-field').eq(0).show();
 		}
 	});
-
 	// meta box toogle for page
 	elem = $('#homepage .rwmb-meta-box .rwmb-field');
 	if($('#homepage_slider').find('option:selected').val() != 'slider2')
@@ -57,16 +50,12 @@ jQuery(function($){
 		} else { elem.eq(1).hide(); }
 	});
 });
-
 jQuery(document).ready(function($){
-
 	// Instantiates the variable that holds the media library frame.
 	var meta_image_frame;
 	var img_input;
-
 	// Runs when the image button is clicked.
 	$('.pix-image-upload').click(function(e){
-
 		img_input = $('#'+$(this).data('input'));
 		// Prevents the default action from occuring.
 		e.preventDefault();

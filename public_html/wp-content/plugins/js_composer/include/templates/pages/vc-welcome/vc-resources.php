@@ -1,6 +1,6 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-	die( '-1' );
+if (! defined ( 'ABSPATH' )) {
+	die ( '-1' );
 }
 ?>
 <div class="vc_resources-tab changelog">
@@ -10,18 +10,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<p><?php _e( 'There are several resources available to Visual Composer users to help you to get around plugin:', 'js_composer' ); ?></p>
 			<ul>
-				<li>
-					<a href="http://vc.wpbakery.com/?utm_campaign=VCplugin&amp;utm_source=vc_user&amp;utm_medium=welcome_page"
-					   target="_blank">Official website</a></li>
-				<li><a href="http://bit.ly/vcomposer" target="_blank">Official sales point on CodeCanyon</a></li>
-				<li><a href="http://kb.wpbakery.com" target="_blank">Official Knowledge Base</a></li>
-				<li><a href="http://vc.wpbakery.com/video-academy/" target="_blank">Video Academy</a></li>
-				<li><a href="http://support.wpbakery.com" target="_blank">Official support</a></li>
-				<li><a href="http://facebook.com/VisualComposer.wpbakery" target="_blank">Facebook page</a></li>
-				<li><a href="http://twitter.com/wpbakery" target="_blank">Twitter account</a></li>
+				<li><a
+					href="http://vc.wpbakery.com/?utm_campaign=VCplugin&amp;utm_source=vc_user&amp;utm_medium=welcome_page"
+					target="_blank">Official website</a></li>
+				<li><a href="http://bit.ly/vcomposer" target="_blank">Official sales
+						point on CodeCanyon</a></li>
+				<li><a href="http://kb.wpbakery.com" target="_blank">Official
+						Knowledge Base</a></li>
+				<li><a href="http://vc.wpbakery.com/video-academy/" target="_blank">Video
+						Academy</a></li>
+				<li><a href="http://support.wpbakery.com" target="_blank">Official
+						support</a></li>
+				<li><a href="http://facebook.com/VisualComposer.wpbakery"
+					target="_blank">Facebook page</a></li>
+				<li><a href="http://twitter.com/wpbakery" target="_blank">Twitter
+						account</a></li>
 			</ul>
 		</div>
-		
+
 		<div class="vc_col-xs-6">
 			<h3><?php _e( 'Official Support', 'js_composer' ); ?></h3>
 

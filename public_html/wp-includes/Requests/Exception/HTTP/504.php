@@ -17,7 +17,7 @@ class Requests_Exception_HTTP_504 extends Requests_Exception_HTTP {
 	 * @var integer
 	 */
 	protected $code = 504;
-
+	
 	/**
 	 * Reason phrase
 	 *

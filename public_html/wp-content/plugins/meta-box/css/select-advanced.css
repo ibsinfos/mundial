@@ -2,15 +2,17 @@
 	height: auto;
 	min-width: 200px;
 }
+
 #wpbody .rwmb-select-all {
 	display: block;
 	margin-top: 5px;
 }
-#wpbody .select2-selection--single,
-#wpbody .select2-selection--multiple,
-.select2-dropdown {
+
+#wpbody .select2-selection--single, #wpbody .select2-selection--multiple,
+	.select2-dropdown {
 	border-color: #ddd;
 }
+
 .select2-results__option {
 	margin-bottom: 0;
 }

@@ -1,31 +1,32 @@
 /* Custom Admin CSS */
-
-.pix-bg-png{
+.pix-bg-png {
 	background-image: url("../img/bg_png.png");
 }
 
-.pix-btn-icon{
+.pix-btn-icon {
 	font-size: 15px;
 	cursor: pointer;
 }
-.pix-bg img{
+
+.pix-bg img {
 	max-width: 200px;
 }
 
-.range-values{
-    margin-left: 10px;
+.range-values {
+	margin-left: 10px;
 }
+
 .range-values.range-single-input {
-    margin-left: 0;
-    text-align: center;
-}
-.range-values input{
-    width: 50px;
-    margin: 10px;
-    text-align: right;
-}
-.range-values input:disabled{
-    color: rgba(51,51,51,1);
+	margin-left: 0;
+	text-align: center;
 }
 
+.range-values input {
+	width: 50px;
+	margin: 10px;
+	text-align: right;
+}
 
+.range-values input:disabled {
+	color: rgba(51, 51, 51, 1);
+}

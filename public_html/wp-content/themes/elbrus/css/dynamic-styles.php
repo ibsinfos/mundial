@@ -1,10 +1,10 @@
 <?php
-header("Content-type: text/css; charset: UTF-8");
+header ( "Content-type: text/css; charset: UTF-8" );
 
-$elbrus_main_color = elbrus_get_option( 'style_settings_main_color', get_option('elbrus_default_main_color') );
-$elbrus_color_darker = elbrus_get_option( 'style_settings_additional_color_darker', get_option('elbrus_default_additional_color') );
+$elbrus_main_color = elbrus_get_option ( 'style_settings_main_color', get_option ( 'elbrus_default_main_color' ) );
+$elbrus_color_darker = elbrus_get_option ( 'style_settings_additional_color_darker', get_option ( 'elbrus_default_additional_color' ) );
 
-$page_color = get_post_meta($_REQUEST['pageID'], 'page_main_color', 1);
+$page_color = get_post_meta ( $_REQUEST ['pageID'], 'page_main_color', 1 );
 ?>
 
 <?php if($page_color):?>

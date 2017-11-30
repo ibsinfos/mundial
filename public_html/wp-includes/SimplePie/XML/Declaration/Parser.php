@@ -42,15 +42,13 @@
  * @license http://www.opensource.org/licenses/bsd-license.php BSD License
  */
 
-
 /**
  * Parses the XML Declaration
  *
  * @package SimplePie
  * @subpackage Parsing
  */
-class SimplePie_XML_Declaration_Parser
-{
+class SimplePie_XML_Declaration_Parser {
 	/**
 	 * XML Version
 	 *
@@ -58,7 +56,7 @@ class SimplePie_XML_Declaration_Parser
 	 * @var string
 	 */
 	var $version = '1.0';
-
+	
 	/**
 	 * Encoding
 	 *
@@ -66,7 +64,7 @@ class SimplePie_XML_Declaration_Parser
 	 * @var string
 	 */
 	var $encoding = 'UTF-8';
-
+	
 	/**
 	 * Standalone
 	 *
@@ -74,7 +72,7 @@ class SimplePie_XML_Declaration_Parser
 	 * @var bool
 	 */
 	var $standalone = false;
-
+	
 	/**
 	 * Current state of the state machine
 	 *
@@ -82,7 +80,7 @@ class SimplePie_XML_Declaration_Parser
 	 * @var string
 	 */
 	var $state = 'before_version_name';
-
+	
 	/**
 	 * Input data
 	 *
@@ -90,7 +88,7 @@ class SimplePie_XML_Declaration_Parser
 	 * @var string
 	 */
 	var $data = '';
-
+	
 	/**
 	 * Input data length (to avoid calling strlen() everytime this is needed)
 	 *
@@ -98,7 +96,7 @@ class SimplePie_XML_Declaration_Parser
 	 * @var int
 	 */
 	var $data_length = 0;
-
+	
 	/**
 	 * Current position of the pointer
 	 *
@@ -106,256 +104,186 @@ class SimplePie_XML_Declaration_Parser
 	 * @access private
 	 */
 	var $position = 0;
-
+	
 	/**
 	 * Create an instance of the class with the input data
 	 *
 	 * @access public
-	 * @param string $data Input data
+	 * @param string $data
+	 *        	Input data
 	 */
-	public function __construct($data)
-	{
+	public function __construct($data) {
 		$this->data = $data;
-		$this->data_length = strlen($this->data);
+		$this->data_length = strlen ( $this->data );
 	}
-
+	
 	/**
 	 * Parse the input data
 	 *
 	 * @access public
 	 * @return bool true on success, false on failure
 	 */
-	public function parse()
-	{
-		while ($this->state && $this->state !== 'emit' && $this->has_data())
-		{
+	public function parse() {
+		while ( $this->state && $this->state !== 'emit' && $this->has_data () ) {
 			$state = $this->state;
-			$this->$state();
+			$this->$state ();
 		}
 		$this->data = '';
-		if ($this->state === 'emit')
-		{
+		if ($this->state === 'emit') {
 			return true;
-		}
-		else
-		{
+		} else {
 			$this->version = '';
 			$this->encoding = '';
 			$this->standalone = '';
 			return false;
 		}
 	}
-
+	
 	/**
 	 * Check whether there is data beyond the pointer
 	 *
 	 * @access private
 	 * @return bool true if there is further data, false if not
 	 */
-	public function has_data()
-	{
-		return (bool) ($this->position < $this->data_length);
+	public function has_data() {
+		return ( bool ) ($this->position < $this->data_length);
 	}
-
+	
 	/**
 	 * Advance past any whitespace
 	 *
 	 * @return int Number of whitespace characters passed
 	 */
-	public function skip_whitespace()
-	{
-		$whitespace = strspn($this->data, "\x09\x0A\x0D\x20", $this->position);
+	public function skip_whitespace() {
+		$whitespace = strspn ( $this->data, "\x09\x0A\x0D\x20", $this->position );
 		$this->position += $whitespace;
 		return $whitespace;
 	}
-
+	
 	/**
 	 * Read value
 	 */
-	public function get_value()
-	{
-		$quote = substr($this->data, $this->position, 1);
-		if ($quote === '"' || $quote === "'")
-		{
-			$this->position++;
-			$len = strcspn($this->data, $quote, $this->position);
-			if ($this->has_data())
-			{
-				$value = substr($this->data, $this->position, $len);
+	public function get_value() {
+		$quote = substr ( $this->data, $this->position, 1 );
+		if ($quote === '"' || $quote === "'") {
+			$this->position ++;
+			$len = strcspn ( $this->data, $quote, $this->position );
+			if ($this->has_data ()) {
+				$value = substr ( $this->data, $this->position, $len );
 				$this->position += $len + 1;
 				return $value;
 			}
 		}
 		return false;
 	}
-
-	public function before_version_name()
-	{
-		if ($this->skip_whitespace())
-		{
+	public function before_version_name() {
+		if ($this->skip_whitespace ()) {
 			$this->state = 'version_name';
-		}
-		else
-		{
+		} else {
 			$this->state = false;
 		}
 	}
-
-	public function version_name()
-	{
-		if (substr($this->data, $this->position, 7) === 'version')
-		{
+	public function version_name() {
+		if (substr ( $this->data, $this->position, 7 ) === 'version') {
 			$this->position += 7;
-			$this->skip_whitespace();
+			$this->skip_whitespace ();
 			$this->state = 'version_equals';
-		}
-		else
-		{
+		} else {
 			$this->state = false;
 		}
 	}
-
-	public function version_equals()
-	{
-		if (substr($this->data, $this->position, 1) === '=')
-		{
-			$this->position++;
-			$this->skip_whitespace();
+	public function version_equals() {
+		if (substr ( $this->data, $this->position, 1 ) === '=') {
+			$this->position ++;
+			$this->skip_whitespace ();
 			$this->state = 'version_value';
-		}
-		else
-		{
+		} else {
 			$this->state = false;
 		}
 	}
-
-	public function version_value()
-	{
-		if ($this->version = $this->get_value())
-		{
-			$this->skip_whitespace();
-			if ($this->has_data())
-			{
+	public function version_value() {
+		if ($this->version = $this->get_value ()) {
+			$this->skip_whitespace ();
+			if ($this->has_data ()) {
 				$this->state = 'encoding_name';
-			}
-			else
-			{
+			} else {
 				$this->state = 'emit';
 			}
-		}
-		else
-		{
+		} else {
 			$this->state = false;
 		}
 	}
-
-	public function encoding_name()
-	{
-		if (substr($this->data, $this->position, 8) === 'encoding')
-		{
+	public function encoding_name() {
+		if (substr ( $this->data, $this->position, 8 ) === 'encoding') {
 			$this->position += 8;
-			$this->skip_whitespace();
+			$this->skip_whitespace ();
 			$this->state = 'encoding_equals';
-		}
-		else
-		{
+		} else {
 			$this->state = 'standalone_name';
 		}
 	}
-
-	public function encoding_equals()
-	{
-		if (substr($this->data, $this->position, 1) === '=')
-		{
-			$this->position++;
-			$this->skip_whitespace();
+	public function encoding_equals() {
+		if (substr ( $this->data, $this->position, 1 ) === '=') {
+			$this->position ++;
+			$this->skip_whitespace ();
 			$this->state = 'encoding_value';
-		}
-		else
-		{
+		} else {
 			$this->state = false;
 		}
 	}
-
-	public function encoding_value()
-	{
-		if ($this->encoding = $this->get_value())
-		{
-			$this->skip_whitespace();
-			if ($this->has_data())
-			{
+	public function encoding_value() {
+		if ($this->encoding = $this->get_value ()) {
+			$this->skip_whitespace ();
+			if ($this->has_data ()) {
 				$this->state = 'standalone_name';
-			}
-			else
-			{
+			} else {
 				$this->state = 'emit';
 			}
-		}
-		else
-		{
+		} else {
 			$this->state = false;
 		}
 	}
-
-	public function standalone_name()
-	{
-		if (substr($this->data, $this->position, 10) === 'standalone')
-		{
+	public function standalone_name() {
+		if (substr ( $this->data, $this->position, 10 ) === 'standalone') {
 			$this->position += 10;
-			$this->skip_whitespace();
+			$this->skip_whitespace ();
 			$this->state = 'standalone_equals';
-		}
-		else
-		{
+		} else {
 			$this->state = false;
 		}
 	}
-
-	public function standalone_equals()
-	{
-		if (substr($this->data, $this->position, 1) === '=')
-		{
-			$this->position++;
-			$this->skip_whitespace();
+	public function standalone_equals() {
+		if (substr ( $this->data, $this->position, 1 ) === '=') {
+			$this->position ++;
+			$this->skip_whitespace ();
 			$this->state = 'standalone_value';
-		}
-		else
-		{
+		} else {
 			$this->state = false;
 		}
 	}
-
-	public function standalone_value()
-	{
-		if ($standalone = $this->get_value())
-		{
-			switch ($standalone)
-			{
-				case 'yes':
+	public function standalone_value() {
+		if ($standalone = $this->get_value ()) {
+			switch ($standalone) {
+				case 'yes' :
 					$this->standalone = true;
 					break;
-
-				case 'no':
+				
+				case 'no' :
 					$this->standalone = false;
 					break;
-
-				default:
+				
+				default :
 					$this->state = false;
 					return;
 			}
-
-			$this->skip_whitespace();
-			if ($this->has_data())
-			{
+			
+			$this->skip_whitespace ();
+			if ($this->has_data ()) {
 				$this->state = false;
-			}
-			else
-			{
+			} else {
 				$this->state = 'emit';
 			}
-		}
-		else
-		{
+		} else {
 			$this->state = false;
 		}
 	}

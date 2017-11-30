@@ -1,8 +1,8 @@
 @import url(forms-rtl.css);
+
 @import url(l10n-rtl.css);
 
-html,
-body {
+html, body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
@@ -12,7 +12,8 @@ body {
 	background: #f1f1f1;
 	min-width: 0;
 	color: #444;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	line-height: 1.4em;
 }
@@ -31,19 +32,15 @@ a {
 	outline: 0;
 }
 
-a:hover,
-a:active {
+a:hover, a:active {
 	color: #00a0d2;
 }
 
 a:focus {
 	color: #124964;
-	-webkit-box-shadow:
-		0 0 0 1px #5b9dd9,
-		0 0 2px 1px rgba(30, 140, 190, .8);
-	box-shadow:
-		0 0 0 1px #5b9dd9,
-		0 0 2px 1px rgba(30, 140, 190, .8);
+	-webkit-box-shadow: 0 0 0 1px #5b9dd9, 0 0 2px 1px
+		rgba(30, 140, 190, .8);
+	box-shadow: 0 0 0 1px #5b9dd9, 0 0 2px 1px rgba(30, 140, 190, .8);
 }
 
 .ie8 a:focus {
@@ -54,22 +51,20 @@ p {
 	line-height: 1.5;
 }
 
-.login .message,
-.login #login_error {
+.login .message, .login #login_error {
 	border-right: 4px solid #00a0d2;
 	padding: 12px;
 	margin-right: 0;
 	background-color: #fff;
-	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
-	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .login #login_error {
 	border-right-color: #dc3232;
 }
 
-#loginform p.submit,
-.login-action-lostpassword p.submit {
+#loginform p.submit, .login-action-lostpassword p.submit {
 	border: none;
 	margin: -10px 0 20px; /* May want to revisit this */
 }
@@ -86,8 +81,8 @@ p {
 	font-weight: 400;
 	overflow: hidden;
 	background: #fff;
-	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.13);
-	box-shadow: 0 1px 3px rgba(0,0,0,0.13);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
 }
 
 .login form .forgetmenot {
@@ -151,8 +146,7 @@ p {
 	margin: auto;
 }
 
-.login #nav,
-.login #backtoblog {
+.login #nav, .login #backtoblog {
 	font-size: 13px;
 	padding: 0 24px 0;
 }
@@ -165,40 +159,32 @@ p {
 	margin: 16px 0;
 }
 
-.login #nav a,
-.login #backtoblog a {
+.login #nav a, .login #backtoblog a {
 	text-decoration: none;
 	color: #555d66;
 }
 
-.login #nav a:hover,
-.login #backtoblog a:hover,
-.login h1 a:hover {
+.login #nav a:hover, .login #backtoblog a:hover, .login h1 a:hover {
 	color: #00a0d2;
 }
 
-.login #nav a:focus,
-.login #backtoblog a:focus,
-.login h1 a:focus {
+.login #nav a:focus, .login #backtoblog a:focus, .login h1 a:focus {
 	color: #124964;
 }
 
-.login form .input,
-.login input[type="text"] {
+.login form .input, .login input[type="text"] {
 	font-size: 24px;
 	width: 100%;
 	padding: 3px;
 	margin: 2px 0 16px 6px;
 }
 
-.login form .input,
-.login input[type="text"],
-.login form input[type="checkbox"] {
+.login form .input, .login input[type="text"], .login form input[type="checkbox"]
+	{
 	background: #fbfbfb;
 }
 
-.ie7 .login form .input,
-.ie8 .login form .input {
+.ie7 .login form .input, .ie8 .login form .input {
 	font-family: sans-serif;
 }
 
@@ -229,8 +215,7 @@ body.interim-login {
 	width: auto;
 }
 
-.interim-login #login_error,
-.interim-login.login .message {
+.interim-login #login_error, .interim-login.login .message {
 	margin: 0 0 16px;
 }
 
@@ -238,7 +223,8 @@ body.interim-login {
 	margin: 0;
 }
 
-@-ms-viewport {
+@
+-ms-viewport {
 	width: device-width;
 }
 
@@ -253,7 +239,6 @@ body.interim-login {
 		height: 16px;
 		width: 16px;
 	}
-
 	.interim-login input[type=checkbox]:checked:before {
 		width: 16px;
 		font: normal 21px/1 dashicons;
