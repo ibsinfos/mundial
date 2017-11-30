@@ -1,0 +1,158 @@
+@charset "utf-8";
+/* CSS Document */
+
+ .form-label-left{
+        width:150px;
+    }
+    .form-line{
+        padding-top:12px;
+        padding-bottom:12px;
+    }
+    .form-label-right{
+        width:150px;
+    }
+    body, html{
+        margin:0;
+        padding:0;
+        background:rgb(255, 255, 255);
+    }
+
+    .form-all{
+        margin:0px auto;
+        padding-top:0px;
+        width:690px;
+        color:rgb(255, 82, 0) !important;
+        font-family:'Open Sans';
+        font-size:14px;
+    }
+    .form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header{
+        color: #555555;
+    }
+	
+	
+	   /* Injected CSS Code */
+/*PREFERENCES STYLE*/
+    .form-all {
+      font-family: "'Trebuchet MS'", sans-serif;
+    }
+    .form-all .qq-upload-button,
+    .form-all .form-submit-button,
+    .form-all .form-submit-reset,
+    .form-all .form-submit-print {
+      font-family: "'Trebuchet MS'", sans-serif;
+    }
+    .form-all .form-pagebreak-back-container,
+    .form-all .form-pagebreak-next-container {
+      font-family: "'Trebuchet MS'", sans-serif;
+    }
+    .form-header-group {
+      font-family: "'Trebuchet MS'", sans-serif;
+    }
+    .form-label {
+      font-family: "'Trebuchet MS'", sans-serif;
+    }
+  
+    .form-label.form-label-auto {
+      
+    display: inline-block;
+    float: left;
+    text-align: right;
+  
+    }
+  
+    .form-line {
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+  
+    .form-all {
+      width: 590px;
+    }
+  
+    .form-label-left,
+    .form-label-right,
+    .form-label-left.form-label-auto,
+    .form-label-right.form-label-auto {
+      width: 150px;
+    }
+  
+    .form-all {
+      font-size: 12pxpx
+    }
+    .form-all .qq-upload-button,
+    .form-all .qq-upload-button,
+    .form-all .form-submit-button,
+    .form-all .form-submit-reset,
+    .form-all .form-submit-print {
+      font-size: 12pxpx
+    }
+    .form-all .form-pagebreak-back-container,
+    .form-all .form-pagebreak-next-container {
+      font-size: 12pxpx
+    }
+  
+    .supernova .form-all, .form-all {
+      background-color: rgb(255, 255, 255);
+      border: 1px solid transparent;
+    }
+  
+    .form-all {
+      color: rgb(255, 82, 0);
+    }
+    .form-header-group .form-header {
+      color: rgb(255, 82, 0);
+    }
+    .form-header-group .form-subHeader {
+      color: rgb(255, 82, 0);
+    }
+    .form-label-top,
+    .form-label-left,
+    .form-label-right,
+    .form-html,
+    .form-checkbox-item label,
+    .form-radio-item label {
+      color: rgb(255, 82, 0);
+    }
+    .form-sub-label {
+      color: 1a1a1a;
+    }
+  
+    .supernova {
+      background-color: undefined;
+    }
+    .supernova body {
+      background: transparent;
+    }
+  
+    .form-textbox,
+    .form-textarea,
+    .form-radio-other-input,
+    .form-checkbox-other-input,
+    .form-captcha input,
+    .form-spinner input {
+      background-color: undefined;
+    }
+  
+    .supernova {
+      background-image: none;
+    }
+    #stage {
+      background-image: none;
+    }
+  
+      /*.form-all {
+        background-image: url("//www.jotform.com/images/styles/style1_bg.gif");
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-position: center top;
+      }*/
+    
+  .ie-8 .form-all:before { display: none; }
+  .ie-8 {
+    margin-top: auto;
+    margin-top: initial;
+  }
+  
+  /*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
+    /* Injected CSS Code */
+

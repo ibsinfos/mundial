@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mundial Logistics Group</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	 <link href="css/AdminLTE.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script>
+	var completes = document.querySelectorAll(".complete");
+var toggleButton = document.getElementById("toggleButton");
+
+
+function toggleComplete(){
+  var lastComplete = completes[completes.length - 1];
+  lastComplete.classList.toggle('complete');
+}
+
+toggleButton.onclick = toggleComplete;
+	</script>
+	
+</head>
+<body>
+	<div class="container">
+  <!-- STEPS -->
+  <section id="Steps" class="steps-section">
+
+    <h2 class="steps-header">
+     Tracking Pedido | Mundial Logistics Group
+    </h2>
+	 <!-- Box (with bar chart) -->
+	    
+                   
+        <div class="box box-danger" id="loading-example">
+            <div class="box-header">
+                   <!-- tools box -->
+				
+                    <i class="ion ion-clipboard"></i>
+                    <h3 class="box-title">Pedido: 24514548</h3>
+            </div><!-- /.box-header -->
+            <div class="box-body no-padding">
+                    <div class="row"></div><!--/.row - inside box -->
+                    
+            </div><!-- /.box-body -->
+            <div class="box-footer">
+                <div class="row">
+            
+                  	<div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+						<p>info 1 </p>
+                    </div><!-- ./col -->
+					
+					<div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+						<p>info 2 </p>
+                    </div><!-- ./col -->
+					
+					<div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+						<p>info 3 </p>
+                    </div><!-- ./col -->
+                    
+					
+                        
+                </div><!-- /.row -->
+            </div><!-- /.box-footer -->
+            
+        </div>
+            <!-- /.box  fim -->  
+
+    <div class="steps-timeline">
+
+      <div class="steps-one">
+        <img class="steps-img" src="images/pedido.png" alt="Seu pedido esta em andamento" />
+        <h3 class="steps-name">
+          Pedido
+        </h3>
+        <p class="steps-description">
+          Seu pedido esta em andamento.Seu pedido esta em andamento. Seu pedido esta em andamento.Seu pedido esta em andamento. Seu pedido esta em andamento.
+		
+        </p>
+      </div>
+
+      <div class="steps-two">
+        <img class="steps-img" src="images/transporte.png" alt="Seu pedido esta acaminho do destino. " />
+        <h3 class="steps-name">
+          Transposte
+        </h3>
+        <p class="steps-description">
+          Seu pedido esta em andamento.Seu pedido esta em andamento. Seu pedido esta em andamento.Seu pedido esta em andamento. Seu pedido esta em andamento.
+        </p>
+      </div>
+
+      <div class="steps-three">
+        <img class="steps-img" src="images/entregue.png" alt="Seu pedido foi entregue com Sucesso." />
+        <h3 class="steps-name">
+          Entrega
+        </h3>
+        <p class="steps-description">
+          Seu pedido foi entregue com Sucesso. 
+
+    </div><!-- /.steps-timeline -->
+
+  </section>    
+
+	</div>
+  <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

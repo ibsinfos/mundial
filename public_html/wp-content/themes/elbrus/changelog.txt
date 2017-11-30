@@ -1,0 +1,52 @@
+
+version 2.0.0  (01.05.2017)
+
+WooCommerce 3.0 Ready
+Section Parralax added
+Section Gradient added
+PixthemeCustom plugin updated
+
+	library/theme/setup.php
+	library/theme/styles_scripts.php
+	library/theme/vc_templates.php
+	library/theme/woocommerce.php
+	vc_templates/vc_row.php 
+	vc_templates/vc_row_inner.php 
+	vc_templates/vc_column.php 
+	library/core/admin/index.php
+	library/core/admin/post-fields.php
+	library/core/admin/admin-panel/header.php
+	header.php
+	js/custom.js
+	js/custom-admin.js
+	js/custom-script.js
+	assets/woocommerce/*
+	fonts/font-awesome/*
+	css/dynamic-styles.php
+	css/main.css
+	style.css
+
+
+
+
+version 1.0.2  (29.03.2017)
+
+Fonts bugs fixed
+
+	fonts/*
+	
+    
+    
+version 1.0.1  (28.03.2017)
+
+Header minor bugs fixed
+
+	templates/header/*
+	library/core/admin/post-fields.php
+	css/main.css
+	style.css
+	
+
+
+version 1.0.0  (01.01.2017)
+

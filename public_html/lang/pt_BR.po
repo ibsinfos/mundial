@@ -1,0 +1,4276 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Renew\n"
+"POT-Creation-Date: 2016-06-13 14:09+0300\n"
+"PO-Revision-Date: 2017-08-04 15:48-0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_c;_n:1,2;_x:1,2c;_nc:1,2;_nx:1,2,4c;"
+"_n_noop:1,2;_nx_noop:1,2,3c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c;__ngettext:1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: pt_BR\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: library/includes/plugins\n"
+
+#: js/jquery-ui.min.js:8
+#, fuzzy
+msgid "'"
+msgstr "'"
+
+#: 404.php:11
+#, fuzzy
+msgid "Page not found"
+msgstr "Pagina não encontrada"
+
+#: 404.php:15
+#, fuzzy
+msgid "The page you are looking for seems to be missing."
+msgstr "A página que você está procurando parece estar faltando."
+
+#: 404.php:18
+#, fuzzy
+msgid "Return to previous page"
+msgstr "Voltar"
+
+#: archive-portfolio.php:25 library/core/admin/admin-panel/portfolio.php:174
+#: library/theme/vc_templates.php:1505 taxonomy-portfolio_category.php:25
+#, fuzzy
+msgid "Load more"
+msgstr "Carregue mais"
+
+#: archive-portfolio.php:43
+#, fuzzy
+msgid "All categories"
+msgstr "Todas as Categorias"
+
+#: archive-portfolio.php:178 taxonomy-portfolio_category.php:178
+#: vc_templates/section_portfolio.php:219
+#, fuzzy
+msgid "Loading..."
+msgstr "Carregando…"
+
+#: comments.php:20
+#, fuzzy
+msgid "Post comment"
+msgstr "Deixe seu comentário"
+
+#: comments.php:22
+#, fuzzy
+msgid "Post comments"
+msgstr "Publicar comentários"
+
+#: comments.php:42
+#, fuzzy
+msgid "Older comments"
+msgstr "Comentários mais antigos"
+
+#: comments.php:43
+#, fuzzy
+msgid "Newer comments"
+msgstr "Novos Comentários"
+
+#: comments.php:52
+#, fuzzy
+msgid "Comments are closed."
+msgstr "Comentários estão fechados."
+
+#: comments.php:64
+#, fuzzy
+msgid "YOUR NAME"
+msgstr "SEU NOME"
+
+#: comments.php:66
+#, fuzzy
+msgid "YOUR E-MAIL"
+msgstr "SEU E-MAIL"
+
+#: comments.php:68
+#, fuzzy
+msgid "YOUR WEBSITE"
+msgstr "Seu site"
+
+#: comments.php:73
+#, fuzzy
+msgid "YOUR COMMENT..."
+msgstr "Seu comentário ..."
+
+#: comments.php:76
+#, fuzzy
+msgid "Send comment"
+msgstr "Enviar comentário"
+
+#: header.php:78
+#, fuzzy
+msgid "Type your search...2"
+msgstr "Digite aqui a sua pesquisa"
+
+#: library/core/admin/admin-panel/blog.php:6
+#, fuzzy
+msgid "Blog"
+msgstr "Blog"
+
+#: library/core/admin/admin-panel/blog.php:20
+#, fuzzy
+msgid "Blog sidebar type"
+msgstr "Sidebar Blog"
+
+#: library/core/admin/admin-panel/blog.php:23
+#, fuzzy
+msgid ""
+"Select sidebar type for blog pages (not for static page) - all posts, "
+"arhive, category, etc."
+msgstr ""
+"Selecione o tipo de sidebar para páginas do blog (não por página estática) - "
+"todas as postagens, arhive, categoria, etc."
+
+#: library/core/admin/admin-panel/blog.php:26
+#: library/core/admin/admin-panel/portfolio.php:141
+#: library/core/admin/admin-panel/shop.php:48
+#: library/core/admin/post-fields.php:39 library/core/admin/post-fields.php:162
+#, fuzzy
+msgid "Full width"
+msgstr "Largura completa"
+
+#: library/core/admin/admin-panel/blog.php:27
+#: library/core/admin/admin-panel/portfolio.php:142
+#: library/core/admin/admin-panel/shop.php:49
+#: library/core/admin/post-fields.php:40
+#, fuzzy
+msgid "Right Sidebar"
+msgstr "Barra Lateral Direita"
+
+#: library/core/admin/admin-panel/blog.php:28
+#: library/core/admin/admin-panel/portfolio.php:143
+#: library/core/admin/admin-panel/shop.php:50
+#: library/core/admin/post-fields.php:41
+#, fuzzy
+msgid "Left Sidebar"
+msgstr "Bara Lateral Esquerda"
+
+#: library/core/admin/admin-panel/blog.php:43
+#, fuzzy
+msgid "Blog sidebar content"
+msgstr "Barra lateral Conteúdo"
+
+#: library/core/admin/admin-panel/blog.php:46
+#, fuzzy
+msgid ""
+"Select sidebar content for blog pages (not for static page) - all posts, "
+"arhive, category, etc."
+msgstr ""
+"Selecione o conteúdo da barra lateral para páginas de blog (todos os posts, "
+"arquivos, categoria, etc.)."
+
+#: library/core/admin/admin-panel/blog.php:49
+#: library/core/admin/admin-panel/portfolio.php:164
+#: library/core/admin/admin-panel/shop.php:71
+#: library/core/admin/post-fields.php:53 library/core/global/sidebars.php:10
+#, fuzzy
+msgid "WP Default Sidebar"
+msgstr "WP Barra Lateral Padrão"
+
+#: library/core/admin/admin-panel/blog.php:50
+#: library/core/admin/admin-panel/portfolio.php:165
+#: library/core/admin/admin-panel/shop.php:72
+#: library/core/global/sidebars.php:19
+#, fuzzy
+msgid "Blog Sidebar"
+msgstr "Blog na Barra Lateral"
+
+#: library/core/admin/admin-panel/blog.php:51
+#: library/core/admin/admin-panel/portfolio.php:166
+#: library/core/admin/admin-panel/shop.php:73
+#, fuzzy
+msgid "Portfolio Sidebar"
+msgstr "Barra Lateral do Portifólio"
+
+#: library/core/admin/admin-panel/blog.php:52
+#: library/core/admin/admin-panel/shop.php:74
+#, fuzzy
+msgid "Shop Sidebar"
+msgstr "Barra lateral da loja"
+
+#: library/core/admin/admin-panel/blog.php:53
+#: library/core/admin/admin-panel/shop.php:75
+#, fuzzy
+msgid "Product Sidebar"
+msgstr "Barra Lateral dos Produtos"
+
+#: library/core/admin/admin-panel/blog.php:54
+#: library/core/admin/admin-panel/portfolio.php:167
+#: library/core/admin/admin-panel/shop.php:76
+#: library/core/global/sidebars.php:55
+#, fuzzy
+msgid "Custom Area"
+msgstr "Área personalizada"
+
+#: library/core/admin/admin-panel/blog.php:61
+#: templates/post-parts/content.php:11 vc_templates/block_posts.php:25
+#: vc_templates/box_about.php:53
+#, fuzzy
+msgid "Read more"
+msgstr "Consulte mais informação"
+
+#: library/core/admin/admin-panel/blog.php:69
+#, fuzzy
+msgid "Read More button text"
+msgstr "Texto do Botão Leia Mais"
+
+#: library/core/admin/admin-panel/blog.php:86
+#, fuzzy
+msgid "Show share buttons"
+msgstr "Mostrar Botões de Compartilhamento"
+
+#: library/core/admin/admin-panel/blog.php:89
+#, fuzzy
+msgid "Show share buttons on single post."
+msgstr "Botões de compartilhamento"
+
+#: library/core/admin/admin-panel/blog.php:92
+#: library/core/admin/admin-panel/blog.php:114
+#: library/core/admin/admin-panel/blog.php:136
+#: library/core/admin/admin-panel/blog.php:158
+#: library/core/admin/admin-panel/general.php:111
+#: library/core/admin/admin-panel/header.php:67
+#: library/core/admin/admin-panel/portfolio.php:213
+#: library/core/admin/admin-panel/portfolio.php:269
+#: library/core/admin/admin-panel/shop.php:26
+#: library/theme/vc_templates.php:1960
+#, fuzzy
+msgid "On"
+msgstr "Ligado"
+
+#: library/core/admin/admin-panel/blog.php:93
+#: library/core/admin/admin-panel/blog.php:115
+#: library/core/admin/admin-panel/blog.php:137
+#: library/core/admin/admin-panel/blog.php:159
+#: library/core/admin/admin-panel/general.php:88
+#: library/core/admin/admin-panel/general.php:110
+#: library/core/admin/admin-panel/header.php:68
+#: library/core/admin/admin-panel/portfolio.php:214
+#: library/core/admin/admin-panel/portfolio.php:270
+#: library/core/admin/admin-panel/shop.php:27
+#: library/theme/vc_templates.php:1959
+#, fuzzy
+msgid "Off"
+msgstr "Desligado"
+
+#: library/core/admin/admin-panel/blog.php:108
+#, fuzzy
+msgid "Show date"
+msgstr "Exibir data"
+
+#: library/core/admin/admin-panel/blog.php:111
+#, fuzzy
+msgid "Show date posts on/off."
+msgstr "Mostre data Postagens de ligar/desligar."
+
+#: library/core/admin/admin-panel/blog.php:130
+#, fuzzy
+msgid "Show author"
+msgstr "Mostrar autor"
+
+#: library/core/admin/admin-panel/blog.php:133
+#, fuzzy
+msgid "Show author posts on/off."
+msgstr "Mostre mensagens do autor de ligar/desligar."
+
+#: library/core/admin/admin-panel/blog.php:152
+#, fuzzy
+msgid "Show Tags"
+msgstr "Mostrar Rótulos"
+
+#: library/core/admin/admin-panel/blog.php:155
+#, fuzzy
+msgid "Show Tags list on/off."
+msgstr "Mostrar a lista de Tags de ligar/desligar."
+
+#: library/core/admin/admin-panel/css_animation.php:6
+#, fuzzy
+msgid "Css Animation"
+msgstr "Animação CSS"
+
+#: library/core/admin/admin-panel/css_animation.php:11
+#: library/theme/vc_templates.php:69 library/theme/vc_templates.php:194
+#: library/theme/vc_templates.php:1443 library/theme/vc_templates.php:1492
+#, fuzzy
+msgid "No"
+msgstr "Não"
+
+#: library/core/admin/admin-panel/css_animation.php:12
+#: library/theme/vc_templates.php:70
+#, fuzzy
+msgid "bounce"
+msgstr "pulo"
+
+#: library/core/admin/admin-panel/css_animation.php:13
+#: library/theme/vc_templates.php:71
+#, fuzzy
+msgid "flash"
+msgstr "instantâneo"
+
+#: library/core/admin/admin-panel/css_animation.php:14
+#: library/theme/vc_templates.php:72
+#, fuzzy
+msgid "pulse"
+msgstr "pulso"
+
+#: library/core/admin/admin-panel/css_animation.php:15
+#: library/theme/vc_templates.php:73
+#, fuzzy
+msgid "rubberBand"
+msgstr "elástico de borracha"
+
+#: library/core/admin/admin-panel/css_animation.php:16
+#: library/theme/vc_templates.php:74
+#, fuzzy
+msgid "shake"
+msgstr "mexe"
+
+#: library/core/admin/admin-panel/css_animation.php:17
+#: library/theme/vc_templates.php:75
+#, fuzzy
+msgid "swing"
+msgstr "balanço"
+
+#: library/core/admin/admin-panel/css_animation.php:18
+#: library/theme/vc_templates.php:76
+#, fuzzy
+msgid "tada"
+msgstr "em seguida"
+
+#: library/core/admin/admin-panel/css_animation.php:19
+#: library/theme/vc_templates.php:77
+#, fuzzy
+msgid "wobble"
+msgstr "Oscilação"
+
+#: library/core/admin/admin-panel/css_animation.php:20
+#: library/theme/vc_templates.php:78
+#, fuzzy
+msgid "jello"
+msgstr "gelatina"
+
+#: library/core/admin/admin-panel/css_animation.php:22
+#: library/theme/vc_templates.php:80
+#, fuzzy
+msgid "bounceIn"
+msgstr "entrar pulando"
+
+#: library/core/admin/admin-panel/css_animation.php:23
+#: library/theme/vc_templates.php:81
+#, fuzzy
+msgid "bounceInDown"
+msgstr "saltar dentro abaixo"
+
+#: library/core/admin/admin-panel/css_animation.php:24
+#: library/theme/vc_templates.php:82
+#, fuzzy
+msgid "bounceInLeft"
+msgstr "pular dentro esquerda"
+
+#: library/core/admin/admin-panel/css_animation.php:25
+#: library/theme/vc_templates.php:83
+#, fuzzy
+msgid "bounceInRight"
+msgstr "pular dentro direita"
+
+#: library/core/admin/admin-panel/css_animation.php:26
+#: library/theme/vc_templates.php:84
+#, fuzzy
+msgid "bounceInUp"
+msgstr "saltar para cima"
+
+#: library/core/admin/admin-panel/css_animation.php:27
+#: library/theme/vc_templates.php:85
+#, fuzzy
+msgid "bounceOut"
+msgstr "Saltar para fora"
+
+#: library/core/admin/admin-panel/css_animation.php:28
+#: library/theme/vc_templates.php:86
+#, fuzzy
+msgid "bounceOutDown"
+msgstr "Saltar para baixo"
+
+#: library/core/admin/admin-panel/css_animation.php:29
+#: library/theme/vc_templates.php:87
+#, fuzzy
+msgid "bounceOutLeft"
+msgstr "Saltar para Esquerda"
+
+#: library/core/admin/admin-panel/css_animation.php:30
+#: library/theme/vc_templates.php:88
+#, fuzzy
+msgid "bounceOutRight"
+msgstr "Saltar para Direita"
+
+#: library/core/admin/admin-panel/css_animation.php:31
+#: library/theme/vc_templates.php:89
+#, fuzzy
+msgid "bounceOutUp"
+msgstr "Saltar para fora"
+
+#: library/core/admin/admin-panel/css_animation.php:33
+#: library/theme/vc_templates.php:91
+#, fuzzy
+msgid "fadeIn"
+msgstr "aparecimento gradual"
+
+#: library/core/admin/admin-panel/css_animation.php:34
+#: library/theme/vc_templates.php:92
+#, fuzzy
+msgid "fadeInDown"
+msgstr "aparecer em baixo"
+
+#: library/core/admin/admin-panel/css_animation.php:35
+#: library/theme/vc_templates.php:93
+#, fuzzy
+msgid "fadeInDownBig"
+msgstr "aparecer para Baixo Grande"
+
+#: library/core/admin/admin-panel/css_animation.php:36
+#: library/theme/vc_templates.php:94
+#, fuzzy
+msgid "fadeInLeft"
+msgstr "aparecer para esquerda"
+
+#: library/core/admin/admin-panel/css_animation.php:37
+#: library/theme/vc_templates.php:95
+#, fuzzy
+msgid "fadeInLeftBig"
+msgstr "aparecer para Esquerda Grande"
+
+#: library/core/admin/admin-panel/css_animation.php:38
+#: library/theme/vc_templates.php:96
+#, fuzzy
+msgid "fadeInRight"
+msgstr "aparecer para direita"
+
+#: library/core/admin/admin-panel/css_animation.php:39
+#: library/theme/vc_templates.php:97
+#, fuzzy
+msgid "fadeInRightBig"
+msgstr "aparecer para Direita Grande"
+
+#: library/core/admin/admin-panel/css_animation.php:40
+#: library/theme/vc_templates.php:98
+#, fuzzy
+msgid "fadeInUp"
+msgstr "surgir em cima"
+
+#: library/core/admin/admin-panel/css_animation.php:41
+#: library/theme/vc_templates.php:99
+#, fuzzy
+msgid "fadeInUpBig"
+msgstr "aparecer para Cima Grande"
+
+#: library/core/admin/admin-panel/css_animation.php:42
+#: library/theme/vc_templates.php:100
+#, fuzzy
+msgid "fadeOut"
+msgstr "desaparecer"
+
+#: library/core/admin/admin-panel/css_animation.php:43
+#: library/theme/vc_templates.php:101
+#, fuzzy
+msgid "fadeOutDown"
+msgstr "desaparecer em baixo"
+
+#: library/core/admin/admin-panel/css_animation.php:44
+#: library/theme/vc_templates.php:102
+#, fuzzy
+msgid "fadeOutDownBig"
+msgstr "desaparecer grande em baixo"
+
+#: library/core/admin/admin-panel/css_animation.php:45
+#: library/theme/vc_templates.php:103
+#, fuzzy
+msgid "fadeOutLeft"
+msgstr "desaparecer na esquerda"
+
+#: library/core/admin/admin-panel/css_animation.php:46
+#: library/theme/vc_templates.php:104
+#, fuzzy
+msgid "fadeOutLeftBig"
+msgstr "desaparecer grande na esquerda"
+
+#: library/core/admin/admin-panel/css_animation.php:47
+#: library/theme/vc_templates.php:105
+#, fuzzy
+msgid "fadeOutRight"
+msgstr "desaparecer na direita"
+
+#: library/core/admin/admin-panel/css_animation.php:48
+#: library/theme/vc_templates.php:106
+#, fuzzy
+msgid "fadeOutRightBig"
+msgstr "desaparecer grande na direita"
+
+#: library/core/admin/admin-panel/css_animation.php:49
+#: library/theme/vc_templates.php:107
+#, fuzzy
+msgid "fadeOutUp"
+msgstr "desaparecer em cima"
+
+#: library/core/admin/admin-panel/css_animation.php:50
+#: library/theme/vc_templates.php:108
+#, fuzzy
+msgid "fadeOutUpBig"
+msgstr "desaparecer grande em cima"
+
+#: library/core/admin/admin-panel/css_animation.php:52
+#: library/theme/vc_templates.php:110
+#, fuzzy
+msgid "flip"
+msgstr "Giro"
+
+#: library/core/admin/admin-panel/css_animation.php:53
+#: library/theme/vc_templates.php:111
+#, fuzzy
+msgid "flipInX"
+msgstr "flipInX"
+
+#: library/core/admin/admin-panel/css_animation.php:54
+#: library/theme/vc_templates.php:112
+#, fuzzy
+msgid "flipInY"
+msgstr "flipInY"
+
+#: library/core/admin/admin-panel/css_animation.php:55
+#: library/theme/vc_templates.php:113
+#, fuzzy
+msgid "flipOutX"
+msgstr "Saindo em Giro na Horizontal"
+
+#: library/core/admin/admin-panel/css_animation.php:56
+#: library/theme/vc_templates.php:114
+#, fuzzy
+msgid "flipOutY"
+msgstr "Saindo em Giro na Vertical"
+
+#: library/core/admin/admin-panel/css_animation.php:58
+#: library/theme/vc_templates.php:116
+#, fuzzy
+msgid "lightSpeedIn"
+msgstr "lightSpeedIn"
+
+#: library/core/admin/admin-panel/css_animation.php:59
+#: library/theme/vc_templates.php:117
+#, fuzzy
+msgid "lightSpeedOut"
+msgstr "Saindo na Velocidade da Luz"
+
+#: library/core/admin/admin-panel/css_animation.php:61
+#: library/theme/vc_templates.php:119
+#, fuzzy
+msgid "rotateIn"
+msgstr "rotateIn"
+
+#: library/core/admin/admin-panel/css_animation.php:62
+#: library/theme/vc_templates.php:120
+#, fuzzy
+msgid "rotateInDownLeft"
+msgstr "rotateInDownLeft"
+
+#: library/core/admin/admin-panel/css_animation.php:63
+#: library/theme/vc_templates.php:121
+#, fuzzy
+msgid "rotateInDownRight"
+msgstr "rotateInDownRight"
+
+#: library/core/admin/admin-panel/css_animation.php:64
+#: library/theme/vc_templates.php:122
+#, fuzzy
+msgid "rotateInUpLeft"
+msgstr "rotateInUpLeft"
+
+#: library/core/admin/admin-panel/css_animation.php:65
+#: library/theme/vc_templates.php:123
+#, fuzzy
+msgid "rotateInUpRight"
+msgstr "rotateInUpRight"
+
+#: library/core/admin/admin-panel/css_animation.php:66
+#: library/theme/vc_templates.php:124
+#, fuzzy
+msgid "rotateOut"
+msgstr "Saída Rotativa "
+
+#: library/core/admin/admin-panel/css_animation.php:67
+#: library/theme/vc_templates.php:125
+#, fuzzy
+msgid "rotateOutDownLeft"
+msgstr "Girar para Fora de Baixo para Esquerda"
+
+#: library/core/admin/admin-panel/css_animation.php:68
+#: library/theme/vc_templates.php:126
+#, fuzzy
+msgid "rotateOutDownRight"
+msgstr "Girarpara  Fora de Baixo para Direita"
+
+#: library/core/admin/admin-panel/css_animation.php:69
+#: library/theme/vc_templates.php:127
+#, fuzzy
+msgid "rotateOutUpLeft"
+msgstr "Girar para Fora de Cima para Esquerda"
+
+#: library/core/admin/admin-panel/css_animation.php:70
+#: library/theme/vc_templates.php:128
+#, fuzzy
+msgid "rotateOutUpRight"
+msgstr "Girar para Fora de Cima para Direita"
+
+#: library/core/admin/admin-panel/css_animation.php:72
+#: library/theme/vc_templates.php:130
+#, fuzzy
+msgid "slideInUp"
+msgstr "slideInUp"
+
+#: library/core/admin/admin-panel/css_animation.php:73
+#: library/theme/vc_templates.php:131
+#, fuzzy
+msgid "slideInDown"
+msgstr "slideInDown"
+
+#: library/core/admin/admin-panel/css_animation.php:74
+#: library/theme/vc_templates.php:132
+#, fuzzy
+msgid "slideInLeft"
+msgstr "slideInLeft"
+
+#: library/core/admin/admin-panel/css_animation.php:75
+#: library/theme/vc_templates.php:133
+#, fuzzy
+msgid "slideInRight"
+msgstr "slideInRight"
+
+#: library/core/admin/admin-panel/css_animation.php:76
+#: library/theme/vc_templates.php:134
+#, fuzzy
+msgid "slideOutUp"
+msgstr "Saindo para cima"
+
+#: library/core/admin/admin-panel/css_animation.php:77
+#: library/theme/vc_templates.php:135
+#, fuzzy
+msgid "slideOutDown"
+msgstr "Saindo para baixo"
+
+#: library/core/admin/admin-panel/css_animation.php:78
+#: library/theme/vc_templates.php:136
+#, fuzzy
+msgid "slideOutLeft"
+msgstr "Saindo para esquerda"
+
+#: library/core/admin/admin-panel/css_animation.php:79
+#: library/theme/vc_templates.php:137
+#, fuzzy
+msgid "slideOutRight"
+msgstr "Saindo para direita"
+
+#: library/core/admin/admin-panel/css_animation.php:81
+#: library/theme/vc_templates.php:139
+#, fuzzy
+msgid "zoomIn"
+msgstr "zoomIn"
+
+#: library/core/admin/admin-panel/css_animation.php:82
+#: library/theme/vc_templates.php:140
+#, fuzzy
+msgid "zoomInDown"
+msgstr "zoomInDown"
+
+#: library/core/admin/admin-panel/css_animation.php:83
+#: library/theme/vc_templates.php:141
+#, fuzzy
+msgid "zoomInLeft"
+msgstr "zoomInLeft"
+
+#: library/core/admin/admin-panel/css_animation.php:84
+#: library/theme/vc_templates.php:142
+#, fuzzy
+msgid "zoomInRight"
+msgstr "zoomInRight"
+
+#: library/core/admin/admin-panel/css_animation.php:85
+#: library/theme/vc_templates.php:143
+#, fuzzy
+msgid "zoomInUp"
+msgstr "zoomInUp"
+
+#: library/core/admin/admin-panel/css_animation.php:86
+#: library/theme/vc_templates.php:144
+#, fuzzy
+msgid "zoomOut"
+msgstr "Sumindo"
+
+#: library/core/admin/admin-panel/css_animation.php:87
+#: library/theme/vc_templates.php:145
+#, fuzzy
+msgid "zoomOutDown"
+msgstr "Sumindo para baixo"
+
+#: library/core/admin/admin-panel/css_animation.php:88
+#: library/theme/vc_templates.php:146
+#, fuzzy
+msgid "zoomOutLeft"
+msgstr "Sumindo para esquerda"
+
+#: library/core/admin/admin-panel/css_animation.php:89
+#: library/theme/vc_templates.php:147
+#, fuzzy
+msgid "zoomOutRight"
+msgstr "Sumindo para direita"
+
+#: library/core/admin/admin-panel/css_animation.php:90
+#: library/theme/vc_templates.php:148
+#, fuzzy
+msgid "zoomOutUp"
+msgstr "Sumindo para cima"
+
+#: library/core/admin/admin-panel/css_animation.php:92
+#: library/theme/vc_templates.php:150
+#, fuzzy
+msgid "hinge"
+msgstr "dobrandod"
+
+#: library/core/admin/admin-panel/css_animation.php:93
+#: library/theme/vc_templates.php:151
+#, fuzzy
+msgid "rollIn"
+msgstr "rollIn"
+
+#: library/core/admin/admin-panel/css_animation.php:94
+#: library/theme/vc_templates.php:152
+#, fuzzy
+msgid "rollOut"
+msgstr "Rolando para Fora"
+
+#: library/core/admin/admin-panel/css_animation.php:106
+#, fuzzy
+msgid "Header Title Animation"
+msgstr "Animação de título do cabeçalho"
+
+#: library/core/admin/admin-panel/css_animation.php:109
+#, fuzzy
+msgid "Select css animation for Header Title Block."
+msgstr "Selecione a animação de css para o bloco de título do cabeçalho."
+
+#: library/core/admin/admin-panel/css_animation.php:125
+#, fuzzy
+msgid "Blog Animation"
+msgstr "Blog animação"
+
+#: library/core/admin/admin-panel/css_animation.php:128
+#, fuzzy
+msgid "Select css animation for blog pages."
+msgstr "Selecione a animação de css para páginas de blog."
+
+#: library/core/admin/admin-panel/css_animation.php:144
+#, fuzzy
+msgid "Sidebar Animation"
+msgstr "Animação da barra lateral"
+
+#: library/core/admin/admin-panel/css_animation.php:147
+#, fuzzy
+msgid "Select css animation for Sidebar."
+msgstr "Selecione a animação de css para barra lateral."
+
+#: library/core/admin/admin-panel/css_animation.php:163
+#, fuzzy
+msgid "Portfolio Category Page Animation"
+msgstr "Animação de página de categoria de carteira"
+
+#: library/core/admin/admin-panel/css_animation.php:166
+#, fuzzy
+msgid "Select css animation for portfolio category pages."
+msgstr "Selecione a animação de css para páginas de categorias de portfólio."
+
+#: library/core/admin/admin-panel/footer.php:8
+#, fuzzy
+msgid "Footer"
+msgstr "Rodapé"
+
+#: library/core/admin/admin-panel/footer.php:21
+#, fuzzy
+msgid "Top Footer Block"
+msgstr "Bloco superior rodapé"
+
+#: library/core/admin/admin-panel/footer.php:39
+#, fuzzy
+msgid "Bottom Footer Block"
+msgstr "Cadernal de rodapé"
+
+#: library/core/admin/admin-panel/general.php:6
+#, fuzzy
+msgid "General Settings"
+msgstr "Configurações Gerais"
+
+#: library/core/admin/admin-panel/general.php:22
+#, fuzzy
+msgid "Logo image"
+msgstr "Imagem do logo"
+
+#: library/core/admin/admin-panel/general.php:27
+#: library/core/admin/admin-panel/general.php:48
+#, fuzzy
+msgid "Recommended size: 130x34"
+msgstr "Tamanho recomendado: 130 x 34"
+
+#: library/core/admin/admin-panel/general.php:43
+#, fuzzy
+msgid "Logo inverse image"
+msgstr "Conjunto imagem"
+
+#: library/core/admin/admin-panel/general.php:64
+#, fuzzy
+msgid "Logo mobile image"
+msgstr "Imagem do logotipo móvel"
+
+#: library/core/admin/admin-panel/general.php:69
+#, fuzzy
+msgid "Recommended size: 34x34"
+msgstr "Tamanho recomendado: 34 x 34"
+
+#: library/core/admin/admin-panel/general.php:83
+#, fuzzy
+msgid "Loader"
+msgstr "Carregador"
+
+#: library/core/admin/admin-panel/general.php:89
+#, fuzzy
+msgid "Use on main"
+msgstr "Use na principal"
+
+#: library/core/admin/admin-panel/general.php:90
+#, fuzzy
+msgid "Use on all pages"
+msgstr "Em todas as páginas"
+
+#: library/core/admin/admin-panel/general.php:105
+#, fuzzy
+msgid "On/off Front Editor"
+msgstr "Liga/desliga o Editor de frente"
+
+#: library/core/admin/admin-panel/header.php:6
+#, fuzzy
+msgid "Header"
+msgstr "Header"
+
+#: library/core/admin/admin-panel/header.php:44
+#, fuzzy
+msgid "Header Image"
+msgstr "Imagem de cabeçalho"
+
+#: library/core/admin/admin-panel/header.php:62
+#, fuzzy
+msgid "On/off header image overlay"
+msgstr "Sobreposição de imagens de cabeçalho para ligar/desligar"
+
+#: library/core/admin/admin-panel/header.php:83
+#, fuzzy
+msgid "Select header image overlay opacity"
+msgstr "Selecione cabeçalho opacidade de sobreposição de imagem"
+
+#: library/core/admin/admin-panel/header.php:111
+#: library/theme/meta-boxes.php:82
+#, fuzzy
+msgid "Page Subtitle"
+msgstr "Subtítulo da Página"
+
+#: library/core/admin/admin-panel/header.php:120
+#: templates/header/header_title.php:19
+#, fuzzy
+msgid "Blog details"
+msgstr "Detalhes do Blog"
+
+#: library/core/admin/admin-panel/header.php:128
+#, fuzzy
+msgid "Title Single Post Page"
+msgstr "Página de título único Post"
+
+#: library/core/admin/admin-panel/header.php:137
+#: templates/header/header_title.php:31
+#, fuzzy
+msgid "All posts"
+msgstr "Todos os posts"
+
+#: library/core/admin/admin-panel/header.php:145
+#, fuzzy
+msgid "Title All Posts Page"
+msgstr "Todos os Posts página do título"
+
+#: library/core/admin/admin-panel/header.php:154
+#: templates/header/header_title.php:21
+#, fuzzy
+msgid "Single work"
+msgstr "Único trabalho"
+
+#: library/core/admin/admin-panel/header.php:162
+#, fuzzy
+msgid "Title Single Portfolio Page"
+msgstr "Página de título único portfólio"
+
+#: library/core/admin/admin-panel/header.php:171
+#: templates/header/header_title.php:27
+#, fuzzy
+msgid "Search results"
+msgstr "Resultados da pesquisa"
+
+#: library/core/admin/admin-panel/header.php:179
+#, fuzzy
+msgid "Title Search Results Page"
+msgstr "Página de resultados de pesquisa de título"
+
+#: library/core/admin/admin-panel/portfolio.php:7
+#: library/theme/vc_templates.php:1432
+#, fuzzy
+msgid "Portfolio"
+msgstr "Portfólio"
+
+#: library/core/admin/admin-panel/portfolio.php:14
+#, fuzzy
+msgid "Portfolio General"
+msgstr "Portfólio geral"
+
+#: library/core/admin/admin-panel/portfolio.php:28
+#, fuzzy
+msgid "Portfolio Tumbnails Width (px)"
+msgstr "Largura de Tumbnails de portfólio (px)"
+
+#: library/core/admin/admin-panel/portfolio.php:32
+#: library/core/admin/admin-panel/portfolio.php:50
+#, fuzzy
+msgid "Default: 555px"
+msgstr "Padrão: 555px"
+
+#: library/core/admin/admin-panel/portfolio.php:46
+#, fuzzy
+msgid "Portfolio Tumbnails Height (px)"
+msgstr "Altura de Tumbnails de portfólio (px)"
+
+#: library/core/admin/admin-panel/portfolio.php:58
+#, fuzzy
+msgid "Portfolio Category and Archive Pages"
+msgstr "Categoria de portfólio e páginas de arquivo"
+
+#: library/core/admin/admin-panel/portfolio.php:72
+#: library/theme/vc_templates.php:1480
+#, fuzzy
+msgid "Item type"
+msgstr "Tipo de item"
+
+#: library/core/admin/admin-panel/portfolio.php:75
+#: library/core/admin/admin-panel/portfolio.php:97
+#, fuzzy
+msgid "Portfolio items per row for portfolio category and archive pages."
+msgstr ""
+"Itens de portfólio por linha para páginas de categoria e arquivo do "
+"portfólio."
+
+#: library/core/admin/admin-panel/portfolio.php:78
+#: library/theme/vc_templates.php:1483
+#, fuzzy
+msgid "Without over icons"
+msgstr "Sem sobre os ícones"
+
+#: library/core/admin/admin-panel/portfolio.php:79
+#: library/theme/vc_templates.php:1484
+#, fuzzy
+msgid "With over icons"
+msgstr "Com sobre os ícones"
+
+#: library/core/admin/admin-panel/portfolio.php:94
+#, fuzzy
+msgid "Portfolio Column Number"
+msgstr "Número da coluna de portfólio"
+
+#: library/core/admin/admin-panel/portfolio.php:100
+#, fuzzy
+msgid "2 columns"
+msgstr "2 colunas"
+
+#: library/core/admin/admin-panel/portfolio.php:101
+#, fuzzy
+msgid "3 columns"
+msgstr "3 colunas"
+
+#: library/core/admin/admin-panel/portfolio.php:102
+#, fuzzy
+msgid "4 columns"
+msgstr "4 colunas"
+
+#: library/core/admin/admin-panel/portfolio.php:117
+#, fuzzy
+msgid "Portfolio Item per page"
+msgstr "Item de portfólio por página"
+
+#: library/core/admin/admin-panel/portfolio.php:120
+#, fuzzy
+msgid ""
+"Portfolio items per page for portfolio category and archive pages. Leave "
+"empty to show all items."
+msgstr ""
+"Itens de portfólio por página para páginas de categoria e arquivo do "
+"portfólio. Deixe em branco para mostrar todos os itens."
+
+#: library/core/admin/admin-panel/portfolio.php:135
+#, fuzzy
+msgid "Portfolio sidebar type"
+msgstr "Barra Lateral do Portifólio"
+
+#: library/core/admin/admin-panel/portfolio.php:138
+#, fuzzy
+msgid "Select sidebar type for portfolio category and archive pages."
+msgstr ""
+"Selecione o tipo de sidebar para páginas de categoria e arquivo do portfólio."
+
+#: library/core/admin/admin-panel/portfolio.php:158
+#, fuzzy
+msgid "Portfolio sidebar content"
+msgstr "Conteúdo do sidebar de portfólio"
+
+#: library/core/admin/admin-panel/portfolio.php:161
+#, fuzzy
+msgid "Select sidebar content for portfolio category and archive pages."
+msgstr ""
+"Selecione o conteúdo da barra lateral para páginas de categoria e arquivo do "
+"portfólio."
+
+#: library/core/admin/admin-panel/portfolio.php:182
+#, fuzzy
+msgid "Load More button text"
+msgstr "Texto do botão \"carregar mais\""
+
+#: library/core/admin/admin-panel/portfolio.php:193
+#, fuzzy
+msgid "Portfolio Single Page"
+msgstr "Página Única do Portfólio"
+
+#: library/core/admin/admin-panel/portfolio.php:207
+#, fuzzy
+msgid "Show block Related projects"
+msgstr "Mostrar projetos relacionados de bloco"
+
+#: library/core/admin/admin-panel/portfolio.php:210
+#, fuzzy
+msgid "Select on/off Related projects for portfolio single pages."
+msgstr ""
+"Selecione projetos relacionados para páginas únicas portfólio de ligar/"
+"desligar."
+
+#: library/core/admin/admin-panel/portfolio.php:221 single-portfolio.php:353
+#, fuzzy
+msgid "Related projects"
+msgstr "Projetos relacionados"
+
+#: library/core/admin/admin-panel/portfolio.php:229
+#, fuzzy
+msgid "Title block Related Projects"
+msgstr "Título bloquear projetos relacionados"
+
+#: library/core/admin/admin-panel/portfolio.php:246
+#, fuzzy
+msgid "Description block Related Projects"
+msgstr "Descrição bloquear projetos relacionados"
+
+#: library/core/admin/admin-panel/portfolio.php:263
+#, fuzzy
+msgid "Show share"
+msgstr "Mostrar Compartilhar"
+
+#: library/core/admin/admin-panel/portfolio.php:266
+#, fuzzy
+msgid "Select on/off share for portfolio single pages."
+msgstr ""
+"Selecione Ativar/desativar o compartilhamento de páginas únicas de portfólio."
+
+#: library/core/admin/admin-panel/portfolio.php:285
+#, fuzzy
+msgid "Link to portfolio all works Page"
+msgstr "Link para portfólio tudo funciona Page"
+
+#: library/core/admin/admin-panel/portfolio.php:289
+#, fuzzy
+msgid "Leave empty to show portfolio default archive page."
+msgstr "Deixe em branco para mostrar a página de arquivo padrão do portfólio."
+
+#: library/core/admin/admin-panel/shop.php:6
+#, fuzzy
+msgid "Shop"
+msgstr "Loja"
+
+#: library/core/admin/admin-panel/shop.php:20
+#, fuzzy
+msgid "Global sidebar settings for Product pages"
+msgstr "Configurações globais da barra lateral para páginas de produto"
+
+#: library/core/admin/admin-panel/shop.php:23
+#, fuzzy
+msgid "Global sidebar settings for all Product pages."
+msgstr "Configurações da sidebar global para todas as páginas de produto."
+
+#: library/core/admin/admin-panel/shop.php:42
+#, fuzzy
+msgid "Product sidebar type"
+msgstr "Barra Lateral dos Produtos"
+
+#: library/core/admin/admin-panel/shop.php:45
+#, fuzzy
+msgid "Select sidebar type for Product pages."
+msgstr "Selecione o tipo de sidebar para páginas de produtos."
+
+#: library/core/admin/admin-panel/shop.php:65
+#, fuzzy
+msgid "Product sidebar content"
+msgstr "Conteúdo da barra lateral do produto"
+
+#: library/core/admin/admin-panel/shop.php:68
+#, fuzzy
+msgid "Select sidebar content for product pages"
+msgstr "Selecione o conteúdo da barra lateral para páginas de produto"
+
+#: library/core/admin/admin-panel/style.php:7
+#, fuzzy
+msgid "Style Settings"
+msgstr "Config. de Estilo"
+
+#: library/core/admin/admin-panel/style.php:25
+#, fuzzy
+msgid "Main Color"
+msgstr "Cor principal"
+
+#: library/core/admin/admin-panel/style.php:47
+#, fuzzy
+msgid "Additional Color 1 (Darker than the main)"
+msgstr "1 de cor adicional (mais escuro do que o principal)"
+
+#: library/core/admin/admin-panel/style.php:69
+#, fuzzy
+msgid "Additional Color 2 (lighter than the main)"
+msgstr "2 de cor adicional (mais leve que o principal)"
+
+#: library/core/admin/admin-panel/style.php:87
+#, fuzzy
+msgid "Custom CSS"
+msgstr "CSS Personalizado"
+
+#: library/core/admin/admin-panel/style.php:91
+#, fuzzy
+msgid "Add custom CSS here"
+msgstr "Adicione seu CSS personalizado aqui"
+
+#: library/core/admin/class-tgm-plugin-activation.php:334
+#: library/plugin-activation.php:151
+#, fuzzy
+msgid "Install Required Plugins"
+msgstr "Instalar Plugins Requeridos"
+
+#: library/core/admin/class-tgm-plugin-activation.php:335
+#: library/plugin-activation.php:152
+#, fuzzy
+msgid "Install Plugins"
+msgstr "Instalar Plugins"
+
+#: library/core/admin/class-tgm-plugin-activation.php:337
+#: library/plugin-activation.php:153
+#, fuzzy, php-format
+msgid "Installing Plugin: %s"
+msgstr "Instalando o plugin: %s"
+
+#: library/core/admin/class-tgm-plugin-activation.php:339
+#, fuzzy, php-format
+msgid "Updating Plugin: %s"
+msgstr "Atualizando do plugin: %s"
+
+#: library/core/admin/class-tgm-plugin-activation.php:340
+#: library/plugin-activation.php:154
+#, fuzzy
+msgid "Something went wrong with the plugin API."
+msgstr "Algo deu errado com a API do plug-in."
+
+#: library/core/admin/class-tgm-plugin-activation.php:343
+#: library/plugin-activation.php:155
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/core/admin/class-tgm-plugin-activation.php:349
+#: library/plugin-activation.php:156
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/core/admin/class-tgm-plugin-activation.php:355
+#: library/plugin-activation.php:161
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/core/admin/class-tgm-plugin-activation.php:361
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/core/admin/class-tgm-plugin-activation.php:367
+#: library/plugin-activation.php:158
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/core/admin/class-tgm-plugin-activation.php:373
+#: library/plugin-activation.php:159
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/core/admin/class-tgm-plugin-activation.php:378
+#: library/plugin-activation.php:163
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/core/admin/class-tgm-plugin-activation.php:383
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/core/admin/class-tgm-plugin-activation.php:388
+#: library/plugin-activation.php:164
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/core/admin/class-tgm-plugin-activation.php:392
+#: library/plugin-activation.php:165
+#, fuzzy
+msgid "Return to Required Plugins Installer"
+msgstr "Voltar para instalador de Plugins requeridos"
+
+#: library/core/admin/class-tgm-plugin-activation.php:393
+#: library/core/admin/class-tgm-plugin-activation.php:912
+#: library/core/admin/class-tgm-plugin-activation.php:2618
+#: library/core/admin/class-tgm-plugin-activation.php:3665
+#, fuzzy
+msgid "Return to the Dashboard"
+msgstr "Retornar ao Painel de Controle"
+
+#: library/core/admin/class-tgm-plugin-activation.php:394
+#: library/core/admin/class-tgm-plugin-activation.php:3244
+#: library/plugin-activation.php:166
+#, fuzzy
+msgid "Plugin activated successfully."
+msgstr "Plugin ativado com sucesso."
+
+#: library/core/admin/class-tgm-plugin-activation.php:395
+#: library/core/admin/class-tgm-plugin-activation.php:3037
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/core/admin/class-tgm-plugin-activation.php:397
+#, fuzzy, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "Nenhuma ação tomada. O plugin %1$s já estava ativo."
+
+#: library/core/admin/class-tgm-plugin-activation.php:399
+#, fuzzy, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+"Plugin não ativado. É necessária uma versão mais alta de% s para este tema. "
+"Atualize o plugin."
+
+#: library/core/admin/class-tgm-plugin-activation.php:401
+#, fuzzy, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Todos os plugins instalado e ativado com sucesso. {0}%1$s{/0}"
+
+#: library/core/admin/class-tgm-plugin-activation.php:402
+#, fuzzy
+msgid "Dismiss this notice"
+msgstr "Descartar essa notificação"
+
+#: library/core/admin/class-tgm-plugin-activation.php:403
+#, fuzzy
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+"Há um ou mais plugins necessários ou recomendados para instalar, atualizar "
+"ou ativar."
+
+#: library/core/admin/class-tgm-plugin-activation.php:404
+#, fuzzy
+msgid "Please contact the administrator of this site for help."
+msgstr "Entre em contato com o administrador deste site para obter ajuda."
+
+#: library/core/admin/class-tgm-plugin-activation.php:607
+#, fuzzy
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr "Este plugin precisa ser atualizado para ser compatível com seu tema."
+
+#: library/core/admin/class-tgm-plugin-activation.php:608
+#, fuzzy
+msgid "Update Required"
+msgstr "Atualização Necessária"
+
+#: library/core/admin/class-tgm-plugin-activation.php:1019
+#, fuzzy
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+"O pacote de plug-in remoto não contém uma pasta com o slug desejado e a "
+"renomeação não funcionou."
+
+#: library/core/admin/class-tgm-plugin-activation.php:1019
+#: library/core/admin/class-tgm-plugin-activation.php:1022
+#, fuzzy
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+"Entre em contato com o provedor de plug-ins e peça-lhes para empacotar seu "
+"plug-in de acordo com as diretrizes do WordPress."
+
+#: library/core/admin/class-tgm-plugin-activation.php:1022
+#, fuzzy
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+"O pacote de plug-in remoto consiste em mais de um arquivo, mas os arquivos "
+"não se encontram na pas."
+
+#: library/core/admin/class-tgm-plugin-activation.php:1206
+#: library/core/admin/class-tgm-plugin-activation.php:3033
+#, fuzzy
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr "e"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2067
+#, fuzzy, php-format
+msgid "TGMPA v%s"
+msgstr "TGMPA v%s"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2358
+#, fuzzy
+msgid "Required"
+msgstr "Requeridos"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2361
+#, fuzzy
+msgid "Recommended"
+msgstr "Recomendado"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2377
+#, fuzzy
+msgid "WordPress Repository"
+msgstr "Repositório WordPress"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2380
+#, fuzzy
+msgid "External Source"
+msgstr "Fonte externa"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2383
+#, fuzzy
+msgid "Pre-Packaged"
+msgstr "Pré-embalados"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2400
+#, fuzzy
+msgid "Not Installed"
+msgstr "Não instalado"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2404
+#, fuzzy
+msgid "Installed But Not Activated"
+msgstr "Instalado, mas não ativado"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2406
+#, fuzzy
+msgid "Active"
+msgstr "Ativo"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2412
+#, fuzzy
+msgid "Required Update not Available"
+msgstr "Atualização necessária não disponível"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2415
+#, fuzzy
+msgid "Requires Update"
+msgstr "Requer atualização"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2418
+#, fuzzy
+msgid "Update recommended"
+msgstr "Atualização recomendada"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2427
+#, fuzzy, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2473
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/core/admin/class-tgm-plugin-activation.php:2477
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/core/admin/class-tgm-plugin-activation.php:2481
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/core/admin/class-tgm-plugin-activation.php:2485
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/core/admin/class-tgm-plugin-activation.php:2567
+#, fuzzy
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr "desconhecida"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2575
+#, fuzzy
+msgid "Installed version:"
+msgstr "Versão instalada:"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2583
+#, fuzzy
+msgid "Minimum required version:"
+msgstr "Versão mínima exigida:"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2595
+#, fuzzy
+msgid "Available version:"
+msgstr "Versão disponível:"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2618
+#, fuzzy
+msgid "No plugins to install, update or activate."
+msgstr "Nenhum plug-in para instalar, atualizar ou ativar."
+
+#: library/core/admin/class-tgm-plugin-activation.php:2632
+#, fuzzy
+msgid "Plugin"
+msgstr "Plugin"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2633
+#, fuzzy
+msgid "Source"
+msgstr "Fonte"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2634
+#: library/theme/vc_templates.php:1125 library/theme/vc_templates.php:1747
+#, fuzzy
+msgid "Type"
+msgstr "Tipo:"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2638
+#, fuzzy
+msgid "Version"
+msgstr "Versão"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2639
+#, fuzzy
+msgid "Status"
+msgstr "Status"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2688
+#, fuzzy, php-format
+msgid "Install %2$s"
+msgstr "Instalar %2$s"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2693
+#, fuzzy, php-format
+msgid "Update %2$s"
+msgstr "Atualização %2$s"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2699
+#, fuzzy, php-format
+msgid "Activate %2$s"
+msgstr "Ativar %2$s"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2769
+#, fuzzy
+msgid "Upgrade message from the plugin author:"
+msgstr "Mensagem de atualização do autor do plugin:"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2802
+#, fuzzy
+msgid "Install"
+msgstr "Instalar"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2808
+#, fuzzy
+msgid "Update"
+msgstr "Atualizar"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2811
+#, fuzzy
+msgid "Activate"
+msgstr "Ativar"
+
+#: library/core/admin/class-tgm-plugin-activation.php:2842
+#, fuzzy
+msgid "No plugins were selected to be installed. No action taken."
+msgstr "Nenhum plugin foi selecionado para ser instalado. Nenhuma ação tomada."
+
+#: library/core/admin/class-tgm-plugin-activation.php:2844
+#, fuzzy
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+"Nenhum plugin foi selecionado para ser atualizado. Nenhuma ação tomada."
+
+#: library/core/admin/class-tgm-plugin-activation.php:2885
+#, fuzzy
+msgid "No plugins are available to be installed at this time."
+msgstr "Nenhum plugin está disponível para ser instalado no momento."
+
+#: library/core/admin/class-tgm-plugin-activation.php:2887
+#, fuzzy
+msgid "No plugins are available to be updated at this time."
+msgstr "Nenhum plug-in está disponível para ser atualizado neste momento."
+
+#: library/core/admin/class-tgm-plugin-activation.php:2993
+#, fuzzy
+msgid "No plugins were selected to be activated. No action taken."
+msgstr "Nenhum plugin foi selecionado para ser ativado. Nenhuma ação tomada."
+
+#: library/core/admin/class-tgm-plugin-activation.php:3019
+#, fuzzy
+msgid "No plugins are available to be activated at this time."
+msgstr "Não há plugins disponíveis para ser ativado no momento."
+
+#: library/core/admin/class-tgm-plugin-activation.php:3243
+#, fuzzy
+msgid "Plugin activation failed."
+msgstr "A ativação do plugin falhou."
+
+#: library/core/admin/class-tgm-plugin-activation.php:3583
+#, fuzzy, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "Actualização do Plugin {0}%1$s{/0} ( {0}%2$d{/0} / {0}%3$d{/0} )"
+
+#: library/core/admin/class-tgm-plugin-activation.php:3586
+#, fuzzy, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "Ocorreu um erro ao instalar %1$s: <strong>%2$s</ strong>."
+
+#: library/core/admin/class-tgm-plugin-activation.php:3588
+#, fuzzy, php-format
+msgid "The installation of %1$s failed."
+msgstr "The installation of %1$s failed."
+
+#: library/core/admin/class-tgm-plugin-activation.php:3592
+#, fuzzy
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"O processo de instalação e ativação está começando. Esse processo pode "
+"demorar um pouco em alguns hosts, então seja paciente."
+
+#: library/core/admin/class-tgm-plugin-activation.php:3594
+#, fuzzy, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "{0}%1$s{/0} instalado e ativado com sucesso."
+
+#: library/core/admin/class-tgm-plugin-activation.php:3594
+#: library/core/admin/class-tgm-plugin-activation.php:3602
+#, fuzzy
+msgid "Show Details"
+msgstr "Exibir Detalhes"
+
+#: library/core/admin/class-tgm-plugin-activation.php:3594
+#: library/core/admin/class-tgm-plugin-activation.php:3602
+#, fuzzy
+msgid "Hide Details"
+msgstr "Ocultar Detalhes"
+
+#: library/core/admin/class-tgm-plugin-activation.php:3595
+#, fuzzy
+msgid "All installations and activations have been completed."
+msgstr "Todas as instalações e ativações foram concluídas."
+
+#: library/core/admin/class-tgm-plugin-activation.php:3597
+#, fuzzy, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+"Instalando e Ativando o Plugin {0}%1$s{/0} ( {0}%2$d{/0} / {0}%3$d{/0} )"
+
+#: library/core/admin/class-tgm-plugin-activation.php:3600
+#, fuzzy
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"O processo de instalação está começando. Esse processo pode demorar um pouco "
+"em alguns hosts, então seja paciente."
+
+#: library/core/admin/class-tgm-plugin-activation.php:3602
+#, fuzzy, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s Instalado com sucesso"
+
+#: library/core/admin/class-tgm-plugin-activation.php:3603
+#, fuzzy
+msgid "All installations have been completed."
+msgstr "Todas as instalações foram concluídas."
+
+#: library/core/admin/class-tgm-plugin-activation.php:3605
+#, fuzzy, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalando o Plugin %1$s (%2$d/%3$d)"
+
+#: library/core/admin/index.php:31
+#, fuzzy
+msgctxt "enhanced select"
+msgid "One result is available, press enter to select it."
+msgstr "Um resultado está disponível, pressione Enter para selecioná-lo."
+
+#: library/core/admin/index.php:32
+#, fuzzy
+msgctxt "enhanced select"
+msgid "%qty% results are available, use up and down arrow keys to navigate."
+msgstr ""
+"%qty% resultados encontrados, use as setas para cima ou baixo para navegar."
+
+#: library/core/admin/index.php:33
+#, fuzzy
+msgctxt "enhanced select"
+msgid "No matches found"
+msgstr "Nenhuma ocorrência encontrada"
+
+#: library/core/admin/index.php:34
+#, fuzzy
+msgctxt "enhanced select"
+msgid "Loading failed"
+msgstr "O carregamento falhou"
+
+#: library/core/admin/index.php:35
+#, fuzzy
+msgctxt "enhanced select"
+msgid "Please enter 1 or more characters"
+msgstr "Por favor insira 1 ou mais caracteres"
+
+#: library/core/admin/index.php:36
+#, fuzzy
+msgctxt "enhanced select"
+msgid "Please enter %qty% or more characters"
+msgstr "Por favor, insira %qty% ou mais caracteres"
+
+#: library/core/admin/index.php:37
+#, fuzzy
+msgctxt "enhanced select"
+msgid "Please delete 1 character"
+msgstr "Por favor, apague 1 caractere"
+
+#: library/core/admin/index.php:38
+#, fuzzy
+msgctxt "enhanced select"
+msgid "Please delete %qty% characters"
+msgstr "Por favor, apague %qty% caracteres"
+
+#: library/core/admin/index.php:39
+#, fuzzy
+msgctxt "enhanced select"
+msgid "You can only select 1 item"
+msgstr "Você só pode selecionar 1 item"
+
+#: library/core/admin/index.php:40
+#, fuzzy
+msgctxt "enhanced select"
+msgid "You can only select %qty% items"
+msgstr "Você só pode selecionar %qty% itens"
+
+#: library/core/admin/index.php:41
+#, fuzzy
+msgctxt "enhanced select"
+msgid "Loading more results&hellip;"
+msgstr "Carregando mais resultados&hellip;"
+
+#: library/core/admin/index.php:42
+#, fuzzy
+msgctxt "enhanced select"
+msgid "Searching&hellip;"
+msgstr "Pesquisando&hellip;"
+
+#: library/core/admin/post-fields.php:4 library/core/admin/post-fields.php:5
+#: library/core/admin/post-fields.php:6
+#, fuzzy
+msgid "Elbrus - Sidebar Options"
+msgstr "Elbrus - opções da barra lateral"
+
+#: library/core/admin/post-fields.php:7
+#, fuzzy
+msgid "Elbrus - Portfolio Layout Options"
+msgstr "Elbrus - portfólio de opções de Layout"
+
+#: library/core/admin/post-fields.php:8 library/core/admin/post-fields.php:9
+#: library/core/admin/post-fields.php:10 library/core/admin/post-fields.php:11
+#, fuzzy
+msgid "Elbrus - Page Layout Options"
+msgstr "Elbrus - opções de Layout de página"
+
+#: library/core/admin/post-fields.php:36
+#, fuzzy
+msgid "Sidebar type"
+msgstr "Tipo de barra lateral"
+
+#: library/core/admin/post-fields.php:45
+#, fuzzy
+msgid "Sidebar content"
+msgstr "Conteúdo da barra lateral"
+
+#: library/core/admin/post-fields.php:97
+#, fuzzy
+msgid "Use global settings"
+msgstr "Usar configurações globais"
+
+#: library/core/admin/post-fields.php:106
+#, fuzzy
+msgid "Top Footer Static Block"
+msgstr "Bloco estático de rodapé superior"
+
+#: library/core/admin/post-fields.php:124
+#, fuzzy
+msgid "Bottom Footer Static Block"
+msgstr "Bloco estático do rodapé inferior"
+
+#: library/core/admin/post-fields.php:158
+#, fuzzy
+msgid "Portfolio layout"
+msgstr "Layout do Portfólio"
+
+#: library/core/admin/post-fields.php:161 library/theme/vc_templates.php:181
+#: library/theme/vc_templates.php:225
+#, fuzzy
+msgid "Default"
+msgstr "Padrão"
+
+#: library/core/frontend/functions.php:119
+#, fuzzy
+msgid "Select block"
+msgstr "Seleccione bloco"
+
+#: library/core/global/options.php:5
+#, fuzzy
+msgid "Elbrus"
+msgstr "Monte Elbrus"
+
+#: library/core/global/options.php:25
+#, fuzzy
+msgid "Enter HTML text"
+msgstr "Inserir texto HTML"
+
+#: library/core/global/options.php:26
+#, fuzzy
+msgid "Enter HTML text NOTE: Text must be between \"p\" tags"
+msgstr "Inserir texto HTML Nota: texto deve estar entre as tags \"p\""
+
+#: library/core/global/options.php:27
+#, fuzzy
+msgid "Enter text"
+msgstr "Inserir texto"
+
+#: library/core/global/options.php:28
+msgid ""
+"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et "
+"dignissim ipsum. Nam ac interdum sem. Pellentesque diam lacus, dictum in "
+"dapibus id, hendrerit eget felis. Nunc nec turpis libero</p>\n"
+"<p>Pellentesque habitant morbi tristique senectus et netus et malesuada "
+"fames ac turpis egestas. Maecenas euismod condimentum mollis. In non congue "
+"orci. Nulla nunc velit, volutpat vestibulum congue vitae, tincidunt at sem. "
+"Pellentesque tincidunt molestie mi, eu aliquam quam fringilla nec. Sed "
+"suscipit adipiscing urna, et varius libero commodo eget.</p>"
+msgstr ""
+
+#: library/core/global/options.php:31
+#, fuzzy
+msgid "Upload image for your theme, or specify an existing url"
+msgstr "Upload de imagem para o seu tema, ou especificar um url existente"
+
+#: library/core/global/options.php:35
+#, fuzzy
+msgid "linear"
+msgstr "linear"
+
+#: library/core/global/options.php:36 library/core/global/options.php:37
+#, fuzzy
+msgid "easeInSine"
+msgstr "easeInSine"
+
+#: library/core/global/options.php:38
+#, fuzzy
+msgid "easeInOutSine"
+msgstr "easeInOutSine"
+
+#: library/core/global/options.php:39
+#, fuzzy
+msgid "easeInCubic"
+msgstr "easeOutCubic"
+
+#: library/core/global/options.php:40
+#, fuzzy
+msgid "easeOutCubic"
+msgstr "easeOutCubic"
+
+#: library/core/global/options.php:41
+#, fuzzy
+msgid "easeInOutCubic"
+msgstr "easeInOutCubic"
+
+#: library/core/global/options.php:42
+#, fuzzy
+msgid "easeOutInCubic"
+msgstr "easeOutInCubic"
+
+#: library/core/global/options.php:43
+#, fuzzy
+msgid "easeInQuint"
+msgstr "easeInQuint"
+
+#: library/core/global/options.php:44
+#, fuzzy
+msgid "easeOutQuint"
+msgstr "easeOutQuint"
+
+#: library/core/global/options.php:45
+#, fuzzy
+msgid "easeInOutQuint"
+msgstr "easeInOutQuint"
+
+#: library/core/global/options.php:46
+#, fuzzy
+msgid "easeOutInQuint"
+msgstr "easeOutInQuint"
+
+#: library/core/global/options.php:47
+#, fuzzy
+msgid "easeInCirc"
+msgstr "easeInCirc"
+
+#: library/core/global/options.php:48
+#, fuzzy
+msgid "easeOutCirc"
+msgstr "easeOutCirc"
+
+#: library/core/global/options.php:49
+#, fuzzy
+msgid "easeInOutCirc"
+msgstr "easeInOutCirc"
+
+#: library/core/global/options.php:50
+#, fuzzy
+msgid "easeOutInCirc"
+msgstr "easeOutInCirc"
+
+#: library/core/global/options.php:51
+#, fuzzy
+msgid "easeInBack"
+msgstr "easeInBack"
+
+#: library/core/global/options.php:52
+#, fuzzy
+msgid "easeOutBack"
+msgstr "easeOutBack"
+
+#: library/core/global/options.php:53
+#, fuzzy
+msgid "easeInOutBack"
+msgstr "easeInOutBack"
+
+#: library/core/global/options.php:54
+#, fuzzy
+msgid "easeOutInBack"
+msgstr "easeOutInBack"
+
+#: library/core/global/options.php:55
+#, fuzzy
+msgid "easeInQuad"
+msgstr "easeInQuad"
+
+#: library/core/global/options.php:56
+#, fuzzy
+msgid "easeOutQuad"
+msgstr "easeOutQuad"
+
+#: library/core/global/options.php:57
+#, fuzzy
+msgid "easeInOutQuad"
+msgstr "easeInOutQuad"
+
+#: library/core/global/options.php:58
+#, fuzzy
+msgid "easeOutInQuad"
+msgstr "easeOutInQuad"
+
+#: library/core/global/options.php:59
+#, fuzzy
+msgid "easeInQuart"
+msgstr "easeInQuart"
+
+#: library/core/global/options.php:60
+#, fuzzy
+msgid "easeOutQuart"
+msgstr "easeOutQuart"
+
+#: library/core/global/options.php:61
+#, fuzzy
+msgid "easeInOutQuart"
+msgstr "easeInOutQuart"
+
+#: library/core/global/options.php:62
+#, fuzzy
+msgid "easeOutInQuart"
+msgstr "easeOutInQuart"
+
+#: library/core/global/options.php:63
+#, fuzzy
+msgid "easeInExpo"
+msgstr "easeInExpo"
+
+#: library/core/global/options.php:64
+#, fuzzy
+msgid "easeOutExpo"
+msgstr "easeOutExpo"
+
+#: library/core/global/options.php:65
+#, fuzzy
+msgid "easeInOutExpo"
+msgstr "easeInOutExpo"
+
+#: library/core/global/options.php:66
+#, fuzzy
+msgid "easeOutInExpo"
+msgstr "easeOutInExpo"
+
+#: library/core/global/options.php:67
+#, fuzzy
+msgid "easeInElastic"
+msgstr "easeInElastic"
+
+#: library/core/global/options.php:68
+#, fuzzy
+msgid "easeOutElastic"
+msgstr "easeOutElastic"
+
+#: library/core/global/options.php:69
+#, fuzzy
+msgid "easeInOutElastic"
+msgstr "easeInOutElastic"
+
+#: library/core/global/options.php:70
+#, fuzzy
+msgid "easeOutInElastic"
+msgstr "easeOutInElastic"
+
+#: library/core/global/options.php:71
+#, fuzzy
+msgid "easeInBounce"
+msgstr "easeInBounce"
+
+#: library/core/global/options.php:72
+#, fuzzy
+msgid "easeOutBounce"
+msgstr "easeOutBounce"
+
+#: library/core/global/options.php:73
+#, fuzzy
+msgid "easeInOutBounce"
+msgstr "easeInOutBounce"
+
+#: library/core/global/options.php:74
+#, fuzzy
+msgid "easeOutInBounce"
+msgstr "easeOutInBounce"
+
+#: library/core/global/sidebars.php:28
+#, fuzzy
+msgid "Portfolio sidebar"
+msgstr "Barra Lateral do Portifólio"
+
+#: library/core/global/sidebars.php:37
+#, fuzzy
+msgid "Shop sidebar"
+msgstr "Loja sidebar"
+
+#: library/core/global/sidebars.php:46
+#, fuzzy
+msgid "Product sidebar"
+msgstr "Barra Lateral dos Produtos"
+
+#: library/core/global/widgets.php:15
+#, fuzzy
+msgid "Display images from flickr"
+msgstr "Exibir imagens do flickr"
+
+#: library/core/global/widgets.php:16
+#, fuzzy
+msgid "Elbrus - Flickr images"
+msgstr "Elbrus - imagens do Flickr"
+
+#: library/core/global/widgets.php:42 library/theme/vc_templates.php:1626
+#, fuzzy
+msgid "Latest From Flickr"
+msgstr "Últimas do Flickr"
+
+#: library/core/global/widgets.php:49
+#, fuzzy
+msgid "Title:"
+msgstr "Título:"
+
+#: library/core/global/widgets.php:54
+#, fuzzy
+msgid "Flickr ID:"
+msgstr "ID do Flickr:"
+
+#: library/core/global/widgets.php:59
+#, fuzzy
+msgid "Number of photos:"
+msgstr "Número de fotos:"
+
+#: library/core/global/widgets.php:75
+#, fuzzy
+msgid "Retrieve and display popular/latest posts/latest comments."
+msgstr ""
+"Recuperar e exibir os comentários populares/últimas postagens/mais recente."
+
+#: library/core/global/widgets.php:76
+#, fuzzy
+msgid "Elbrus Popular/Latest posts/Last comments"
+msgstr "Elbrus Popular/últimas postagens/Last comentários"
+
+#: library/core/global/widgets.php:95
+#, fuzzy
+msgid "Recent"
+msgstr "Recente"
+
+#: library/core/global/widgets.php:96 library/theme/vc_templates.php:1175
+#, fuzzy
+msgid "Popular"
+msgstr "Popular"
+
+#: library/core/global/widgets.php:97
+#, fuzzy
+msgid "Comments"
+msgstr "Comentários"
+
+#: library/core/global/widgets.php:148
+#, fuzzy
+msgid "on "
+msgstr "em "
+
+#: library/core/global/widgets.php:153
+#, fuzzy
+msgid "on"
+msgstr "em"
+
+#: library/core/global/widgets.php:178
+#, fuzzy
+msgid "Blog posts"
+msgstr "Postagens do Blog"
+
+#: library/core/global/widgets.php:184 library/core/global/widgets.php:245
+#: library/theme/vc_templates.php:261 library/theme/vc_templates.php:314
+#: library/theme/vc_templates.php:351 library/theme/vc_templates.php:387
+#: library/theme/vc_templates.php:430 library/theme/vc_templates.php:802
+#: library/theme/vc_templates.php:849 library/theme/vc_templates.php:992
+#: library/theme/vc_templates.php:1050 library/theme/vc_templates.php:1111
+#: library/theme/vc_templates.php:1272 library/theme/vc_templates.php:1327
+#: library/theme/vc_templates.php:1624 library/theme/vc_templates.php:1682
+#: library/theme/vc_templates.php:1734 library/theme/vc_templates.php:1779
+#: library/theme/vc_templates.php:1872
+#, fuzzy
+msgid "Title"
+msgstr "Título"
+
+#: library/core/global/widgets.php:189
+#, fuzzy
+msgid "Number of Posts to show"
+msgstr "Número de postagens para exibir"
+
+#: library/core/global/widgets.php:194
+#, fuzzy
+msgid "Category (Leave Blank to show from all categories)"
+msgstr "Categoria (deixe em branco para mostrar de todas as categorias)"
+
+#: library/core/global/widgets.php:206
+#, fuzzy
+msgid "Display Portfolio Categories"
+msgstr "Exibir categorias de portfólio"
+
+#: library/core/global/widgets.php:207
+#, fuzzy
+msgid "Elbrus - Portfolio Categories"
+msgstr "Elbrus - categorias de portfólio"
+
+#: library/core/global/widgets.php:241
+#, fuzzy
+msgid "Portfolio Categories"
+msgstr "Categorias de Produtos"
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:14
+#, fuzzy
+msgid "Stroke-Gap-Icons"
+msgstr "Acidente vascular cerebral-Gap-ícones"
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:17
+#, fuzzy
+msgid "Flaticon"
+msgstr "Flaticon"
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:20
+#, fuzzy
+msgid "Font Awesome"
+msgstr "Fonte awesome"
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:23
+#, fuzzy
+msgid "Elegant"
+msgstr "Elegante"
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:26
+#, fuzzy
+msgid "Icomoon"
+msgstr "Icomoon"
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:29
+#: library/theme/vc_templates.php:1174 library/theme/vc_templates.php:1750
+#, fuzzy
+msgid "Simple"
+msgstr "Simples"
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:32
+#, fuzzy
+msgid "Custom 1"
+msgstr "Custom 1"
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:35
+#, fuzzy
+msgid "Custom 2"
+msgstr "Custom 2"
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:38
+#, fuzzy
+msgid "Custom 3"
+msgstr "Custom 3"
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:41
+#, fuzzy
+msgid "Custom 4"
+msgstr "Custom 4"
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:44
+#, fuzzy
+msgid "Custom 5"
+msgstr "Fonte personalizada 5"
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:47
+#, fuzzy
+msgid "VC Font Awesome"
+msgstr "Fonte awesome"
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:50
+#, fuzzy
+msgid "VC Open Iconic"
+msgstr "Abrir Iconic"
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:53
+#, fuzzy
+msgid "VC Typicons"
+msgstr "VC Typicons"
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:56
+#, fuzzy
+msgid "VC Entypo"
+msgstr "VC Entypo"
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:59
+#, fuzzy
+msgid "VC Linecons"
+msgstr "VC Linecons"
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:64
+#, fuzzy
+msgid "Icon library"
+msgstr "Biblioteca de ícones"
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:68
+#, fuzzy
+msgid "Select icon library."
+msgstr "Selecione a biblioteca de ícones."
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:78
+#, fuzzy
+msgid "Icon"
+msgstr "Icon"
+
+#: library/modules/vc_icons_loader/vc_icons_loader.php:90
+#, fuzzy
+msgid "Select icon from library."
+msgstr "Selecione o ícone da biblioteca."
+
+#: library/plugin-activation.php:11 library/theme/vc_templates.php:1565
+#, fuzzy
+msgid "Contact Form 7"
+msgstr "Formulário de contato"
+
+#: library/plugin-activation.php:23
+#, fuzzy
+msgid "Mailchimp"
+msgstr "Mailchimp"
+
+#: library/plugin-activation.php:35
+#, fuzzy
+msgid "Revolution Slider"
+msgstr "Revolution Slider"
+
+#: library/plugin-activation.php:47
+#, fuzzy
+msgid "WPBakery Visual Composer"
+msgstr "WPBakery Visual Composer"
+
+#: library/plugin-activation.php:59
+#, fuzzy
+msgid "Regenerate Thumbnails"
+msgstr "Regenerar Miniaturas"
+
+#: library/plugin-activation.php:71
+#, fuzzy
+msgid "ElbrusPixCustom"
+msgstr "ElbrusPixCustom"
+
+#: library/plugin-activation.php:83
+#, fuzzy
+msgid "Font Icons Loader"
+msgstr "Fonte carregador de ícones"
+
+#: library/plugin-activation.php:95
+#, fuzzy
+msgid "Meta Box"
+msgstr "Meta Box"
+
+#: library/plugin-activation.php:108
+#, fuzzy
+msgid "Visual CSS Style Editor"
+msgstr "Editor de estilo CSS Visual"
+
+#: library/plugin-activation.php:121
+#, fuzzy
+msgid "Envato Market"
+msgstr "Envato Market"
+
+#: library/plugin-activation.php:157
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins installed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/plugin-activation.php:160
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins activated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/plugin-activation.php:162
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %s plugins. "
+"Contact the administrator of this site for help on getting the plugins "
+"updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/plugin-activation.php:167
+#, fuzzy, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr "Todos os plugins instalados e ativados com sucesso. %1$s"
+
+#: library/theme/functions.php:109
+#, fuzzy
+msgid "says"
+msgstr "diz"
+
+#: library/theme/functions.php:110
+#, fuzzy, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s até %2$s"
+
+#: library/theme/functions.php:111
+#, fuzzy
+msgid "Edit"
+msgstr "Editar"
+
+#: library/theme/functions.php:117
+#, fuzzy
+msgid "Your comment is awaiting moderation."
+msgstr "Seu comentário está aguardando moderação."
+
+#: library/theme/functions.php:182
+#, fuzzy
+msgctxt "taxonomy terms separator"
+msgid ", "
+msgstr ", "
+
+#: library/theme/functions.php:309
+#, fuzzy
+msgctxt "Montserrat font: on or off"
+msgid "on"
+msgstr "em"
+
+#: library/theme/functions.php:315
+#, fuzzy
+msgctxt "Playfair font: on or off"
+msgid "on"
+msgstr "em"
+
+#: library/theme/functions.php:321
+#, fuzzy
+msgctxt "Raleway font: on or off"
+msgid "on"
+msgstr "em"
+
+#: library/theme/meta-boxes.php:15
+#, fuzzy
+msgid "Post Format Options"
+msgstr "Opções de formato de postagem"
+
+#: library/theme/meta-boxes.php:23
+#, fuzzy
+msgid "Post Gallery:"
+msgstr "Galeria de post"
+
+#: library/theme/meta-boxes.php:29
+#, fuzzy
+msgid "Quote Source:"
+msgstr "Fonte da citação"
+
+#: library/theme/meta-boxes.php:36
+#, fuzzy
+msgid "Quote Content:"
+msgstr "Conteúdo da citação"
+
+#: library/theme/meta-boxes.php:43
+#, fuzzy
+msgid "Video URL"
+msgstr "URL do vídeo"
+
+#: library/theme/meta-boxes.php:46 library/theme/meta-boxes.php:175
+#, fuzzy
+msgid "Enter video link eg (https://youtu.be/R8OOWcsFj0U)"
+msgstr "Insira o link do vídeo, por exemplo (https://youtu.be/R8OOWcsFj0U)"
+
+#: library/theme/meta-boxes.php:49
+#, fuzzy
+msgid "Image for background"
+msgstr "Imagem de fundo"
+
+#: library/theme/meta-boxes.php:55
+#, fuzzy
+msgid "Link URL"
+msgstr "URL do link"
+
+#: library/theme/meta-boxes.php:62
+#, fuzzy
+msgid "Link text"
+msgstr "Link texto"
+
+#: library/theme/meta-boxes.php:69
+#, fuzzy
+msgid "Audio URL"
+msgstr "URL do áudio"
+
+#: library/theme/meta-boxes.php:72
+#, fuzzy
+msgid "Enter audio link eg (https://soundcloud.com/muse/01-new-born)"
+msgstr ""
+"Digite o link de áudio, por exemplo (https://soundcloud.com/muse/01-new-born)"
+
+#: library/theme/meta-boxes.php:89
+#, fuzzy
+msgid "Text"
+msgstr "Texto"
+
+#: library/theme/meta-boxes.php:100
+#, fuzzy
+msgid "Portfolio Meta"
+msgstr "Metadados do Portfólio"
+
+#: library/theme/meta-boxes.php:107 single-portfolio.php:135
+#: single-portfolio.php:280
+#, fuzzy
+msgid "Created by"
+msgstr "Criado por"
+
+#: library/theme/meta-boxes.php:110
+#, fuzzy
+msgid "Enter author name"
+msgstr "Digite o nome do autor"
+
+#: library/theme/meta-boxes.php:113 single-portfolio.php:146
+#: single-portfolio.php:291
+#, fuzzy
+msgid "Completed on"
+msgstr "Concluído em"
+
+#: library/theme/meta-boxes.php:117
+#, fuzzy
+msgid "Enter date"
+msgstr "Insira a data"
+
+#: library/theme/meta-boxes.php:120 single-portfolio.php:157
+#: single-portfolio.php:302
+#, fuzzy
+msgid "Skills"
+msgstr "Habilidades"
+
+#: library/theme/meta-boxes.php:123
+#, fuzzy
+msgid "Enter skills"
+msgstr "Insira as habilidades"
+
+#: library/theme/meta-boxes.php:126 single-portfolio.php:168
+#: single-portfolio.php:313
+#, fuzzy
+msgid "Client"
+msgstr "Cliente"
+
+#: library/theme/meta-boxes.php:129
+#, fuzzy
+msgid "Enter client name"
+msgstr "Digite o nome do cliente"
+
+#: library/theme/meta-boxes.php:132
+#, fuzzy
+msgid "Client link"
+msgstr "Link Cliente"
+
+#: library/theme/meta-boxes.php:135
+#, fuzzy
+msgid "Enter client link eg (http://themeforest.net/)"
+msgstr "Insira o link de cliente, por exemplo (http://themeforest.net/)"
+
+#: library/theme/meta-boxes.php:138
+#, fuzzy
+msgid "Project link"
+msgstr "Link do Evento"
+
+#: library/theme/meta-boxes.php:141
+#, fuzzy
+msgid ""
+"Enter project link eg (http://themeforest.net/). Leave empty to hide button "
+"View project"
+msgstr ""
+"Insira o projeto link, por exemplo (http://themeforest.net/). Deixe em "
+"branco para esconder o projeto de modo de exibição do botão"
+
+#: library/theme/meta-boxes.php:148
+#, fuzzy
+msgid "Portfolio Option"
+msgstr "Opções do Portfolio"
+
+#: library/theme/meta-boxes.php:155
+#, fuzzy
+msgid "Post Types"
+msgstr "Tipos de post"
+
+#: library/theme/meta-boxes.php:158
+#, fuzzy
+msgid "Select post types"
+msgstr "Selecione os tipos de posts"
+
+#: library/theme/meta-boxes.php:160
+#, fuzzy
+msgid "Gallery"
+msgstr "Galeria"
+
+#: library/theme/meta-boxes.php:161 library/theme/meta-boxes.php:172
+#: library/theme/vc_templates.php:1865
+#, fuzzy
+msgid "Video"
+msgstr "Vídeo"
+
+#: library/theme/meta-boxes.php:165
+#, fuzzy
+msgid "Post Type For Gallery"
+msgstr "Tipo de post para Galeria"
+
+#: library/theme/meta-boxes.php:169
+#, fuzzy
+msgid "Upload images for your portfolio post."
+msgstr "Fazer upload de imagens para o seu post de portfólio."
+
+#: library/theme/meta-boxes.php:178
+#, fuzzy
+msgid "Video width"
+msgstr "Largura do vídeo"
+
+#: library/theme/meta-boxes.php:181
+#, fuzzy
+msgid "Range video width"
+msgstr "A largura de faixa"
+
+#: library/theme/meta-boxes.php:182 library/theme/meta-boxes.php:194
+#, fuzzy
+msgid "px"
+msgstr "px"
+
+#: library/theme/meta-boxes.php:190
+#, fuzzy
+msgid "Video height"
+msgstr "Altura do vídeo"
+
+#: library/theme/meta-boxes.php:193
+#, fuzzy
+msgid "Range video height"
+msgstr "Alcance a altura"
+
+#: library/theme/setup.php:47
+#, fuzzy
+msgid "Primary Menu"
+msgstr "Menu Primário"
+
+#: library/theme/vc_templates.php:65
+#, fuzzy
+msgid "CSS Animation"
+msgstr "Animação CSS"
+
+#: library/theme/vc_templates.php:155
+#, fuzzy
+msgid ""
+"Select type of animation if you want this element to be animated when it "
+"enters into the browsers viewport. Note: Works only in modern browsers."
+msgstr ""
+"Selecione tipo de animação se você deseja que este elemento seja animado "
+"quando entrar no browsers viewport. Nota: Funciona apenas em browsers "
+"modernos."
+
+#: library/theme/vc_templates.php:164
+#, fuzzy
+msgid "Use Section Anchor"
+msgstr "Use a seção âncora"
+
+#: library/theme/vc_templates.php:167
+#, fuzzy
+msgid "Use Simple Anchor"
+msgstr "Uso de ancoragem simples"
+
+#: library/theme/vc_templates.php:168
+#, fuzzy
+msgid "Use Anchor with background"
+msgstr "Uso de âncora com fundo"
+
+#: library/theme/vc_templates.php:169
+#, fuzzy
+msgid "Do not use"
+msgstr "Não use"
+
+#: library/theme/vc_templates.php:171
+#, fuzzy
+msgid "Need Row ID. "
+msgstr "Preciso de identificação de linha."
+
+#: library/theme/vc_templates.php:178
+#, fuzzy
+msgid "Padding"
+msgstr "Espaçamento"
+
+#: library/theme/vc_templates.php:182
+#, fuzzy
+msgid "Both"
+msgstr "Ambos"
+
+#: library/theme/vc_templates.php:183 library/theme/vc_templates.php:1075
+#, fuzzy
+msgid "Top"
+msgstr "Topo"
+
+#: library/theme/vc_templates.php:184 library/theme/vc_templates.php:1077
+#, fuzzy
+msgid "Bottom"
+msgstr "Em baixo"
+
+#: library/theme/vc_templates.php:186
+#, fuzzy
+msgid "Top, bottom, both"
+msgstr "Superior, inferior, ambos"
+
+#: library/theme/vc_templates.php:187 library/theme/vc_templates.php:199
+#: library/theme/vc_templates.php:207 library/theme/vc_templates.php:218
+#: library/theme/vc_templates.php:230
+#, fuzzy
+msgid "Row Options"
+msgstr "Linha: Opções"
+
+#: library/theme/vc_templates.php:191
+#, fuzzy
+msgid "Overlay"
+msgstr "Sobreposição"
+
+#: library/theme/vc_templates.php:195 library/theme/vc_templates.php:1442
+#: library/theme/vc_templates.php:1493
+#, fuzzy
+msgid "Yes"
+msgstr "Sim"
+
+#: library/theme/vc_templates.php:198
+#, fuzzy
+msgid "Yes / No"
+msgstr "Sim / Não"
+
+#: library/theme/vc_templates.php:203
+#, fuzzy
+msgid "Overlay Opacity"
+msgstr "Opacidade de Sobreposição"
+
+#: library/theme/vc_templates.php:206
+#, fuzzy
+msgid "Values 0.1 - 0.9"
+msgstr "Valores de 0,1 - 0,9"
+
+#: library/theme/vc_templates.php:211
+#, fuzzy
+msgid "Bottom effect"
+msgstr "Efeito de fundo"
+
+#: library/theme/vc_templates.php:214
+#, fuzzy
+msgid "Without bottom effect"
+msgstr "Sem efeito de fundo"
+
+#: library/theme/vc_templates.php:215
+#, fuzzy
+msgid "With bottom effect"
+msgstr "Com efeito de fundo"
+
+#: library/theme/vc_templates.php:216
+#, fuzzy
+msgid "With transparent bottom effect"
+msgstr "Com efeito de fundo transparente"
+
+#: library/theme/vc_templates.php:222 library/theme/vc_templates.php:229
+#, fuzzy
+msgid "Text Color"
+msgstr "Cor do texto"
+
+#: library/theme/vc_templates.php:226
+#, fuzzy
+msgid "White"
+msgstr "Branco"
+
+#: library/theme/vc_templates.php:227 library/theme/vc_templates.php:1128
+#, fuzzy
+msgid "Black"
+msgstr "Black"
+
+#: library/theme/vc_templates.php:244
+#, fuzzy
+msgid "Title Box with decor"
+msgstr "Título caixa com decoração"
+
+#: library/theme/vc_templates.php:247 library/theme/vc_templates.php:308
+#: library/theme/vc_templates.php:345 library/theme/vc_templates.php:383
+#: library/theme/vc_templates.php:424 library/theme/vc_templates.php:466
+#: library/theme/vc_templates.php:562 library/theme/vc_templates.php:758
+#: library/theme/vc_templates.php:844 library/theme/vc_templates.php:943
+#: library/theme/vc_templates.php:1028 library/theme/vc_templates.php:1107
+#: library/theme/vc_templates.php:1153 library/theme/vc_templates.php:1253
+#: library/theme/vc_templates.php:1266 library/theme/vc_templates.php:1323
+#: library/theme/vc_templates.php:1344 library/theme/vc_templates.php:1382
+#: library/theme/vc_templates.php:1395 library/theme/vc_templates.php:1435
+#: library/theme/vc_templates.php:1538 library/theme/vc_templates.php:1568
+#: library/theme/vc_templates.php:1594 library/theme/vc_templates.php:1618
+#: library/theme/vc_templates.php:1664 library/theme/vc_templates.php:1676
+#: library/theme/vc_templates.php:1730 library/theme/vc_templates.php:1775
+#: library/theme/vc_templates.php:1809 library/theme/vc_templates.php:1868
+#: library/theme/vc_templates.php:1913
+#, fuzzy
+msgid "Templines"
+msgstr "Tasso Muniz"
+
+#: library/theme/vc_templates.php:253
+#, fuzzy
+msgid "Before Title"
+msgstr "Antes do título"
+
+#: library/theme/vc_templates.php:255
+#, fuzzy
+msgid "Before Title text."
+msgstr "Antes do título"
+
+#: library/theme/vc_templates.php:263 library/theme/vc_templates.php:317
+#: library/theme/vc_templates.php:354 library/theme/vc_templates.php:390
+#, fuzzy
+msgid "Title param."
+msgstr "Título do parâmetro"
+
+#: library/theme/vc_templates.php:269
+#, fuzzy
+msgid "After Title"
+msgstr "Depois do título"
+
+#: library/theme/vc_templates.php:271
+#, fuzzy
+msgid "After Title text."
+msgstr "Depois do Título"
+
+#: library/theme/vc_templates.php:275
+#, fuzzy
+msgid "Box Title Position"
+msgstr "Posição do título do recibo"
+
+#: library/theme/vc_templates.php:278 library/theme/vc_templates.php:1843
+#, fuzzy
+msgid "Center"
+msgstr "Centro"
+
+#: library/theme/vc_templates.php:279 library/theme/vc_templates.php:973
+#: library/theme/vc_templates.php:1065 library/theme/vc_templates.php:1844
+#, fuzzy
+msgid "Left"
+msgstr "Esquerda"
+
+#: library/theme/vc_templates.php:280 library/theme/vc_templates.php:974
+#: library/theme/vc_templates.php:1066 library/theme/vc_templates.php:1845
+#, fuzzy
+msgid "Right"
+msgstr "Direita"
+
+#: library/theme/vc_templates.php:282
+#, fuzzy
+msgid "Center, left or right"
+msgstr "Centro, esquerda ou direita"
+
+#: library/theme/vc_templates.php:288 library/theme/vc_templates.php:323
+#: library/theme/vc_templates.php:360 library/theme/vc_templates.php:402
+#: library/theme/vc_templates.php:822 library/theme/vc_templates.php:1001
+#: library/theme/vc_templates.php:1224 library/theme/vc_templates.php:1701
+#: library/theme/vc_templates.php:1893
+#, fuzzy
+msgid "Content"
+msgstr "Conteúdo"
+
+#: library/theme/vc_templates.php:290 library/theme/vc_templates.php:326
+#: library/theme/vc_templates.php:363 library/theme/vc_templates.php:405
+#: library/theme/vc_templates.php:1704
+#, fuzzy
+msgid "Enter your content."
+msgstr "Coloque seu conteúdo."
+
+#: library/theme/vc_templates.php:305
+#, fuzzy
+msgid "Title Box underline"
+msgstr "Título sublinhado de caixa"
+
+#: library/theme/vc_templates.php:316 library/theme/vc_templates.php:353
+#: library/theme/vc_templates.php:389
+#, fuzzy
+msgid "I am Title"
+msgstr "Eu sou o título"
+
+#: library/theme/vc_templates.php:342
+#, fuzzy
+msgid "Feature Box (top icon)"
+msgstr "Caixa de recurso (ícone superior)"
+
+#: library/theme/vc_templates.php:362 library/theme/vc_templates.php:404
+#: library/theme/vc_templates.php:537 library/theme/vc_templates.php:824
+#: library/theme/vc_templates.php:1003 library/theme/vc_templates.php:1703
+#, fuzzy
+msgid "<p>I am test text block. Click edit button to change this text.</p>"
+msgstr ""
+"<p>Eu sou um teste do bloco de texto. Clique no botão editar para alterar "
+"este conteúdo.</p>"
+
+#: library/theme/vc_templates.php:380
+#, fuzzy
+msgid "Feature Box (left icon)"
+msgstr "Caixa de recurso (ícone esquerdo)"
+
+#: library/theme/vc_templates.php:394 library/theme/vc_templates.php:1056
+#: library/theme/vc_templates.php:1878
+#, fuzzy
+msgid "Under Title"
+msgstr "Sob o Título"
+
+#: library/theme/vc_templates.php:396
+#, fuzzy
+msgid "Under Title text"
+msgstr "Abaixo do Título"
+
+#: library/theme/vc_templates.php:421
+#, fuzzy
+msgid "Amount Box"
+msgstr "Quantidade de caixa"
+
+#: library/theme/vc_templates.php:432
+#, fuzzy
+msgid "Project"
+msgstr "Projeto"
+
+#: library/theme/vc_templates.php:433 library/theme/vc_templates.php:1052
+#: library/theme/vc_templates.php:1874
+#, fuzzy
+msgid "Title."
+msgstr "Cargo:"
+
+#: library/theme/vc_templates.php:439 library/theme/vc_templates.php:1198
+#, fuzzy
+msgid "Amount"
+msgstr "Quantidade"
+
+#: library/theme/vc_templates.php:442
+#, fuzzy
+msgid "Amount."
+msgstr "Quantia."
+
+#: library/theme/vc_templates.php:460
+#, fuzzy
+msgid "Reviews"
+msgstr "Avaliações"
+
+#: library/theme/vc_templates.php:471
+#, fuzzy
+msgid "Reviews per page"
+msgstr "Avaliações por página"
+
+#: library/theme/vc_templates.php:477
+#, fuzzy
+msgid "Select number of columns."
+msgstr "Selecione o número de colunas."
+
+#: library/theme/vc_templates.php:481 library/theme/vc_templates.php:892
+#, fuzzy
+msgid "Carousel"
+msgstr "Carrosel"
+
+#: library/theme/vc_templates.php:484 library/theme/vc_templates.php:895
+#, fuzzy
+msgid "Enable"
+msgstr "Ativar"
+
+#: library/theme/vc_templates.php:485 library/theme/vc_templates.php:896
+#, fuzzy
+msgid "Disable"
+msgstr "Desabilitar"
+
+#: library/theme/vc_templates.php:487 library/theme/vc_templates.php:898
+#, fuzzy
+msgid "On/off carousel"
+msgstr "Carrossel ligar/desligar"
+
+#: library/theme/vc_templates.php:491 library/theme/vc_templates.php:902
+#, fuzzy
+msgid "Auto Play"
+msgstr "Reprodução Automática"
+
+#: library/theme/vc_templates.php:494 library/theme/vc_templates.php:905
+#, fuzzy
+msgid "Enter autoplay speed in milliseconds. 0 is turn off autoplay."
+msgstr ""
+"Digite a velocidade de reprodução automática em milissegundos. 0 é desativar "
+"reprodução automática."
+
+#: library/theme/vc_templates.php:506
+#, fuzzy
+msgid "Review"
+msgstr "Avaliação"
+
+#: library/theme/vc_templates.php:514 library/theme/vc_templates.php:580
+#: library/theme/vc_templates.php:673 library/theme/vc_templates.php:808
+#: library/theme/vc_templates.php:980 library/theme/vc_templates.php:1032
+#: library/theme/vc_templates.php:1401
+#, fuzzy
+msgid "Image"
+msgstr "Imagem"
+
+#: library/theme/vc_templates.php:516 library/theme/vc_templates.php:582
+#: library/theme/vc_templates.php:675 library/theme/vc_templates.php:810
+#: library/theme/vc_templates.php:982 library/theme/vc_templates.php:1034
+#: library/theme/vc_templates.php:1695
+#, fuzzy
+msgid "Select image."
+msgstr "Selecione a imagem"
+
+#: library/theme/vc_templates.php:520 library/theme/vc_templates.php:586
+#: library/theme/vc_templates.php:679
+#, fuzzy
+msgid "Name"
+msgstr "Nome"
+
+#: library/theme/vc_templates.php:522
+#, fuzzy
+msgid "Person name."
+msgstr "Nome da pessoa"
+
+#: library/theme/vc_templates.php:526 library/theme/vc_templates.php:592
+#: library/theme/vc_templates.php:685
+#, fuzzy
+msgid "Position"
+msgstr "Posição"
+
+#: library/theme/vc_templates.php:528
+#, fuzzy
+msgid "Text under the name."
+msgstr "Texto sob o nome."
+
+#: library/theme/vc_templates.php:535
+#, fuzzy
+msgid "Review Text"
+msgstr "Texto da Avaliação"
+
+#: library/theme/vc_templates.php:538 library/theme/vc_templates.php:825
+#: library/theme/vc_templates.php:1004
+#, fuzzy
+msgid "Enter text."
+msgstr "Digite o texto."
+
+#: library/theme/vc_templates.php:556
+#, fuzzy
+msgid "Slider Team Members"
+msgstr "Membros da equipe de controle deslizante"
+
+#: library/theme/vc_templates.php:572
+#, fuzzy
+msgid "Team Member"
+msgstr "Membro da Equipe"
+
+#: library/theme/vc_templates.php:588 library/theme/vc_templates.php:681
+#, fuzzy
+msgid "Team member name."
+msgstr "Nome do membro da equipe"
+
+#: library/theme/vc_templates.php:594 library/theme/vc_templates.php:687
+#, fuzzy
+msgid "Member position."
+msgstr "Cargo"
+
+#: library/theme/vc_templates.php:598 library/theme/vc_templates.php:691
+#, fuzzy
+msgid "Social Link 1"
+msgstr "Link da Rede Social 1"
+
+#: library/theme/vc_templates.php:600 library/theme/vc_templates.php:693
+#, fuzzy
+msgid "https://twitter.com/"
+msgstr "https://twitter.com/"
+
+#: library/theme/vc_templates.php:604 library/theme/vc_templates.php:697
+#, fuzzy
+msgid "Social Network Icon 1"
+msgstr "Icone da conta de rede social adicional - 1"
+
+#: library/theme/vc_templates.php:606 library/theme/vc_templates.php:699
+#, fuzzy
+msgid ""
+"Add icon fa-twitter <a href=\"//fortawesome.github.io/Font-Awesome/icons/\" "
+"target=\"_blank\">See all icons</a>"
+msgstr ""
+"Adicionar o ícone fa-twitter <a href=\"//fortawesome.github.io/Font-Awesome/"
+"icons/\" target=\"_blank\">Ver todos os ícones</a>"
+
+#: library/theme/vc_templates.php:610 library/theme/vc_templates.php:703
+#, fuzzy
+msgid "Social Link 2"
+msgstr "Link da Rede Social 2"
+
+#: library/theme/vc_templates.php:612 library/theme/vc_templates.php:705
+#, fuzzy
+msgid "https://www.facebook.com/"
+msgstr "https://www.facebook.com/MoasureApp/"
+
+#: library/theme/vc_templates.php:616 library/theme/vc_templates.php:709
+#, fuzzy
+msgid "Social Network Icon 2"
+msgstr "Social Network Icon 2"
+
+#: library/theme/vc_templates.php:618 library/theme/vc_templates.php:711
+#, fuzzy
+msgid ""
+"Add icon fa-facebook <a href=\"//fortawesome.github.io/Font-Awesome/icons/\" "
+"target=\"_blank\">See all icons</a>"
+msgstr ""
+"Adicionar o ícone fa-facebook <a href=\"//fortawesome.github.io/Font-Awesome/"
+"icons/\" target=\"_blank\">Ver todos os ícones</a>"
+
+#: library/theme/vc_templates.php:622 library/theme/vc_templates.php:715
+#, fuzzy
+msgid "Social Link 3"
+msgstr "Link da Rede Social 3"
+
+#: library/theme/vc_templates.php:624 library/theme/vc_templates.php:717
+#, fuzzy
+msgid "https://www.linkedin.com/"
+msgstr "https://www.LinkedIn.com/"
+
+#: library/theme/vc_templates.php:628 library/theme/vc_templates.php:721
+#, fuzzy
+msgid "Social Network Icon 3"
+msgstr "Social Network Icon 3"
+
+#: library/theme/vc_templates.php:630 library/theme/vc_templates.php:723
+#, fuzzy
+msgid ""
+"Add icon fa-linkedin <a href=\"//fortawesome.github.io/Font-Awesome/icons/\" "
+"target=\"_blank\">See all icons</a>"
+msgstr ""
+"Adicionar o ícone fa-linkedin <a href=\"//fortawesome.github.io/Font-Awesome/"
+"icons/\" target=\"_blank\">Ver todos os ícones</a>"
+
+#: library/theme/vc_templates.php:634 library/theme/vc_templates.php:727
+#, fuzzy
+msgid "Social Link 4"
+msgstr "Link da Rede Social 4"
+
+#: library/theme/vc_templates.php:636 library/theme/vc_templates.php:729
+#, fuzzy
+msgid "https://www.googleplus.com/"
+msgstr "https://www.googleplus.com/"
+
+#: library/theme/vc_templates.php:640 library/theme/vc_templates.php:733
+#, fuzzy
+msgid "Social Network Icon 4"
+msgstr "Rede social ícone 4"
+
+#: library/theme/vc_templates.php:642 library/theme/vc_templates.php:735
+#, fuzzy
+msgid ""
+"Add icon fa-google-plus <a href=\"//fortawesome.github.io/Font-Awesome/icons/"
+"\" target=\"_blank\">See all icons</a>"
+msgstr ""
+"Add icon fa-google-plus <a href=\"//fortawesome.github.io/Font-Awesome/icons/"
+"\" target=\"_blank\">See all icons</a>"
+
+#: library/theme/vc_templates.php:646 library/theme/vc_templates.php:739
+#, fuzzy
+msgid "E-mail"
+msgstr "E-mail"
+
+#: library/theme/vc_templates.php:648 library/theme/vc_templates.php:741
+#, fuzzy
+msgid "Example: youremail@example.com (Leave empty to hide e-mail)"
+msgstr ""
+"Exemplo: youremail@example.com (deixar em branco para esconder o e-mail)"
+
+#: library/theme/vc_templates.php:667
+#, fuzzy
+msgid "Team Member box"
+msgstr "Membro da equipe"
+
+#: library/theme/vc_templates.php:755
+#, fuzzy
+msgid "Posts Block"
+msgstr "Bloco de Posts"
+
+#: library/theme/vc_templates.php:762
+#, fuzzy
+msgid "Category"
+msgstr "Qualquer categoria"
+
+#: library/theme/vc_templates.php:765
+#, fuzzy
+msgid "Select category to show their post."
+msgstr "Selecione a categoria para visualizar seu post."
+
+#: library/theme/vc_templates.php:769 library/theme/vc_templates.php:1460
+#, fuzzy
+msgid "Columns Number"
+msgstr "Número de colunas"
+
+#: library/theme/vc_templates.php:772
+#, fuzzy
+msgid "Columns 3"
+msgstr "Colunas 3"
+
+#: library/theme/vc_templates.php:773
+#, fuzzy
+msgid "Columns 2"
+msgstr "Colunas 2"
+
+#: library/theme/vc_templates.php:778
+#, fuzzy
+msgid "Posts Count"
+msgstr "Contagem Posts"
+
+#: library/theme/vc_templates.php:781
+#, fuzzy
+msgid "If empty, display all posts."
+msgstr "Se estiver vazio, exiba todas as mensagens."
+
+#: library/theme/vc_templates.php:796
+#, fuzzy
+msgid "About box"
+msgstr "Sobre a caixa"
+
+#: library/theme/vc_templates.php:804
+#, fuzzy
+msgid "Title block."
+msgstr "Título Bloco"
+
+#: library/theme/vc_templates.php:814 library/theme/vc_templates.php:1217
+#: library/theme/vc_templates.php:1278 library/theme/vc_templates.php:1350
+#: library/theme/vc_templates.php:1407 library/theme/vc_templates.php:1821
+#, fuzzy
+msgid "Link"
+msgstr "Link"
+
+#: library/theme/vc_templates.php:816
+#, fuzzy
+msgid "Select url."
+msgstr "Selecionar URL"
+
+#: library/theme/vc_templates.php:841
+#, fuzzy
+msgid "Twitter Box"
+msgstr "Caixa do Twitter"
+
+#: library/theme/vc_templates.php:851
+#, fuzzy
+msgid "Latest from twitter"
+msgstr "Últimas do twitter"
+
+#: library/theme/vc_templates.php:855
+#, fuzzy
+msgid "Username"
+msgstr "Nome de usuário"
+
+#: library/theme/vc_templates.php:861
+#, fuzzy
+msgid "Consumer Key"
+msgstr "Consumer Key"
+
+#: library/theme/vc_templates.php:867
+#, fuzzy
+msgid "Consumer Secret"
+msgstr "Consumer Secret"
+
+#: library/theme/vc_templates.php:873
+#, fuzzy
+msgid "Access Token"
+msgstr "Token de acesso"
+
+#: library/theme/vc_templates.php:879
+#, fuzzy
+msgid "Access Token Secret"
+msgstr "Token secreto de acesso"
+
+#: library/theme/vc_templates.php:885
+#, fuzzy
+msgid "Number of Tweets to show"
+msgstr "Número de Tweets para exibir:"
+
+#: library/theme/vc_templates.php:937
+#, fuzzy
+msgid "Timeline"
+msgstr "Linha do Tempo"
+
+#: library/theme/vc_templates.php:947
+#, fuzzy
+msgid "Timeline block per page"
+msgstr "Bloco de linha do tempo por página"
+
+#: library/theme/vc_templates.php:950
+#, fuzzy
+msgid "If empty, display all blocks"
+msgstr "Se estiver vazio, exibir todos os blocos"
+
+#: library/theme/vc_templates.php:962
+#, fuzzy
+msgid "Timeline option"
+msgstr "Opção de linha de tempo"
+
+#: library/theme/vc_templates.php:970
+#, fuzzy
+msgid "Position On Timeline"
+msgstr "Posição na linha do tempo"
+
+#: library/theme/vc_templates.php:976
+#, fuzzy
+msgid "Left/right position on timeline"
+msgstr "Posição esquerda/direita na linha do tempo"
+
+#: library/theme/vc_templates.php:986 library/theme/vc_templates.php:1204
+#, fuzzy
+msgid "Date"
+msgstr "Data"
+
+#: library/theme/vc_templates.php:988
+#, fuzzy
+msgid "Option date"
+msgstr "Data Opção:"
+
+#: library/theme/vc_templates.php:994
+#, fuzzy
+msgid "Option title"
+msgstr "Opção de Título"
+
+#: library/theme/vc_templates.php:1022
+#, fuzzy
+msgid "Detailed Analytics"
+msgstr "Análise detalhada"
+
+#: library/theme/vc_templates.php:1042
+#, fuzzy
+msgid "Analytic Option"
+msgstr "Opção analítica"
+
+#: library/theme/vc_templates.php:1058 library/theme/vc_templates.php:1880
+#, fuzzy
+msgid "Under Title."
+msgstr "Sob o Título"
+
+#: library/theme/vc_templates.php:1062
+#, fuzzy
+msgid "Horizontal Item Position"
+msgstr "Posição horizontal do Item"
+
+#: library/theme/vc_templates.php:1068
+#, fuzzy
+msgid "Left or right"
+msgstr "Esquerda ou Direita?"
+
+#: library/theme/vc_templates.php:1072
+#, fuzzy
+msgid "Vertical Item Position"
+msgstr "Posição vertical do Item"
+
+#: library/theme/vc_templates.php:1076
+#, fuzzy
+msgid "Middle"
+msgstr "Meio"
+
+#: library/theme/vc_templates.php:1079
+#, fuzzy
+msgid "Top, middle or bottom"
+msgstr "Superior; centro; inferior"
+
+#: library/theme/vc_templates.php:1086 library/theme/vc_templates.php:1741
+#: library/theme/vc_templates.php:1786
+#, fuzzy
+msgid "Info"
+msgstr "Desative a informação do autor."
+
+#: library/theme/vc_templates.php:1088
+#, fuzzy
+msgid "Enter information."
+msgstr "Informação."
+
+#: library/theme/vc_templates.php:1104
+#, fuzzy
+msgid "Icon Step"
+msgstr "Passo de ícone"
+
+#: library/theme/vc_templates.php:1113 library/theme/vc_templates.php:1736
+#: library/theme/vc_templates.php:1781
+#, fuzzy
+msgid "I am title"
+msgstr "Eu sou o título"
+
+#: library/theme/vc_templates.php:1114 library/theme/vc_templates.php:1737
+#: library/theme/vc_templates.php:1782
+#, fuzzy
+msgid "Add Title "
+msgstr "Adicionar Título"
+
+#: library/theme/vc_templates.php:1118
+#, fuzzy
+msgid "Step"
+msgstr "Etapa"
+
+#: library/theme/vc_templates.php:1121
+#, fuzzy
+msgid "Use step number."
+msgstr "Use o número da etapa."
+
+#: library/theme/vc_templates.php:1129 library/theme/vc_templates.php:1293
+#, fuzzy
+msgid "Color"
+msgstr "Cor"
+
+#: library/theme/vc_templates.php:1147
+#, fuzzy
+msgid "Price"
+msgstr "Preço"
+
+#: library/theme/vc_templates.php:1163
+#, fuzzy
+msgid "Price Table"
+msgstr "Tabela de preços"
+
+#: library/theme/vc_templates.php:1171
+#, fuzzy
+msgid "Type Price"
+msgstr "Preço do Tipo"
+
+#: library/theme/vc_templates.php:1177
+#, fuzzy
+msgid "Simple or popular"
+msgstr "Simples ou popular"
+
+#: library/theme/vc_templates.php:1181
+#, fuzzy
+msgid "Width Table Price"
+msgstr "Preço de tabela de largura"
+
+#: library/theme/vc_templates.php:1184
+#, fuzzy
+msgid "1/3"
+msgstr "1/3"
+
+#: library/theme/vc_templates.php:1185
+#, fuzzy
+msgid "1/4"
+msgstr "1/4"
+
+#: library/theme/vc_templates.php:1187
+#, fuzzy
+msgid "1/3 or 1/4"
+msgstr "1/3 ou 1/4"
+
+#: library/theme/vc_templates.php:1191
+#, fuzzy
+msgid "Price Title"
+msgstr "Título do Preço"
+
+#: library/theme/vc_templates.php:1193
+#, fuzzy
+msgid "Price title."
+msgstr "Título do preço"
+
+#: library/theme/vc_templates.php:1194
+#, fuzzy
+msgid "Basic"
+msgstr "Básico"
+
+#: library/theme/vc_templates.php:1200
+#, fuzzy
+msgid "$150"
+msgstr "USD $150"
+
+#: library/theme/vc_templates.php:1206
+#, fuzzy
+msgid "per month"
+msgstr "por mês"
+
+#: library/theme/vc_templates.php:1210
+#, fuzzy
+msgid "Button Text"
+msgstr "Botão de texto"
+
+#: library/theme/vc_templates.php:1212
+#, fuzzy
+msgid "Button text."
+msgstr "Texto do Botão"
+
+#: library/theme/vc_templates.php:1213
+#, fuzzy
+msgid "Sign up now"
+msgstr "Cadastre-se Agora"
+
+#: library/theme/vc_templates.php:1219 library/theme/vc_templates.php:1823
+#, fuzzy
+msgid "Button link."
+msgstr "Link do Botão."
+
+#: library/theme/vc_templates.php:1226
+#, fuzzy
+msgid "<ul><li>1</li><li>2</li><li class=\"inactive\">3</li></ul>"
+msgstr "<ul><li>1</li><li>2</li><li class=\"inactive\">3</li></ul>"
+
+#: library/theme/vc_templates.php:1247
+#, fuzzy
+msgid "Social Buttons"
+msgstr "Botões Sociais"
+
+#: library/theme/vc_templates.php:1263
+#, fuzzy
+msgid "Color Social Button"
+msgstr "Social botão cor"
+
+#: library/theme/vc_templates.php:1274 library/theme/vc_templates.php:1329
+#, fuzzy
+msgid "Social title."
+msgstr "Título Social"
+
+#: library/theme/vc_templates.php:1280 library/theme/vc_templates.php:1352
+#, fuzzy
+msgid "Social link."
+msgstr "Social link."
+
+#: library/theme/vc_templates.php:1285
+#, fuzzy
+msgid "Background Color"
+msgstr "Cor do fundo"
+
+#: library/theme/vc_templates.php:1288
+#, fuzzy
+msgid "Select bg color."
+msgstr "Selecione a cor de bg."
+
+#: library/theme/vc_templates.php:1296
+#, fuzzy
+msgid "Select text color."
+msgstr "Selecione a cor do texto."
+
+#: library/theme/vc_templates.php:1317
+#, fuzzy
+msgid "Social Icons"
+msgstr "Ícones Sociais"
+
+#: library/theme/vc_templates.php:1330
+#, fuzzy
+msgid "We are social 24/7 - Get in touch"
+msgstr "Nós somos social 24/7 - Get em contato"
+
+#: library/theme/vc_templates.php:1341
+#, fuzzy
+msgid "Social Button"
+msgstr "Botão de redes sociais"
+
+#: library/theme/vc_templates.php:1376
+#, fuzzy
+msgid "Brands"
+msgstr "Marcas"
+
+#: library/theme/vc_templates.php:1392
+#, fuzzy
+msgid "Brand"
+msgstr "Marca"
+
+#: library/theme/vc_templates.php:1403 library/theme/vc_templates.php:1920
+#, fuzzy
+msgid "Select image from media library."
+msgstr "Selecione a imagem da biblioteca de mídia."
+
+#: library/theme/vc_templates.php:1409
+#, fuzzy
+msgid "https://wordpress.com"
+msgstr "https://WordPress.com"
+
+#: library/theme/vc_templates.php:1410
+#, fuzzy
+msgid "Brand link."
+msgstr "Link da Marca"
+
+#: library/theme/vc_templates.php:1439
+#, fuzzy
+msgid "Show filter"
+msgstr "Mostrar Filtro"
+
+#: library/theme/vc_templates.php:1449 library/theme/vc_templates.php:1542
+#, fuzzy
+msgid "Categories"
+msgstr "Categorias"
+
+#: library/theme/vc_templates.php:1452 library/theme/vc_templates.php:1545
+#, fuzzy
+msgid "Select categories to show their portfolio."
+msgstr "Selecione as categorias para mostrar sua carteira."
+
+#: library/theme/vc_templates.php:1463
+#, fuzzy
+msgid "2 Columns"
+msgstr "2 Colunas"
+
+#: library/theme/vc_templates.php:1464
+#, fuzzy
+msgid "3 Columns"
+msgstr "3 Colunas"
+
+#: library/theme/vc_templates.php:1465
+#, fuzzy
+msgid "4 Columns"
+msgstr "4 Colunas"
+
+#: library/theme/vc_templates.php:1470 library/theme/vc_templates.php:1549
+#, fuzzy
+msgid "Items Count"
+msgstr "Conta dos itens"
+
+#: library/theme/vc_templates.php:1472
+#, fuzzy
+msgid ""
+"Select number portfolio works to show per page. Leave empty to show all "
+"warks."
+msgstr ""
+"Selecione número portfólio trabalha para mostrar por página. Deixe em branco "
+"Mostrar todas warks."
+
+#: library/theme/vc_templates.php:1489
+#, fuzzy
+msgid "Show Load more button"
+msgstr "Exibir | Botão Carregar Mais"
+
+#: library/theme/vc_templates.php:1499
+#, fuzzy
+msgid "Show or not button Load more"
+msgstr "Mostrar ou não botão carga mais"
+
+#: library/theme/vc_templates.php:1503 library/theme/vc_templates.php:1815
+#, fuzzy
+msgid "Button text"
+msgstr "Texto do Botão"
+
+#: library/theme/vc_templates.php:1514 single-portfolio.php:116
+#: single-portfolio.php:267
+#, fuzzy
+msgid "Description"
+msgstr "Descrição"
+
+#: library/theme/vc_templates.php:1521
+#, fuzzy
+msgid "ID"
+msgstr "ID"
+
+#: library/theme/vc_templates.php:1535
+#, fuzzy
+msgid "Portfolio Latest Works"
+msgstr "Portfólio de trabalhos mais recentes"
+
+#: library/theme/vc_templates.php:1551
+#, fuzzy
+msgid "Select number portfolio works to show. Leave empty to show all warks."
+msgstr ""
+"Selecione número portfólio trabalhos para mostrar. Deixe em branco Mostrar "
+"todas warks."
+
+#: library/theme/vc_templates.php:1572
+#, fuzzy
+msgid "Contact Form"
+msgstr "Formulários de Contato"
+
+#: library/theme/vc_templates.php:1575
+#, fuzzy
+msgid "Select contact form to show"
+msgstr "Selecione o formulário de contato para mostrar"
+
+#: library/theme/vc_templates.php:1591
+#, fuzzy
+msgid "Mailchimp Block"
+msgstr "MailChimp bloco"
+
+#: library/theme/vc_templates.php:1598
+#, fuzzy
+msgid "Mailchimp Form"
+msgstr "Formulário Mailchimp"
+
+#: library/theme/vc_templates.php:1601
+#, fuzzy
+msgid "Select Mailchimp Form to show"
+msgstr "Selecione formulário Mailchimp para mostrar"
+
+#: library/theme/vc_templates.php:1615
+#, fuzzy
+msgid "Flickr"
+msgstr "Flickr"
+
+#: library/theme/vc_templates.php:1633
+#, fuzzy
+msgid "Flickr ID"
+msgstr "ID do Flickr"
+
+#: library/theme/vc_templates.php:1636
+#, fuzzy
+msgid "Get your flickr ID from: //idgettr.com/"
+msgstr "Obter seu flickr ID de: //idgettr.com/"
+
+#: library/theme/vc_templates.php:1642
+#, fuzzy
+msgid "Number of photos"
+msgstr "Número de fotos"
+
+#: library/theme/vc_templates.php:1645
+#, fuzzy
+msgid "Default 6."
+msgstr "Padrão 6."
+
+#: library/theme/vc_templates.php:1659
+#, fuzzy
+msgid "Tabs"
+msgstr "Tabs"
+
+#: library/theme/vc_templates.php:1673
+#, fuzzy
+msgid "Tab"
+msgstr "Tab"
+
+#: library/theme/vc_templates.php:1684
+#, fuzzy
+msgid "Tab title."
+msgstr "Título da guia."
+
+#: library/theme/vc_templates.php:1688
+#, fuzzy
+msgid "Tab ID"
+msgstr "Id da Guia"
+
+#: library/theme/vc_templates.php:1693
+#, fuzzy
+msgid "Content Image"
+msgstr "Imagem do conteúdo"
+
+#: library/theme/vc_templates.php:1727
+#, fuzzy
+msgid "Info Icon Box"
+msgstr "Caixa de ícone de informação"
+
+#: library/theme/vc_templates.php:1743 library/theme/vc_templates.php:1788
+#, fuzzy
+msgid "Add Info"
+msgstr "Adicionar informação"
+
+#: library/theme/vc_templates.php:1751
+#, fuzzy
+msgid "Underline"
+msgstr "Sublinhado"
+
+#: library/theme/vc_templates.php:1753
+#, fuzzy
+msgid "Select type icon box"
+msgstr "Selecione a caixa tipo de ícone"
+
+#: library/theme/vc_templates.php:1772
+#, fuzzy
+msgid "Big Icon Box"
+msgstr "Caixa grande ícone"
+
+#: library/theme/vc_templates.php:1806
+#, fuzzy
+msgid "Button"
+msgstr "Botão"
+
+#: library/theme/vc_templates.php:1817
+#, fuzzy
+msgid "Enter Button text"
+msgstr "Inserir o texto do botão"
+
+#: library/theme/vc_templates.php:1827 library/theme/vc_templates.php:1839
+#, fuzzy
+msgid "Button Type"
+msgstr "Tipo de botão"
+
+#: library/theme/vc_templates.php:1830
+#, fuzzy
+msgid "Default (bg white)"
+msgstr "Padrão (branco bg)"
+
+#: library/theme/vc_templates.php:1831
+#, fuzzy
+msgid "Info (bg transparent)"
+msgstr "Informação (bg transparente)"
+
+#: library/theme/vc_templates.php:1832
+#, fuzzy
+msgid "Primary (bg main color)"
+msgstr "Primária (cor principal do bg)"
+
+#: library/theme/vc_templates.php:1833
+#, fuzzy
+msgid "Warning (bg white color - hover main color)"
+msgstr "Aviso (bg branco cor - foco principal)"
+
+#: library/theme/vc_templates.php:1835 library/theme/vc_templates.php:1847
+#, fuzzy
+msgid "Select button type"
+msgstr "Selecione o tipo do botão."
+
+#: library/theme/vc_templates.php:1842
+#, fuzzy
+msgid "Inline"
+msgstr "Em linha"
+
+#: library/theme/vc_templates.php:1884
+#, fuzzy
+msgid "YouTube link"
+msgstr "YouTube link"
+
+#: library/theme/vc_templates.php:1887
+#, fuzzy
+msgid "Use YouTube link."
+msgstr "Use o link do YouTube."
+
+#: library/theme/vc_templates.php:1910
+#, fuzzy
+msgid "Google Map"
+msgstr "Google Map"
+
+#: library/theme/vc_templates.php:1917
+#, fuzzy
+msgid "Marker Image"
+msgstr "Imagem do Marcador"
+
+#: library/theme/vc_templates.php:1925
+#, fuzzy
+msgid "Address"
+msgstr "Endereço"
+
+#: library/theme/vc_templates.php:1928
+#, fuzzy
+msgid "Example: San Diego, CA"
+msgstr "Exemplo: San Diego, CA"
+
+#: library/theme/vc_templates.php:1933
+#, fuzzy
+msgid "Map Width"
+msgstr "Largura do Mapa"
+
+#: library/theme/vc_templates.php:1936
+#, fuzzy
+msgid "Default 100%"
+msgstr "Padrão - 100%"
+
+#: library/theme/vc_templates.php:1941
+#, fuzzy
+msgid "Map Height"
+msgstr "Altura do mapa"
+
+#: library/theme/vc_templates.php:1944
+#, fuzzy
+msgid "Default 300px"
+msgstr "300px padrão"
+
+#: library/theme/vc_templates.php:1949
+#, fuzzy
+msgid "Zoom"
+msgstr "Zoom"
+
+#: library/theme/vc_templates.php:1952
+#, fuzzy
+msgid "Zoom 0-20. Default 12."
+msgstr "Zoom de 0-20. 12 como padrão."
+
+#: library/theme/vc_templates.php:1956
+#, fuzzy
+msgid "Scroll Wheel"
+msgstr "Barra de rolagem"
+
+#: library/theme/vc_templates.php:1962
+#, fuzzy
+msgid "Zoom map with scroll"
+msgstr "Zoom mapa com rolagem"
+
+#: one-click-demo-install/importer/parsers.php:42
+#: one-click-demo-install/importer/parsers.php:63
+#, fuzzy
+msgid "There was an error when reading this WXR file"
+msgstr "Ocorreu um erro ao ler este arquivo WXR"
+
+#: one-click-demo-install/importer/parsers.php:43
+#, fuzzy
+msgid ""
+"Details are shown above. The importer will now try again with a different "
+"parser..."
+msgstr ""
+"Os detalhes são mostrados acima. O importador tentará novamente com um "
+"analisador diferente..."
+
+#: one-click-demo-install/importer/parsers.php:67
+#: one-click-demo-install/importer/parsers.php:72
+#: one-click-demo-install/importer/parsers.php:262
+#: one-click-demo-install/importer/parsers.php:447
+#, fuzzy
+msgid ""
+"This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr ""
+"Isso não parece ser um arquivo WXR, número de versão WXR ausente ou inválido"
+
+#: one-click-demo-install/importer/radium-importer.php:135
+#: one-click-demo-install/importer/radium-importer.php:234
+#, fuzzy
+msgid "Import Demo Data"
+msgstr "Importar dados de demonstração"
+
+#: one-click-demo-install/importer/radium-importer.php:210
+#, fuzzy
+msgid "Demo already imported"
+msgstr "Demo já importado"
+
+#: one-click-demo-install/importer/radium-importer.php:230
+#, fuzzy
+msgid "Import Again"
+msgstr "Importar novamente"
+
+#: one-click-demo-install/importer/radium-importer.php:441
+#, fuzzy
+msgid "Theme options Import file could not be found. Please try again."
+msgstr ""
+"Opções de tema O arquivo de importação não foi encontrado. Por favor, tente "
+"novamente."
+
+#: one-click-demo-install/importer/radium-importer.php:499
+#, fuzzy
+msgid "Widget Import file could not be found. Please try again."
+msgstr ""
+"O arquivo de importação de widgets não pôde ser encontrado. Por favor, tente "
+"novamente."
+
+#: one-click-demo-install/importer/radium-importer.php:572
+#, fuzzy
+msgid "Sidebar does not exist in theme (using Inactive)"
+msgstr "Sidebar não existe no tema (usando Inativo)"
+
+#: one-click-demo-install/importer/radium-importer.php:594
+#, fuzzy
+msgid "Site does not support widget"
+msgstr "O site não suporta widget"
+
+#: one-click-demo-install/importer/radium-importer.php:617
+#, fuzzy
+msgid "Widget already exists"
+msgstr "O Widget já existe"
+
+#: one-click-demo-install/importer/radium-importer.php:666
+#, fuzzy
+msgid "Imported"
+msgstr "Importado"
+
+#: one-click-demo-install/importer/radium-importer.php:669
+#, fuzzy
+msgid "Imported to Inactive"
+msgstr "Importado para Inativo"
+
+#: one-click-demo-install/importer/radium-importer.php:676
+#, fuzzy
+msgid "No Title"
+msgstr "Sem Título"
+
+#: one-click-demo-install/importer/wordpress-importer.php:134
+#: one-click-demo-install/importer/wordpress-importer.php:143
+#: one-click-demo-install/importer/wordpress-importer.php:194
+#: one-click-demo-install/importer/wordpress-importer.php:198
+#: one-click-demo-install/importer/wordpress-importer.php:207
+#, fuzzy
+msgid "Sorry, there has been an error."
+msgstr "Desculpe, ocorreu um erro."
+
+#: one-click-demo-install/importer/wordpress-importer.php:135
+#, fuzzy
+msgid "The file does not exist, please try again."
+msgstr "O arquivo não existe, tente novamente."
+
+#: one-click-demo-install/importer/wordpress-importer.php:178
+#, fuzzy
+msgid "All done."
+msgstr "Tudo feito."
+
+#: one-click-demo-install/importer/wordpress-importer.php:178
+#, fuzzy
+msgid "Have fun!"
+msgstr "Diverta-se!"
+
+#: one-click-demo-install/importer/wordpress-importer.php:179
+#, fuzzy
+msgid "Remember to update the passwords and roles of imported users."
+msgstr "Lembre-se de atualizar as senhas e os papéis dos usuários importados."
+
+#: one-click-demo-install/importer/wordpress-importer.php:199
+#, fuzzy, php-format
+msgid ""
+"The export file could not be found at <code>%s</code>. It is likely that "
+"this was caused by a permissions problem."
+msgstr ""
+"O arquivo de exportação não pôde ser encontrado em <code>%s</code>. É "
+"provável que isso tenha sido causado por um problema de permissões."
+
+#: one-click-demo-install/importer/wordpress-importer.php:215
+#, fuzzy, php-format
+msgid ""
+"This WXR file (version %s) may not be supported by this version of the "
+"importer. Please consider updating."
+msgstr ""
+"Este arquivo WXR (versão %s) pode não ser suportado por esta versão do "
+"importador. Considere a atualização."
+
+#: one-click-demo-install/importer/wordpress-importer.php:240
+#, fuzzy, php-format
+msgid ""
+"Failed to import author %s. Their posts will be attributed to the current "
+"user."
+msgstr ""
+"Falha ao importar o autor %s. Suas postagens serão atribuídas ao usuário "
+"atual."
+
+#: one-click-demo-install/importer/wordpress-importer.php:266
+#, fuzzy
+msgid "Assign Authors"
+msgstr "Atribuir Autores"
+
+#: one-click-demo-install/importer/wordpress-importer.php:267
+#, fuzzy
+msgid ""
+"To make it easier for you to edit and save the imported content, you may "
+"want to reassign the author of the imported item to an existing user of this "
+"site. For example, you may want to import all the entries as <code>admin</"
+"code>s entries."
+msgstr ""
+"Para tornar mais fácil para você editar e salvar o conteúdo importado, você "
+"pode reatribuir o autor do item importado a um usuário existente deste site. "
+"Por exemplo, você pode querer importar todas as entradas como entradas de "
+"<code> admin </code> s."
+
+#: one-click-demo-install/importer/wordpress-importer.php:269
+#, fuzzy, php-format
+msgid ""
+"If a new user is created by WordPress, a new password will be randomly "
+"generated and the new user&#8217;s role will be set as %s. Manually changing "
+"the new user&#8217;s details will be necessary."
+msgstr ""
+"Se um novo usuário for criado pelo WordPress, uma nova senha será gerada "
+"aleatoriamente e a função do novo usuário será definida como %s. É "
+"necessário alterar manualmente os detalhes do novo usuário."
+
+#: one-click-demo-install/importer/wordpress-importer.php:279
+#, fuzzy
+msgid "Import Attachments"
+msgstr "Importar Anexos"
+
+#: one-click-demo-install/importer/wordpress-importer.php:282
+#, fuzzy
+msgid "Download and import file attachments"
+msgstr "Baixe e importe arquivos anexos"
+
+#: one-click-demo-install/importer/wordpress-importer.php:286
+#, fuzzy
+msgid "Submit"
+msgstr "Enviar"
+
+#: one-click-demo-install/importer/wordpress-importer.php:299
+#, fuzzy
+msgid "Import author:"
+msgstr "Importar autor:"
+
+#: one-click-demo-install/importer/wordpress-importer.php:310
+#, fuzzy
+msgid "or create new user with login name:"
+msgstr "ou criar novo usuário com o nome de login:"
+
+#: one-click-demo-install/importer/wordpress-importer.php:313
+#, fuzzy
+msgid "as a new user:"
+msgstr "como um novo usuário:"
+
+#: one-click-demo-install/importer/wordpress-importer.php:321
+#, fuzzy
+msgid "assign posts to an existing user:"
+msgstr "atribuir artigos a um usuário existente:"
+
+#: one-click-demo-install/importer/wordpress-importer.php:323
+#, fuzzy
+msgid "or assign posts to an existing user:"
+msgstr "ou atribuir postagens a um usuário existente:"
+
+#: one-click-demo-install/importer/wordpress-importer.php:324
+#, fuzzy
+msgid "- Select -"
+msgstr "- Selecione -"
+
+#: one-click-demo-install/importer/wordpress-importer.php:374
+#, fuzzy, php-format
+msgid ""
+"Failed to create new user for %s. Their posts will be attributed to the "
+"current user."
+msgstr ""
+"Falha ao criar um novo usuário para %s. Suas postagens serão atribuídas ao "
+"usuário atual."
+
+#: one-click-demo-install/importer/wordpress-importer.php:423
+#, fuzzy, php-format
+msgid "Failed to import category %s"
+msgstr "Falha ao importar categoria %s"
+
+#: one-click-demo-install/importer/wordpress-importer.php:461
+#, fuzzy, php-format
+msgid "Failed to import post tag %s"
+msgstr "Falha ao importar post tag %s"
+
+#: one-click-demo-install/importer/wordpress-importer.php:505
+#: one-click-demo-install/importer/wordpress-importer.php:631
+#, fuzzy, php-format
+msgid "Failed to import %s %s"
+msgstr "Falha ao importar %s %s"
+
+#: one-click-demo-install/importer/wordpress-importer.php:527
+#, fuzzy, php-format
+msgid "Failed to import &#8220;%s&#8221;: Invalid post type %s"
+msgstr "Falha ao importar &#8220;%s&#8221;: Tipo de publicação inválido %s"
+
+#: one-click-demo-install/importer/wordpress-importer.php:548
+#, fuzzy, php-format
+msgid "%s &#8220;%s&#8221; already exists."
+msgstr "%s &#8220;%s&#8221; já existe."
+
+#: one-click-demo-install/importer/wordpress-importer.php:603
+#, fuzzy, php-format
+msgid "Failed to import %s &#8220;%s&#8221;"
+msgstr "Falha ao importar  %s &#8220;%s&#8221;"
+
+#: one-click-demo-install/importer/wordpress-importer.php:749
+#, fuzzy
+msgid "Menu item skipped due to missing menu slug"
+msgstr "Item de menu ignorado devido à falta de um slug"
+
+#: one-click-demo-install/importer/wordpress-importer.php:756
+#, fuzzy, php-format
+msgid "Menu item skipped due to invalid menu slug: %s"
+msgstr "Item de menu ignorado devido o slug do menu inválido: %s"
+
+#: one-click-demo-install/importer/wordpress-importer.php:819
+#, fuzzy
+msgid "Fetching attachments is not enabled"
+msgstr "A busca de anexos não está habilitada"
+
+#: one-click-demo-install/importer/wordpress-importer.php:832
+#, fuzzy
+msgid "Invalid file type"
+msgstr "Tipo de arquivo inválido"
+
+#: one-click-demo-install/importer/wordpress-importer.php:890
+#, fuzzy, php-format
+msgid "Remote server returned %1$d %2$s for %3$s"
+msgstr "Servidor remoto retornado %1$d %2$s por %3$s"
+
+#: one-click-demo-install/importer/wordpress-importer.php:903
+#, fuzzy
+msgid "Remote file is incorrect size"
+msgstr "O tamanho do arquivo remoto está incorreto"
+
+#: one-click-demo-install/importer/wordpress-importer.php:908
+#, fuzzy
+msgid "Zero size file downloaded"
+msgstr "Arquivo de tamanho zero baixado"
+
+#: one-click-demo-install/importer/wordpress-importer.php:914
+#, fuzzy, php-format
+msgid "Remote file is too large, limit is %s"
+msgstr "O arquivo remoto é muito grande, o limite é %s"
+
+#: one-click-demo-install/importer/wordpress-importer.php:1013
+#, fuzzy
+msgid "Import WordPress"
+msgstr "Importar WordPress"
+
+#: one-click-demo-install/importer/wordpress-importer.php:1020
+#, fuzzy, php-format
+msgid ""
+"A new version of this importer is available. Please update to version %s to "
+"ensure compatibility with newer export files."
+msgstr ""
+"Uma nova versão deste importador está disponível. Por favor, atualize para a "
+"versão %s para garantir a compatibilidade com novos arquivos de exportação."
+
+#: one-click-demo-install/importer/wordpress-importer.php:1035
+#, fuzzy
+msgid ""
+"Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import "
+"the posts, pages, comments, custom fields, categories, and tags into this "
+"site."
+msgstr ""
+"Oi! Carregue o seu arquivo WordPress eXtended RSS (WXR) e&#8217;  "
+"importaremos as postagens, páginas, comentários, campos, categorias e tags "
+"personalizados neste site."
+
+#: one-click-demo-install/importer/wordpress-importer.php:1036
+#, fuzzy
+msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
+msgstr ""
+"Escolha um arquivo WXR (.xml) para carregar e, em seguida, clique em "
+"Carregar arquivo e importar."
+
+#: searchform.php:7
+#, fuzzy
+msgid "Search..."
+msgstr "Pesquisar…"
+
+#: single-portfolio.php:119 single-portfolio.php:270
+#, fuzzy
+msgid "View project"
+msgstr "Exibir projeto"
+
+#: single-portfolio.php:129 single-portfolio.php:274
+#, fuzzy
+msgid "Summary"
+msgstr "Resumo das Atividades"
+
+#: single-portfolio.php:187 single-portfolio.php:332
+#, fuzzy
+msgid "Share"
+msgstr "Compartilhar"
+
+#: templates/header/header_title.php:29
+#, fuzzy
+msgid "404"
+msgstr "404"
+
+#: templates/post-parts/content-none.php:11
+#, fuzzy
+msgid "Nothing Found"
+msgstr "Nada encontrado"
+
+#: templates/post-parts/content-none.php:16
+#, fuzzy
+msgid "Ready to publish your first post?"
+msgstr "Pronto para publicar seu primeiro post?"
+
+#: templates/post-parts/content-none.php:17
+#, fuzzy
+msgid "Get started here"
+msgstr "Comece aqui"
+
+#: templates/post-parts/content-none.php:21
+#, fuzzy
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Desculpe, não encontramos nada relacionado à sua busca. Por favor, tente uma "
+"nova busca com palavras diferentes ou entre em contato conosco! :)"
+
+#: templates/post-parts/content-none.php:26
+#, fuzzy
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+"Parece que não podemos encontrar o que você está procurando. Talvez a busca "
+"possa ajudar."
+
+#: templates/post-parts/content-single.php:40
+#: templates/post-parts/content.php:50
+#, fuzzy
+msgid "Post a Comment"
+msgstr "Postar um Comentário"
+
+#: templates/post-parts/content-single.php:40
+#: templates/post-parts/content.php:50
+#, fuzzy
+msgid "1 comment"
+msgstr "1 Comentário"
+
+#: templates/post-parts/content-single.php:40
+#: templates/post-parts/content.php:50
+#, fuzzy, php-format
+msgid "% comments"
+msgstr "% comentários"
+
+#: vc_templates/box_twitter.php:83
+#, fuzzy, php-format
+msgid "%s ago"
+msgstr "%s atrás"
+
+#: vc_templates/box_twitter.php:85
+#, fuzzy
+msgid "Y/m/d"
+msgstr "Y/m/d"
+
+#: vc_templates/box_twitter.php:99
+#, fuzzy
+msgid "Sorry , Twitter seems down or responds slowly."
+msgstr "Desculpa, o Twitter parece baixo ou responde lentamente."
+
+#: vc_templates/box_twitter.php:103
+#, fuzzy
+msgid "You need to Setup Twitter API OAuth settings first"
+msgstr ""
+"Você precisa de configurações de configuração de API Twitter OAuth primeiro"
+
+#: vc_templates/section_portfolio.php:37
+#: vc_templates/section_portfolio_latest_works.php:22
+#, fuzzy
+msgid ""
+"No categories selected. To fix this, please login to your WP Admin area and "
+"set the categories you want to show by editing this shortcode and setting "
+"one or more categories in the multi checkbox field \"Categories\"."
+msgstr ""
+"Nenhuma categoria foi selecionada. Para corrigir isso, faça o login na sua "
+"área de administração e defina\n"
+"\t\t\t\t\t\n"
+"As categorias que você deseja mostrar editando, esta página e definindo uma "
+"ou mais categorias \n"
+"\t\t\t\t\t no campo de caixa de seleção múltiplas \"Categorias de Carterios"
+"\"."
+
+#: vc_templates/section_portfolio.php:89
+#, fuzzy
+msgid "All"
+msgstr "Todo"
+
+#: woocommerce/product-searchform.php:27
+#, fuzzy
+msgctxt "placeholder"
+msgid "Search Products&hellip;"
+msgstr "Pesquisar produtos&hellip;"
+
+#: woocommerce/product-searchform.php:27
+#, fuzzy
+msgctxt "label"
+msgid "Search for:"
+msgstr "Procurar por:"
