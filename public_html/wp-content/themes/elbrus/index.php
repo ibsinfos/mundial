@@ -72,4 +72,6 @@ if (! is_active_sidebar ( $elbrus_sidebar ))
 	</div>
 </section>
 
+
+
 <?php get_footer(); ?>
