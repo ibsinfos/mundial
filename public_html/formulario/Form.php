@@ -14,10 +14,6 @@
 <link type="text/css" rel="stylesheet" href="css/stilo.css"/>
 
 
-<script src="js/imageinfo.js" type="text/javascript"></script>
-<script src="js/prototype.forms.js" type="text/javascript"></script>
-<script src="js/jotform.forms.js" type="text/javascript"></script>
-<script src="js/script.js" type="text/javascript"></script>
 
 </head>
 <body>
@@ -1430,6 +1426,10 @@
         </li>
       </ul>
  
+<script src="js/imageinfo.js" type="text/javascript"></script>
+<script src="js/prototype.forms.js" type="text/javascript"></script>
+<script src="js/jotform.forms.js" type="text/javascript"></script>
+<script src="js/script.js" type="text/javascript"></script>
   
   <script>
   JotForm.showJotFormPowered = "new_footer";

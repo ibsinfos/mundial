@@ -12,9 +12,7 @@ scripts supeitos
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-javascript	
-Reduzir http://mundiallogisticsgroup.com.br/wp-content/themes/elbrus/js/custom.js pouparia 1,3 KiB (29% de redução) após a compactação
-Reduzir http://mundiallogisticsgroup.com.br/…ct-form-7/includes/js/scripts.js?ver=4.8 pouparia 618 B (17% de redução) após a compactação.
+
 Css
 Reduzir http://mundiallogisticsgroup.com.br/…s/assets/prettyphoto/css/prettyPhoto.css pouparia 620 B (19% de redução) após a compactação.
 
@@ -33,8 +31,7 @@ Mobile
 javascript
 https://code.jquery.com/jquery-3.2.1.min.js
 
-Css
-Reduzir http://mundiallogisticsgroup.com.br/…s/assets/prettyphoto/css/prettyPhoto.css pouparia 620 B (19% de redução) após a compactação.
+
 
 IMAGENS
 A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…ntent/uploads/2017/08/mundial_branco.png poderiam poupar 2,1 KiB (redução de 28%).
@@ -47,3 +44,10 @@ A compactação e o redimensionamento de http://mundiallogistics.institucional.w
 A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…/uploads/2017/08/icone-express_cinza.png poderiam poupar 583 B (redução de 19%).
 
 Resolvidos
+javascript	
+Reduzir http://mundiallogisticsgroup.com.br/wp-content/themes/elbrus/js/custom.js pouparia 1,3 KiB (29% de redução) apóa compactação
+Reduzir http://mundiallogisticsgroup.com.br/…ct-form-7/includes/js/scripts.js?ver=4.8 pouparia 618 B (17% de redução) após a compactação.
+
+
+Css
+Reduzir http://mundiallogisticsgroup.com.br/…s/assets/prettyphoto/css/prettyPhoto.css pouparia 620 B (19% de redução) após a compactação.
