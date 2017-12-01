@@ -6,12 +6,7 @@
 
 
 <title>Formulário</title>
-<link type="text/css" rel="stylesheet" href="css/formCss.css" />
-<link type="text/css" rel="stylesheet" href="css/jottheme.css" />
-<link type="text/css" rel="stylesheet" href="css/printForm.css?" />
-<link type="text/css" rel="stylesheet" href="css/nova.css" />
-<link type="text/css" rel="stylesheet" href="css/stilo1.css"/>
-<link type="text/css" rel="stylesheet" href="css/stilo.css"/>
+
 
 
 
@@ -1426,6 +1421,12 @@
         </li>
       </ul>
  
+<link type="text/css" rel="stylesheet" href="css/formCss.css" />
+<link type="text/css" rel="stylesheet" href="css/jottheme.css" />
+<link type="text/css" rel="stylesheet" href="css/printForm.css?" />
+<link type="text/css" rel="stylesheet" href="css/nova.css" />
+<link type="text/css" rel="stylesheet" href="css/stilo1.css"/>
+<link type="text/css" rel="stylesheet" href="css/stilo.css"/>
 <script src="js/imageinfo.js" type="text/javascript"></script>
 <script src="js/prototype.forms.js" type="text/javascript"></script>
 <script src="js/jotform.forms.js" type="text/javascript"></script>

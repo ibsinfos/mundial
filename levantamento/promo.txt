@@ -1,0 +1,110 @@
+http://mundiallogisticsgroup.com.br/mundial-promo/
+A resolverr :
+
+DESKTOP
+
+mover script para o fim da pagina 
+
+scripts supeitos
+<meta http-equiv="Refresh" content="1800"> 
+
+<!--[if lt IE 9]> 
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+	
+
+Carregameto
+	
+javascript
+https://code.jquery.com/jquery-3.2.1.min.js
+http://mundiallogisticsgroup.com.br/…-includes/js/jquery/jquery.js?ver=1.12.4
+http://mundiallogisticsgroup.com.br/…s/jquery/jquery-migrate.min.js?ver=1.4.1
+http://mundiallogisticsgroup.com.br/…uery.themepunch.tools.min.js?ver=5.4.5.1
+http://mundiallogisticsgroup.com.br/…themepunch.revolution.min.js?ver=5.4.5.1
+
+CSS	
+http://mundiallogisticsgroup.com.br/…loader/fonts/elegant/style.css?ver=4.7.8
+http://mundiallogisticsgroup.com.br/…er/fonts/fontawesome/style.css?ver=4.7.8
+http://mundiallogisticsgroup.com.br/…loader/fonts/icomoon/style.css?ver=4.7.8
+http://mundiallogisticsgroup.com.br/…-loader/fonts/simple/style.css?ver=4.7.8
+http://mundiallogisticsgroup.com.br/…ader/fonts/strokegap/style.css?ver=4.7.8
+http://mundiallogisticsgroup.com.br/…er/fonts/flaticon/flaticon.css?ver=4.7.8
+http://mundiallogisticsgroup.com.br/…t-form-7/includes/css/styles.css?ver=4.8
+http://mundiallogisticsgroup.com.br/…theme-custom/css/pix-theme.css?ver=1.0.0
+http://mundiallogisticsgroup.com.br/…blic/assets/css/settings.css?ver=5.4.5.1
+http://mundiallogisticsgroup.com.br/…ontent/themes/elbrus/style.css?ver=4.7.8
+https://fonts.googleapis.com/…400%2C700%2C300&subset=latin%2Clatin-ext
+http://mundiallogisticsgroup.com.br/…esome/css/font-awesome.min.css?ver=5.1.1
+http://mundiallogisticsgroup.com.br/…fonts/Stroke-Gap-Icons-Webfont/style.css
+http://mundiallogisticsgroup.com.br/…s/elbrus/css/bootstrap.min.css?ver=3.3.5
+http://mundiallogisticsgroup.com.br/…/owl-carousel/owl.carousel.css?ver=1.3.3
+http://mundiallogisticsgroup.com.br/…ssets/slick-carousel/slick.css?ver=1.5.8
+http://mundiallogisticsgroup.com.br/…mes/elbrus/css/animate.min.css?ver=3.5.0
+http://mundiallogisticsgroup.com.br/…s/assets/prettyphoto/css/prettyPhoto.css
+http://mundiallogisticsgroup.com.br/wp-content/themes/elbrus/css/main.css
+http://mundiallogisticsgroup.com.br/…nt/themes/elbrus/debugging.css?ver=4.7.8
+http://mundiallogisticsgroup.com.br/…ion=dynamic_styles&pageID=1542&ver=4.7.8
+http://mundiallogisticsgroup.com.br/…assets/css/js_composer.min.css?ver=5.1.1
+
+	
+	
+IMAGENS
+A compactação de http://mundiallogisticsgroup.com.br/…content/uploads/2017/08/banner_promo.jpg pouparia 420,1 KiB (76% de redução).
+A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…ontent/uploads/2017/08/mundial_preto.png poderiam poupar 11,1 KiB (redução de 85%).
+A compactação de http://mundiallogistics.institucional.ws/…loads/2017/08/icone_serviço_promo-01.png pouparia 2,2 KiB (35% de redução).
+A compactação de http://mundiallogistics.institucional.ws/…ent/uploads/2017/08/icone_serviço-06.png pouparia 2 KiB (35% de redução).
+A compactação de http://mundiallogistics.institucional.ws/…loads/2017/08/icone_serviço_promo-02.png pouparia 1,9 KiB (33% de redução).
+A compactação de http://mundiallogistics.institucional.ws/…ent/uploads/2017/08/icone_serviço-04.png pouparia 1,8 KiB (34% de redução).
+A compactação de http://mundiallogistics.institucional.ws/…ent/uploads/2017/08/icone_serviço-05.png pouparia 1,7 KiB (31% de redução).
+A compactação de http://mundiallogistics.institucional.ws/…ent/uploads/2017/08/icone_serviço-03.png pouparia 1,7 KiB (31% de redução).
+A compactação de http://mundiallogistics.institucional.ws/…ent/uploads/2017/08/icone_serviço-08.png pouparia 1,6 KiB (32% de redução).
+
+Mobile
+
+
+
+
+javascript	
+https://code.jquery.com/jquery-3.2.1.min.js
+http://mundiallogisticsgroup.com.br/…-includes/js/jquery/jquery.js?ver=1.12.4
+http://mundiallogisticsgroup.com.br/…s/jquery/jquery-migrate.min.js?ver=1.4.1
+http://mundiallogisticsgroup.com.br/…uery.themepunch.tools.min.js?ver=5.4.5.1
+http://mundiallogisticsgroup.com.br/…themepunch.revolution.min.js?ver=5.4.5.1
+
+
+CSS
+http://mundiallogisticsgroup.com.br/…loader/fonts/elegant/style.css?ver=4.7.8
+http://mundiallogisticsgroup.com.br/…er/fonts/fontawesome/style.css?ver=4.7.8
+http://mundiallogisticsgroup.com.br/…loader/fonts/icomoon/style.css?ver=4.7.8
+http://mundiallogisticsgroup.com.br/…-loader/fonts/simple/style.css?ver=4.7.8
+http://mundiallogisticsgroup.com.br/…ader/fonts/strokegap/style.css?ver=4.7.8
+http://mundiallogisticsgroup.com.br/…er/fonts/flaticon/flaticon.css?ver=4.7.8
+http://mundiallogisticsgroup.com.br/…t-form-7/includes/css/styles.css?ver=4.8
+http://mundiallogisticsgroup.com.br/…theme-custom/css/pix-theme.css?ver=1.0.0
+http://mundiallogisticsgroup.com.br/…blic/assets/css/settings.css?ver=5.4.5.1
+
+
+
+
+IMAGENS
+A compactação de http://mundiallogisticsgroup.com.br/…content/uploads/2017/08/banner_promo.jpg pouparia 420,1 KiB (76% de redução).
+A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…loads/2017/08/icone_serviço_promo-01.png poderiam poupar 3,4 KiB (redução de 53%).
+A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…ent/uploads/2017/08/icone_serviço-06.png poderiam poupar 3 KiB (redução de 51%).
+A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…ent/uploads/2017/08/icone_serviço-05.png poderiam poupar 2,8 KiB (redução de 50%).
+A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…ent/uploads/2017/08/icone_serviço-04.png poderiam poupar 2,8 KiB (redução de 52%).
+A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…ent/uploads/2017/08/icone_serviço-03.png poderiam poupar 2,7 KiB (redução de 50%).
+A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…loads/2017/08/icone_serviço_promo-02.png poderiam poupar 2,7 KiB (redução de 48%).
+A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…ent/uploads/2017/08/icone_serviço-08.png poderiam poupar 2,3 KiB (redução de 47%).
+A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…ntent/uploads/2017/08/mundial_branco.png poderiam poupar 2,1 KiB (redução de 28%).
+A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…ent/uploads/2017/08/icone_serviço-07.png poderiam poupar 1,9 KiB (redução de 44%).
+
+Resolvido
+javascript
+Reduzir http://mundiallogisticsgroup.com.br/wp-content/themes/elbrus/js/custom.js pouparia 1,3 KiB (29% de redução) após a compactação.
+Reduzir http://mundiallogisticsgroup.com.br/…ct-form-7/includes/js/scripts.js?ver=4.8 pouparia 618 B (17% de redução) após a compactação.
+
+CSS
+Reduzir http://mundiallogisticsgroup.com.br/…s/assets/prettyphoto/css/prettyPhoto.css pouparia 620 B (19% de redução) após a compactação.
