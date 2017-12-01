@@ -12,21 +12,17 @@
 if (! defined ( 'WPINC' )) {
 	die ();
 }
-
 define ( 'FOLDER', 'fonts/' );
-
 if (! class_exists ( 'WP_List_Table' ))
 	require_once (ABSPATH . 'wp-admin/includes/class-wp-list-table.php');
 if (! function_exists ( 'wp_handle_upload' ))
 	require_once (ABSPATH . 'wp-admin/includes/file.php');
-
 add_action ( 'admin_menu', 'fil_plugin_setup_menu' );
 function fil_plugin_setup_menu() {
 	add_theme_page ( 'Font Icons Loader', 'Font Icons Loader', 'manage_options', 'fil-plugin', 'fil_init' );
 	wp_enqueue_style ( 'default-fil-styles', plugin_dir_url ( __FILE__ ) . 'css/fil-styles.css' );
 	wp_enqueue_script ( 'fil-script', plugin_dir_url ( __FILE__ ) . 'js/script.js' );
 }
-
 register_activation_hook ( __FILE__, 'pixfil_fonts_activate' );
 function pixfil_fonts_activate() {
 	$fonts_activate = array ();
@@ -67,14 +63,12 @@ function fil_enqueue_styles() {
 add_action ( 'wp_enqueue_scripts', 'fil_enqueue_styles' );
 add_action ( 'vc_base_register_front_css', 'fil_enqueue_styles' );
 add_action ( 'vc_base_register_admin_css', 'fil_enqueue_styles' );
-
 $active_fonts = get_option ( 'fil_font_icons' );
 $fil_dir = plugin_dir_path ( __FILE__ ) . FOLDER;
 if (! empty ( $active_fonts )) {
 	foreach ( $active_fonts as $key => $val ) {
 		if (file_exists ( $fil_dir . $val ) && $val != '') {
 			$file_style = $fil_dir . $val;
-			
 			switch ($key) {
 				case 'fontawesome' :
 					add_filter ( 'vc_iconpicker-type-pixfontawesome', function ($icons) use ($file_style) {
@@ -120,7 +114,6 @@ if (! empty ( $active_fonts )) {
 								}
 							}
 						}
-						
 						return array_merge ( $icons, $typicons_icons );
 					} );
 					break;
@@ -251,9 +244,8 @@ if (! empty ( $active_fonts )) {
 function fil_init() {
 	fil_upload ();
 	fonts_actions ();
-	?>
+?>
 <div class="fil-container">
-
 	<div class="fil-upload">
 		<h3>Upload a File</h3>
 		<!-- Form to handle the upload - The enctype value here is very important -->
@@ -263,7 +255,6 @@ function fil_init() {
 				<?php submit_button('Upload')?>
 			</form>
 	</div>
-
 	<div class="fil-table">
 		<h3>Fonts Table</h3>
 		<form method="post">
@@ -361,13 +352,9 @@ function fil_upload() {
 			request_filesystem_credentials ( $url, $method, true, false, $form_fields );
 			$in = false;
 		}
-		
 		if ($in) {
-			
 			$outputdir = preg_replace ( "[\\/]", DIRECTORY_SEPARATOR, plugin_dir_path ( __FILE__ ) ) . FOLDER;
-			
 			$file = $_FILES ['fil_upload_icons'];
-			
 			$overrides = array (
 					'test_form' => false 
 			);
@@ -401,7 +388,6 @@ function fil_upload() {
 			}
 		}
 	}
-	
 	return true;
 }
 function fonts_actions() {
@@ -422,7 +408,6 @@ function fonts_actions() {
 		}
 		update_option ( 'fil_font_icons', $fonts_active );
 	} 
-
 	elseif (isset ( $_POST ['Deactive'] )) {
 		$fonts_active = get_option ( 'fil_font_icons' );
 		$fonts_deactivete = array ();
@@ -455,7 +440,6 @@ function fonts_actions() {
 				unset ( $fonts_active [$key] );
 		}
 		update_option ( 'fil_font_icons', $fonts_active );
-		
 		foreach ( $fonts_delete as $key => $val ) {
 			if (is_dir ( plugin_dir_path ( __FILE__ ) . FOLDER . $key )) {
 				$dir = plugin_dir_path ( __FILE__ ) . FOLDER . $key;
@@ -475,6 +459,5 @@ function fonts_actions() {
 			}
 		}
 	}
-	
 	return true;
 }
