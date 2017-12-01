@@ -9,7 +9,6 @@
  */
 get_header ();
 ?>
-
 <div class="home-section">
 	<div class="container rtd">
 	<?php
@@ -23,8 +22,6 @@ get_header ();
 	
 	endif;
 	?>
-
 	</div>
 </div>
-
 <?php get_footer(); ?>

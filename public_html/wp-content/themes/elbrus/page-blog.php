@@ -6,6 +6,5 @@
 	<?php endif; ?>
 	
 	<?php the_title( sprintf('<h1 class="entry-title"><a href="%s">', esc_url( get_permalink() ) ),'</a></h1>' ); ?>
-	
 	<small><?php the_category(' '); ?></small>
 </div>

@@ -21,31 +21,23 @@ $elbrus_portfolio_perrow = elbrus_get_option ( 'portfolio_settings_perrow', '2' 
 $elbrus_portfolio_css_animation = (elbrus_get_option ( 'css_animation_settings_portfolio', '' ) != '') ? ' wow ' . elbrus_get_option ( 'css_animation_settings_portfolio', '' ) : '';
 $elbrus_portfolio_type = elbrus_get_option ( 'portfolio_settings_type', 'type_without_icons' );
 $elbrus_portfolio_loadmore = elbrus_get_option ( 'portfolio_settings_loadmore', esc_html__ ( 'Load more', 'elbrus' ) );
-
 ?>
-
 <!-- ========================== -->
 <!-- BLOG - CONTENT -->
 <!-- ========================== -->
 <section class="page-section">
 	<div class="container">
 		<div class="row">
-
 			<?php elbrus_show_sidebar( 'left', $elbrus_layout, $elbrus_sidebar ); ?>
-
 			<div
 				class="<?php if ( $elbrus_layout == 1 ) : ?>col-lg-12 col-md-12<?php else : ?>col-lg-9 col-md-8<?php endif; ?> col-sm-12 col-xs-12 left-column sidebar-type-<?php echo esc_attr($elbrus_layout); ?>">
-
 				<div id="portfolio-category-section"
 					class="portfolio-list-section portfolio-perrow-<?php echo esc_attr($elbrus_portfolio_perrow); ?>">
-
 					<div class="section-heading text-center">
 						<div class="section-subtitle"><?php esc_html_e( 'All categories', 'elbrus' ); ?></div>
 						<div class="design-arrow"></div>
 					</div>
-
 				<?php
-				
 				$paged = (get_query_var ( 'paged' )) ? get_query_var ( 'paged' ) : 1;
 				
 				$elbrus_portfolio_perpage = elbrus_get_option ( 'portfolio_settings_perpage' );

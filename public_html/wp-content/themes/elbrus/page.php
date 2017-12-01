@@ -1,23 +1,19 @@
 <?php
 /*** The template for displaying all pages. ***/
 get_header ();
-
 $elbrus_custom = isset ( $wp_query ) ? get_post_custom ( $wp_query->get_queried_object_id () ) : '';
 $elbrus_layout = isset ( $elbrus_custom ['pix_page_layout'] ) ? $elbrus_custom ['pix_page_layout'] [0] : '2';
 $elbrus_sidebar = isset ( $elbrus_custom ['pix_selected_sidebar'] [0] ) ? $elbrus_custom ['pix_selected_sidebar'] [0] : 'sidebar-1';
 
 if (! is_active_sidebar ( $elbrus_sidebar ))
 	$elbrus_layout = '1';
-
 ?>
-
 <!-- ========================== -->
 <!-- BLOG - CONTENT -->
 <!-- ========================== -->
 <section class="page-section">
 	<div class="container">
 		<div class="row">
-
 			<?php elbrus_show_sidebar( 'left', $elbrus_layout, $elbrus_sidebar ); ?>
 
 			<div
