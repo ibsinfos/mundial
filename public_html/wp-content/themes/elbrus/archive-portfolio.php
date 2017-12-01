@@ -38,6 +38,7 @@ $elbrus_portfolio_loadmore = elbrus_get_option ( 'portfolio_settings_loadmore', 
 						<div class="design-arrow"></div>
 					</div>
 				<?php
+				
 				$paged = (get_query_var ( 'paged' )) ? get_query_var ( 'paged' ) : 1;
 				
 				$elbrus_portfolio_perpage = elbrus_get_option ( 'portfolio_settings_perpage' );
