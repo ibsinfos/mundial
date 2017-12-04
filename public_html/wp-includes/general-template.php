@@ -35,15 +35,12 @@ function get_header($name = null) {
 	 *        	Name of the specific header file to use. null for the default header.
 	 */
 	do_action ( 'get_header', $name );
-	
 	$templates = array ();
 	$name = ( string ) $name;
 	if ('' !== $name) {
 		$templates [] = "header-{$name}.php";
 	}
-	
 	$templates [] = 'header.php';
-	
 	locate_template ( $templates, true );
 }
 

@@ -1,37 +1,7 @@
 https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fmundiallogisticsgroup.com.br%2F&tab=desktop
 A resolverr :
 
-DESKTOP
-
-mover script para o fim da pagina 
-
-scripts supeitos
-<meta http-equiv="Refresh" content="1800"> 
-
-<!--[if lt IE 9]> 
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-Css
-Reduzir http://mundiallogisticsgroup.com.br/…s/assets/prettyphoto/css/prettyPhoto.css pouparia 620 B (19% de redução) após a compactação.
-
-IMAGENS
-A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…ntent/uploads/2017/08/mundial_branco.png poderiam poupar 2,1 KiB (redução de 28%).
-A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…ent/uploads/2017/08/icone-mone_cinza.png poderiam poupar 1,4 KiB (redução de 29%).
-A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…t/uploads/2017/08/icone-health_cinza.png poderiam poupar 867 B (redução de 26%).
-A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…uploads/2017/08/MUNDIAL-HEALTH_COLOR.png poderiam poupar 839 B (redução de 23%).
-A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…-content/uploads/2017/08/M.ONE-COLOR.png poderiam poupar 811 B (redução de 33%).
-A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…nt/uploads/2017/08/icone-promo_cinza.png poderiam poupar 709 B (redução de 25%).
-A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…/uploads/2017/08/icone-reverse_cinza.png poderiam poupar 650 B (redução de 15%).
-A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…/uploads/2017/08/icone-express_cinza.png poderiam poupar 583 B (redução de 19%).
-
-Mobile
-
-javascript
-https://code.jquery.com/jquery-3.2.1.min.js
-
-
+DESKTOP Mobile :
 
 IMAGENS
 A compactação e o redimensionamento de http://mundiallogistics.institucional.ws/…ntent/uploads/2017/08/mundial_branco.png poderiam poupar 2,1 KiB (redução de 28%).
