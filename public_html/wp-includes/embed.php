@@ -959,8 +959,7 @@ function enqueue_embed_scripts() {
 function print_embed_styles() {
 	?>
 <style type="text/css">
-<?
-php
+<?php
 
 		
 if (
@@ -1353,8 +1352,7 @@ html[dir=rtl] .wp-embed-share-tab-button+.wp-embed-share-tab-button {
 	border-left: none;
 	border-right: 1px solid #aaa
 }
-<?
-		php
+<?php
 	}
 	?>
 </style>

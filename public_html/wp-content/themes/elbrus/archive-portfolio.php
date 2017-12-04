@@ -188,7 +188,7 @@ $elbrus_portfolio_loadmore = elbrus_get_option ( 'portfolio_settings_loadmore', 
 						</div>
 
 							
-						<?phpendif;
+						<?php endif;
 					endwhile
 					;
 					?>

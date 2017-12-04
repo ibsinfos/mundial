@@ -42,7 +42,7 @@ if ($allAccess) :
 			title="<?php printf( __( 'Delete %s', 'js_composer' ), $name ) ?>"><span
 			class="vc_btn-content"><i
 				class="vc-composer-icon vc-c-icon-delete_empty"></i></span></a>
-				<?php
-endif;			<?php endforeach ?>
+				<?php endif;	?>
+				<?php endforeach ?>
 	</div>
 </div>

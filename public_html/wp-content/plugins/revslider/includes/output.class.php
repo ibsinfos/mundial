@@ -5647,23 +5647,8 @@ var revapi<?php echo $sliderID; ?>,
 					echo '<!-- STYLE -->';
 				}
 				?><style type="text/css">
-<?
-php
- 
-echo
- 
-RevSliderCssParser
-:
-:compress_css
-(stripslashes($this-
->
-slider-
->
-getParam
-('custom_css'
-,
-'')));
-				?>
+<?php 
+echo RevSliderCssParser::compress_css(stripslashes($this->slider->getParam('custom_css','')));?>
 </style><?php
 				if ($markup_export === true) {
 					echo '<!-- /STYLE -->';
@@ -5694,15 +5679,7 @@ getParam
 				}
 				?>
 <style type="text/css">
-<?
-php
- 
-echo
- 
-RevSliderCssParser
-:
-:compress_css ( ($nav_css) );?
->
+<?php echo RevSliderCssParser::compress_css ( ($nav_css) );?>
 </style>
 				<?php
 				if ($markup_export === true) {

@@ -190,8 +190,8 @@ foreach ( $posts as $post ) :
 						<?php endforeach ?>
 					<?php else : ?>
 						<li class="<?php echo $this->spanClass( 1 ); ?>"><?php _e( 'Nothing found.', 'js_composer' ) ?></li>
-					<?php
-endif;				</ul>
+					<?php endif;?>
+				</ul>
 		</div>
 	</div>
 	<div class="clear"></div>

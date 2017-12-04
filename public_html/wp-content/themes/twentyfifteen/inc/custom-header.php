@@ -92,9 +92,8 @@ if (! function_exists ( 'twentyfifteen_header_style' )) :
 		// If we get this far, we have custom styles. Let's do this.
 		?>
 <style type="text/css" id="twentyfifteen-header-css">
-<?
-php // Short header for when there is no Custom Header and Header Text is hidden
-	.
+<?php // Short header for when there is no Custom Header and Header Text is hidden
+	
 		if (empty ( $header_image ) && ! display_header_text ()) :
 			?> .site-header {
 	padding-top: 14px;
@@ -135,8 +134,7 @@ php // Short header for when there is no Custom Header and Header Text is hidden
 	}
 }
 
-<?
-			php
+<?php
 		
 		endif ; // Has a Custom Header been added ?
 		if (! empty ( $header_image )) :
@@ -145,7 +143,7 @@ php // Short header for when there is no Custom Header and Header Text is hidden
 			 * No shorthand so the Customizer can override individual properties.
 			 * @see https://core.trac.wordpress.org/ticket/31460
 			 */
-	background-image: url(<? php header_image(); ?>);
+	background-image: url(<?php header_image(); ?>);
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	-webkit-background-size: cover;
@@ -160,7 +158,7 @@ php // Short header for when there is no Custom Header and Header Text is hidden
 				 * No shorthand so the Customizer can override individual properties.
 				 * @see https://core.trac.wordpress.org/ticket/31460
 				 */
-		background-image: url(<? php header_image(); ?>);
+		background-image: url(<?php header_image(); ?>);
 		background-repeat: no-repeat;
 		background-position: 100% 50%;
 		-webkit-background-size: cover;
@@ -174,8 +172,7 @@ php // Short header for when there is no Custom Header and Header Text is hidden
 	}
 }
 
-<?
-			php
+<?php
 		
 		endif ; // Has the text been hidden ?
 		if (! display_header_text ()) :
@@ -183,8 +180,7 @@ php // Short header for when there is no Custom Header and Header Text is hidden
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute;
 }
-<?
-			php
+<?php
 		
  
 endif

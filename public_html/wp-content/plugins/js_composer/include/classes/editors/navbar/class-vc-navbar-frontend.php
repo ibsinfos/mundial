@@ -2,9 +2,7 @@
 if (! defined ( 'ABSPATH' )) {
 	die ( '-1' );
 }
-
 require_once vc_path_dir ( 'EDITORS_DIR', 'navbar/class-vc-navbar.php' );
-
 /**
  */
 class Vc_Navbar_Frontend extends Vc_Navbar {
@@ -90,10 +88,8 @@ class Vc_Navbar_Frontend extends Vc_Navbar {
 			
 			return $output;
 		}
-		
 		return '';
 	}
-	
 	/**
 	 *
 	 * @return string
@@ -104,18 +100,15 @@ class Vc_Navbar_Frontend extends Vc_Navbar {
 		$can_publish = current_user_can ( $post_type->cap->publish_posts );
 		ob_start ();
 		?>
-<li class="vc_show-mobile vc_pull-right">
-	<button
+		<li class="vc_show-mobile vc_pull-right">
+		<button
 		data-url="<?php esc_attr_e( get_edit_post_link( $post->ID ) . '&wpb_vc_js_status=true' ) ?>"
 		class="vc_btn vc_btn-default vc_btn-sm vc_navbar-btn vc_btn-backend-editor"
 		id="vc_button-cancel"
 		title="<?php _e( 'Cancel all changes and return to WP dashboard', 'js_composer' ) ?>"><?php
-		
-echo vc_user_access ()->part ( 'backend_editor' )->can ()->get () ? __ ( 'Backend Editor', 'js_composer' ) : __ ( 'Edit', 'js_composer' );
-		?></button>
-			<?php
-		
-if (! in_array ( $post->post_status, array (
+        echo vc_user_access ()->part ( 'backend_editor' )->can ()->get () ? __ ( 'Backend Editor', 'js_composer' ) : __ ( 'Edit', 'js_composer' );?></button>
+		<?php
+		if (! in_array ( $post->post_status, array (
 				'publish',
 				'future',
 				'private' 
@@ -131,8 +124,8 @@ if (! in_array ( $post->post_status, array (
 		class="vc_btn vc_btn-primary vc_btn-sm vc_navbar-btn vc_btn-save"
 		id="vc_button-save-as-pending"
 		title="<?php esc_attr_e( 'Save as Pending', 'js_composer' ) ?>"><?php _e( 'Save as Pending', 'js_composer' ) ?></button>
-				<?php
-endif;				<?php if ( $can_publish ) : ?>
+				<?php endif;	?>
+							<?php if ( $can_publish ) : ?>
 					<button type="button"
 		class="vc_btn vc_btn-primary vc_btn-sm vc_navbar-btn vc_btn-save"
 		id="vc_button-update"
@@ -144,20 +137,18 @@ endif;				<?php if ( $can_publish ) : ?>
 		id="vc_button-update"
 		title="<?php esc_attr_e( 'Submit for Review', 'js_composer' ) ?>"
 		data-change-status="pending"><?php _e( 'Submit for Review', 'js_composer' ) ?></button>
-				<?php
-endif;			<?php else : ?>
+				<?php endif;	?>		<?php else : ?>
 				<button type="button"
 		class="vc_btn vc_btn-primary vc_btn-sm vc_navbar-btn vc_btn-save"
 		id="vc_button-update"
 		title="<?php esc_attr_e( 'Update', 'js_composer' ) ?>"><?php _e( 'Update', 'js_composer' ) ?></button>
-			<?php
-endif;		</li>
-<?php
-		$output = ob_get_contents ();
-		ob_end_clean ();
-		
-		return $output;
-	}
+		<?php endif; ?>
+		</li>
+		<?php
+		    $output = ob_get_contents ();
+		   ob_end_clean ();
+	       return $output;
+	    }
 	
 	/**
 	 *

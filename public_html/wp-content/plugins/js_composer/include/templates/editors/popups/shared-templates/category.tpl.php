@@ -132,14 +132,12 @@ _e ( 'Access Visual Composer Template Library for unique layout
 		</button>
 	</div>
 	
- <?phpelse :
-	?>
+ <?php else :	?>
 	<div class="vc_column vc_col-sm-12 vc_access-library-col">
 		<h3 class="vc_ui-panel-title"><?php _e( 'Template library', 'js_composer' ); ?></h3>
 	</div>
 	
-<?phpendif;
-?>
+<?php endif; ?>
 
 <div class="vc_column vc_col-sm-12">
 		<div

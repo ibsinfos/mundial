@@ -4,9 +4,7 @@
  *
  * @package WordPress
  */
-
 require( ABSPATH . WPINC . '/option.php' );
-
 /**
  * Convert given date string into a different format.
  *
@@ -26,21 +24,16 @@ require( ABSPATH . WPINC . '/option.php' );
 function mysql2date( $format, $date, $translate = true ) {
 	if ( empty( $date ) )
 		return false;
-
 	if ( 'G' == $format )
 		return strtotime( $date . ' +0000' );
-
 	$i = strtotime( $date );
-
 	if ( 'U' == $format )
 		return $i;
-
 	if ( $translate )
 		return date_i18n( $format, $i );
 	else
 		return date( $format, $i );
 }
-
 /**
  * Retrieve the current time based on specified type.
  *
@@ -68,7 +61,6 @@ function current_time( $type, $gmt = 0 ) {
 			return ( $gmt ) ? date( $type ) : date( $type, time() + ( get_option( 'gmt_offset' ) * HOUR_IN_SECONDS ) );
 	}
 }
-
 /**
  * Retrieve the date in localized format, based on timestamp.
  *
@@ -89,17 +81,14 @@ function current_time( $type, $gmt = 0 ) {
 function date_i18n( $dateformatstring, $unixtimestamp = false, $gmt = false ) {
 	global $wp_locale;
 	$i = $unixtimestamp;
-
 	if ( false === $i ) {
 		$i = current_time( 'timestamp', $gmt );
 	}
-
 	/*
 	 * Store original value for language with untypical grammars.
 	 * See https://core.trac.wordpress.org/ticket/9396
 	 */
 	$req_format = $dateformatstring;
-
 	if ( ( !empty( $wp_locale->month ) ) && ( !empty( $wp_locale->weekday ) ) ) {
 		$datemonth = $wp_locale->get_month( date( 'm', $i ) );
 		$datemonth_abbrev = $wp_locale->get_month_abbrev( $datemonth );
@@ -114,7 +103,6 @@ function date_i18n( $dateformatstring, $unixtimestamp = false, $gmt = false ) {
 		$dateformatstring = preg_replace( "/([^\\\])M/", "\\1" . backslashit( $datemonth_abbrev ), $dateformatstring );
 		$dateformatstring = preg_replace( "/([^\\\])a/", "\\1" . backslashit( $datemeridiem ), $dateformatstring );
 		$dateformatstring = preg_replace( "/([^\\\])A/", "\\1" . backslashit( $datemeridiem_capital ), $dateformatstring );
-
 		$dateformatstring = substr( $dateformatstring, 1, strlen( $dateformatstring ) -1 );
 	}
 	$timezone_formats = array( 'P', 'I', 'O', 'T', 'Z', 'e' );
@@ -135,7 +123,6 @@ function date_i18n( $dateformatstring, $unixtimestamp = false, $gmt = false ) {
 		}
 	}
 	$j = @date( $dateformatstring, $i );
-
 	/**
 	 * Filters the date formatted based on the locale.
 	 *
@@ -149,7 +136,6 @@ function date_i18n( $dateformatstring, $unixtimestamp = false, $gmt = false ) {
 	$j = apply_filters( 'date_i18n', $j, $req_format, $i, $gmt );
 	return $j;
 }
-
 /**
  * Determines if the date should be declined.
  *
@@ -163,12 +149,10 @@ function date_i18n( $dateformatstring, $unixtimestamp = false, $gmt = false ) {
  */
 function wp_maybe_decline_date( $date ) {
 	global $wp_locale;
-
 	// i18n functions are not available in SHORTINIT mode
 	if ( ! function_exists( '_x' ) ) {
 		return $date;
 	}
-
 	/* translators: If months in your language require a genitive case,
 	 * translate this to 'on'. Do not translate into your own language.
 	 */
@@ -177,30 +161,23 @@ function wp_maybe_decline_date( $date ) {
 		if ( @preg_match( '#^\d{1,2}\.? [^\d ]+#u', $date ) ) {
 			$months          = $wp_locale->month;
 			$months_genitive = $wp_locale->month_genitive;
-
 			foreach ( $months as $key => $month ) {
 				$months[ $key ] = '# ' . $month . '( |$)#u';
 			}
-
 			foreach ( $months_genitive as $key => $month ) {
 				$months_genitive[ $key ] = ' ' . $month . '$1';
 			}
-
 			$date = preg_replace( $months, $months_genitive, $date );
 		}
 	}
-
 	// Used for locale-specific rules
 	$locale = get_locale();
-
 	if ( 'ca' === $locale ) {
 		// " de abril| de agost| de octubre..." -> " d'abril| d'agost| d'octubre..."
 		$date = preg_replace( '# de ([ao])#i', " d'\\1", $date );
 	}
-
 	return $date;
 }
-
 /**
  * Convert float number to format based on the locale.
  *
@@ -214,13 +191,11 @@ function wp_maybe_decline_date( $date ) {
  */
 function number_format_i18n( $number, $decimals = 0 ) {
 	global $wp_locale;
-
 	if ( isset( $wp_locale ) ) {
 		$formatted = number_format( $number, absint( $decimals ), $wp_locale->number_format['decimal_point'], $wp_locale->number_format['thousands_sep'] );
 	} else {
 		$formatted = number_format( $number, absint( $decimals ) );
 	}
-
 	/**
 	 * Filters the number formatted based on the locale.
 	 *
@@ -230,7 +205,6 @@ function number_format_i18n( $number, $decimals = 0 ) {
 	 */
 	return apply_filters( 'number_format_i18n', $formatted );
 }
-
 /**
  * Convert number of bytes largest unit bytes will fit into.
  *
@@ -259,20 +233,16 @@ function size_format( $bytes, $decimals = 0 ) {
 		'KB' => KB_IN_BYTES,
 		'B'  => 1,
 	);
-
 	if ( 0 === $bytes ) {
 		return number_format_i18n( 0, $decimals ) . ' B';
 	}
-
 	foreach ( $quant as $unit => $mag ) {
 		if ( doubleval( $bytes ) >= $mag ) {
 			return number_format_i18n( $bytes / $mag, $decimals ) . ' ' . $unit;
 		}
 	}
-
 	return false;
 }
-
 /**
  * Get the week start and end from the datetime or date string from MySQL.
  *
@@ -285,33 +255,24 @@ function size_format( $bytes, $decimals = 0 ) {
 function get_weekstartend( $mysqlstring, $start_of_week = '' ) {
 	// MySQL string year.
 	$my = substr( $mysqlstring, 0, 4 );
-
 	// MySQL string month.
 	$mm = substr( $mysqlstring, 8, 2 );
-
 	// MySQL string day.
 	$md = substr( $mysqlstring, 5, 2 );
-
 	// The timestamp for MySQL string day.
 	$day = mktime( 0, 0, 0, $md, $mm, $my );
-
 	// The day of the week from the timestamp.
 	$weekday = date( 'w', $day );
-
 	if ( !is_numeric($start_of_week) )
 		$start_of_week = get_option( 'start_of_week' );
-
 	if ( $weekday < $start_of_week )
 		$weekday += 7;
-
 	// The most recent week start day on or before $day.
 	$start = $day - DAY_IN_SECONDS * ( $weekday - $start_of_week );
-
 	// $start + 1 week - 1 second.
 	$end = $start + WEEK_IN_SECONDS - 1;
 	return compact( 'start', 'end' );
 }
-
 /**
  * Unserialize value only if it was serialized.
  *
@@ -325,7 +286,6 @@ function maybe_unserialize( $original ) {
 		return @unserialize( $original );
 	return $original;
 }
-
 /**
  * Check value to find if it was serialized.
  *
@@ -392,7 +352,6 @@ function is_serialized( $data, $strict = true ) {
 	}
 	return false;
 }
-
 /**
  * Check whether serialized data is of string type.
  *
@@ -421,7 +380,6 @@ function is_serialized_string( $data ) {
 		return true;
 	}
 }
-
 /**
  * Serialize data, if needed.
  *
@@ -433,16 +391,13 @@ function is_serialized_string( $data ) {
 function maybe_serialize( $data ) {
 	if ( is_array( $data ) || is_object( $data ) )
 		return serialize( $data );
-
 	// Double serialization is required for backward compatibility.
 	// See https://core.trac.wordpress.org/ticket/12930
 	// Also the world will end. See WP 3.6.1.
 	if ( is_serialized( $data, false ) )
 		return serialize( $data );
-
 	return $data;
 }
-
 /**
  * Retrieve post title from XMLRPC XML.
  *
@@ -465,7 +420,6 @@ function xmlrpc_getposttitle( $content ) {
 	}
 	return $post_title;
 }
-
 /**
  * Retrieve the post category or categories from XMLRPC XML.
  *
@@ -490,7 +444,6 @@ function xmlrpc_getpostcategory( $content ) {
 	}
 	return $post_category;
 }
-
 /**
  * XMLRPC XML content without title and category elements.
  *
@@ -505,7 +458,6 @@ function xmlrpc_removepostdata( $content ) {
 	$content = trim( $content );
 	return $content;
 }
-
 /**
  * Use RegEx to extract URLs from arbitrary content.
  *
@@ -523,7 +475,7 @@ function wp_extract_urls( $content ) {
 			. "(?:"
 				. "\([\w\d]+\)|"
 				. "(?:"
-					. "[^`!()\[\]{};:'\".,<>«»“”‘’\s]|"
+					. "[^`!()\[\]{};:'\".,<>Â«Â»â€œâ€�â€˜â€™\s]|"
 					. "(?:[:]\d+)?/?"
 				. ")+"
 			. ")"
@@ -531,12 +483,10 @@ function wp_extract_urls( $content ) {
 		$content,
 		$post_links
 	);
-
 	$post_links = array_unique( array_map( 'html_entity_decode', $post_links[2] ) );
 
 	return array_values( $post_links );
 }
-
 /**
  * Check content for video and audio links to add as enclosures.
  *
@@ -570,7 +520,6 @@ function do_enclose( $content, $post_ID ) {
 				delete_metadata_by_mid( 'post', $mid );
 		}
 	}
-
 	foreach ( (array) $post_links_temp as $link_test ) {
 		if ( !in_array( $link_test, $pung ) ) { // If we haven't pung it already
 			$test = @parse_url( $link_test );
@@ -582,7 +531,6 @@ function do_enclose( $content, $post_ID ) {
 				$post_links[] = $link_test;
 		}
 	}
-
 	/**
 	 * Filters the list of enclosure links before querying the database.
 	 *
@@ -595,15 +543,12 @@ function do_enclose( $content, $post_ID ) {
 	 * @param int   $post_ID    Post ID.
 	 */
 	$post_links = apply_filters( 'enclosure_links', $post_links, $post_ID );
-
 	foreach ( (array) $post_links as $url ) {
 		if ( $url != '' && !$wpdb->get_var( $wpdb->prepare( "SELECT post_id FROM $wpdb->postmeta WHERE post_id = %d AND meta_key = 'enclosure' AND meta_value LIKE %s", $post_ID, $wpdb->esc_like( $url ) . '%' ) ) ) {
-
 			if ( $headers = wp_get_http_headers( $url) ) {
 				$len = isset( $headers['content-length'] ) ? (int) $headers['content-length'] : 0;
 				$type = isset( $headers['content-type'] ) ? $headers['content-type'] : '';
 				$allowed_types = array( 'video', 'audio' );
-
 				// Check to see if we can figure out the mime type from
 				// the extension
 				$url_parts = @parse_url( $url );
@@ -618,7 +563,6 @@ function do_enclose( $content, $post_ID ) {
 						}
 					}
 				}
-
 				if ( in_array( substr( $type, 0, strpos( $type, "/" ) ), $allowed_types ) ) {
 					add_post_meta( $post_ID, 'enclosure', "$url\n$len\n$mime\n" );
 				}
@@ -626,7 +570,6 @@ function do_enclose( $content, $post_ID ) {
 		}
 	}
 }
-
 /**
  * Retrieve HTTP Headers from URL.
  *
@@ -639,12 +582,9 @@ function do_enclose( $content, $post_ID ) {
 function wp_get_http_headers( $url, $deprecated = false ) {
 	if ( !empty( $deprecated ) )
 		_deprecated_argument( __FUNCTION__, '2.7.0' );
-
 	$response = wp_safe_remote_head( $url );
-
 	if ( is_wp_error( $response ) )
 		return false;
-
 	return wp_remote_retrieve_headers( $response );
 }
 
@@ -666,7 +606,6 @@ function is_new_day() {
 	else
 		return 0;
 }
-
 /**
  * Build URL query based on an associative and, or indexed array.
  *
@@ -685,7 +624,6 @@ function is_new_day() {
 function build_query( $data ) {
 	return _http_build_query( $data, null, '&', '', false );
 }
-
 /**
  * From php.net (modified by Mark Jaquith to behave like the native PHP5 function).
  *
@@ -706,7 +644,6 @@ function build_query( $data ) {
  */
 function _http_build_query( $data, $prefix = null, $sep = null, $key = '', $urlencode = true ) {
 	$ret = array();
-
 	foreach ( (array) $data as $k => $v ) {
 		if ( $urlencode)
 			$k = urlencode($k);
@@ -726,13 +663,11 @@ function _http_build_query( $data, $prefix = null, $sep = null, $key = '', $urle
 		else
 			array_push($ret, $k.'='.$v);
 	}
-
 	if ( null === $sep )
 		$sep = ini_get('arg_separator.output');
 
 	return implode($sep, $ret);
 }
-
 /**
  * Retrieves a modified URL query string.
  *
@@ -781,7 +716,6 @@ function add_query_arg() {
 		else
 			$uri = $args[2];
 	}
-
 	if ( $frag = strstr( $uri, '#' ) )
 		$uri = substr( $uri, 0, -strlen( $frag ) );
 	else
@@ -796,7 +730,6 @@ function add_query_arg() {
 	} else {
 		$protocol = '';
 	}
-
 	if ( strpos( $uri, '?' ) !== false ) {
 		list( $base, $query ) = explode( '?', $uri, 2 );
 		$base .= '?';
@@ -807,7 +740,6 @@ function add_query_arg() {
 		$base = '';
 		$query = $uri;
 	}
-
 	wp_parse_str( $query, $qs );
 	$qs = urlencode_deep( $qs ); // this re-URL-encodes things that were already in the query string
 	if ( is_array( $args[0] ) ) {
@@ -817,12 +749,10 @@ function add_query_arg() {
 	} else {
 		$qs[ $args[0] ] = $args[1];
 	}
-
 	foreach ( $qs as $k => $v ) {
 		if ( $v === false )
 			unset( $qs[$k] );
 	}
-
 	$ret = build_query( $qs );
 	$ret = trim( $ret, '?' );
 	$ret = preg_replace( '#=(&|$)#', '$1', $ret );
@@ -830,7 +760,6 @@ function add_query_arg() {
 	$ret = rtrim( $ret, '?' );
 	return $ret;
 }
-
 /**
  * Removes an item or items from a query string.
  *
@@ -848,7 +777,6 @@ function remove_query_arg( $key, $query = false ) {
 	}
 	return add_query_arg( $key, false, $query );
 }
-
 /**
  * Returns an array of single-use query variable names that can be removed from a URL.
  *
@@ -882,7 +810,6 @@ function wp_removable_query_args() {
 		'updated',
 		'wp-post-new-reload',
 	);
-
 	/**
 	 * Filters the list of query variables to remove.
 	 *
@@ -892,7 +819,6 @@ function wp_removable_query_args() {
 	 */
 	return apply_filters( 'removable_query_args', $removable_query_args );
 }
-
 /**
  * Walks the array while sanitizing the contents.
  *
@@ -911,7 +837,6 @@ function add_magic_quotes( $array ) {
 	}
 	return $array;
 }
-
 /**
  * HTTP request for URI to retrieve content.
  *
@@ -924,21 +849,15 @@ function add_magic_quotes( $array ) {
  */
 function wp_remote_fopen( $uri ) {
 	$parsed_url = @parse_url( $uri );
-
 	if ( !$parsed_url || !is_array( $parsed_url ) )
 		return false;
-
 	$options = array();
 	$options['timeout'] = 10;
-
 	$response = wp_safe_remote_get( $uri, $options );
-
 	if ( is_wp_error( $response ) )
 		return false;
-
 	return wp_remote_retrieve_body( $response );
 }
-
 /**
  * Set up the WordPress query.
  *
@@ -953,11 +872,9 @@ function wp_remote_fopen( $uri ) {
 function wp( $query_vars = '' ) {
 	global $wp, $wp_query, $wp_the_query;
 	$wp->main( $query_vars );
-
 	if ( !isset($wp_the_query) )
 		$wp_the_query = $wp_query;
 }
-
 /**
  * Retrieve the description for the HTTP status.
  *
@@ -970,15 +887,12 @@ function wp( $query_vars = '' ) {
  */
 function get_status_header_desc( $code ) {
 	global $wp_header_to_desc;
-
 	$code = absint( $code );
-
 	if ( !isset( $wp_header_to_desc ) ) {
 		$wp_header_to_desc = array(
 			100 => 'Continue',
 			101 => 'Switching Protocols',
 			102 => 'Processing',
-
 			200 => 'OK',
 			201 => 'Created',
 			202 => 'Accepted',
@@ -988,7 +902,6 @@ function get_status_header_desc( $code ) {
 			206 => 'Partial Content',
 			207 => 'Multi-Status',
 			226 => 'IM Used',
-
 			300 => 'Multiple Choices',
 			301 => 'Moved Permanently',
 			302 => 'Found',
@@ -998,7 +911,6 @@ function get_status_header_desc( $code ) {
 			306 => 'Reserved',
 			307 => 'Temporary Redirect',
 			308 => 'Permanent Redirect',
-
 			400 => 'Bad Request',
 			401 => 'Unauthorized',
 			402 => 'Payment Required',
@@ -1027,7 +939,6 @@ function get_status_header_desc( $code ) {
 			429 => 'Too Many Requests',
 			431 => 'Request Header Fields Too Large',
 			451 => 'Unavailable For Legal Reasons',
-
 			500 => 'Internal Server Error',
 			501 => 'Not Implemented',
 			502 => 'Bad Gateway',
@@ -1040,13 +951,11 @@ function get_status_header_desc( $code ) {
 			511 => 'Network Authentication Required',
 		);
 	}
-
 	if ( isset( $wp_header_to_desc[$code] ) )
 		return $wp_header_to_desc[$code];
 	else
 		return '';
 }
-
 /**
  * Set HTTP status header.
  *
@@ -1070,7 +979,6 @@ function status_header( $code, $description = '' ) {
 	$protocol = wp_get_server_protocol();
 	$status_header = "$protocol $code $description";
 	if ( function_exists( 'apply_filters' ) )
-
 		/**
 		 * Filters an HTTP status header.
 		 *
@@ -1082,10 +990,8 @@ function status_header( $code, $description = '' ) {
 		 * @param string $protocol      Server protocol.
 		 */
 		$status_header = apply_filters( 'status_header', $status_header, $code, $description, $protocol );
-
 	@header( $status_header, true, $code );
 }
-
 /**
  * Get the header information to prevent caching.
  *
@@ -1122,7 +1028,6 @@ function wp_get_nocache_headers() {
 	$headers['Last-Modified'] = false;
 	return $headers;
 }
-
 /**
  * Set the headers to prevent caching for the different browsers.
  *
@@ -1136,9 +1041,7 @@ function wp_get_nocache_headers() {
  */
 function nocache_headers() {
 	$headers = wp_get_nocache_headers();
-
 	unset( $headers['Last-Modified'] );
-
 	// In PHP 5.3+, make sure we are not sending a Last-Modified header.
 	if ( function_exists( 'header_remove' ) ) {
 		@header_remove( 'Last-Modified' );
@@ -1152,11 +1055,9 @@ function nocache_headers() {
 			}
 		}
 	}
-
 	foreach ( $headers as $name => $field_value )
 		@header("{$name}: {$field_value}");
 }
-
 /**
  * Set the headers for caching for 10 days with JavaScript content type.
  *
@@ -1164,12 +1065,10 @@ function nocache_headers() {
  */
 function cache_javascript_headers() {
 	$expiresOffset = 10 * DAY_IN_SECONDS;
-
 	header( "Content-Type: text/javascript; charset=" . get_bloginfo( 'charset' ) );
 	header( "Vary: Accept-Encoding" ); // Handle proxies
 	header( "Expires: " . gmdate( "D, d M Y H:i:s", time() + $expiresOffset ) . " GMT" );
 }
-
 /**
  * Retrieve the number of database queries during the WordPress execution.
  *
@@ -1212,19 +1111,14 @@ function bool_from_yn( $yn ) {
  */
 function do_feed() {
 	global $wp_query;
-
 	$feed = get_query_var( 'feed' );
-
 	// Remove the pad, if present.
 	$feed = preg_replace( '/^_+/', '', $feed );
-
 	if ( $feed == '' || $feed == 'feed' )
 		$feed = get_default_feed();
-
 	if ( ! has_action( "do_feed_{$feed}" ) ) {
 		wp_die( __( 'ERROR: This is not a valid feed template.' ), '', array( 'response' => 404 ) );
 	}
-
 	/**
 	 * Fires once the given feed is loaded.
 	 *
@@ -1239,7 +1133,6 @@ function do_feed() {
 	 */
 	do_action( "do_feed_{$feed}", $wp_query->is_comment_feed, $feed );
 }
-
 /**
  * Load the RDF RSS 0.91 Feed template.
  *
@@ -1250,7 +1143,6 @@ function do_feed() {
 function do_feed_rdf() {
 	load_template( ABSPATH . WPINC . '/feed-rdf.php' );
 }
-
 /**
  * Load the RSS 1.0 Feed Template.
  *
@@ -1261,7 +1153,6 @@ function do_feed_rdf() {
 function do_feed_rss() {
 	load_template( ABSPATH . WPINC . '/feed-rss.php' );
 }
-
 /**
  * Load either the RSS2 comment feed or the RSS2 posts feed.
  *
@@ -1277,7 +1168,6 @@ function do_feed_rss2( $for_comments ) {
 	else
 		load_template( ABSPATH . WPINC . '/feed-rss2.php' );
 }
-
 /**
  * Load either Atom comment feed or Atom posts feed.
  *
@@ -1293,7 +1183,6 @@ function do_feed_atom( $for_comments ) {
 	else
 		load_template( ABSPATH . WPINC . '/feed-atom.php' );
 }
-
 /**
  * Display the robots.txt file content.
  *
@@ -1304,14 +1193,12 @@ function do_feed_atom( $for_comments ) {
  */
 function do_robots() {
 	header( 'Content-Type: text/plain; charset=utf-8' );
-
 	/**
 	 * Fires when displaying the robots.txt file.
 	 *
 	 * @since 2.1.0
 	 */
 	do_action( 'do_robotstxt' );
-
 	$output = "User-agent: *\n";
 	$public = get_option( 'blog_public' );
 	if ( '0' == $public ) {
@@ -1322,7 +1209,6 @@ function do_robots() {
 		$output .= "Disallow: $path/wp-admin/\n";
 		$output .= "Allow: $path/wp-admin/admin-ajax.php\n";
 	}
-
 	/**
 	 * Filters the robots.txt output.
 	 *
@@ -1351,7 +1237,6 @@ function do_robots() {
  */
 function is_blog_installed() {
 	global $wpdb;
-
 	/*
 	 * Check cache first. If options table goes away and we have true
 	 * cached, oh well.
@@ -1369,19 +1254,14 @@ function is_blog_installed() {
 	else
 		$installed = $alloptions['siteurl'];
 	$wpdb->suppress_errors( $suppress );
-
 	$installed = !empty( $installed );
 	wp_cache_set( 'is_blog_installed', $installed );
-
 	if ( $installed )
 		return true;
-
 	// If visiting repair.php, return true and let it take over.
 	if ( defined( 'WP_REPAIRING' ) )
 		return true;
-
 	$suppress = $wpdb->suppress_errors();
-
 	/*
 	 * Loop over the WP tables. If none exist, then scratch install is allowed.
 	 * If one or more exist, suggest table repair since we got here because the
@@ -1397,28 +1277,20 @@ function is_blog_installed() {
 
 		if ( ! $wpdb->get_results( "DESCRIBE $table;" ) )
 			continue;
-
 		// One or more tables exist. We are insane.
-
 		wp_load_translations_early();
-
 		// Die with a DB error.
 		$wpdb->error = sprintf(
 			/* translators: %s: database repair URL */
 			__( 'One or more database tables are unavailable. The database may need to be <a href="%s">repaired</a>.' ),
 			'maint/repair.php?referrer=is_blog_installed'
 		);
-
 		dead_db();
 	}
-
 	$wpdb->suppress_errors( $suppress );
-
 	wp_cache_set( 'is_blog_installed', false );
-
 	return false;
 }
-
 /**
  * Retrieve URL with nonce added to URL query.
  *
@@ -1472,7 +1344,6 @@ function wp_nonce_field( $action = -1, $name = "_wpnonce", $referer = true , $ec
 
 	return $nonce_field;
 }
-
 /**
  * Retrieve or display referer hidden field for forms.
  *
@@ -1491,7 +1362,6 @@ function wp_referer_field( $echo = true ) {
 		echo $referer_field;
 	return $referer_field;
 }
-
 /**
  * Retrieve or display original referer hidden field for forms.
  *
@@ -1515,7 +1385,6 @@ function wp_original_referer_field( $echo = true, $jump_back_to = 'current' ) {
 		echo $orig_referer_field;
 	return $orig_referer_field;
 }
-
 /**
  * Retrieve referer from '_wp_http_referer' or HTTP referer.
  *
@@ -1538,7 +1407,6 @@ function wp_get_referer() {
 
 	return false;
 }
-
 /**
  * Retrieves unvalidated referer from '_wp_http_referer' or HTTP referer.
  *
@@ -1554,10 +1422,8 @@ function wp_get_raw_referer() {
 	} else if ( ! empty( $_SERVER['HTTP_REFERER'] ) ) {
 		return wp_unslash( $_SERVER['HTTP_REFERER'] );
 	}
-
 	return false;
 }
-
 /**
  * Retrieve original referer that was posted, if it exists.
  *
@@ -1570,7 +1436,6 @@ function wp_get_original_referer() {
 		return wp_validate_redirect( wp_unslash( $_REQUEST['_wp_original_http_referer'] ), false );
 	return false;
 }
-
 /**
  * Recursive directory creation based on full path.
  *
@@ -1583,20 +1448,16 @@ function wp_get_original_referer() {
  */
 function wp_mkdir_p( $target ) {
 	$wrapper = null;
-
 	// Strip the protocol.
 	if ( wp_is_stream( $target ) ) {
 		list( $wrapper, $target ) = explode( '://', $target, 2 );
 	}
-
 	// From php.net/mkdir user contributed notes.
 	$target = str_replace( '//', '/', $target );
-
 	// Put the wrapper back on the target.
 	if ( $wrapper !== null ) {
 		$target = $wrapper . '://' . $target;
 	}
-
 	/*
 	 * Safe mode fails with a trailing slash under certain PHP versions.
 	 * Use rtrim() instead of untrailingslashit to avoid formatting.php dependency.
@@ -1607,22 +1468,18 @@ function wp_mkdir_p( $target ) {
 
 	if ( file_exists( $target ) )
 		return @is_dir( $target );
-
 	// We need to find the permissions of the parent folder that exists and inherit that.
 	$target_parent = dirname( $target );
 	while ( '.' != $target_parent && ! is_dir( $target_parent ) ) {
 		$target_parent = dirname( $target_parent );
 	}
-
 	// Get the permission bits.
 	if ( $stat = @stat( $target_parent ) ) {
 		$dir_perms = $stat['mode'] & 0007777;
 	} else {
 		$dir_perms = 0777;
 	}
-
 	if ( @mkdir( $target, $dir_perms, true ) ) {
-
 		/*
 		 * If a umask is set that modifies $dir_perms, we'll have to re-set
 		 * the $dir_perms correctly with chmod()
@@ -1633,10 +1490,8 @@ function wp_mkdir_p( $target ) {
 				@chmod( $target_parent . '/' . implode( '/', array_slice( $folder_parts, 0, $i ) ), $dir_perms );
 			}
 		}
-
 		return true;
 	}
-
 	return false;
 }
 
@@ -1657,14 +1512,11 @@ function path_is_absolute( $path ) {
 	 */
 	if ( realpath($path) == $path )
 		return true;
-
 	if ( strlen($path) == 0 || $path[0] == '.' )
 		return false;
-
 	// Windows allows absolute paths like this.
 	if ( preg_match('#^[a-zA-Z]:\\\\#', $path) )
 		return true;
-
 	// A path starting with / or \ is absolute; anything else is relative.
 	return ( $path[0] == '/' || $path[0] == '\\' );
 }
@@ -1687,7 +1539,6 @@ function path_join( $base, $path ) {
 
 	return rtrim($base, '/') . '/' . ltrim($path, '/');
 }
-
 /**
  * Normalize a filesystem path.
  *
@@ -1711,7 +1562,6 @@ function wp_normalize_path( $path ) {
 	}
 	return $path;
 }
-
 /**
  * Determine a writable directory for temporary files.
  *
@@ -1732,27 +1582,21 @@ function get_temp_dir() {
 	static $temp = '';
 	if ( defined('WP_TEMP_DIR') )
 		return trailingslashit(WP_TEMP_DIR);
-
 	if ( $temp )
 		return trailingslashit( $temp );
-
 	if ( function_exists('sys_get_temp_dir') ) {
 		$temp = sys_get_temp_dir();
 		if ( @is_dir( $temp ) && wp_is_writable( $temp ) )
 			return trailingslashit( $temp );
 	}
-
 	$temp = ini_get('upload_tmp_dir');
 	if ( @is_dir( $temp ) && wp_is_writable( $temp ) )
 		return trailingslashit( $temp );
-
 	$temp = WP_CONTENT_DIR . '/';
 	if ( is_dir( $temp ) && wp_is_writable( $temp ) )
 		return $temp;
-
 	return '/tmp/';
 }
-
 /**
  * Determine if a directory is writable.
  *
@@ -1772,7 +1616,6 @@ function wp_is_writable( $path ) {
 	else
 		return @is_writable( $path );
 }
-
 /**
  * Workaround for Windows bug in is_writable() function
  *
@@ -1790,7 +1633,6 @@ function wp_is_writable( $path ) {
  * @return bool Whether the path is writable.
  */
 function win_is_writable( $path ) {
-
 	if ( $path[strlen( $path ) - 1] == '/' ) { // if it looks like a directory, check a random file within the directory
 		return win_is_writable( $path . uniqid( mt_rand() ) . '.tmp');
 	} elseif ( is_dir( $path ) ) { // If it's a directory (and not a file) check a random file within the directory
@@ -1806,7 +1648,6 @@ function win_is_writable( $path ) {
 		unlink( $path );
 	return true;
 }
-
 /**
  * Retrieves uploads directory information.
  *
@@ -1823,7 +1664,6 @@ function win_is_writable( $path ) {
 function wp_get_upload_dir() {
 	return wp_upload_dir( null, false );
 }
-
 /**
  * Get an array containing the current upload directory's path and url.
  *
@@ -1862,13 +1702,10 @@ function wp_get_upload_dir() {
  */
 function wp_upload_dir( $time = null, $create_dir = true, $refresh_cache = false ) {
 	static $cache = array(), $tested_paths = array();
-
 	$key = sprintf( '%d-%s', get_current_blog_id(), (string) $time );
-
 	if ( $refresh_cache || empty( $cache[ $key ] ) ) {
 		$cache[ $key ] = _wp_upload_dir( $time );
 	}
-
 	/**
 	 * Filters the uploads directory data.
 	 *
@@ -1878,10 +1715,8 @@ function wp_upload_dir( $time = null, $create_dir = true, $refresh_cache = false
 	 *                       'url', 'subdir, 'basedir', and 'error'.
 	 */
 	$uploads = apply_filters( 'upload_dir', $cache[ $key ] );
-
 	if ( $create_dir ) {
 		$path = $uploads['path'];
-
 		if ( array_key_exists( $path, $tested_paths ) ) {
 			$uploads['error'] = $tested_paths[ $path ];
 		} else {
@@ -1891,18 +1726,15 @@ function wp_upload_dir( $time = null, $create_dir = true, $refresh_cache = false
 				} else {
 					$error_path = basename( $uploads['basedir'] ) . $uploads['subdir'];
 				}
-
 				$uploads['error'] = sprintf(
 					/* translators: %s: directory path */
 					__( 'Unable to create directory %s. Is its parent directory writable by the server?' ),
 					esc_html( $error_path )
 				);
 			}
-
 			$tested_paths[ $path ] = $uploads['error'];
 		}
 	}
-
 	return $uploads;
 }
 
@@ -1917,7 +1749,6 @@ function wp_upload_dir( $time = null, $create_dir = true, $refresh_cache = false
 function _wp_upload_dir( $time = null ) {
 	$siteurl = get_option( 'siteurl' );
 	$upload_path = trim( get_option( 'upload_path' ) );
-
 	if ( empty( $upload_path ) || 'wp-content/uploads' == $upload_path ) {
 		$dir = WP_CONTENT_DIR . '/uploads';
 	} elseif ( 0 !== strpos( $upload_path, ABSPATH ) ) {
@@ -1926,14 +1757,12 @@ function _wp_upload_dir( $time = null ) {
 	} else {
 		$dir = $upload_path;
 	}
-
 	if ( !$url = get_option( 'upload_url_path' ) ) {
 		if ( empty($upload_path) || ( 'wp-content/uploads' == $upload_path ) || ( $upload_path == $dir ) )
 			$url = WP_CONTENT_URL . '/uploads';
 		else
 			$url = trailingslashit( $siteurl ) . $upload_path;
 	}
-
 	/*
 	 * Honor the value of UPLOADS. This happens as long as ms-files rewriting is disabled.
 	 * We also sometimes obey UPLOADS when rewriting is enabled -- see the next block.
@@ -1942,10 +1771,8 @@ function _wp_upload_dir( $time = null ) {
 		$dir = ABSPATH . UPLOADS;
 		$url = trailingslashit( $siteurl ) . UPLOADS;
 	}
-
 	// If multisite (and if not the main site in a post-MU network)
 	if ( is_multisite() && ! ( is_main_network() && is_main_site() && defined( 'MULTISITE' ) ) ) {
-
 		if ( ! get_site_option( 'ms_files_rewriting' ) ) {
 			/*
 			 * If ms-files rewriting is disabled (networks created post-3.5), it is fairly
@@ -1955,15 +1782,12 @@ function _wp_upload_dir( $time = null ) {
 			 * ms-files rewriting manually, they don't need the extra directory, as they never
 			 * had wp-content/uploads for the main site.)
 			 */
-
 			if ( defined( 'MULTISITE' ) )
 				$ms_dir = '/sites/' . get_current_blog_id();
 			else
 				$ms_dir = '/' . get_current_blog_id();
-
 			$dir .= $ms_dir;
 			$url .= $ms_dir;
-
 		} elseif ( defined( 'UPLOADS' ) && ! ms_is_switched() ) {
 			/*
 			 * Handle the old-form ms-files.php rewriting if the network still has that enabled.
@@ -1978,7 +1802,6 @@ function _wp_upload_dir( $time = null ) {
 			 * as it is relative to ABSPATH. For the final piece: when UPLOADS is used with ms-files
 			 * rewriting in multisite, the resulting URL is /files. (#WP22702 for background.)
 			 */
-
 			if ( defined( 'BLOGUPLOADDIR' ) )
 				$dir = untrailingslashit( BLOGUPLOADDIR );
 			else
@@ -1986,10 +1809,8 @@ function _wp_upload_dir( $time = null ) {
 			$url = trailingslashit( $siteurl ) . 'files';
 		}
 	}
-
 	$basedir = $dir;
 	$baseurl = $url;
-
 	$subdir = '';
 	if ( get_option( 'uploads_use_yearmonth_folders' ) ) {
 		// Generate the yearly and monthly dirs
@@ -1999,10 +1820,8 @@ function _wp_upload_dir( $time = null ) {
 		$m = substr( $time, 5, 2 );
 		$subdir = "/$y/$m";
 	}
-
 	$dir .= $subdir;
 	$url .= $subdir;
-
 	return array(
 		'path'    => $dir,
 		'url'     => $url,
@@ -2012,7 +1831,6 @@ function _wp_upload_dir( $time = null ) {
 		'error'   => false,
 	);
 }
-
 /**
  * Get a filename that is sanitized and unique for the given directory.
  *
@@ -2033,19 +1851,16 @@ function _wp_upload_dir( $time = null ) {
 function wp_unique_filename( $dir, $filename, $unique_filename_callback = null ) {
 	// Sanitize the file name before we begin processing.
 	$filename = sanitize_file_name($filename);
-
 	// Separate the filename into a name and extension.
 	$ext = pathinfo( $filename, PATHINFO_EXTENSION );
 	$name = pathinfo( $filename, PATHINFO_BASENAME );
 	if ( $ext ) {
 		$ext = '.' . $ext;
 	}
-
 	// Edge case: if file is named '.ext', treat as an empty name.
 	if ( $name === $ext ) {
 		$name = '';
 	}
-
 	/*
 	 * Increment the file number until we have a unique file to save in $dir.
 	 * Use callback if supplied.
@@ -2054,12 +1869,10 @@ function wp_unique_filename( $dir, $filename, $unique_filename_callback = null )
 		$filename = call_user_func( $unique_filename_callback, $dir, $name, $ext );
 	} else {
 		$number = '';
-
 		// Change '.ext' to lower case.
 		if ( $ext && strtolower($ext) != $ext ) {
 			$ext2 = strtolower($ext);
 			$filename2 = preg_replace( '|' . preg_quote($ext) . '$|', $ext2, $filename );
-
 			// Check for both lower and upper case extension or image sub-sizes may be overwritten.
 			while ( file_exists($dir . "/$filename") || file_exists($dir . "/$filename2") ) {
 				$new_number = (int) $number + 1;
@@ -2067,7 +1880,6 @@ function wp_unique_filename( $dir, $filename, $unique_filename_callback = null )
 				$filename2 = str_replace( array( "-$number$ext2", "$number$ext2" ), "-$new_number$ext2", $filename2 );
 				$number = $new_number;
 			}
-
 			/**
 			 * Filters the result when generating a unique file name.
 			 *
@@ -2080,7 +1892,6 @@ function wp_unique_filename( $dir, $filename, $unique_filename_callback = null )
 			 */
 			return apply_filters( 'wp_unique_filename', $filename2, $ext, $dir, $unique_filename_callback );
 		}
-
 		while ( file_exists( $dir . "/$filename" ) ) {
 			$new_number = (int) $number + 1;
 			if ( '' == "$number$ext" ) {
@@ -2091,11 +1902,9 @@ function wp_unique_filename( $dir, $filename, $unique_filename_callback = null )
 			$number = $new_number;
 		}
 	}
-
 	/** This filter is documented in wp-includes/functions.php */
 	return apply_filters( 'wp_unique_filename', $filename, $ext, $dir, $unique_filename_callback );
 }
-
 /**
  * Create a file in the upload folder with given content.
  *
@@ -2122,19 +1931,14 @@ function wp_unique_filename( $dir, $filename, $unique_filename_callback = null )
 function wp_upload_bits( $name, $deprecated, $bits, $time = null ) {
 	if ( !empty( $deprecated ) )
 		_deprecated_argument( __FUNCTION__, '2.0.0' );
-
 	if ( empty( $name ) )
 		return array( 'error' => __( 'Empty filename' ) );
-
 	$wp_filetype = wp_check_filetype( $name );
 	if ( ! $wp_filetype['ext'] && ! current_user_can( 'unfiltered_upload' ) )
 		return array( 'error' => __( 'Invalid file type' ) );
-
 	$upload = wp_upload_dir( $time );
-
 	if ( $upload['error'] !== false )
 		return $upload;
-
 	/**
 	 * Filters whether to treat the upload bits as an error.
 	 *
@@ -2150,9 +1954,7 @@ function wp_upload_bits( $name, $deprecated, $bits, $time = null ) {
 		$upload[ 'error' ] = $upload_bits_error;
 		return $upload;
 	}
-
 	$filename = wp_unique_filename( $upload['path'], $name );
-
 	$new_file = $upload['path'] . "/$filename";
 	if ( ! wp_mkdir_p( dirname( $new_file ) ) ) {
 		if ( 0 === strpos( $upload['basedir'], ABSPATH ) )
@@ -3759,7 +3561,7 @@ function dead_db() {
 	nocache_headers();
 	header( 'Content-Type: text/html; charset=utf-8' );
 ?>
-<!DOCTYPE html>
+<!--  <!DOCTYPE html>-->
 <html xmlns="http://www.w3.org/1999/xhtml"<?php if ( is_rtl() ) echo ' dir="rtl"'; ?>>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

@@ -365,13 +365,8 @@ function twentyseventeen_colors_css_wrap() {
 	?>
 <style type="text/css" id="custom-theme-colors"
 	<?php if ( is_customize_preview() ) { echo 'data-hue="' . $hue . '"'; } ?>>
-<?
-php
- 
-echo 
-
-	twentyseventeen_custom_colors_css ();
-	
+<?php
+echo twentyseventeen_custom_colors_css ();
 	?>
 </style>
 <?php

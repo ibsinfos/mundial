@@ -198,10 +198,8 @@ class WP_Customize_Media_Control extends WP_Customize_Control {
 		<# } else if ( 'video' === data.attachment.type ) { #>
 		<div class="wp-media-wrapper wp-video">
 			<video controls="controls" class="wp-video-shortcode"
-				preload="metadata"
-				<# if ( data.attachment.image && data.attachment.image.src !==
-				data.attachment.icon ) { #>poster="{{ data.attachment.image.src
-				}}"<# } #>>
+				preload="metadata"  >
+				<# if ( data.attachment.image && data.attachment.image.src !==data.attachment.icon ) { #>poster="{{ data.attachment.image.src}}"<# } #>
 				<source type="{{ data.attachment.mime }}" src="{{ data.attachment.url }}"/>
 							</video>
 		</div>

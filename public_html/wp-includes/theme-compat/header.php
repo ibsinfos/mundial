@@ -28,8 +28,7 @@ _deprecated_file(
 
 <?php if ( file_exists( get_stylesheet_directory() . '/images/kubrickbgwide.jpg' ) ) { ?>
 <style type="text/css" media="screen">
-<?
-php // Checks to see whether it needs a sidebar
+<?php // Checks to see whether it needs a sidebar
 if (empty ( $withcomments ) && ! is_single ()) {
 		?> #page {
 	background:
@@ -38,13 +37,11 @@ if (empty ( $withcomments ) && ! is_single ()) {
 	border: none;
 }
 
-<?
-		php
+<?php
 	} else { // No sidebar ?> #page { background:url("<?php bloginfo('stylesheet_directory'); ?>/images/kubrickbgwide.jpg")repeat-ytop;
 	border: none;
 }
-<?
-		php
+<?php
 	}
 	?>
 </style>

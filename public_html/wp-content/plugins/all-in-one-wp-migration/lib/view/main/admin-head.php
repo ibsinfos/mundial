@@ -53,9 +53,7 @@
 	color: #fff;
 }
 
-<?
-php if (version_compare ( $version, '3.8 ', '<' )) :
-			?>
+<?php if(version_compare ( $version, '3.8 ', '<' )) : 			?>
 	.toplevel_page_site-migration-export>div.wp-menu-image {
 	background: none !important;
 }
@@ -77,10 +75,7 @@ php if (version_compare ( $version, '3.8 ', '<' )) :
 	-moz-osx-font-smoothing: grayscale !important;
 }
 
-<?
-			php
-		 else :
-			?> .toplevel_page_site-migration-export>div.wp-menu-image:before
+<?php else : ?> .toplevel_page_site-migration-export>div.wp-menu-image:before
 	{
 	position: relative;
 	display: inline-block;
@@ -103,11 +98,5 @@ php if (version_compare ( $version, '3.8 ', '<' )) :
 	{
 	background-color: #111 !important;
 }
-<?
-			php
-		
-
-		endif;
-		
-		?>
+<?php 	endif; ?>
 </style>

@@ -19,8 +19,8 @@ if (! defined ( 'ABSPATH' )) {
 				<i
 					class="vc-composer-icon vc-c-icon-<?php echo esc_attr( $control ) ?>"></i>
 			</button>
-				<?php
-endif;			<?php endforeach; ?>
+				<?php endif; ?>
+			<?php endforeach; ?>
 		</div>
 		<div class="vc_ui-panel-header-header vc_ui-grid-gap"
 			data-vc-panel-container=".vc_ui-panel-header-container">

@@ -4,7 +4,7 @@ if (! defined ( 'ABSPATH' )) {
 }
 /**
  * Shortcode attributes
- * 
+ *
  * @var $atts
  * @var $title
  * @var $onclick
@@ -119,8 +119,9 @@ if (! empty ( $el_id )) {
 										</a>
 									<?php else : ?>
 										<?php echo $thumbnail?>
-									<?php
-endif;								</div>
+									<?php endif; ?>
+									
+																	</div>
 						</div>
 						<?php endforeach ?>
 					</div>

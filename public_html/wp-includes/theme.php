@@ -1722,54 +1722,8 @@ function wp_custom_css_cb() {
 	if ($styles || is_customize_preview ()) :
 		?>
 <style type="text/css" id="wp-custom-css">
-<?
-php
- 
-echo
- 
-strip_tags
-(
- 
-$
-styles
- 
-);
-//
-Note
- 
-that
- 
-esc_html
-()
- 
-cannot
- 
-be
- 
-used
- 
-because
- 
-`
-div
- 
-&
-gt
-;
- 
-span
-`
- 
-is
- 
-not
- 
-interpreted
- 
-properly
-.
- 
-?>
+<?php echo strip_tags($styles);?>
+//Note that esc_html() cannot be used  because` div &gt;span `is not interpreted properly.
 </style>
 
 	<?php endif;
@@ -2680,40 +2634,16 @@ function _custom_logo_header_styles() {
 		?>
 <!-- Custom Logo: hide header text -->
 <style id="custom-logo-css" type="text/css">
-<?
-php
+<?php
  
-echo
- 
-$
-classes;
+echo $classes;
 		
 		?>
 {
-position
-:
- 
-absolute
-;
-
-				
-clip
-:
- 
-rect
-(1px
-,
-1
-px
-,
-1
-px
-,
-1
-px
-);
-
-			
+position:
+absolute;
+clip:
+rect(1px,1px,1px,1px);
 }
 </style>
 <?php

@@ -116,8 +116,7 @@ $classes = 'vc_settings-tab-content vc_settings-tab-content-active ' . esc_attr 
 					<?php echo sprintf( __( 'Don\'t have direct license yet? <a href="%s" target="_blank">Purchase Visual Composer license</a>.', 'js_composer' ), esc_url( 'http://bit.ly/vcomposer' ) )?>
 				</p>
 
-			<?php
-endif;		</div>
+			<?php endif;	?>	</div>
 
 	<?php endif ?>
 </form>

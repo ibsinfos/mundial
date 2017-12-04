@@ -199,7 +199,7 @@ $elbrus_portfolio_category_description = get_term_field ( 'description', $elbrus
 						</div>
 
 							
-						<?phpendif;
+						<?php endif;
 					endwhile
 					;
 					?>

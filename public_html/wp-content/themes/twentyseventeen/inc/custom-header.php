@@ -71,16 +71,14 @@ if (! function_exists ( 'twentyseventeen_header_style' )) :
 		// If we get this far, we have custom styles. Let's do this.
 		?>
 <style id="twentyseventeen-custom-header-styles" type="text/css">
-<?
-php // Has the text been hidden ?
+<?php // Has the text been hidden ?
 		if ('blank ' === $header_text_color) :
 			?> .site-title, .site-description {
 	position: absolute;
 	clip: rect(1px, 1px, 1px, 1px);
 }
 
-<?
-			php
+<?php
 		  // If the user has set a custom color for the text use that .
 else :
 			?> .site-title a, .colors-dark .site-title a, .colors-custom .site-title a,
@@ -92,11 +90,10 @@ else :
 	body.has-header-image.colors-dark .site-description, body.has-header-video.colors-dark .site-description,
 	body.has-header-image.colors-custom .site-description, body.has-header-video.colors-custom .site-description
 	{
-	color: #<?php echo esc_attr($ header_text_color);
+	color: #<?php echo esc_attr($header_text_color);
 			?>;
 }
-<?
-			php
+<?php
 		
 
 		endif;

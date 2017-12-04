@@ -18,7 +18,7 @@ function wp_underscore_audio_template() {
 	?>
 <audio style="visibility: hidden" controls class="wp-audio-shortcode"
 	width="{{ _.isUndefined( data.model.width ) ? 400 : data.model.width }}"
-	preload="{{ _.isUndefined( data.model.preload ) ? 'none' : data.model.preload }}"<#
+	preload="{{ _.isUndefined( data.model.preload ) ? 'none' : data.model.preload }}"><#
 	<?php
 	
 foreach ( array (
@@ -94,7 +94,7 @@ function wp_underscore_video_template() {
 
 #>
 <div style="" class="wp-video">
-	<video controls class="wp-video-shortcode {{ classes.join( ' ' ) }}"<# if ( w ) { #>width="{{ w }}"<# } #>
+	<video controls class="wp-video-shortcode {{ classes.join( ' ' ) }}" ><# if ( w ) { #>width="{{ w }}"<# } #>
 	<# if ( h ) { #>height="{{ h }}"<# } #>
 	<?php
 	$props = array (

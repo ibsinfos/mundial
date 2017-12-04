@@ -34,4 +34,3 @@ require (dirname ( __FILE__ ) . '/wp-blog-header.php');
 </script>
 <!-- End Piwik Code -->
 
-<?php

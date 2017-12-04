@@ -15,11 +15,11 @@ $elbrus_header_image = elbrus_get_option ( 'header_settings_headerimage' ) ? elb
 			echo esc_url ( $elbrus_header_image );
 			?>);">
 		
-		 <?phpelse :
+		 <?php else :
 			?>
 			);">
 		
-		<?phpendif;
+		<?php endif;
 	 
 
 	else :
@@ -28,11 +28,11 @@ $elbrus_header_image = elbrus_get_option ( 'header_settings_headerimage' ) ? elb
 			echo esc_url ( $elbrus_header_image );
 			?>);">
 		
-		 <?phpelse :
+		 <?php else :
 			?>
 			);">
 		
-		<?phpendif;
+		<?php endif;
 	
 
 	endif;

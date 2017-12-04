@@ -6,7 +6,6 @@
  * @subpackage Toolbar
  * @since 3.1.0
  */
-
 /**
  * Core class used to implement the Toolbar API.
  *
@@ -16,7 +15,6 @@ class WP_Admin_Bar {
 	private $nodes = array ();
 	private $bound = false;
 	public $user;
-	
 	/**
 	 *
 	 * @param string $name        	
@@ -32,14 +30,12 @@ class WP_Admin_Bar {
 				return array (); // Sorry, folks.
 		}
 	}
-	
 	/**
 	 *
 	 * @access public
 	 */
 	public function initialize() {
 		$this->user = new stdClass ();
-		
 		if (is_user_logged_in ()) {
 			/* Populate settings we need for the menu based on the current user. */
 			$this->user->blogs = get_blogs_of_user ( get_current_user_id () );
@@ -53,11 +49,8 @@ class WP_Admin_Bar {
 				$this->user->account_domain = $this->user->domain;
 			}
 		}
-		
 		add_action ( 'wp_head', 'wp_admin_bar_header' );
-		
 		add_action ( 'admin_head', 'wp_admin_bar_header' );
-		
 		if (current_theme_supports ( 'admin-bar' )) {
 			/**
 			 * To remove the default padding styles from WordPress for the Toolbar, use the following code:
@@ -66,15 +59,11 @@ class WP_Admin_Bar {
 			$admin_bar_args = get_theme_support ( 'admin-bar' );
 			$header_callback = $admin_bar_args [0] ['callback'];
 		}
-		
 		if (empty ( $header_callback ))
 			$header_callback = '_admin_bar_bump_cb';
-		
 		add_action ( 'wp_head', $header_callback );
-		
 		wp_enqueue_script ( 'admin-bar' );
 		wp_enqueue_style ( 'admin-bar' );
-		
 		/**
 		 * Fires after WP_Admin_Bar is initialized.
 		 *
@@ -82,7 +71,6 @@ class WP_Admin_Bar {
 		 */
 		do_action ( 'admin_bar_init' );
 	}
-	
 	/**
 	 *
 	 * @param array $node        	
@@ -90,7 +78,6 @@ class WP_Admin_Bar {
 	public function add_menu($node) {
 		$this->add_node ( $node );
 	}
-	
 	/**
 	 *
 	 * @param string $id        	
@@ -98,7 +85,6 @@ class WP_Admin_Bar {
 	public function remove_menu($id) {
 		$this->remove_node ( $id );
 	}
-	
 	/**
 	 * Adds a node to the menu.
 	 *
@@ -133,12 +119,10 @@ class WP_Admin_Bar {
 		if (empty ( $args ['id'] )) {
 			if (empty ( $args ['title'] ))
 				return;
-			
 			_doing_it_wrong ( __METHOD__, __ ( 'The menu ID should not be empty.' ), '3.3.0' );
 			// Deprecated: Generate an ID from the title.
 			$args ['id'] = esc_attr ( sanitize_title ( trim ( $args ['title'] ) ) );
 		}
-		
 		$defaults = array (
 				'id' => false,
 				'title' => false,
@@ -147,17 +131,13 @@ class WP_Admin_Bar {
 				'group' => false,
 				'meta' => array () 
 		);
-		
 		// If the node already exists, keep any data that isn't provided.
 		if ($maybe_defaults = $this->get_node ( $args ['id'] ))
 			$defaults = get_object_vars ( $maybe_defaults );
-			
 			// Do the same for 'meta' items.
 		if (! empty ( $defaults ['meta'] ) && ! empty ( $args ['meta'] ))
 			$args ['meta'] = wp_parse_args ( $args ['meta'], $defaults ['meta'] );
-		
 		$args = wp_parse_args ( $args, $defaults );
-		
 		$back_compat_parents = array (
 				'my-account-with-avatar' => array (
 						'my-account',
@@ -168,7 +148,6 @@ class WP_Admin_Bar {
 						'3.3' 
 				) 
 		);
-		
 		if (isset ( $back_compat_parents [$args ['parent']] )) {
 			list ( $new_parent, $version ) = $back_compat_parents [$args ['parent']];
 			_deprecated_argument ( __METHOD__, $version, sprintf ( 'Use <code>%s</code> as the parent for the <code>%s</code> admin bar node instead of <code>%s</code>.', $new_parent, $args ['id'], $args ['parent'] ) );
@@ -177,7 +156,6 @@ class WP_Admin_Bar {
 		
 		$this->_set_node ( $args );
 	}
-	
 	/**
 	 *
 	 * @param array $args        	
@@ -185,7 +163,6 @@ class WP_Admin_Bar {
 	final protected function _set_node($args) {
 		$this->nodes [$args ['id']] = ( object ) $args;
 	}
-	
 	/**
 	 * Gets a node.
 	 *
@@ -196,7 +173,6 @@ class WP_Admin_Bar {
 		if ($node = $this->_get_node ( $id ))
 			return clone $node;
 	}
-	
 	/**
 	 *
 	 * @param string $id        	
@@ -212,7 +188,6 @@ class WP_Admin_Bar {
 		if (isset ( $this->nodes [$id] ))
 			return $this->nodes [$id];
 	}
-	
 	/**
 	 *
 	 * @return array|void
@@ -226,7 +201,6 @@ class WP_Admin_Bar {
 		}
 		return $nodes;
 	}
-	
 	/**
 	 *
 	 * @return array|void
@@ -237,7 +211,6 @@ class WP_Admin_Bar {
 		
 		return $this->nodes;
 	}
-	
 	/**
 	 * Add a group to a menu node.
 	 *
@@ -258,7 +231,6 @@ class WP_Admin_Bar {
 		
 		$this->add_node ( $args );
 	}
-	
 	/**
 	 * Remove a node.
 	 *
@@ -268,7 +240,6 @@ class WP_Admin_Bar {
 	public function remove_node($id) {
 		$this->_unset_node ( $id );
 	}
-	
 	/**
 	 *
 	 * @param string $id        	
@@ -276,7 +247,6 @@ class WP_Admin_Bar {
 	final protected function _unset_node($id) {
 		unset ( $this->nodes [$id] );
 	}
-	
 	/**
 	 *
 	 * @access public
@@ -286,7 +256,6 @@ class WP_Admin_Bar {
 		if ($root)
 			$this->_render ( $root );
 	}
-	
 	/**
 	 *
 	 * @return object|void
@@ -294,7 +263,6 @@ class WP_Admin_Bar {
 	final protected function _bind() {
 		if ($this->bound)
 			return;
-			
 			// Add the root node.
 			// Clear it first, just in case. Don't mess with The Root.
 		$this->remove_node ( 'root' );
@@ -302,7 +270,6 @@ class WP_Admin_Bar {
 				'id' => 'root',
 				'group' => false 
 		) );
-		
 		// Normalize nodes: define internal 'children' and 'type' properties.
 		foreach ( $this->_get_nodes () as $node ) {
 			$node->children = array ();
@@ -313,7 +280,6 @@ class WP_Admin_Bar {
 			if (! $node->parent)
 				$node->parent = 'root';
 		}
-		
 		foreach ( $this->_get_nodes () as $node ) {
 			if ('root' == $node->id)
 				continue;
@@ -415,7 +381,6 @@ class WP_Admin_Bar {
 		$this->bound = true;
 		return $root;
 	}
-	
 	/**
 	 *
 	 * @global bool $is_IE
@@ -575,11 +540,9 @@ foreach ( $root->children as $group ) {
 			<?php
 				endif;
 			?>>
-		 <?phpelse :
-			?><div class="ab-item ab-empty-item"
-			<?php
-			
-echo $aria_attributes;
+		 <?php else :?>
+		 <div class="ab-item ab-empty-item"
+			<?php echo $aria_attributes;
 			if (! empty ( $node->meta ['title'] )) :
 				?>
 			title="<?php echo esc_attr( $node->meta['title'] ); ?>"
@@ -596,18 +559,15 @@ echo $aria_attributes;
 				?>
 			dir="<?php echo esc_attr( $node->meta['dir'] ); ?>"
 			
-			<?php
-				endif;
-			?>>
-		<?phpendif;
+			<?php	endif;?>>
+		<?php endif;
 		
 		echo $node->title;
 		
 		if ($has_link) :
 			?></a>
-		 <?phpelse :
-			?></div>
-		<?phpendif;
+		 <?php else :		?></div>
+		<?php endif;
 		
 		if ($is_parent) :
 			?><div class="ab-sub-wrapper"><?php
@@ -623,7 +583,7 @@ echo $aria_attributes;
 		
 		?>
 		</li><?php
-	}
+	} 
 	
 	/**
 	 *

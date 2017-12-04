@@ -25,8 +25,7 @@ body {
 	font-size: 12px;
 }
 
-<?
-php echo visual_composer ()->parseShortcodesCustomCss ( $shortcodes_string )?> .vc_gitem-preview {
+<?php echo visual_composer ()->parseShortcodesCustomCss ( $shortcodes_string )?> .vc_gitem-preview {
 	margin: 60px auto;
 }
 
