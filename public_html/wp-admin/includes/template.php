@@ -1011,7 +1011,7 @@ function wp_import_upload_form($action) {
 <?php submit_button( __('Upload file and import'), 'primary' ); ?>
 </form>
 
-	<?phpendif;
+	<?php endif;
 }
 
 /**
