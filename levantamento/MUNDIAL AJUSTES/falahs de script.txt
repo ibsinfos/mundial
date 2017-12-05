@@ -1,0 +1,16 @@
+CSS3114: @font-face não conseguiu carregar a fonte OpenType inválida.
+Stroke-Gap-Icons.eot
+CSS3119: Não há fontes disponíveis para a regra @font-face
+style.css (2,4)
+CSS3114: @font-face não conseguiu carregar a fonte OpenType inválida.
+Stroke-Gap-Icons.eot
+CSS3119: Não há fontes disponíveis para a regra @font-face
+style.css (2,4)
+HTML1508: Marca de fim sem correspondência.
+mundialnews (750,9)
+HTML1508: Marca de fim sem correspondência.
+mundialnews (750,9)
+HTML1509: Marca de fim sem correspondência.
+mundialnews (802,8)
+HTML1509: Marca de fim sem correspondência.
+mundialnews (808,8)

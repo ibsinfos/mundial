@@ -1,4 +1,4 @@
-https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fmundiallogisticsgroup.com.br%2F&tab=desktop
+﻿https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fmundiallogisticsgroup.com.br%2F&tab=desktop
 A resolverr :
 
 DESKTOP Mobile
@@ -34,4 +34,4 @@ Reduzir http://mlg.institucional.ws/wp-content/themes/elbrus/js/custom.js poupar
 Reduzir http://mlg.institucional.ws/…ct-form-7/includes/js/scripts.js?ver=4.8 pouparia 618 B (17% de redução) após a compactação.
 
 Css
-Reduzir http://mlg.institucional.ws/…s/assets/prettyphoto/css/prettyPhoto.css pouparia 620 B (19% de redução) após a compactação.
+	

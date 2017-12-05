@@ -1,0 +1,16 @@
+Nome	Protocolo	Método	Resultado	Tipo de conteúdo	Recebido	Tempo	Iniciador
+http://mundiallogisticsgroup.com.br/wp-content/uploads/2017/08/banner_promo.jpg	HTTP	GET	200	image/jpeg	550,58 KB	197,72 ms	image
+http://mundiallogisticsgroup.com.br/wp-content/uploads/2017/08/banner_express-1.jpg	HTTP	GET	200	image/jpeg	455,47 KB	131,43 ms	image
+http://mundiallogisticsgroup.com.br/wp-content/uploads/2017/08/banner_health.jpg	HTTP	GET	200	image/jpeg	418,94 KB	82,98 ms	image
+http://mundiallogisticsgroup.com.br/wp-content/uploads/2017/08/banner_health.jpg	HTTP	GET	200	image/jpeg	418,94 KB	82,98 ms	image
+http://mundiallogisticsgroup.com.br/wp-content/uploads/2017/08/banner_reverse_b.jpg	HTTP	GET	200	image/jpeg	239,04 KB	76,62 ms	image
+http://mundiallogisticsgroup.com.br/wp-content/uploads/2017/08/banner_m.one_novo-1.jpg	HTTP	GET	200	image/jpeg	141,57 KB	73,31 ms	image
+http://mundiallogisticsgroup.com.br/wp-content/uploads/2017/08/acesso.jpg	HTTP	GET	200	image/jpeg	97,26 KB	60,99 ms	image
+http://mundiallogistics.institucional.ws/wp-content/uploads/2017/08/acesso.jpg?id=1857	HTTP	GET	200	image/jpeg	97,26 KB	54,11 ms	image
+http://mundiallogisticsgroup.com.br/wp-content/uploads/2017/07/loreal-premio-770x370.png	HTTP	GET	200	image/png	431,96 KB	254,76 ms	image
+http://mundiallogisticsgroup.com.br/wp-content/uploads/2017/07/banner_m.one_-770x370.png	HTTP	GET	200	image/png	329,47 KB	200,92 ms	image
+http://mundiallogisticsgroup.com.br/wp-content/uploads/2017/07/banner_express-770x370.png	HTTP	GET	200	image/png	273,46 KB	207,76 ms	image
+http://mundiallogisticsgroup.com.br/wp-content/uploads/2017/11/Post-22-11-770x370.png	HTTP	GET	200	image/png	253,97 KB	81,38 ms	image
+http://mlg.institucional.ws/wp-content/uploads/2017/07/banner_contato.jpg	HTTP	GET	200	image/jpeg	407,34 KB	139,46 ms	image
+
+
