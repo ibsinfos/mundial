@@ -1,0 +1,41 @@
+https://codepen.io/mattsince87/pen/exByn
+
+https://codepen.io/AndreCortellini/pen/kaCEf
+
+trabalheconosco@mundiallogisticsgroup.com.br
+tecnologia@mundiallogistics.com.br
+
+smtp.mundiallogisticsgroups.com.br
+porta 587
+//////////////////
+
+Boa tarde,
+Segue dados para configuração.
+Formulário  - Trabalhe Conosco
+Autenticar por:
+E-MAIL: trabalheconosco@mundiallogistics.com.br
+SENHA: CONTAtrabalhEconoscO1212
+Com informações adicionais, segue os dados do serviço de SMTP:
+ENDEREÇO: smtp.office365.com
+PORTA: 587
+REQUER SSL: sim
+Enviar para: selecao@mundiallogistics.com.br  - (Grupo)
+Formulário  - Contato
+Autenticar por:
+E-MAIL: trabalheconosco@mundiallogistics.com.br
+SENHA: CONTAtrabalhEconoscO1212
+Com informações adicionais, segue os dados do serviço de SMTP:
+ENDEREÇO: smtp.office365.com
+PORTA: 587
+REQUER SSL: sim
+Enviar para: marketing@mundiallogistics.com.br ; comercial@mundiallogistics.com.br - (Grupo)
+Formulário -  Login Webclient
+WebService:
+http://server1.mundialgroup.com.br/WsMundial/WsMundial.asmx
+dsChaveAcesso : spuQ5u3H
+
+dsLogin: text
+
+dsSenha: text
+
+método: rest
